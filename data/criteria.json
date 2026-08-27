@@ -1,0 +1,360 @@
+{
+  "$schema": "./_schema/criteria.md",
+  "$note": "Методика оценки. Лист 04_ТРЕБОВАНИЯ: '6 критериев с весами и правилами начисления баллов'. Лист 05: без опубликованной методики AggregateRating не ставится. Оценка КАЖДОГО бренда считается отсюда скриптом (lib/score.js) и никогда не проставляется руками в brands.json. Человекочитаемая версия этого файла = страница /how-we-test/, она генерируется из него же, чтобы текст и расчёт не разъезжались.",
+
+  "version": "1.0",
+  "updated": "2026-08-25",
+  "scale": 10,
+  "roundTo": 1,
+  "methodologyPageKey": "how-we-test",
+
+  "criteria": [
+    {
+      "id": "payouts",
+      "weight": 25,
+      "labelKey": "criteria.payouts",
+      "$why": "Самый весомый критерий: скорость и предсказуемость вывода — то, ради чего пользователь и сравнивает казино. Единственный критерий, который опирается на собственные замеры, а не на заявления оператора.",
+      "skipWhen": {
+        "field": "payout.provisional",
+        "equals": true,
+        "reason": "собственных замеров вывода ещё нет",
+        "$note": "Пока замеров нет, критерий исключается из расчёта целиком, а не получает ноль баллов. Ноль означал бы «платит медленно» — утверждение, которого мы не проверяли. Вес 25% уходит из знаменателя, и оценка честно считается по оставшимся 75%. На странице это видно: в разборе критериев строка помечена как непроверенная."
+      },
+      "rules": [
+        {
+          "id": "payout-median",
+          "share": 55,
+          "type": "band",
+          "field": "payout.medianHours",
+          "unitKey": "unit.hours",
+          "direction": "lower-better",
+          "bands": [
+            { "lte": 1, "points": 10 },
+            { "lte": 6, "points": 9 },
+            { "lte": 24, "points": 8 },
+            { "lte": 48, "points": 6 },
+            { "lte": 72, "points": 4 },
+            { "lte": 120, "points": 2 }
+          ],
+          "else": 1
+        },
+        {
+          "id": "payout-gap",
+          "share": 30,
+          "type": "ratio",
+          "numerator": "payout.medianHours",
+          "denominator": "payout.claimedHours",
+          "direction": "lower-better",
+          "$why": "Разрыв между заявленным сроком и нашим замером. Казино, которое обещает 24 часа и платит за 24, объективно честнее того, что обещает час и платит за трое суток.",
+          "bands": [
+            { "lte": 1, "points": 10 },
+            { "lte": 1.5, "points": 8 },
+            { "lte": 2, "points": 6 },
+            { "lte": 3, "points": 4 }
+          ],
+          "else": 2
+        },
+        {
+          "id": "payout-samples",
+          "share": 15,
+          "type": "band",
+          "field": "payout.samples",
+          "direction": "higher-better",
+          "$why": "Сколько выводов мы реально провели. Оценка на одном замере не равна оценке на двенадцати, и это должно быть видно в баллах.",
+          "bands": [
+            { "gte": 12, "points": 10 },
+            { "gte": 6, "points": 8 },
+            { "gte": 3, "points": 6 },
+            { "gte": 1, "points": 3 }
+          ],
+          "else": 0
+        }
+      ]
+    },
+
+    {
+      "id": "bonus",
+      "weight": 20,
+      "labelKey": "criteria.bonus",
+      "$why": "Оценивается не размер бонуса, а его реальная стоимость для игрока. Размер сознательно не входит в формулу: 500% с вейджером x60 хуже, чем 100% с x25.",
+      "rules": [
+        {
+          "id": "bonus-wagering",
+          "share": 40,
+          "type": "band",
+          "field": "bonus.wagering",
+          "unitKey": "unit.times",
+          "direction": "lower-better",
+          "bands": [
+            { "lte": 20, "points": 10 },
+            { "lte": 25, "points": 9 },
+            { "lte": 30, "points": 8 },
+            { "lte": 35, "points": 6 },
+            { "lte": 40, "points": 4 },
+            { "lte": 50, "points": 2 }
+          ],
+          "else": 1
+        },
+        {
+          "id": "bonus-min-deposit",
+          "share": 20,
+          "type": "band",
+          "field": "bonus.minDeposit",
+          "unitKey": "unit.currency",
+          "direction": "lower-better",
+          "bands": [
+            { "lte": 5, "points": 10 },
+            { "lte": 10, "points": 9 },
+            { "lte": 20, "points": 7 },
+            { "lte": 50, "points": 4 }
+          ],
+          "else": 2
+        },
+        {
+          "id": "bonus-expiry",
+          "share": 20,
+          "type": "band",
+          "field": "bonus.expiryDays",
+          "unitKey": "unit.days",
+          "direction": "higher-better",
+          "bands": [
+            { "gte": 60, "points": 10 },
+            { "gte": 30, "points": 8 },
+            { "gte": 21, "points": 6 },
+            { "gte": 14, "points": 4 },
+            { "gte": 7, "points": 2 }
+          ],
+          "else": 1
+        },
+        {
+          "id": "bonus-max-bet",
+          "share": 20,
+          "type": "band",
+          "field": "bonus.maxBet",
+          "unitKey": "unit.currency",
+          "direction": "higher-better",
+          "$why": "Потолок ставки при активном бонусе. Лимит в 1 евро превращает отыгрыш x30 в математически недостижимый.",
+          "bands": [
+            { "gte": 10, "points": 10 },
+            { "gte": 7, "points": 9 },
+            { "gte": 5, "points": 8 },
+            { "gte": 3, "points": 5 }
+          ],
+          "else": 3
+        }
+      ]
+    },
+
+    {
+      "id": "trust",
+      "weight": 20,
+      "labelKey": "criteria.trust",
+      "$why": "Лицензия и инструменты защиты игрока. Лист 01 называет лицензию сильным сигналом доверия и выделяет под неё отдельную таксономию.",
+      "rules": [
+        {
+          "id": "license-authority",
+          "share": 60,
+          "type": "match",
+          "field": "license.authority",
+          "$why": "Ранжирование по тому, что регулятор реально даёт игроку: досудебное урегулирование споров, сегрегация средств игроков, обязательное самоисключение.",
+          "map": {
+            "UKGC": 10,
+            "GGL": 10,
+            "MGA": 10,
+            "AGCO": 10,
+            "SEGOB": 8,
+            "Gibraltar": 9,
+            "IsleOfMan": 9,
+            "GRAI": 9,
+            "Kahnawake": 6,
+            "Cagayan": 5,
+            "Curacao": 5,
+            "Anjouan": 3,
+            "Tobique": 3,
+            "none": 0
+          },
+          "else": 0
+        },
+        {
+          "id": "responsible-tools",
+          "share": 30,
+          "type": "count",
+          "field": "security.responsibleTools",
+          "$why": "Лимиты депозита, лимиты времени, реалити-чек, самоисключение, тайм-аут, ссылка на национальный реестр. Считаем фактическое наличие в кабинете, а не упоминание в правилах.",
+          "bands": [
+            { "gte": 5, "points": 10 },
+            { "gte": 4, "points": 9 },
+            { "gte": 3, "points": 7 },
+            { "gte": 2, "points": 5 },
+            { "gte": 1, "points": 3 }
+          ],
+          "else": 0
+        },
+        {
+          "id": "two-factor",
+          "share": 10,
+          "type": "bool",
+          "field": "security.twoFactor",
+          "trueValue": 10,
+          "falseValue": 4
+        }
+      ]
+    },
+
+    {
+      "id": "games",
+      "weight": 15,
+      "labelKey": "criteria.games",
+      "rules": [
+        {
+          "id": "games-total",
+          "share": 40,
+          "type": "band",
+          "field": "games.total",
+          "direction": "higher-better",
+          "bands": [
+            { "gte": 5000, "points": 10 },
+            { "gte": 3000, "points": 9 },
+            { "gte": 2000, "points": 8 },
+            { "gte": 1000, "points": 6 },
+            { "gte": 500, "points": 4 }
+          ],
+          "else": 2
+        },
+        {
+          "id": "providers-count",
+          "share": 35,
+          "type": "count",
+          "field": "providers",
+          "bands": [
+            { "gte": 40, "points": 10 },
+            { "gte": 25, "points": 9 },
+            { "gte": 15, "points": 7 },
+            { "gte": 8, "points": 5 },
+            { "gte": 3, "points": 3 }
+          ],
+          "else": 1
+        },
+        {
+          "id": "live-tables",
+          "share": 25,
+          "type": "count",
+          "field": "live",
+          "bands": [
+            { "gte": 8, "points": 10 },
+            { "gte": 6, "points": 8 },
+            { "gte": 4, "points": 6 },
+            { "gte": 2, "points": 4 },
+            { "gte": 1, "points": 2 }
+          ],
+          "else": 0
+        }
+      ]
+    },
+
+    {
+      "id": "payments",
+      "weight": 10,
+      "labelKey": "criteria.payments",
+      "rules": [
+        {
+          "id": "payments-count",
+          "share": 50,
+          "type": "count",
+          "field": "payments",
+          "bands": [
+            { "gte": 12, "points": 10 },
+            { "gte": 9, "points": 9 },
+            { "gte": 6, "points": 7 },
+            { "gte": 4, "points": 5 },
+            { "gte": 2, "points": 3 }
+          ],
+          "else": 1
+        },
+        {
+          "id": "withdrawal-methods",
+          "share": 30,
+          "type": "count",
+          "field": "payments_withdrawal",
+          "$why": "Отдельно считаем методы, доступные НА ВЫВОД. У части операторов список пополнения втрое длиннее списка вывода, и пользователь узнаёт об этом в кассе.",
+          "bands": [
+            { "gte": 8, "points": 10 },
+            { "gte": 5, "points": 8 },
+            { "gte": 3, "points": 6 },
+            { "gte": 1, "points": 3 }
+          ],
+          "else": 0
+        },
+        {
+          "id": "withdrawal-fee",
+          "share": 20,
+          "type": "band",
+          "field": "fees.withdrawalPct",
+          "unitKey": "unit.percent",
+          "direction": "lower-better",
+          "bands": [
+            { "lte": 0, "points": 10 },
+            { "lte": 1, "points": 8 },
+            { "lte": 2.5, "points": 6 },
+            { "lte": 5, "points": 3 }
+          ],
+          "else": 1
+        }
+      ]
+    },
+
+    {
+      "id": "support",
+      "weight": 10,
+      "labelKey": "criteria.support",
+      "rules": [
+        {
+          "id": "chat-availability",
+          "share": 35,
+          "type": "bool",
+          "field": "support.liveChat24_7",
+          "trueValue": 10,
+          "falseValue": 5
+        },
+        {
+          "id": "reply-time",
+          "share": 30,
+          "type": "band",
+          "field": "support.medianReplyMinutes",
+          "unitKey": "unit.minutes",
+          "direction": "lower-better",
+          "$why": "Наш замер: три обращения в разное время суток, берём медиану.",
+          "bands": [
+            { "lte": 2, "points": 10 },
+            { "lte": 5, "points": 9 },
+            { "lte": 15, "points": 7 },
+            { "lte": 60, "points": 4 }
+          ],
+          "else": 2
+        },
+        {
+          "id": "mobile-app",
+          "share": 20,
+          "type": "bool",
+          "field": "mobile.app",
+          "trueValue": 10,
+          "falseValue": 6,
+          "$why": "Отсутствие приложения не штрафуется жёстко: адаптивный сайт закрывает задачу, а в части ГЕО нативные приложения запрещены сторами."
+        },
+        {
+          "id": "support-languages",
+          "share": 15,
+          "type": "count",
+          "field": "support.languages",
+          "bands": [
+            { "gte": 8, "points": 10 },
+            { "gte": 5, "points": 8 },
+            { "gte": 3, "points": 6 },
+            { "gte": 1, "points": 3 }
+          ],
+          "else": 0
+        }
+      ]
+    }
+  ]
+}

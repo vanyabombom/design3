@@ -1,0 +1,211 @@
+{
+  "$note": "Факты по платёжным методам для немецкого рынка. Лист 05, «Дубли между близкими таксономиями»: visa-casino и mastercard-casino соберутся из одних и тех же брендов, и уникальность даётся ровно этим — чем метод отличается, какие лимиты, скорость зачисления, комиссии, доступен ли на вывод, кому подходит.",
+  "$scope": "Это свойства САМОГО метода, одинаковые у всех операторов. Данные по конкретному казино (работает ли метод на вывод именно там, минимальная сумма) считаются из brands.json и выводятся отдельной таблицей.",
+  "$verify": "Перед публикацией сверить лимиты и сроки с условиями платёжных провайдеров: они меняются. Комиссии казино — отдельно, в карточке каждого бренда.",
+  "methods": {
+    "paypal": {
+      "howItWorks": "PayPal steht zwischen Ihnen und dem Casino: Der Anbieter sieht nur Ihre E-Mail-Adresse, nicht Ihre Kontodaten. Einzahlungen sind sofort da, Auszahlungen laufen denselben Weg zurück.",
+      "limits": "In der Regel ab 10 € pro Einzahlung. Das Monatslimit von 1.000 € bei deutschen Lizenznehmern gilt unabhängig von der Zahlungsmethode und wird über LUGAS geprüft.",
+      "speed": "Einzahlung sofort. Auszahlung meist innerhalb von 24 Stunden nach Freigabe durch den Anbieter. Unter den Methoden, die in beide Richtungen funktionieren, ist das der schnellste Weg.",
+      "fees": "Für Sie fallen bei Zahlungen in Euro keine Gebühren an. Bei Währungsumrechnung berechnet PayPal einen Aufschlag.",
+      "withdrawal": "Ja, und das ist der eigentliche Grund, PayPal zu wählen. Das PayPal-Konto muss auf denselben Namen laufen wie das Casinokonto, sonst wird die Auszahlung abgelehnt.",
+      "suitedFor": "Wer Wert darauf legt, dass der Anbieter keine Bankdaten sieht, und wer schnell wieder an sein Geld will.",
+      "caveat": "PayPal arbeitet in Deutschland nur mit Anbietern zusammen, die eine deutsche Erlaubnis haben. Taucht das Logo bei einem Anbieter ohne GGL-Lizenz auf, lohnt ein zweiter Blick: dahinter steckt oft ein anders benannter Dienst mit ähnlichem Auftritt und ähnlicher Farbgebung. Der zweite Punkt betrifft die Reihenfolge. Wer zuerst mit einer anderen Methode einzahlt und später PayPal hinterlegt, kann die Auszahlung meist nicht über PayPal nehmen: Zurück geht das Geld dorthin, woher es kam.",
+      "notFor": "Wenn Sie bei Anbietern ohne deutsche Lizenz spielen wollen: dort finden Sie PayPal praktisch nie, und wo es auftaucht, ist es meist ein ähnlich benannter Dienst. Auch wer sein PayPal-Konto mit einer Kreditkarte statt mit dem Bankkonto verknüpft hat, sollte prüfen, ob der Kartenherausgeber Glücksspielumsätze überhaupt zulässt. Sonst scheitert die Einzahlung an der Karte und nicht an PayPal."
+    },
+    "visa": {
+      "howItWorks": "Direkte Kartenzahlung. Die Einzahlung wird wie ein normaler Kauf abgewickelt und über 3-D Secure bestätigt.",
+      "limits": "Meist ab 10 €, nach oben durch Ihr Kartenlimit begrenzt. Debitkarten funktionieren zuverlässiger als Kreditkarten.",
+      "speed": "Einzahlung sofort. Die Rückbuchung auf die Karte dauert 1 bis 5 Bankarbeitstage. Die Bearbeitung beim Anbieter ist dabei nur der erste Teil, der Rest liegt bei den Banken.",
+      "fees": "Vom Casino in der Regel keine. Manche Kartenherausgeber behandeln Glücksspiel als Bargeldgeschäft und berechnen dafür Zinsen ab dem ersten Tag.",
+      "withdrawal": "Meist ja, aber nur auf dieselbe Karte, mit der eingezahlt wurde. Ist die Karte abgelaufen, wird auf Banküberweisung ausgewichen, was zusätzliche Tage kostet.",
+      "suitedFor": "Wer keine zusätzliche Wallet anlegen will und mit ein paar Tagen Wartezeit leben kann.",
+      "caveat": "Einzelne deutsche Banken sperren Zahlungen an Glücksspielanbieter grundsätzlich. Wird die Karte abgelehnt, liegt das häufig an der Bank und nicht am Casino. Im Konto des Anbieters sieht man davon nichts, dort steht nur „fehlgeschlagen“. Der zweite Punkt ist der Rückweg: die Gutschrift läuft über den Kartenherausgeber und liegt dort nach der Freigabe durch das Casino oft noch einmal Tage. Wer die Auszahlungsdauer plant, sollte diese Tage mitrechnen.",
+      "notFor": "Wenn Sie schnell wieder an Ihr Geld wollen. Die Einzahlung ist sofort da, der Weg zurück dauert bei Karten am längsten, weil die Gutschrift über den Kartenherausgeber läuft und dort noch einmal Tage liegen kann. Und wenn Ihre Karte eine Kreditkarte ist: viele deutsche Banken sperren Glücksspielumsätze grundsätzlich, unabhängig vom Casino."
+    },
+    "mastercard": {
+      "howItWorks": "Funktioniert technisch wie Visa: direkte Kartenzahlung mit Bestätigung über 3-D Secure. In der Praxis unterscheiden sich vor allem die Regeln der herausgebenden Bank.",
+      "limits": "Ab 10 € üblich, Obergrenze durch das Kartenlimit. Prepaid-Mastercards werden von vielen Anbietern akzeptiert, taugen aber nicht zur Auszahlung.",
+      "speed": "Einzahlung sofort, Rückbuchung 1 bis 5 Bankarbeitstage.",
+      "fees": "Vom Anbieter üblicherweise keine. Bei Kreditkarten kann die Bank Glücksspiel als Bargeldbezug werten.",
+      "withdrawal": "Über Mastercard Send unterstützen viele Anbieter Auszahlungen auf die Karte. Bei Prepaid-Karten geht das nicht, dort wird auf Banküberweisung umgestellt.",
+      "suitedFor": "Dieselbe Zielgruppe wie Visa. Wer beide Karten hat, sollte die Debitkarte nehmen.",
+      "caveat": "Prepaid-Mastercards sind der häufigste Grund für die Überraschung an der Kasse: Einzahlung geht, Auszahlung nicht."
+    },
+    "maestro": {
+      "howItWorks": "Debitkartensystem, das schrittweise durch Debit-Mastercard ersetzt wird.",
+      "limits": "Wie bei der zugrunde liegenden Girokarte.",
+      "speed": "Einzahlung sofort. Auszahlungen sind über Maestro meist gar nicht vorgesehen.",
+      "fees": "Keine seitens des Anbieters.",
+      "withdrawal": "In der Regel nein. Rückzahlungen laufen über Banküberweisung.",
+      "suitedFor": "Nur noch als Ergänzung sinnvoll, wenn keine andere Karte vorliegt.",
+      "caveat": "Maestro wird seit 2023 nicht mehr neu ausgegeben. Prüfen Sie, ob Ihre Karte überhaupt noch darüber läuft."
+    },
+    "trustly": {
+      "howItWorks": "Direkte Überweisung aus Ihrem Online-Banking, ohne dass Sie ein zusätzliches Konto anlegen. Sie wählen Ihre Bank, bestätigen im gewohnten Verfahren, fertig.",
+      "limits": "Ab 10 €, nach oben durch Ihr Überweisungslimit bei der Bank begrenzt.",
+      "speed": "Einzahlung sofort. Auszahlung landet meist innerhalb von 1 bis 2 Bankarbeitstagen direkt auf dem Girokonto, ohne Umweg über eine Wallet.",
+      "fees": "Für Sie keine.",
+      "withdrawal": "Ja, und ohne dass Sie IBAN und Empfänger erneut eingeben müssen: Die Kontoverbindung ist aus der Einzahlung bekannt.",
+      "suitedFor": "Wer weder Karte noch Wallet einsetzen will und den direkten Weg zum eigenen Konto bevorzugt.",
+      "caveat": "Trustly braucht Zugriff auf Ihr Online-Banking im Bestätigungsschritt. Wer das grundsätzlich vermeiden möchte, ist mit PayPal oder SEPA besser bedient."
+    },
+    "sofort": {
+      "howItWorks": "Sofortüberweisung, heute Teil von Klarna. Sie melden sich im Bezahlprozess mit Ihren Bankzugangsdaten an, das Casino bekommt sofort eine Zahlungsbestätigung.",
+      "limits": "Ab 10 €, begrenzt durch Ihr Tageslimit bei der Bank.",
+      "speed": "Einzahlung sofort.",
+      "fees": "Für Sie keine.",
+      "withdrawal": "Nein. Sofortüberweisung ist ein reines Einzahlungsverfahren. Auszahlungen laufen über SEPA-Überweisung, und die dauert 1 bis 3 Bankarbeitstage länger.",
+      "suitedFor": "Wer schnell einzahlen will und die längere Auszahlung über die Bank in Kauf nimmt.",
+      "caveat": "Das ist der Punkt, den Anbieter selten dazuschreiben: Der Weg funktioniert nur in eine Richtung."
+    },
+    "klarna": {
+      "howItWorks": "Klarna bündelt mehrere Verfahren. Im Glücksspielbereich läuft es praktisch immer als Sofortüberweisung. Kauf auf Rechnung ist bei Glücksspiel ausgeschlossen.",
+      "limits": "Ab 10 €, Obergrenze über das Bankkonto.",
+      "speed": "Einzahlung sofort.",
+      "fees": "Für Sie keine.",
+      "withdrawal": "Nein. Auszahlungen laufen über SEPA-Überweisung.",
+      "suitedFor": "Wer Klarna ohnehin nutzt und keinen weiteren Dienst anlegen möchte.",
+      "caveat": "Der bekannte Klarna-Ratenkauf steht bei Glücksspiel nicht zur Verfügung, und das ist gut so. Glücksspiel auf Kredit ist die schlechteste aller Varianten."
+    },
+    "paysafecard": {
+      "howItWorks": "Prepaid-Gutschein mit 16-stelligem PIN, den Sie an der Tankstelle oder im Kiosk kaufen. Sie geben den Code ein, ein Konto brauchen Sie nicht.",
+      "limits": "Gutscheine bis 100 €, mehrere lassen sich kombinieren. Ohne verifiziertes my paysafecard-Konto gilt in Deutschland ein monatliches Limit von 1.000 €.",
+      "speed": "Einzahlung sofort.",
+      "fees": "Der Gutschein selbst kostet nichts extra. Bleibt Guthaben länger als ein Jahr ungenutzt, fällt eine monatliche Gebühr an.",
+      "withdrawal": "Nein, außer über ein verifiziertes my paysafecard-Konto, und selbst das unterstützen die wenigsten Anbieter. Rechnen Sie damit, dass die Auszahlung auf einem anderen Weg kommt.",
+      "suitedFor": "Wer ein hartes Ausgabenlimit will. Was nicht auf dem Gutschein steht, kann nicht verspielt werden. Das Limit steckt im Zahlungsmittel selbst.",
+      "caveat": "Genau die Eigenschaft, die Paysafecard sicher macht, macht sie zur Auszahlung untauglich: Ein Gutschein hat keinen Absender, an den Geld zurückfließen könnte. Praktisch heißt das, Sie zahlen mit der Karte ein und richten für die Auszahlung trotzdem eine zweite Methode ein, samt Verifizierung, die Sie sich mit der Karte eigentlich sparen wollten. Wer das vorher weiß, wählt gleich die Methode, über die das Geld später zurückkommen soll.",
+      "notFor": "Wenn Sie mit einer Auszahlung rechnen. Paysafecard ist ein Gutschein und funktioniert nur in eine Richtung. Gewinne kommen über einen anderen Weg zurück, den Sie dann trotzdem einrichten und verifizieren müssen. Für den ersten Test eines Anbieters ist die Karte gut, als Dauerlösung nicht."
+    },
+    "skrill": {
+      "howItWorks": "E-Wallet, das Sie vorher mit Karte oder Überweisung aufladen. Das Casino sieht nur die Wallet, nicht Ihre Bankdaten.",
+      "limits": "Ab 10 €, Obergrenzen hängen vom Verifizierungsgrad der Wallet ab.",
+      "speed": "Einzahlung sofort. Auszahlung meist innerhalb von 24 Stunden in die Wallet. Von dort auf Ihr Konto dauert es noch einmal 1 bis 3 Tage.",
+      "fees": "Skrill berechnet für Währungsumrechnung einen Aufschlag und für Auszahlungen auf das Bankkonto eine Gebühr. Das Casino selbst verlangt meist nichts.",
+      "withdrawal": "Ja, und in diesem Segment einer der schnellsten Wege.",
+      "suitedFor": "Wer häufig ein- und auszahlt und die Wallet ohnehin nutzt.",
+      "caveat": "Bei vielen Anbietern ist eine Einzahlung über Skrill vom Willkommensbonus ausgeschlossen. Das steht in den Bonusbedingungen, und nicht an der Kasse, also vorher nachlesen."
+    },
+    "neteller": {
+      "howItWorks": "E-Wallet aus derselben Unternehmensgruppe wie Skrill, mit fast identischem Ablauf.",
+      "limits": "Ab 10 €, Obergrenzen nach Verifizierungsstufe.",
+      "speed": "Einzahlung sofort, Auszahlung in die Wallet meist binnen 24 Stunden.",
+      "fees": "Gebühren bei Währungsumrechnung und beim Weiterleiten auf das Bankkonto.",
+      "withdrawal": "Ja.",
+      "suitedFor": "Praktisch dieselbe Zielgruppe wie Skrill. Wer beide hat, kann die nehmen, die beim jeweiligen Anbieter nicht vom Bonus ausgeschlossen ist.",
+      "caveat": "Wie bei Skrill gilt bei vielen Anbietern ein Bonusausschluss."
+    },
+    "muchbetter": {
+      "howItWorks": "Wallet, die als App auf dem Handy läuft und Zahlungen per Fingerabdruck bestätigt.",
+      "limits": "Ab 10 €, Obergrenzen nach Verifizierung.",
+      "speed": "Einzahlung sofort, Auszahlung in die App meist am selben Tag.",
+      "fees": "Für Zahlungen in Euro in der Regel keine, für Währungsumrechnung ja.",
+      "withdrawal": "Ja.",
+      "suitedFor": "Wer alles auf dem Handy erledigt und keine Kartendaten eingeben will.",
+      "caveat": "Deutlich seltener akzeptiert als Skrill oder Neteller. Prüfen Sie vor der Einzahlung, ob der Anbieter die Wallet auch für Auszahlungen freigeschaltet hat."
+    },
+    "sepa": {
+      "howItWorks": "Klassische Banküberweisung. Sie bekommen die Kontodaten des Anbieters und überweisen aus Ihrem Online-Banking.",
+      "limits": "Nach oben praktisch offen. Die Grenze setzt Ihre Bank, nicht das Verfahren.",
+      "speed": "Der langsamste Weg in beide Richtungen: 1 bis 3 Bankarbeitstage für die Einzahlung, noch einmal so lange zurück. An Wochenenden bewegt sich gar nichts.",
+      "fees": "Innerhalb des Euroraums keine.",
+      "withdrawal": "Ja, und für größere Beträge oft der einzige Weg: Wallets und Karten haben Obergrenzen, die Überweisung praktisch nicht.",
+      "suitedFor": "Größere Beträge und alle, die weder Wallet noch Karte einsetzen wollen.",
+      "caveat": "Rechnen Sie bei der ersten Auszahlung mit mehreren Tagen. Die Überweisung selbst braucht einen Bankarbeitstag, davor liegt aber die Freigabe durch den Anbieter, und die erste Auszahlung geht fast überall mit der Verifizierung einher. Am Wochenende steht beides still. Wer schneller an sein Geld will, hinterlegt für den Alltag eine zweite Methode und behält SEPA für größere Beträge, bei denen ein Tag mehr keine Rolle spielt.",
+      "notFor": "Wenn Sie heute Abend spielen wollen. Die Überweisung braucht bis zur Gutschrift oft einen Bankarbeitstag, und am Wochenende steht sie still. Dafür ist es die Methode, bei der am wenigsten Dritte zwischen Ihnen und dem Anbieter stehen. Wer das will und nicht in Eile ist, fährt damit gut."
+    },
+    "wire-transfer": {
+      "howItWorks": "Überweisung außerhalb des SEPA-Raums oder über eine Korrespondenzbank.",
+      "limits": "Sehr hohe Obergrenzen, dafür oft eine hohe Mindestsumme.",
+      "speed": "Mehrere Bankarbeitstage, bei internationalen Wegen bis zu zehn.",
+      "fees": "Sowohl die eigene Bank als auch die Zwischenbank können Gebühren einbehalten.",
+      "withdrawal": "Ja, meist als Rückfallebene, wenn andere Wege nicht zur Verfügung stehen.",
+      "suitedFor": "Große Beträge, wenn keine andere Methode das Volumen abdeckt.",
+      "caveat": "Bei einer Mindestauszahlung von mehreren hundert Euro ist dieser Weg für den Alltag ungeeignet."
+    },
+    "apple-pay": {
+      "howItWorks": "Keine eigene Zahlungsmethode, sondern eine Hülle um Ihre hinterlegte Karte. Bestätigt wird per Face ID oder Fingerabdruck, die Kartennummer bekommt das Casino nicht zu sehen.",
+      "limits": "Wie bei der zugrunde liegenden Karte.",
+      "speed": "Einzahlung sofort.",
+      "fees": "Keine zusätzlichen.",
+      "withdrawal": "Nein. Apple Pay ist ein reines Einzahlungsverfahren. Das Geld kommt auf die hinterlegte Karte oder per Überweisung zurück.",
+      "suitedFor": "iPhone-Nutzer, die schnell einzahlen und keine Kartennummer eintippen wollen.",
+      "caveat": "Weil Apple Pay auf einer Karte aufsetzt, gelten auch die Regeln der Bank dahinter. Sperrt die Bank Glücksspiel, hilft Apple Pay nicht."
+    },
+    "google-pay": {
+      "howItWorks": "Wie Apple Pay eine Hülle um die hinterlegte Karte, bestätigt über das Android-Gerät.",
+      "limits": "Wie bei der zugrunde liegenden Karte.",
+      "speed": "Einzahlung sofort.",
+      "fees": "Keine zusätzlichen.",
+      "withdrawal": "Nein. Rückzahlungen laufen über die Karte oder per Überweisung.",
+      "suitedFor": "Android-Nutzer mit hinterlegter Karte.",
+      "caveat": "Deutlich seltener akzeptiert als Apple Pay. Steht es in der Liste, ist die Einzahlung gemeint, nicht die Auszahlung."
+    },
+    "revolut": {
+      "howItWorks": "Zahlung über die Revolut-Karte oder direkt aus dem Revolut-Konto.",
+      "limits": "Nach Kontostufe unterschiedlich.",
+      "speed": "Einzahlung sofort, Auszahlung meist innerhalb eines Tages.",
+      "fees": "Für Euro-Zahlungen keine, bei Fremdwährung am Wochenende ein Aufschlag.",
+      "withdrawal": "Ja, wenn der Anbieter Revolut ausdrücklich für Auszahlungen freigeschaltet hat.",
+      "suitedFor": "Wer Revolut als Hauptkonto nutzt.",
+      "caveat": "Revolut hat eine eigene Sperrfunktion für Glücksspielzahlungen. Ist sie aktiv, wird die Zahlung abgelehnt. Deaktivieren lässt sie sich mit einer Wartezeit."
+    },
+    "neosurf": {
+      "howItWorks": "Prepaid-Gutschein mit zehnstelligem Code, ähnlich paysafecard, im Handel erhältlich.",
+      "limits": "Gutscheine bis 250 €.",
+      "speed": "Einzahlung sofort.",
+      "fees": "Beim Kauf keine, bei längerer Nichtnutzung Gebühren auf das Restguthaben.",
+      "withdrawal": "Nein.",
+      "suitedFor": "Wer anonym und mit hartem Limit einzahlen möchte.",
+      "caveat": "In Deutschland deutlich schwerer zu bekommen als paysafecard."
+    },
+    "bitcoin": {
+      "howItWorks": "Direkte Überweisung an eine Wallet-Adresse des Anbieters. Es gibt keine Bank dazwischen und niemanden, der eine Zahlung rückgängig machen kann.",
+      "limits": "Vom Anbieter gesetzt, technisch praktisch unbegrenzt.",
+      "speed": "Einzahlung nach 1 bis 3 Netzwerkbestätigungen, je nach Auslastung 10 bis 60 Minuten. Auszahlung nach Freigabe meist innerhalb weniger Stunden.",
+      "fees": "Das Casino verlangt selten etwas, das Bitcoin-Netzwerk immer. Bei kleinen Beträgen kann die Netzwerkgebühr spürbar ins Gewicht fallen.",
+      "withdrawal": "Ja, und dort liegt der eigentliche Vorteil: keine Bankarbeitstage, keine Wochenendpause.",
+      "suitedFor": "Wer Bitcoin ohnehin hält und mit Kursschwankungen umgehen kann.",
+      "caveat": "Zwei Dinge zusammen: Der Kurs kann sich zwischen Einzahlung und Auszahlung deutlich bewegen, und Anbieter mit deutscher Lizenz akzeptieren keine Kryptowährungen. Wer hier zahlt, spielt ohne deutsche Erlaubnis."
+    },
+    "ethereum": {
+      "howItWorks": "Überweisung an eine Wallet-Adresse im Ethereum-Netzwerk.",
+      "limits": "Vom Anbieter gesetzt.",
+      "speed": "Bestätigung meist in wenigen Minuten, also schneller als bei Bitcoin.",
+      "fees": "Die Netzwerkgebühr schwankt stark mit der Auslastung und kann bei kleinen Beträgen unverhältnismäßig hoch werden.",
+      "withdrawal": "Ja.",
+      "suitedFor": "Wer schneller als mit Bitcoin abwickeln will und die schwankende Netzwerkgebühr in Kauf nimmt.",
+      "caveat": "Prüfen Sie vor dem Senden das Netzwerk. Ein Transfer über eine falsche Kette ist in der Regel verloren."
+    },
+    "litecoin": {
+      "howItWorks": "Überweisung im Litecoin-Netzwerk, technisch nah an Bitcoin, aber mit kürzeren Blockzeiten.",
+      "limits": "Vom Anbieter gesetzt.",
+      "speed": "Bestätigung typischerweise in wenigen Minuten.",
+      "fees": "Deutlich niedrigere Netzwerkgebühren als bei Bitcoin. Das ist der praktische Grund, Litecoin zu wählen.",
+      "withdrawal": "Ja.",
+      "suitedFor": "Kleinere Beträge, bei denen die Bitcoin-Netzwerkgebühr nicht mehr im Verhältnis steht.",
+      "caveat": "Kursschwankungen gelten hier genauso wie bei Bitcoin."
+    },
+    "usdt": {
+      "howItWorks": "An den US-Dollar gebundener Stablecoin. Sie überweisen an eine Wallet-Adresse, der Wert bleibt dabei stabil.",
+      "limits": "Vom Anbieter gesetzt.",
+      "speed": "Über das TRON-Netzwerk in Sekunden bis Minuten, über Ethereum langsamer und teurer.",
+      "fees": "Auf TRON sehr niedrig, auf Ethereum abhängig von der Netzauslastung.",
+      "withdrawal": "Ja.",
+      "suitedFor": "Wer die Geschwindigkeit von Kryptozahlungen will, ohne das Kursrisiko zu tragen. Für Nicht-Anleger ist das der einzige Krypto-Vorteil, der übrig bleibt.",
+      "caveat": "Die Netzwerkwahl ist entscheidend: USDT auf TRON und USDT auf Ethereum sind nicht dasselbe. Eine Einzahlung im falschen Netzwerk ist praktisch verloren."
+    },
+    "crypto": {
+      "howItWorks": "Sammelbegriff für alle Kryptozahlungen. Gemeinsam ist ihnen: keine Bank dazwischen, keine Rückbuchung, keine Bankarbeitstage.",
+      "limits": "Vom Anbieter gesetzt, technisch kaum begrenzt.",
+      "speed": "Je nach Währung Sekunden bis rund eine Stunde. Stablecoins auf schnellen Netzwerken liegen am unteren Ende, Bitcoin am oberen.",
+      "fees": "Das Netzwerk berechnet immer etwas, das Casino selten.",
+      "withdrawal": "Ja, und meist schneller als jede klassische Methode. Das ist der Hauptgrund für Kryptozahlungen im Casino.",
+      "suitedFor": "Wer nicht auf Bankarbeitstage warten will und mit Wallets vertraut ist.",
+      "caveat": "Kein Anbieter mit deutscher Lizenz akzeptiert Kryptowährungen. Wer per Krypto zahlt, spielt damit zwangsläufig bei einem Anbieter ohne deutsche Erlaubnis: ohne OASIS-Anbindung, ohne Einzahlungslimit und ohne Behörde, die im Streitfall zuständig ist. Dazu kommt der Kurs: zwischen Einzahlung und Auszahlung liegen oft Tage, und der Gegenwert läuft in beide Richtungen. Ein Gewinn in Coins kann in Euro gerechnet kleiner ausfallen als der Einsatz.",
+      "notFor": "Wenn Sie bei einem Anbieter mit deutscher Lizenz spielen wollen: dort ist Krypto nicht zugelassen. Und wenn Sie den Gegenwert stabil halten wollen: Zwischen Einzahlung und Auszahlung liegt ein Kurs, der in beide Richtungen läuft. Wer das nicht will, nimmt einen Stablecoin oder eine andere Methode."
+    }
+  },
+  "$notForNote": "Поле notFor — обратная сторона suitedFor. Написано руками по каждому методу: это самый частый реальный вопрос («почему у меня не прошло») и одновременно то, чего оператор про собственную кассу не напишет. Лист 05 требует, чтобы соседние страницы платёжных методов расходились содержательно, а не формулировками."
+}

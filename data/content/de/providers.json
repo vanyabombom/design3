@@ -1,0 +1,67 @@
+{
+  "$note": "Лист 05: соседние страницы должны расходиться содержательно, а не формулировками. Для листингов по студиям это и есть точка расхождения — сама студия. Лист 04 просит блок, которого нет у оператора: здесь это разбор того, как один и тот же слот ведёт себя под немецкой лицензией и без неё.",
+
+  "$rtpNote": "RTP указан диапазоном намеренно. Крупные студии выпускают один тайтл в нескольких конфигурациях отдачи, и какую поставит оператор — его выбор. Писать одно число значило бы обещать читателю то, что мы не проверяли у каждого оператора отдельно.",
+
+  "providers": {
+    "merkur": {
+      "whoTheyAre": "Merkur gehört zur Gauselmann-Gruppe aus Espelkamp in Nordrhein-Westfalen. Die Marke kommt aus der Spielhalle: Die Sonne mit dem Gesicht steht seit den siebziger Jahren an deutschen Geldspielgeräten. Online tritt der Konzern über Merkur Gaming und die Tochter Edict auf.",
+      "knownFor": "Eye of Horus ist der meistgespielte Automat in deutschen Online-Spielotheken überhaupt. Dazu kommen Blazing Star, Extra Wild, Magic Mirror und Double Triple Chance. Das sind alles Titel, die viele Spieler zuerst am Gerät in der Spielhalle kennengelernt haben.",
+      "germanStatus": "Merkur ist einer der wenigen Hersteller, deren Spiele fast ausschließlich bei Anbietern mit deutscher Erlaubnis laufen. Das hat einen einfachen Grund: Der Konzern hat sein Geschäft im regulierten deutschen Markt und riskiert es nicht für Betreiber ohne Lizenz.",
+      "typicalRtp": "94 bis 96 Prozent. Eye of Horus liegt bei 96,3 Prozent, Blazing Star bei 95,0 Prozent.",
+      "germanRules": "Unter deutscher Erlaubnis gilt für jeden dieser Automaten: höchstens 1 € Einsatz pro Drehung, mindestens 5 Sekunden zwischen zwei Drehungen, kein Autostart und keine Jackpots. Derselbe Titel bei einem Anbieter ohne Lizenz läuft schneller und lässt höhere Einsätze zu. Technisch ist es dasselbe Spiel, nur mit anderen Grenzen.",
+      "whatToWatch": "Die Spielhallen-Optik täuscht über die Mathematik hinweg. Am Geldspielgerät ist der Verlust pro Stunde gesetzlich gedeckelt, online gibt es diese Deckelung nicht, sondern nur das Einsatzlimit pro Drehung. Wer aus der Spielothek kommt und die gewohnten Titel wiedererkennt, rechnet oft mit den gewohnten Grenzen. Die gelten hier nicht.",
+      "notFor": "Wer Freispielrunden mit hohen Multiplikatoren und moderne Mechaniken wie Megaways sucht, findet sie bei Merkur kaum. Das Portfolio ist bewusst nah am klassischen Automaten gehalten.",
+      "questions": {
+        "whereToPlay": "Bei welchen Anbietern gibt es Merkur-Spiele?",
+        "whyNotOffshore": "Warum finde ich Merkur selten bei Casinos ohne deutsche Lizenz?",
+        "sameAsSpielothek": "Sind die Online-Automaten dieselben wie in der Spielothek?"
+      }
+    },
+
+    "novoline": {
+      "whoTheyAre": "Novoline ist die Automatenmarke des österreichischen Novomatic-Konzerns. Online werden die Titel von der Tochter Greentube betrieben. Deshalb steht im Spielefilter mancher Anbieter Greentube, wo der Spieler Novoline erwartet.",
+      "knownFor": "Book of Ra ist der Ursprung des gesamten Book-of-Genres, das heute jede zweite Studie kopiert. Dazu Sizzling Hot, Lucky Lady's Charm, Dolphin's Pearl und Faust, Klassiker mit einfacher Mechanik und ohne Bonuskaufoption.",
+      "germanStatus": "Novomatic hat den deutschen Markt nach dem Glücksspielstaatsvertrag 2021 gezielt wieder besetzt. Die Titel laufen fast nur bei Anbietern mit GGL-Erlaubnis; Kopien mit ähnlichen Namen bei Anbietern ohne Lizenz stammen meist von anderen Studios.",
+      "typicalRtp": "94 bis 96 Prozent. Book of Ra Deluxe liegt bei 95,1 Prozent, Sizzling Hot Deluxe bei 95,7 Prozent.",
+      "germanRules": "Auch hier gelten 1 € Höchsteinsatz, 5 Sekunden Mindestdauer pro Drehung und kein Autostart. Bei Book of Ra fällt das besonders auf: Die Freispielrunde mit dem expandierenden Symbol läuft automatisch ab und ist von der 5-Sekunden-Regel nicht betroffen. Die Wartezeit betrifft nur die reguläre Drehung.",
+      "whatToWatch": "Zwei Fallen. Erstens: Bei Anbietern ohne deutsche Lizenz tauchen Spiele mit fast identischem Namen und identischer Optik auf, die nicht von Greentube stammen und eine andere Auszahlungsquote haben. Zweitens: Novoline-Titel gelten als hochvolatil. Lange Serien ohne Gewinn gehören zur Mathematik dieser Spiele und sind kein Zeichen für eine „kalte Phase“.",
+      "notFor": "Wer moderne Bonusmechaniken, Freispielkauf oder Gewinnwege im vierstelligen Bereich sucht. Novoline setzt auf wenige Linien und schlichte Freispielrunden.",
+      "questions": {
+        "greentubeSame": "Ist Greentube dasselbe wie Novoline?",
+        "bookOfRa": "Wo kann ich Book of Ra legal spielen?",
+        "fakes": "Woran erkenne ich gefälschte Novoline-Spiele?"
+      }
+    },
+
+    "pragmatic-play": {
+      "whoTheyAre": "Pragmatic Play sitzt auf Malta und ist der produktivste Automatenhersteller der Branche, mit mehreren neuen Titeln pro Monat. Neben Slots liefert das Studio auch Live-Tische und Spielshows, die in Deutschland allerdings nicht erlaubnisfähig sind.",
+      "knownFor": "Gates of Olympus, Sweet Bonanza und Big Bass Bonanza. Alle drei arbeiten mit Cluster- oder Scatter-Mechanik statt klassischer Gewinnlinien und mit Multiplikatoren, die in der Freispielrunde aufaddiert werden.",
+      "germanStatus": "Pragmatic Play läuft sowohl bei deutschen Lizenznehmern als auch bei Anbietern ohne Erlaubnis. Das macht die Studie zum besten Vergleichsfall überhaupt: Denselben Titel gibt es hier wie dort, nur unter anderen Regeln.",
+      "typicalRtp": "Und genau hier lohnt der zweite Blick. Pragmatic liefert viele Titel in mehreren Konfigurationen aus. Gates of Olympus etwa gibt es mit 96,5 Prozent, 95,5 Prozent oder 94,5 Prozent. Welche Version läuft, entscheidet der Betreiber, nicht der Hersteller.",
+      "germanRules": "Bei deutschen Lizenznehmern fällt die Bonuskauf-Funktion weg: Freispiele für Geld zu kaufen ist unter dem Glücksspielstaatsvertrag nicht erlaubt. Dazu 1 € Höchsteinsatz und 5 Sekunden pro Drehung. Bei Sweet Bonanza und Gates of Olympus ändert das den Charakter des Spiels erheblich, weil beide auf schnelle Serien ausgelegt sind.",
+      "whatToWatch": "Prüfen Sie die Auszahlungsquote im Spiel selbst, nicht in einer Übersicht. Bei Pragmatic-Titeln steht sie in den Spielinformationen unter dem Fragezeichen. Weil derselbe Titel je nach Anbieter mit unterschiedlicher Quote läuft, ist das der einzige verlässliche Ort.",
+      "notFor": "Wer ruhige Automaten mit geringer Schwankung sucht. Die bekannten Pragmatic-Titel sind hochvolatil: lange Durststrecken, seltene große Runden.",
+      "questions": {
+        "rtpVaries": "Warum hat derselbe Pragmatic-Slot unterschiedliche Auszahlungsquoten?",
+        "bonusBuy": "Warum fehlt der Bonuskauf bei deutschen Anbietern?",
+        "whereToCheck": "Wo sehe ich die tatsächliche Quote meines Spiels?"
+      }
+    },
+
+    "playn-go": {
+      "whoTheyAre": "Play'n GO ist ein schwedisches Studio aus Växjö und liefert seit 2005 Automaten. Anders als die großen Konzerne arbeitet das Haus ohne Live-Sparte und ohne Tischspiele, ausschließlich Slots.",
+      "knownFor": "Book of Dead ist der bekannteste Titel und in fast jeder deutschen Online-Spielothek zu finden. Dazu Reactoonz, Fire Joker, Rise of Olympus und Legacy of Dead.",
+      "germanStatus": "Play'n GO gehört zu den Studios, die den deutschen Markt früh bedient haben. Die Titel laufen bei praktisch allen GGL-Lizenznehmern und ebenso bei Anbietern ohne Erlaubnis.",
+      "typicalRtp": "96 bis 96,5 Prozent bei den Standardversionen. Book of Dead liegt bei 96,21 Prozent, Reactoonz bei 96,51 Prozent. Auch Play'n GO liefert einzelne Titel in reduzierten Varianten aus.",
+      "germanRules": "1 € pro Drehung, 5 Sekunden Mindestabstand, kein Autostart. Bei Book of Dead betrifft das vor allem die Freispiele: Die Runde selbst läuft durch, aber der Weg dorthin dauert unter deutschen Regeln deutlich länger als bei Anbietern ohne Lizenz.",
+      "whatToWatch": "Book of Dead wird sehr häufig als Spiel für Freispiel-Angebote gesetzt. Das ist kein Zufall: Der Titel ist hochvolatil, und aus 50 Freispielen zu 0,10 € wird statistisch selten der Betrag, den die Werbung nahelegt. Rechnen Sie Freispielpakete immer über den Einsatzwert, nicht über die Anzahl.",
+      "notFor": "Wer Spielshows, Live-Tische oder Titel mit sehr vielen Gewinnwegen sucht. Das Portfolio ist schmal und auf klassische Slot-Mechanik konzentriert.",
+      "questions": {
+        "bookOfDead": "Warum ist Book of Dead bei Freispielen so verbreitet?",
+        "whereToPlay": "Welche deutschen Anbieter führen Play'n GO?",
+        "volatility": "Sind Play'n GO-Slots für kleine Einsätze geeignet?"
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+# Демонстрационная выкладка. Снимается через site.deploy.demo = false.
+User-agent: *
+Disallow: /

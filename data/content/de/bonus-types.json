@@ -1,0 +1,91 @@
+{
+  "$note": "Факты по типам бонусов. Та же логика, что и в payment-methods.json: welcome-bonus и free-spins собираются почти из одного набора брендов, и различать их должно содержание, а не перестановка слов (лист 05).",
+  "types": {
+    "welcome-bonus": {
+      "howItWorks": "Der Willkommensbonus verdoppelt oder vervielfacht Ihre erste Einzahlung. Das Geld landet auf einem getrennten Bonuskonto und wird erst nach erfülltem Umsatz zu auszahlbarem Guthaben.",
+      "theCatch": "Entscheidend ist nicht die Prozentzahl, sondern worauf sich der Umsatz bezieht. „35x auf den Bonus“ und „35x auf Bonus und Einzahlung“ stehen beide klein gedruckt da und unterscheiden sich im nötigen Umsatz um das Doppelte.",
+      "germanLimit": "Bei Anbietern mit deutscher Lizenz liegt der Bonus praktisch immer bei 100 €, in Einzelfällen 200 €. Das ist keine Zurückhaltung des Anbieters: Bei 1 € Höchsteinsatz und 1.000 € Monatslimit wäre ein Bonus über 1.000 € rechnerisch gar nicht freispielbar.",
+      "howToClaim": "In aller Regel automatisch mit der ersten Einzahlung, sofern Sie den Bonus im Einzahlungsdialog nicht abwählen. Bei einigen Anbietern muss ein Code eingegeben werden. Welche das sind, steht in der Tabelle oben.",
+      "commonMistake": "Der häufigste Fehler ist die zu große erste Einzahlung. Der Umsatz wächst mit der Einzahlung mit, nicht nur mit dem Bonus. Wer 500 € einzahlt, um den vollen Bonus mitzunehmen, hat am Ende den fünffachen Umsatz zu erfüllen.",
+      "advice": "Rechnen Sie vor der Einzahlung aus, wie viele Drehungen der Umsatz bedeutet, und teilen Sie das durch die Tage der Frist. Kommt eine Zahl heraus, die Sie nicht spielen wollen, ist der Bonus kein Vorteil, sondern eine Bindung.",
+      "questions": {
+        "how": "Wie funktioniert der Willkommensbonus im Online Casino?",
+        "wagering": "Wie viel Umsatz muss ich für den Willkommensbonus machen?",
+        "best": "Welcher Willkommensbonus lohnt sich rechnerisch am meisten?",
+        "small": "Warum ist der Willkommensbonus bei deutschen Casinos nur 100 €?",
+        "code": "Brauche ich für den Willkommensbonus einen Bonuscode?",
+        "expiry": "Wie lange habe ich Zeit, den Willkommensbonus freizuspielen?",
+        "mistake": "Was ist der häufigste Fehler beim Willkommensbonus?"
+      }
+    },
+    "no-deposit-bonus-codes": {
+      "howItWorks": "Ein Bonus ohne Einzahlung wird nach der Registrierung gutgeschrieben, oft erst nach Verifizierung der Handynummer. Sie riskieren kein eigenes Geld.",
+      "theCatch": "Fast immer ist der auszahlbare Gewinn gedeckelt, typischerweise auf das Zwei- bis Fünffache des Bonusbetrags. Was Sie darüber hinaus gewinnen, verfällt beim Umsatz.",
+      "germanLimit": "Anbieter mit deutscher Lizenz bieten Boni ohne Einzahlung nur selten an. Der Grund ist regulatorisch: Werbung mit kostenlosem Spiel steht unter besonderer Beobachtung.",
+      "howToClaim": "Meist über einen Code bei der Registrierung. Ohne den Code wird der Bonus in der Regel nicht nachträglich gutgeschrieben, auch nicht auf Nachfrage beim Support.",
+      "commonMistake": "Zu glauben, ein Bonus ohne Einzahlung bedeute Geld ohne Bedingungen. Der Umsatzfaktor ist bei dieser Bonusart meist höher als beim Willkommensbonus, nicht niedriger.",
+      "advice": "Behandeln Sie ihn als kostenlose Gelegenheit, den Anbieter kennenzulernen: Wie läuft die Verifizierung, wie schnell antwortet der Support, wie sieht die Kasse aus. Als Einkommensquelle taugt er wegen des Gewinndeckels nicht.",
+      "questions": {
+        "how": "Wie funktioniert ein Bonus ohne Einzahlung?",
+        "wagering": "Wie viel Umsatz verlangt ein Bonus ohne Einzahlung?",
+        "best": "Welcher Bonus ohne Einzahlung lohnt sich wirklich?",
+        "small": "Warum sind Boni ohne Einzahlung so klein?",
+        "code": "Brauche ich für einen Bonus ohne Einzahlung einen Code?",
+        "expiry": "Wie lange ist ein Bonus ohne Einzahlung gültig?",
+        "mistake": "Was ist der häufigste Fehler beim Bonus ohne Einzahlung?"
+      }
+    },
+    "free-spins": {
+      "howItWorks": "Freispiele gelten für einen bestimmten Automaten mit einem festen Einsatzwert pro Drehung, oft 0,10 € oder 0,20 €, unabhängig davon, was der Automat sonst kostet.",
+      "theCatch": "Der springende Punkt ist, was mit dem Gewinn passiert. Bei manchen Anbietern sind Freispielgewinne umsatzfrei und sofort auszahlbar, bei anderen müssen sie erst 30- bis 40-mal umgesetzt werden. Das ist der größte Unterschied zwischen zwei sonst identisch aussehenden Angeboten.",
+      "germanLimit": "Freispiele sind auch unter deutscher Lizenz zulässig und deshalb der Teil des Angebots, bei dem lizenzierte Anbieter mithalten können. Hundert Freispiele sind hier keine Seltenheit.",
+      "howToClaim": "Automatisch mit der Einzahlung, dann meist zeitlich befristet: Häufig verfallen sie 24 Stunden nach Gutschrift. Manche Anbieter verteilen sie in Tagesportionen über eine Woche, was ehrlicher ist als ein Paket, das über Nacht verfällt.",
+      "commonMistake": "Nur auf die Anzahl zu schauen. 300 Freispiele zu 0,10 € sind 30 € Spielwert. 100 Freispiele zu 0,20 € mit umsatzfreiem Gewinn sind praktisch mehr wert.",
+      "advice": "Prüfen Sie drei Dinge: Einsatzwert pro Drehung, Umsatzbedingung auf den Gewinn und Gültigkeitsdauer. Alle drei stehen in den Bonusbedingungen, keines davon in der Werbung.",
+      "questions": {
+        "how": "Wie funktionieren Freispiele im Online Casino?",
+        "wagering": "Wie viel Umsatz muss ich für Freispiele machen?",
+        "best": "Welche Freispiele lohnen sich rechnerisch am meisten?",
+        "small": "Warum gibt es bei deutschen Casinos so wenige Freispiele?",
+        "code": "Brauche ich für Freispiele einen Bonuscode?",
+        "expiry": "Wie lange sind Freispiele gültig?",
+        "mistake": "Was ist der häufigste Fehler bei Freispielen?"
+      }
+    },
+    "cashback-bonus": {
+      "howItWorks": "Ein Anteil Ihrer Verluste eines Zeitraums wird zurückerstattet, meist wöchentlich oder monatlich.",
+      "theCatch": "Ob die Erstattung als echtes Guthaben oder als erneuter Bonus mit Umsatzbedingung kommt. Nur die erste Variante ist tatsächlich Geld.",
+      "germanLimit": "Unter deutscher Lizenz zulässig, aber selten großzügig.",
+      "howToClaim": "In der Regel automatisch. Bei einigen Anbietern hängt die Höhe an einer Treuestufe.",
+      "commonMistake": "Cashback als Gewinn zu betrachten. Es ist eine Verlustminderung, und die setzt voraus, dass Sie verloren haben.",
+      "advice": "Die ehrlichste Variante ist wöchentliches Cashback ohne Umsatzbedingung und ohne Treuestufe. Alles andere ist eher ein Bindungsinstrument als eine Erstattung.",
+      "questions": {
+        "how": "Wie funktioniert Cashback im Online Casino?",
+        "wagering": "Muss ich Cashback umsetzen?",
+        "best": "Welches Cashback-Angebot lohnt sich am meisten?",
+        "small": "Warum fällt Cashback bei deutschen Anbietern niedriger aus?",
+        "code": "Brauche ich für Cashback einen Code?",
+        "expiry": "Wie lange habe ich Zeit, Cashback zu nutzen?",
+        "mistake": "Was ist der häufigste Fehler beim Cashback?"
+      }
+    },
+    "bonus-code": {
+      "howItWorks": "Ein Code, der im Einzahlungs- oder Registrierungsdialog eingegeben wird und ein bestimmtes Angebot freischaltet.",
+      "theCatch": "Ohne den Code wird das Angebot in der Regel nicht nachträglich gutgeschrieben, auch nicht über den Support.",
+      "germanLimit": "Codes sind unter deutscher Lizenz zulässig und üblich.",
+      "howToClaim": "Vor der Einzahlung eingeben, nicht danach.",
+      "commonMistake": "Veraltete Codes von Drittseiten zu verwenden. Ein abgelaufener Code kann die Einzahlung ohne Bonus durchlaufen lassen.",
+      "advice": "Nehmen Sie den Code von der Aktionsseite des Anbieters selbst und achten Sie auf das Prüfdatum daneben. In der Tabelle oben steht bei jedem Anbieter, wann wir seinen Code zuletzt geprüft haben.",
+      "questions": {
+        "how": "Wie löse ich einen Bonuscode im Casino ein?",
+        "wagering": "Wie viel Umsatz verlangt ein Bonus mit Code?",
+        "best": "Welcher Bonuscode lohnt sich rechnerisch am meisten?",
+        "small": "Warum sind Bonuscodes bei deutschen Anbietern selten geworden?",
+        "code": "Wo finde ich den passenden Bonuscode?",
+        "expiry": "Wie lange ist ein Bonuscode gültig?",
+        "mistake": "Was ist der häufigste Fehler beim Einlösen eines Bonuscodes?"
+      }
+    }
+  },
+  "$questionsNote": "Вопросы FAQ написаны руками по одному набору на тип бонуса. Собрать их шаблоном нельзя: «der Willkommensbonus», но «die Freispiele» — подстановка термина в общий шаблон выдаёт машинный текст с первой строки. Ответы при этом по-прежнему считаются из данных листинга."
+}

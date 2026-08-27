@@ -1,0 +1,57 @@
+{
+  "$note": "Лист 04: «Именованный автор с профилем на каждой странице + дата публикации и обновления». Лист 09 проверяет автора отдельной строкой, и «admin», «player», «pin-admin» это провал приёмки.",
+  "$pending": "ЖДЁМ РЕАЛЬНЫХ ЛЮДЕЙ. Записи ниже помечены placeholder: true — сборка выводит по ним отдельное предупреждение и не даст забыть. Нужны настоящие имя, роль, опыт и, желательно, фото: выдуманный эксперт на сайте про деньги — это то, что проверяется в первую очередь.",
+  "$ownsNote": "owns — за какие разделы и служебные страницы отвечает человек. По этому полю подписывается страница: раньше resolveAuthor брал первого из списка, и все шестьдесят страниц подписывал один и тот же человек. Значения: id таксономии, ключ служебной страницы или тип страницы.",
+  "format": "team",
+  "$formatNote": "Лист 02: «Формат чередовать между сайтами: эксперт / команда / редакция». Ещё один параметр, который различает сайты сети.",
+  "authors": [
+    {
+      "slug": "editor-in-chief",
+      "owns": ["casino-general", "casino-license", "home", "compare", "how-we-test", "authors", "editorial-policy", "imprint", "privacy", "404"],
+      "placeholder": true,
+      "name": "Timothy Fong",
+      "role": "Editor in Chief",
+      "since": 2019,
+      "expertise": [
+        "payout testing",
+        "licensing",
+        "bonus terms"
+      ],
+      "bio": "",
+      "photo": null,
+      "links": {}
+    },
+    {
+      "slug": "payments-editor",
+      "owns": ["casino-payment", "casino-betting", "responsible-gambling", "brand-index"],
+      "placeholder": true,
+      "name": "Frank Schuil",
+      "role": "Payments Editor",
+      "since": 2021,
+      "expertise": [
+        "withdrawal speed",
+        "payment methods",
+        "KYC"
+      ],
+      "bio": "",
+      "photo": null,
+      "links": {}
+    },
+    {
+      "slug": "bonus-analyst",
+      "owns": ["casino-bonus", "casino-provider", "casino-live"],
+      "placeholder": true,
+      "name": "Richard Tunney",
+      "role": "Bonus Analyst",
+      "since": 2022,
+      "expertise": [
+        "wagering maths",
+        "bonus value",
+        "terms and conditions"
+      ],
+      "bio": "",
+      "photo": null,
+      "links": {}
+    }
+  ]
+}

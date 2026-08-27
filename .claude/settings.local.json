@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(node build.js > \"$env:TEMP\\\\b.txt\" 2>&1; Get-Content \"$env:TEMP\\\\b.txt\" -Encoding UTF8 | Select-Object -First 30)",
+      "Bash(node build.js --stage=content --lint-only)"
+    ]
+  }
+}

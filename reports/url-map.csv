@@ -1,0 +1,300 @@
+﻿url;тип;уровень;родитель;приоритет;брендов в листинге;примечание
+/casino/;home;1;—;1;;
+/casino/casino-payment/paypal-casino/;listing;3;/casino/zahlungen/;1;10;
+/casino/casino-payment/visa-casino/;listing;3;/casino/zahlungen/;1;18;
+/casino/casino-payment/paysafecard-casino/;listing;3;/casino/zahlungen/;1;14;
+/casino/casino-payment/sepa-casino/;listing;3;/casino/zahlungen/;2;10;
+/casino/casino-payment/crypto-casino/;listing;3;/casino/zahlungen/;2;8;
+/casino/casino-bonus/welcome-bonus/;listing;3;/casino/bonusse/;1;18;
+/casino/casino-bonus/free-spins/;listing;3;/casino/bonusse/;1;15;
+/casino/casino-general/best-online-casinos/;listing;3;/casino/aktuell/;1;15;отсечено по limit: 3
+/casino/casino-general/legal-online-casino/;listing;3;/casino/aktuell/;1;10;
+/casino/casino-general/casino-apps/;listing;3;/casino/aktuell/;1;5;
+/casino/casino-license/casinos-ohne-lizenz/;listing;3;/casino/lizenzen/;1;8;
+/casino/casino-license/casinos-ohne-limit/;listing;3;/casino/lizenzen/;1;8;
+/casino/casino-license/casinos-ohne-lugas/;listing;3;/casino/lizenzen/;2;8;
+/casino/casino-license/casinos-ohne-oasis/;listing;3;/casino/lizenzen/;2;8;
+/casino/casino-provider/pragmatic-play/;listing;3;/casino/anbieter/;1;11;
+/casino/casino-provider/playn-go/;listing;3;/casino/anbieter/;2;6;
+/casino/casino-provider/merkur/;listing;3;/casino/anbieter/;1;7;
+/casino/casino-provider/novoline/;listing;3;/casino/anbieter/;1;9;
+/casino/casino-live/live-roulette/;listing;3;/casino/live-spiele/;1;8;
+/casino/casino-live/live-blackjack/;listing;3;/casino/live-spiele/;1;8;
+/casino/casino-live/live-baccarat/;listing;3;/casino/live-spiele/;2;5;
+/casino/casino-live/crazy-time/;listing;3;/casino/live-spiele/;1;6;
+/casino/casino-betting/sports-betting/;listing;3;/casino/quoten/;1;8;
+/casino/casino-betting/football-betting/;listing;3;/casino/quoten/;1;8;
+/casino/casino-betting/tennis-betting/;listing;3;/casino/quoten/;2;7;
+/casino/casino-betting/in-play-betting/;listing;3;/casino/quoten/;2;8;
+/casino/zahlungen/;hub;2;/casino/;1;;
+/casino/bonusse/;hub;2;/casino/;1;;
+/casino/aktuell/;hub;2;/casino/;1;;
+/casino/lizenzen/;hub;2;/casino/;1;;
+/casino/anbieter/;hub;2;/casino/;2;;
+/casino/live-spiele/;hub;2;/casino/;2;;
+/casino/quoten/;hub;2;/casino/;2;;
+/casino/casino/;brand-index;2;/casino/;2;;
+/casino/casino/slotuna/;brand;3;/casino/casino/;1;;
+/casino/go/slotuna/;go;3;—;5;;noindex
+/casino/casino/sportuna/;brand;3;/casino/casino/;1;;
+/casino/go/sportuna/;go;3;—;5;;noindex
+/casino/casino/lanista/;brand;3;/casino/casino/;1;;
+/casino/go/lanista/;go;3;—;5;;noindex
+/casino/casino/jet4bet/;brand;3;/casino/casino/;1;;
+/casino/go/jet4bet/;go;3;—;5;;noindex
+/casino/casino/goldexcasino/;brand;3;/casino/casino/;1;;
+/casino/go/goldexcasino/;go;3;—;5;;noindex
+/casino/casino/vicibet/;brand;3;/casino/casino/;1;;
+/casino/go/vicibet/;go;3;—;5;;noindex
+/casino/casino/slotsgem/;brand;3;/casino/casino/;1;;
+/casino/go/slotsgem/;go;3;—;5;;noindex
+/casino/casino/spinline/;brand;3;/casino/casino/;1;;
+/casino/go/spinline/;go;3;—;5;;noindex
+/casino/casino/leovegas/;brand;3;/casino/casino/;1;;
+/casino/go/leovegas/;go;3;—;5;;noindex
+/casino/casino/betano/;brand;3;/casino/casino/;1;;
+/casino/go/betano/;go;3;—;5;;noindex
+/casino/casino/tipico/;brand;3;/casino/casino/;1;;
+/casino/go/tipico/;go;3;—;5;;noindex
+/casino/casino/bwin/;brand;3;/casino/casino/;1;;
+/casino/go/bwin/;go;3;—;5;;noindex
+/casino/casino/mr-green/;brand;3;/casino/casino/;1;;
+/casino/go/mr-green/;go;3;—;5;;noindex
+/casino/casino/wunderino/;brand;3;/casino/casino/;1;;
+/casino/go/wunderino/;go;3;—;5;;noindex
+/casino/casino/jackpotpiraten/;brand;3;/casino/casino/;1;;
+/casino/go/jackpotpiraten/;go;3;—;5;;noindex
+/casino/casino/lapalingo/;brand;3;/casino/casino/;1;;
+/casino/go/lapalingo/;go;3;—;5;;noindex
+/casino/casino/drueckglueck/;brand;3;/casino/casino/;1;;
+/casino/go/drueckglueck/;go;3;—;5;;noindex
+/casino/casino/merkur-bets/;brand;3;/casino/casino/;1;;
+/casino/go/merkur-bets/;go;3;—;5;;noindex
+/casino/vergleich/;compare;2;/casino/;1;;
+/casino/so-testen-wir/;static;2;/casino/;1;;
+/casino/redaktion/;static;2;/casino/;1;;
+/casino/redaktionelle-richtlinien/;static;2;/casino/;1;;
+/casino/verantwortungsvolles-spielen/;static;2;/casino/;1;;
+/casino/impressum/;static;2;/casino/;1;;
+/casino/datenschutz/;static;2;/casino/;1;;
+/casino/404.html;static;2;/casino/;3;;noindex
+/casino/paypal/;301;2;/casino/casino-payment/paypal-casino/;;;короткий URL эталона (лист 07)
+/casino/visa/;301;2;/casino/casino-payment/visa-casino/;;;короткий URL эталона (лист 07)
+/casino/casino-payment/mastercard-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/mastercard/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/maestro-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/trustly-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/trustly/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/paysafecard/;301;2;/casino/casino-payment/paysafecard-casino/;;;короткий URL эталона (лист 07)
+/casino/casino-payment/skrill-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/skrill/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/neteller-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/neteller/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/muchbetter-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/muchbetter/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/revolut-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/revolut/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/apple-pay-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/apple-pay/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/google-pay-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/google-pay/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/klarna-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/klarna/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/sofort-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/sofort/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/sepa/;301;2;/casino/casino-payment/sepa-casino/;;;короткий URL эталона (лист 07)
+/casino/casino-payment/wire-transfer-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/boku-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/boku/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/siru-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/neosurf-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/neosurf/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/flexepin-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/mifinity-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/ecopayz-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/zimpler-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/crypto/;301;2;/casino/casino-payment/crypto-casino/;;;короткий URL эталона (лист 07)
+/casino/casino-payment/bitcoin-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/bitcoin/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/ethereum-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/ethereum/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/usdt-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/usdt/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/usdt-trc20-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/usdc-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/litecoin-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/litecoin/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/dogecoin-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/dogecoin/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/xrp-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/xrp/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/cardano-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/cardano/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/solana-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/solana/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/casino-payment/polygon-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/shiba-inu-casino/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/casino-payment/fast-payouts/;301;3;/casino/zahlungen/;;;вне текущей волны публикации
+/casino/fast-payouts/;301;2;/casino/zahlungen/;;;короткий URL тонкого листинга
+/casino/welcome-bonus/;301;2;/casino/casino-bonus/welcome-bonus/;;;короткий URL эталона (лист 07)
+/casino/casino-bonus/no-deposit-bonus-codes/;301;3;/casino/bonusse/;;;тонкий листинг: 0 брендов из 5
+/casino/no-deposit-bonus-codes/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/free-spins/;301;2;/casino/casino-bonus/free-spins/;;;короткий URL эталона (лист 07)
+/casino/casino-bonus/free-chip/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/free-chip/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/cashback-bonus/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/cashback-bonus/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/vip-program/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/vip-program/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/bonus-code/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/bonus-code/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/new-codes/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/new-codes/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/bonus-code-for-existing-players/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/bonus-code-for-existing-players/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/bonus-funds/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/bonus-funds/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/bonus-offer/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/bonus-offers/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/10-euro-bonus-ohne-einzahlung-casino/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/10-euro-bonus-ohne-einzahlung/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/15-euro-bonus-ohne-einzahlung-casino/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/15-euro-bonus-ohne-einzahlung/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/online-casino-200-welcome-bonus/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/200-welcome-bonus/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/online-casino-300-deposit-bonus/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/300-deposit-bonus/;301;2;/casino/bonusse/;;;короткий URL тонкого листинга
+/casino/casino-bonus/1-euro-deposit-casino/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/casino-bonus/5-euro-deposit-casino/;301;3;/casino/bonusse/;;;вне текущей волны публикации
+/casino/best-online-casinos/;301;2;/casino/casino-general/best-online-casinos/;;;короткий URL эталона (лист 07)
+/casino/casino-general/new-online-casinos/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/new-online-casinos/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/legal-online-casino/;301;2;/casino/casino-general/legal-online-casino/;;;короткий URL эталона (лист 07)
+/casino/casino-general/real-money-casino/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/real-money-casino/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/casino-general/mobile-casino/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/mobile-casino/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/casino-apps/;301;2;/casino/casino-general/casino-apps/;;;короткий URL эталона (лист 07)
+/casino/casino-general/live-online-casino/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/live-online-casino/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/casino-general/high-roller-casino/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/high-roller-casino/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/casino-general/payout-online-casinos/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/payout-online-casinos/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/casino-general/fast-withdrawal-casinos/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/casino-general/online-casinos-without-verification/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/casinos-without-verification/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/casino-general/online-casino-vergleich/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/online-casino-vergleich/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/casino-general/testsieger-online-casino/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/testsieger/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/casino-general/seriose-deutsche-online-casinos/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/casino-general/online-casino-kostenlos/;301;3;/casino/aktuell/;;;вне текущей волны публикации
+/casino/online-casino-kostenlos/;301;2;/casino/aktuell/;;;короткий URL тонкого листинга
+/casino/casino-license/ukgc/;301;3;/casino/lizenzen/;;;вне текущей волны публикации
+/casino/ukgc/;301;2;/casino/lizenzen/;;;короткий URL тонкого листинга
+/casino/casino-license/mga/;301;3;/casino/lizenzen/;;;вне текущей волны публикации
+/casino/mga/;301;2;/casino/lizenzen/;;;короткий URL тонкого листинга
+/casino/casino-license/curacao/;301;3;/casino/lizenzen/;;;вне текущей волны публикации
+/casino/curacao/;301;2;/casino/lizenzen/;;;короткий URL тонкого листинга
+/casino/casino-license/gibraltar/;301;3;/casino/lizenzen/;;;вне текущей волны публикации
+/casino/gibraltar/;301;2;/casino/lizenzen/;;;короткий URL тонкого листинга
+/casino/casino-license/isle-of-man/;301;3;/casino/lizenzen/;;;вне текущей волны публикации
+/casino/isle-of-man/;301;2;/casino/lizenzen/;;;короткий URL тонкого листинга
+/casino/casino-license/kahnawake/;301;3;/casino/lizenzen/;;;вне текущей волны публикации
+/casino/kahnawake/;301;2;/casino/lizenzen/;;;короткий URL тонкого листинга
+/casino/casino-license/cagayan/;301;3;/casino/lizenzen/;;;вне текущей волны публикации
+/casino/cagayan/;301;2;/casino/lizenzen/;;;короткий URL тонкого листинга
+/casino/casinos-ohne-lizenz/;301;2;/casino/casino-license/casinos-ohne-lizenz/;;;короткий URL эталона (лист 07)
+/casino/casinos-ohne-limit/;301;2;/casino/casino-license/casinos-ohne-limit/;;;короткий URL эталона (лист 07)
+/casino/casinos-ohne-lugas/;301;2;/casino/casino-license/casinos-ohne-lugas/;;;короткий URL эталона (лист 07)
+/casino/casino-ohne-oasis/;301;2;/casino/casino-license/casinos-ohne-oasis/;;;короткий URL эталона (лист 07)
+/casino/pragmatic-play/;301;2;/casino/casino-provider/pragmatic-play/;;;короткий URL эталона (лист 07)
+/casino/casino-provider/evolution/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/evolution/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/netent/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/netent/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/microgaming/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/microgaming/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/playn-go/;301;2;/casino/casino-provider/playn-go/;;;короткий URL эталона (лист 07)
+/casino/casino-provider/playtech/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/playtech/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/hacksaw-gaming/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/hacksaw-gaming/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/nolimit-city/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/nolimit-city/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/big-time-gaming/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/big-time-gaming/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/red-tiger/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/red-tiger/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/push-gaming/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/push-gaming/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/relax-gaming/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/relax-gaming/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/yggdrasil/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/yggdrasil/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/quickspin/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/casino-provider/thunderkick/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/thunderkick/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/betsoft/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/betsoft/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/elk-studios/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/casino-provider/booming-games/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/booming-games/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/wazdan/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/wazdan/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/amatic/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/amatic/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-provider/igt/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/casino-provider/blueprint-gaming/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/blueprint-gaming/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/merkur/;301;2;/casino/casino-provider/merkur/;;;короткий URL эталона (лист 07)
+/casino/novoline/;301;2;/casino/casino-provider/novoline/;;;короткий URL эталона (лист 07)
+/casino/casino-provider/bally-wulff/;301;3;/casino/anbieter/;;;вне текущей волны публикации
+/casino/bally-wulff/;301;2;/casino/anbieter/;;;короткий URL тонкого листинга
+/casino/casino-live/live-casino-lobby/;301;3;/casino/live-spiele/;;;вне текущей волны публикации
+/casino/roulette/;301;2;/casino/casino-live/live-roulette/;;;короткий URL эталона (лист 07)
+/casino/blackjack/;301;2;/casino/casino-live/live-blackjack/;;;короткий URL эталона (лист 07)
+/casino/bakarat/;301;2;/casino/casino-live/live-baccarat/;;;короткий URL эталона (лист 07)
+/casino/casino-live/live-poker/;301;3;/casino/live-spiele/;;;вне текущей волны публикации
+/casino/poker/;301;2;/casino/live-spiele/;;;короткий URL тонкого листинга
+/casino/casino-live/lightning-roulette/;301;3;/casino/live-spiele/;;;вне текущей волны публикации
+/casino/lightning-roulette/;301;2;/casino/live-spiele/;;;короткий URL тонкого листинга
+/casino/crazy-time/;301;2;/casino/casino-live/crazy-time/;;;короткий URL эталона (лист 07)
+/casino/casino-live/monopoly-live/;301;3;/casino/live-spiele/;;;вне текущей волны публикации
+/casino/monopoly-live/;301;2;/casino/live-spiele/;;;короткий URL тонкого листинга
+/casino/casino-live/dream-catcher/;301;3;/casino/live-spiele/;;;вне текущей волны публикации
+/casino/dream-catcher/;301;2;/casino/live-spiele/;;;короткий URL тонкого листинга
+/casino/casino-live/game-shows/;301;3;/casino/live-spiele/;;;вне текущей волны публикации
+/casino/game-shows/;301;2;/casino/live-spiele/;;;короткий URL тонкого листинга
+/casino/sports-betting/;301;2;/casino/casino-betting/sports-betting/;;;короткий URL эталона (лист 07)
+/casino/football-betting/;301;2;/casino/casino-betting/football-betting/;;;короткий URL эталона (лист 07)
+/casino/casino-betting/basketball-betting/;301;3;/casino/quoten/;;;вне текущей волны публикации
+/casino/basketball-betting/;301;2;/casino/quoten/;;;короткий URL тонкого листинга
+/casino/tennis-betting/;301;2;/casino/casino-betting/tennis-betting/;;;короткий URL эталона (лист 07)
+/casino/casino-betting/horse-racing/;301;3;/casino/quoten/;;;вне текущей волны публикации
+/casino/horse-racing/;301;2;/casino/quoten/;;;короткий URL тонкого листинга
+/casino/casino-betting/esports-betting/;301;3;/casino/quoten/;;;вне текущей волны публикации
+/casino/esports-betting/;301;2;/casino/quoten/;;;короткий URL тонкого листинга
+/casino/casino-betting/virtual-sports/;301;3;/casino/quoten/;;;вне текущей волны публикации
+/casino/virtual-sports/;301;2;/casino/quoten/;;;короткий URL тонкого листинга
+/casino/in-play-betting/;301;2;/casino/casino-betting/in-play-betting/;;;короткий URL эталона (лист 07)
+/casino/casino-betting/accumulator-bets/;301;3;/casino/quoten/;;;вне текущей волны публикации
+/casino/accumulator-bets/;301;2;/casino/quoten/;;;короткий URL тонкого листинга
+/casino/casino-betting/asian-handicap/;301;3;/casino/quoten/;;;вне текущей волны публикации
+/casino/asian-handicap/;301;2;/casino/quoten/;;;короткий URL тонкого листинга
+/casino/casino-betting/cash-out/;301;3;/casino/quoten/;;;вне текущей волны публикации
+/casino/cash-out/;301;2;/casino/quoten/;;;короткий URL тонкого листинга
+/casino/casino-payment/cryptocurrency-casino/;301;3;/casino/casino-payment/crypto-casino/;;;"синоним терма ""crypto-casino"""
+/casino/casino-payment/eth-casino/;301;3;/casino/zahlungen/;;;"синоним терма ""ethereum-casino"", который сам не добрал порога"
+/casino/casino-payment/tether-casino/;301;3;/casino/zahlungen/;;;"синоним терма ""usdt-casino"", который сам не добрал порога"
+/casino/casino-payment/ripple-casino/;301;3;/casino/zahlungen/;;;"синоним терма ""xrp-casino"", который сам не добрал порога"
+/casino/casino-bonus/welcome-offer/;301;3;/casino/casino-bonus/welcome-bonus/;;;"синоним терма ""welcome-bonus"""
+/casino/casino-bonus/sign-up-bonus/;301;3;/casino/casino-bonus/welcome-bonus/;;;"синоним терма ""welcome-bonus"""
+/casino/casino-bonus/promo-code/;301;3;/casino/bonusse/;;;"синоним терма ""bonus-code"", который сам не добрал порога"
+/casino/casino-bonus/coupon/;301;3;/casino/bonusse/;;;"синоним терма ""bonus-code"", который сам не добрал порога"
+/casino/casino-bonus/promotion/;301;3;/casino/bonusse/;;;"синоним терма ""bonus-offer"", который сам не добрал порога"
+/casino/casino-bonus/online-casino-bonus-fur-anmeldung/;301;3;/casino/casino-bonus/welcome-bonus/;;;"синоним терма ""welcome-bonus"""
+/casino/casino-general/liste-der-besten-online-casinos/;301;3;/casino/casino-general/best-online-casinos/;;;"синоним терма ""best-online-casinos"""
+/casino/casino-license/casinos-ohne-deutsche-lizenz/;301;3;/casino/casino-license/casinos-ohne-lizenz/;;;"синоним терма ""casinos-ohne-lizenz"""
+/casino/casino-live/live-dealer-casino/;301;3;/casino/live-spiele/;;;"синоним терма ""live-casino-lobby"", который сам не добрал порога"

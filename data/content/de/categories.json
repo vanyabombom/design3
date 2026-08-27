@@ -1,0 +1,65 @@
+{
+  "$note": "Факты по общим категориям (таксономия casino-general). Эти термы — головные запросы ниши, и они особенно склонны сливаться: best-online-casinos и real-money-casino соберутся из одного набора брендов. Различие даётся здесь.",
+  "categories": {
+    "best-online-casinos": {
+      "whatItMeans": "Die Frage hinter dieser Suche ist selten „welches ist objektiv das beste“, sondern „wo fange ich an, ohne einen Fehler zu machen“. Deshalb steht hier nicht ein Anbieter oben, sondern eine nach nachvollziehbaren Kriterien sortierte Liste.",
+      "howWeSelected": "Aufgenommen sind alle Anbieter, die wir geprüft haben und die aktiv Spieler annehmen. Die Reihenfolge ergibt sich aus der gewichteten Note, nicht aus der Bonushöhe und nicht aus der Provision.",
+      "whatToWatch": "Die ersten Plätze belegen durchweg Anbieter mit deutscher Lizenz. Das liegt am Kriterium „Lizenz und Sicherheit“ mit 20 % Gewicht und an den durchweg milderen Umsatzbedingungen, nicht an einer redaktionellen Vorliebe.",
+      "whoShouldLookElsewhere": "Wer Live-Roulette oder Blackjack sucht, findet das in dieser Liste nur bei den hinteren Plätzen. Unter deutscher Lizenz gibt es diese Spiele online nicht.",
+      "questions": {
+        "top": "Welches Online Casino ist das beste?",
+        "criteria": "Wie ist die Rangliste der besten Online Casinos entstanden?",
+        "watch": "Worauf sollte ich bei der Wahl eines Online Casinos achten?",
+        "mistake": "Was machen die meisten bei der Wahl eines Casinos falsch?"
+      }
+    },
+    "legal-online-casino": {
+      "whatItMeans": "Legal heißt in Deutschland: auf der Whitelist der Gemeinsamen Glücksspielbehörde der Länder geführt. Alles, was nicht darauf steht, ist unerlaubtes Glücksspiel, unabhängig davon, welche Lizenz im Fuß der Seite abgebildet ist.",
+      "howWeSelected": "In dieser Liste steht ausschließlich, wer eine deutsche Erlaubnis führt. Anbieter mit Lizenzen aus Curaçao, Anjouan oder Tobique sind hier bewusst nicht enthalten, auch wenn sie deutschsprachige Seiten betreiben.",
+      "whatToWatch": "Eine deutsche Erlaubnis deckt nur virtuelle Automatenspiele, Online-Poker und Sportwetten ab. Wirbt ein Anbieter mit deutscher Lizenz zugleich mit Live-Roulette, stimmt etwas nicht.",
+      "whoShouldLookElsewhere": "Wer die Limits von 1 € pro Drehung und 1.000 € im Monat nicht akzeptieren will, wird hier nicht fündig. Diese Grenzen gelten für jeden Anbieter auf der Whitelist gleichermaßen.",
+      "questions": {
+        "top": "Welche Online Casinos sind in Deutschland legal?",
+        "criteria": "Woran erkenne ich ein legales Online Casino?",
+        "watch": "Worauf sollte ich bei einem legalen Online Casino achten?",
+        "mistake": "Welcher Irrtum über legale Online Casinos hält sich am hartnäckigsten?"
+      }
+    },
+    "casino-apps": {
+      "whatItMeans": "Gemeint ist eine echte installierbare App, nicht die mobile Webseite. Der Unterschied ist praktisch: Eine App bleibt angemeldet, meldet Aktionen per Push und läuft flüssiger. Die Webseite braucht dafür keinen Installationsschritt und keine Updates.",
+      "howWeSelected": "Aufgenommen sind nur Anbieter mit einer eigenständigen App. Anbieter mit reiner mobiler Webseite stehen nicht in dieser Liste, auch wenn diese gut funktioniert.",
+      "whatToWatch": "Im Google Play Store sind Glücksspiel-Apps in Deutschland nur eingeschränkt zugelassen, deshalb bieten manche Anbieter die App als Direkt-Download an. Prüfen Sie in dem Fall besonders genau, dass Sie auf der echten Seite des Anbieters sind.",
+      "whoShouldLookElsewhere": "Wer selten spielt, braucht keine App. Die mobile Webseite bietet bei allen geprüften Anbietern denselben Funktionsumfang, inklusive Ein- und Auszahlung.",
+      "questions": {
+        "top": "Welche Casino App ist die beste?",
+        "criteria": "Wie haben wir die Casino Apps bewertet?",
+        "watch": "Worauf sollte ich bei einer Casino App achten?",
+        "mistake": "Was übersehen die meisten bei Casino Apps?"
+      }
+    },
+    "mobile-casino": {
+      "whatItMeans": "Ein Casino, dessen Seite auf dem Handy vollständig bedienbar ist, inklusive Kasse, Verifizierung und Limits, nicht nur der Spiele.",
+      "howWeSelected": "Aufgenommen ist, wessen Seite sich auf einem Telefon ohne horizontales Scrollen bedienen lässt.",
+      "whatToWatch": "Fast alle Anbieter erfüllen das heute. Aussagekräftiger ist die Frage, ob sich Limits und Selbstsperre auch mobil setzen lassen. Bei einigen Anbietern geht das nur am Desktop.",
+      "whoShouldLookElsewhere": "Diese Liste grenzt kaum ein. Wenn Sie eine engere Auswahl brauchen, sortieren Sie besser nach Lizenz oder Umsatzbedingungen.",
+      "questions": {
+        "top": "Welches mobile Casino ist das beste?",
+        "criteria": "Wie haben wir die mobilen Casinos bewertet?",
+        "watch": "Worauf kommt es beim Spielen am Handy an?",
+        "mistake": "Was übersehen die meisten beim mobilen Spielen?"
+      }
+    },
+    "real-money-casino": {
+      "whatItMeans": "Die Abgrenzung zu Demo- und Social-Angeboten, bei denen mit Spielgeld gespielt wird. Hier geht es um Einsatz und Auszahlung in Euro.",
+      "howWeSelected": "Alle geprüften Anbieter, die Einzahlungen in Euro annehmen und Gewinne auszahlen.",
+      "whatToWatch": "Anbieter mit deutscher Lizenz dürfen kein kostenloses Spiel zu Werbezwecken anbieten. Ein Demo-Modus ist deshalb eher ein Hinweis darauf, dass keine deutsche Erlaubnis vorliegt.",
+      "whoShouldLookElsewhere": "Wer ausprobieren möchte, ohne Geld einzusetzen, findet Demo-Versionen der Automaten direkt bei den Spieleherstellern.",
+      "questions": {
+        "top": "In welchem Online Casino spielt man am besten um echtes Geld?",
+        "criteria": "Wie ist diese Liste sortiert?",
+        "watch": "Worauf sollte ich beim Spiel um echtes Geld achten?",
+        "mistake": "Was machen Einsteiger beim Spiel um echtes Geld falsch?"
+      }
+    }
+  }
+}

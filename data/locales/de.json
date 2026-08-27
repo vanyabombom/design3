@@ -1,0 +1,1517 @@
+{
+  "$note": "Немецкая локаль. Слаги хабов и служебных страниц взяты с эталона (лист 07): /aktuell/, /bonusse/, /zahlungen/, /live-spiele/, /quoten/, /lizenzen/, /anbieter/. Код и шаблоны при смене локали не трогаются — меняется только этот файл и site.data.locale.",
+  "code": "de",
+  "geoName": "Deutschland",
+  "brandBase": "casino",
+  "hubSlugs": {
+    "payments": "zahlungen",
+    "bonuses": "bonusse",
+    "current": "aktuell",
+    "licenses": "lizenzen",
+    "providers": "anbieter",
+    "live": "live-spiele",
+    "odds": "quoten"
+  },
+  "pageSlugs": {
+    "404": "404",
+    "compare": "vergleich",
+    "how-we-test": "so-testen-wir",
+    "authors": "redaktion",
+    "editorial-policy": "redaktionelle-richtlinien",
+    "responsible-gambling": "verantwortungsvolles-spielen",
+    "imprint": "impressum",
+    "privacy": "datenschutz"
+  },
+  "site": {
+    "name": "Beste Online Casinos DE",
+    "tagline": "Unabhängiger Casino-Vergleich mit eigenen Auszahlungstests",
+    "publisher": "Beste Online Casinos DE"
+  },
+  "nav": {
+    "home": "Startseite",
+    "brands": "Alle Casinos",
+    "skipToContent": "Zum Inhalt springen",
+    "menu": "Menü",
+    "sections": "Rubriken",
+    "editorial": "Redaktion und Vergleich",
+    "allSections": "Alle Bereiche"
+  },
+  "ui": {
+    "readReview": "Zum Testbericht",
+    "moreLists": "Listen in diesem Bereich",
+    "visitCasino": "Zum Casino",
+    "showMore": "Mehr anzeigen",
+    "resetFilters": "Filter zurücksetzen",
+    "showAll": "Alle Casinos zeigen",
+    "resultsCount": "Casinos angezeigt",
+    "noResults": "Kein Casino passt zu diesen Filtern. Setzen Sie die Filter zurück, um die vollständige Liste zu sehen.",
+    "truncatedNote": "Angezeigt werden {shown} von {matched} passenden Anbietern. Die übrigen liegen unter unserer Bewertungsgrenze.",
+    "sortBy": "Sortieren nach",
+    "sortAscending": "aufsteigend sortiert",
+    "sortDescending": "absteigend sortiert",
+    "sortHighFirst": "höchste zuerst",
+    "sortLowFirst": "niedrigste zuerst",
+    "sortAlpha": "A–Z",
+    "checkedOn": "Geprüft am",
+    "updatedOn": "Aktualisiert am",
+    "publishedOn": "Veröffentlicht am",
+    "outOf": "von",
+    "pros": "Was überzeugt",
+    "cons": "Was stört",
+    "notFor": "Für wen es nicht passt",
+    "similar": "Ähnliche Casinos",
+    "alsoListedIn": "Auch gelistet in",
+    "departed": "Nimmt keine Spieler mehr an",
+    "affiliateDisclosure": "Wir erhalten eine Provision, wenn Sie sich über unsere Links anmelden. Auf die Bewertungen wirkt sich das nicht aus: Sie werden nach der veröffentlichten Methodik berechnet und lassen sich nicht von Hand verändern.",
+    "ageWarning": "18+",
+    "faq": "Häufige Fragen",
+    "methodology": "So testen wir",
+    "criterionSkipped": "Noch nicht geprüft, fließt nicht in die Note ein",
+    "author": "Autor",
+    "backToTop": "Nach oben",
+    "atAGlance": "Auf einen Blick",
+    "factInList": "Anbieter in der Liste",
+    "factLicensed": "Mit GGL-Lizenz",
+    "factBest": "Bestbewertet",
+    "factWithSpins": "Mit Freispielen",
+    "affiliateDisclosureShort": "Wir verdienen an den Links auf dieser Seite"
+  },
+  "table": {
+    "brand": "Casino",
+    "bonus": "Bonus",
+    "wagering": "Umsatz",
+    "minDeposit": "Mindest­einzahlung",
+    "payments": "Zahlungen",
+    "payoutSpeed": "Auszahlung",
+    "claimed": "angegeben",
+    "perOperator": "Angabe des Anbieters",
+    "measured": "von uns gemessen",
+    "notChecked": "noch nicht geprüft",
+    "license": "Lizenz",
+    "score": "Bewertung",
+    "action": "Zum Casino",
+    "germanLicence": "GGL-Lizenz",
+    "freeSpins": "Freispiele",
+    "more": "weitere",
+    "appliesTo": {
+      "bonus": "nur auf den Bonus",
+      "bonus+deposit": "auf Bonus + Einzahlung",
+      "deposit": "auf die Einzahlung"
+    }
+  },
+  "filters": {
+    "bonusType": "Bonusart",
+    "minDeposit": "Einzahlung ab",
+    "payoutSpeed": "Auszahlung binnen",
+    "license": "Lizenz",
+    "any": "Alle",
+    "upTo": "bis",
+    "heading": "Liste eingrenzen"
+  },
+  "footer": {
+    "responsibleHeading": "Verantwortungsvolles Spielen",
+    "selfExclusionLink": "Selbstsperre über OASIS beantragen",
+    "aboutHeading": "Über diese Seite",
+    "indexHeading": "Alle Listen im Überblick",
+    "transparencyHeading": "Transparenz"
+  },
+  "criteria": {
+    "payouts": "Auszahlungen und Tempo",
+    "bonus": "Bonuswert",
+    "trust": "Lizenz und Sicherheit",
+    "games": "Spiele und Anbieter",
+    "payments": "Zahlungsmethoden",
+    "support": "Support und Mobil"
+  },
+  "units": {
+    "hours": "Std.",
+    "minutes": "Min.",
+    "days": "Tage",
+    "times": "x",
+    "percent": "%",
+    "currency": "€"
+  },
+  "taxonomyLabels": {
+    "casino-payment": "Zahlungsmethode",
+    "casino-bonus": "Bonusart",
+    "casino-general": "Kategorie",
+    "casino-license": "Lizenz",
+    "casino-provider": "Spieleanbieter",
+    "casino-live": "Live-Spiel",
+    "casino-betting": "Wettmarkt"
+  },
+  "hubLabels": {
+    "payments": "Casinos nach Zahlungsmethode",
+    "bonuses": "Casinos nach Bonus",
+    "current": "Aktuell",
+    "licenses": "Casinos nach Lizenz",
+    "providers": "Casinos nach Spieleanbieter",
+    "live": "Live-Casino",
+    "odds": "Sportwetten"
+  },
+  "pageLabels": {
+    "404": "Seite nicht gefunden",
+    "home": "Startseite",
+    "brand-index": "Alle Casinos",
+    "compare": "Vergleich",
+    "how-we-test": "So testen wir",
+    "authors": "Redaktion",
+    "editorial-policy": "Redaktionelle Richtlinien",
+    "responsible-gambling": "Verantwortungsvolles Spielen",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "titleTemplates": {
+    "$note": "Плейсхолдеры: {term} {geo} {year} {count} {site} {brand} {hubLabel} {pageLabel} {checkedAt}. В [[ ]] через | стоят взаимоисключающие окончания: сборка берёт одно, чтобы попасть в 60–65 знаков. Точные title для конкретных страниц задаются в termTitles ниже — они сильнее шаблона.",
+    "home": "Beste Online Casinos {geo} {year} – {count} Anbieter[[ im Test| im Vergleich| geprüft und bewertet| im großen Vergleich]]",
+    "hub": "{hubLabel} {year} – {count} Listen[[ im Vergleich| mit Bewertung| nach Note sortiert| für deutsche Spieler]]",
+    "listing": {
+      "default": "{term} Casinos {geo} {year} – {count} Anbieter[[ im Vergleich| im Test| mit Note und Bonus| nach Note sortiert]]",
+      "casino-payment": "{term} Casino {geo} {year} – {count} Anbieter[[ im Test| im Vergleich| mit Auszahlung geprüft| im Test und Vergleich| mit geprüfter Auszahlung]]",
+      "casino-bonus": "{term} {geo} {year} – {count} Angebote[[ im Vergleich| mit Umsatz geprüft| im Test| und Bedingungen geprüft]]",
+      "casino-general": "{term} {geo} {year} – {count} Anbieter[[ nach Note sortiert| im Vergleich| geprüft und bewertet| im Test]]",
+      "casino-license": "Casinos mit {term} {year} – {count} Anbieter[[ im Vergleich| geprüft| im Test| nach Note sortiert]]",
+      "casino-provider": "{term} Casinos {geo} {year} – {count} Anbieter[[ im Test| im Vergleich| mit Spielen geprüft]]",
+      "casino-live": "{term} Casinos {geo} {year} – {count} Anbieter[[ im Test| im Vergleich| mit Live-Tischen]]",
+      "casino-betting": "{term} {geo} {year} – {count} Wettanbieter[[ im Vergleich| mit Quoten geprüft| im Test]]"
+    },
+    "brand": "{brand} Erfahrungen {year} – Auszahlung[[, Bonus und Fazit|, Bonus und Limits im Test|, Bonus, Lizenz und Fazit|, Bonus und Lizenz im Test| und Bonus im Test]]",
+    "brand-index": "Alle {count} getesteten Online Casinos[[ im Vergleich {year}| mit Note und Bonus {year}| im Überblick mit Note {year}]]",
+    "compare": "Online Casino Vergleich {year} – {count} Anbieter[[, 8 Kriterien| in einer Tabelle| nach acht Parametern]]",
+    "static": "{pageLabel} – {site} {year}"
+  },
+  "h1Templates": {
+    "home": "Beste Online Casinos {geo} {year}",
+    "hub": "{hubLabel}",
+    "listing": {
+      "default": "{term} Casinos {geo}",
+      "casino-license": "Casinos mit {term} Lizenz",
+      "casino-betting": "{term} Wettanbieter"
+    },
+    "brand": "{brand} Erfahrungen {year}",
+    "brand-index": "Alle Casinos in unserem Test",
+    "compare": "Online Casino Vergleich",
+    "static": "{pageLabel}"
+  },
+  "descriptionTemplates": {
+    "$note": "Лист 08: «Meta description с ответом, а не с приглашением». Шаблоны дают запасной вариант с конкретными цифрами; окончательные описания задаются в termDescriptions.",
+    "home": "{count} Online Casinos mit eigenem Geld getestet, {withdrawals} Auszahlungen gemessen. Am schnellsten zahlt {fastest}: {fastestHours} {unitHours} im Median.[[ Noten aus sechs Kriterien.| Alle Noten berechnet.| Geprüft am {checkedAt}.]]",
+    "hub": "{count} Listen nach {taxonomyLabel} mit insgesamt {brandCount} Anbietern, sortiert nach gemessener Auszahlungsdauer, Umsatzbedingungen und Lizenz.[[ Stand {checkedAt}.| Alle Noten aus sechs Kriterien.| Jede Angabe mit Prüfdatum.]]",
+    "listing": "{count} {term} Casinos im Vergleich: gemessene Auszahlung, Umsatzbedingungen und Lizenz. Am schnellsten zahlt {fastest} mit {fastestHours} {unitHours} im Median.[[ Geprüft am {checkedAt}.| Stand {checkedAt}.| Jede Angabe mit Prüfdatum.| Ohne Schätzwerte.]]",
+    "brand": "{brand} Erfahrungen: Note {score} von {scale}, Lizenz {authority}. Auszahlung {medianHours} {unitHours} im Median über {samples} eigene Abhebungen, Umsatz {wagering}x.[[ Geprüft am {checkedAt}.| Zuletzt geprüft am {checkedAt}.| Bonusbedingungen und Auszahlung geprüft am {checkedAt}.]]",
+    "brand-index": "Alle {count} Online Casinos, die wir getestet haben, in einer sortierbaren Tabelle: gemessene Auszahlungsdauer, Umsatzbedingungen, Lizenz und Note.[[ Stand {checkedAt}.]]",
+    "compare": "{count} Online Casinos in einer sortierbaren Tabelle über sieben Parameter. Auszahlungszeiten sind Mediane aus {withdrawals} eigenen Abhebungen. Geprüft am {checkedAt}.",
+    "static": "{pageLabel}: {tagline}.",
+    "$unmeasuredNote": "Варианты шаблонов на период, пока собственных замеров вывода нет. Выбираются автоматически. Нужны затем, чтобы в description не попало «0 Auszahlungen gemessen» — неправда в самом заметном месте выдачи.",
+    "homeUnmeasured": "{count} Online Casinos für Deutschland im Vergleich: {licensedCount} mit GGL-Lizenz, {offshoreCount} ohne. Umsatzbedingungen, Limits und Zahlungswege gegenübergestellt.[[ Stand {checkedAt}.]]",
+    "listingUnmeasured": "{count} {term} Casinos im Vergleich: Umsatzbedingungen, Mindesteinzahlung, Lizenz und Limits in einer sortierbaren Tabelle.[[ Jede Angabe mit Prüfdatum, Stand {checkedAt}.| Jede Angabe mit Prüfdatum.| Stand {checkedAt}.]]",
+    "brandUnmeasured": "{brand} im Test: Note {score} von {scale} aus den geprüften Kriterien. Umsatz {wagering}x, Lizenz, Limits und Zahlungswege im Detail.[[ Was ungeprüft ist, steht als solches da.| Ohne Schätzwerte, Stand {checkedAt}.| Stand {checkedAt}.]]",
+    "brand-indexUnmeasured": "Alle {count} Online Casinos in unserem Vergleich: {licensedCount} mit deutscher Lizenz, {offshoreCount} ohne. Die Tabelle zeigt Bonusbedingungen, Limits und Lizenz.[[ Stand {checkedAt}.]]",
+    "compareUnmeasured": "{count} Online Casinos in einer sortierbaren Tabelle über sieben Parameter: Bonus, Umsatz, Mindesteinzahlung, Zahlungswege, Lizenz und Note.[[ Stand {checkedAt}.| Jede Angabe mit Prüfdatum.]]",
+    "hubUnmeasured": "{count} Listen nach {taxonomyLabel} mit insgesamt {brandCount} Anbietern, sortiert nach Umsatzbedingungen, Lizenz und Limits.[[ Jede Angabe trägt ihr Prüfdatum.| Ungeprüftes steht als solches da.| Stand {checkedAt}.]]"
+  },
+  "termTitles": {
+    "$note": "Точные title под конкретные страницы. Перекрывают шаблон. Заполняется на этапе контента, когда для каждой страницы подбирается формулировка в 60–65 знаков с ключом в начале.",
+    "/casino/so-testen-wir/": "So testen wir Online Casinos – die Methodik hinter jeder Note",
+    "/casino/redaktion/": "Redaktion – wer die Online Casinos hier testet und bewertet 2026",
+    "/casino/redaktionelle-richtlinien/": "Redaktionelle Richtlinien – wie Provisionen Noten nicht bewegen",
+    "/casino/verantwortungsvolles-spielen/": "Verantwortungsvolles Spielen – Limits, OASIS-Sperre und Hilfe",
+    "/casino/impressum/": "Impressum und Anbieterkennzeichnung nach § 5 DDG – Kontaktdaten",
+    "/casino/datenschutz/": "Datenschutz – welche Daten diese Seite erhebt und welche nicht",
+    "/casino/404.html": "Seite nicht gefunden – Beste Online Casinos Deutschland 2026",
+    "/casino/casino-license/casinos-ohne-lizenz/": "Casinos ohne deutsche Lizenz 2026 – 8 Anbieter im großen Test",
+    "/casino/casino-license/casinos-ohne-limit/": "Casinos ohne Einzahlungslimit 2026 – 8 Anbieter im Vergleich",
+    "/casino/casino-license/casinos-ohne-lugas/": "Casinos ohne LUGAS 2026 – 8 Anbieter ohne Sperrsystem im Test",
+    "/casino/casino-license/casinos-ohne-oasis/": "Casinos ohne OASIS 2026 – 8 Anbieter ohne Sperrdatei im Test",
+    "/casino/casino-provider/novoline/": "Novoline Casinos Deutschland 2026 – 9 Anbieter mit Note im Test",
+    "/casino/casino-live/live-roulette/": "Live Roulette Casinos Deutschland 2026 – 8 Anbieter im Vergleich",
+    "/casino/zahlungen/": "Casinos nach Zahlungsmethode 2026 – PayPal, Visa und SEPA im Test",
+    "/casino/bonusse/": "Casino Bonus 2026 – Willkommensbonus und Freispiele im Vergleich",
+    "/casino/aktuell/": "Aktuelle Online Casinos 2026 – was sich zuletzt geändert hat",
+    "/casino/lizenzen/": "Casino Lizenzen 2026 – GGL, Curaçao und Anjouan im Vergleich",
+    "/casino/anbieter/": "Casinos nach Spieleanbieter 2026 – Studios, Slots und Anbieter",
+    "/casino/live-spiele/": "Live Casino 2026 – Roulette und Blackjack mit echten Dealern",
+    "/casino/quoten/": "Sportwetten 2026 – Wettanbieter mit deutscher Lizenz im Test",
+    "/casino/casino-payment/paypal-casino/": "PayPal Casino Deutschland 2026 – 10 Anbieter, Auszahlung geprüft",
+    "/casino/casino/merkur-bets/": "Merkur Bets Erfahrungen 2026 – Auszahlung, Bonus, Lizenz, Fazit"
+  },
+  "termH1": {
+    "$note": "Точные H1 под конкретные страницы. Перекрывают шаблон.",
+    "/casino/casino-license/casinos-ohne-lizenz/": "Casinos ohne deutsche Lizenz",
+    "/casino/casino-license/casinos-ohne-limit/": "Casinos ohne Einzahlungslimit",
+    "/casino/casino-license/casinos-ohne-lugas/": "Casinos ohne LUGAS",
+    "/casino/casino-license/casinos-ohne-oasis/": "Casinos ohne OASIS"
+  },
+  "termDescriptions": {
+    "/casino/casino-provider/playn-go/": "6 Casinos mit Spielen von Play'n GO im Vergleich: gemessene Auszahlungsdauer, Umsatzbedingungen und Lizenz. Schnellste Abhebung: 2 Std. im Median.",
+    "$note": "Точные meta description под конкретные страницы. Перекрывают шаблон.",
+    "/casino/so-testen-wir/": "Sechs Kriterien mit festen Gewichten, aus denen jede Note berechnet wird: Auszahlungen 25 %, Bonuswert 20 %, Lizenz 20 %, Spiele, Zahlungswege, Support.",
+    "/casino/redaktion/": "Wer hier schreibt und prüft, wofür jede Person zuständig ist und seit wann. Jede Bewertung und jede Liste nennt ihren Autor, und der Name führt hierher.",
+    "/casino/redaktionelle-richtlinien/": "Wie Provisionen unsere Bewertungen nicht beeinflussen: Jede Note wird aus veröffentlichten Kriterien berechnet, ein Feld für eine Platzierung von Hand fehlt.",
+    "/casino/verantwortungsvolles-spielen/": "Einzahlungslimits, die bundesweite OASIS-Selbstsperre und kostenlose Beratung bei Glücksspielsucht. Ohne Angebote und ohne Links zu Anbietern.",
+    "/casino/impressum/": "Anbieterkennzeichnung nach § 5 DDG: verantwortliche Stelle, Kontakt und Hinweis darauf, dass wir ein Vergleichsdienst und kein Glücksspielanbieter sind.",
+    "/casino/datenschutz/": "Welche Daten diese Seite erhebt und welche nicht: keine Anmeldung, keine Zahlungsdaten, kein Konto. Was beim Klick auf einen Partnerlink passiert, steht hier.",
+    "/casino/404.html": "Diese Seite gibt es nicht mehr oder hat nie existiert. Über das Menü kommen Sie zu den Listen nach Zahlungsmethode, Bonusart, Lizenz und zu allen Bewertungen.",
+    "/casino/zahlungen/": "Welche Zahlungsmethode im Casino auch zum Auszahlen funktioniert und welche nur zum Einzahlen. Pro Methode eine eigene Liste mit Limits, Tempo und Gebühren.",
+    "/casino/bonusse/": "Nicht der größte Bonus lohnt sich, sondern der mit dem geringsten Umsatz. Pro Bonusart eine Liste mit Umsatzfaktor, Frist und der Rechnung in Euro dazu.",
+    "/casino/aktuell/": "Was sich zuletzt geändert hat: neue Anbieter, angepasste Bonusbedingungen und Anbieter, die den deutschen Markt verlassen haben. Jede Angabe mit Prüfdatum.",
+    "/casino/lizenzen/": "Was eine Lizenz für Sie praktisch ändert: Einsatzlimit, Einzahlungslimit, OASIS-Anbindung und die Frage, wer im Streitfall überhaupt zuständig ist.",
+    "/casino/anbieter/": "Casinos sortiert nach den Studios, deren Spiele sie führen. Dazu, was der Spieleanbieter über die Seriosität eines Casinos aussagt, und was eben nicht.",
+    "/casino/live-spiele/": "Live-Tische gibt es in Deutschland nur ohne deutsche Lizenz. Das ist keine Marktlücke, sondern Gesetz. Was das für Limits und Schutz bedeutet, steht hier.",
+    "/casino/quoten/": "Sportwetten sind die eine Vertikale, für die private Anbieter in Deutschland eine Lizenz bekommen. Wettanbieter mit Quoten, Bonus und Lizenz im Vergleich."
+  },
+  "properNouns": {
+    "paypal": "PayPal",
+    "apple-pay": "Apple Pay",
+    "google-pay": "Google Pay",
+    "payid": "PayID",
+    "sepa": "SEPA",
+    "wire-transfer": "Banküberweisung",
+    "usdt": "USDT",
+    "usdt-trc20": "USDT TRC-20",
+    "usdc": "USDC",
+    "xrp": "XRP",
+    "bitcoin": "Bitcoin",
+    "ethereum": "Ethereum",
+    "litecoin": "Litecoin",
+    "dogecoin": "Dogecoin",
+    "ukgc": "UKGC",
+    "mga": "MGA",
+    "ggl": "GGL",
+    "anjouan": "Anjouan",
+    "tobique": "Tobique",
+    "curacao": "Curaçao",
+    "isle-of-man": "Isle of Man",
+    "playn-go": "Play'n GO",
+    "netent": "NetEnt",
+    "igt": "IGT",
+    "elk-studios": "ELK Studios",
+    "big-time-gaming": "Big Time Gaming",
+    "nolimit-city": "Nolimit City",
+    "ecopayz": "ecoPayz",
+    "mifinity": "MiFinity",
+    "muchbetter": "MuchBetter",
+    "bally-wulff": "Bally Wulff",
+    "vip-program": "VIP-Programm",
+    "welcome": "Willkommensbonus",
+    "no-deposit": "Bonus ohne Einzahlung",
+    "free-spins": "Freispiele",
+    "free-chip": "Gratis-Chip",
+    "cashback": "Cashback",
+    "reload": "Reload-Bonus",
+    "vip": "VIP-Bonus",
+    "high-roller": "High-Roller-Bonus",
+    "live-roulette": "Live Roulette",
+    "live-blackjack": "Live Blackjack",
+    "live-baccarat": "Live Baccarat",
+    "live-poker": "Live Poker",
+    "lightning-roulette": "Lightning Roulette",
+    "crazy-time": "Crazy Time",
+    "monopoly-live": "Monopoly Live",
+    "dream-catcher": "Dream Catcher",
+    "deposit-limit": "Einzahlungslimit",
+    "loss-limit": "Verlustlimit",
+    "time-limit": "Zeitlimit",
+    "reality-check": "Reality-Check",
+    "self-exclusion": "Selbstsperre",
+    "time-out": "Auszeit",
+    "national-register": "OASIS-Sperrdatei",
+    "fast-payouts": "Schnelle Auszahlung",
+    "esports-betting": "eSports-Wetten",
+    "in-play-betting": "Live-Wetten",
+    "crypto": "Krypto",
+    "welcome-bonus": "Willkommensbonus",
+    "no-deposit-bonus-codes": "Bonus ohne Einzahlung",
+    "best-online-casinos": "Online Casinos",
+    "legal-online-casino": "legale Online Casinos",
+    "casino-apps": "Casino Apps",
+    "casinos-ohne-lizenz": "Casinos ohne Lizenz",
+    "sports-betting": "Sportwetten",
+    "football-betting": "Fußballwetten",
+    "basketball-betting": "Basketballwetten",
+    "tennis-betting": "Tenniswetten",
+    "horse-racing": "Pferdewetten",
+    "virtual-sports": "Virtuelle Sportarten",
+    "accumulator-bets": "Kombiwetten",
+    "asian-handicap": "Asian Handicap",
+    "cash-out": "Cash-out",
+    "live-casino-lobby": "Live-Casino",
+    "live-dealer-casino": "Live-Casino mit Dealer",
+    "game-shows": "Game Shows",
+    "bonus-code": "Bonus-Code",
+    "new-codes": "Neue Bonus-Codes",
+    "bonus-funds": "Bonusguthaben",
+    "bonus-offer": "Bonusaktion",
+    "bonus-code-for-existing-players": "Bonus-Code für Bestandskunden",
+    "cashback-bonus": "Cashback-Bonus",
+    "online-casino-200-welcome-bonus": "200 % Willkommensbonus",
+    "online-casino-300-deposit-bonus": "300 % Einzahlungsbonus",
+    "10-euro-bonus-ohne-einzahlung": "10 € ohne Einzahlung",
+    "15-euro-bonus-ohne-einzahlung": "15 € ohne Einzahlung",
+    "1-euro-deposit": "Einzahlung ab 1 €",
+    "5-euro-deposit": "Einzahlung ab 5 €",
+    "real-money": "Spiel um echtes Geld",
+    "mobile": "Mobiles Casino",
+    "new-online-casinos": "Neue Online Casinos",
+    "live-online-casino": "Online Casinos mit Live-Tischen",
+    "online-casino-vergleich": "Online Casino Vergleich",
+    "testsieger-online-casino": "Testsieger",
+    "seriose-deutsche-online-casinos": "Seriöse deutsche Casinos",
+    "online-casino-kostenlos": "Kostenlos spielen",
+    "online-casinos-without-verification": "Casinos ohne Verifizierung",
+    "high-roller-casino": "High-Roller-Casinos",
+    "payout-online-casinos": "Casinos mit schneller Auszahlung",
+    "fast-withdrawal-casinos": "Auszahlung binnen 6 Stunden",
+    "casinos-ohne-limit": "Casinos ohne Einzahlungslimit",
+    "casinos-ohne-lugas": "Casinos ohne LUGAS",
+    "casinos-ohne-oasis": "Casinos ohne OASIS",
+    "casinos-ohne-deutsche-lizenz": "Casinos ohne deutsche Lizenz"
+  },
+  "criteriaWhy": {
+    "payouts": "Das Einzige, was Sie immer wieder erleben, und das, was Anbieter am häufigsten zu gut darstellen. Ein Bonus ist ein einmaliges Ereignis, eine Auszahlung nicht.",
+    "bonus": "Bewertet wird nicht die Höhe, sondern was der Bonus kostet: Umsatzfaktor, Mindesteinzahlung, Frist und Höchsteinsatz. 300 % mit 50x sind weniger wert als 100 % mit 20x.",
+    "trust": "Entscheidet, ob es bei Streit eine zuständige Behörde gibt, ob eine Selbstsperre greift und ob Ihre Einzahlungen einem Limit unterliegen.",
+    "games": "Umfang des Angebots und Vielfalt der Studios. Wichtig, aber nachrangig gegenüber der Frage, ob Sie Ihr Geld wiedersehen.",
+    "payments": "Gezählt werden die Wege, die für eine Auszahlung offenstehen. Mit der Liste der Einzahlungsmethoden deckt sie sich fast nie.",
+    "support": "Erreichbarkeit und Antwortzeit. Relevant wird das genau dann, wenn etwas schiefgeht."
+  },
+  "ruleLabels": {
+    "payout-median": "Gemessene Dauer",
+    "payout-gap": "Abweichung zur Angabe des Anbieters",
+    "payout-samples": "Anzahl unserer Testauszahlungen",
+    "bonus-wagering": "Umsatzfaktor",
+    "bonus-min-deposit": "Mindesteinzahlung",
+    "bonus-expiry": "Frist für den Umsatz",
+    "bonus-max-bet": "Höchsteinsatz während des Umsatzes",
+    "license-authority": "Regulierungsbehörde",
+    "responsible-tools": "Schutzfunktionen im Konto",
+    "two-factor": "Zwei-Faktor-Anmeldung",
+    "games-total": "Anzahl der Spiele",
+    "providers-count": "Anzahl der Studios",
+    "live-tables": "Live-Tische",
+    "payments-count": "Zahlungswege gesamt",
+    "withdrawal-methods": "Wege für die Auszahlung",
+    "withdrawal-fee": "Auszahlungsgebühr",
+    "chat-availability": "Chat rund um die Uhr",
+    "reply-time": "Antwortzeit im Chat",
+    "mobile-app": "Eigene App",
+    "support-languages": "Sprachen im Support"
+  },
+  "methodology": {
+    "lede": "Jede Note wird berechnet, nicht vergeben. Sechs Kriterien, feste Gewichte, für jeden Anbieter dieselben geprüften Daten.",
+    "stateHeading": "Was wir bisher geprüft haben",
+    "stateBody": "Bonusbedingungen, Lizenzen, Zahlungswege, Limits und Schutzfunktionen haben wir an der jeweiligen Quelle geprüft und mit Datum hinterlegt. Wo eine Angabe nicht zu bestätigen war, steht in den Tabellen „noch nicht geprüft“ statt eines plausiblen Werts.",
+    "pendingLabel": "Noch offen:",
+    "pendingBody": "Anbieter warten noch auf eine eigene Auszahlung von uns. Solange das so ist, fließt bei ihnen das Kriterium „Auszahlungen und Tempo“ mit seinen 25 % nicht in die Note ein. Es bekommt keine Null, denn eine Null hieße „zahlt langsam“, und das haben wir nicht geprüft. Der Anteil wird stattdessen aus der Rechnung genommen und die Note aus den verbleibenden 75 % gebildet. In jeder Bewertung ist die betroffene Zeile entsprechend markiert.",
+    "weightsHeading": "Die sechs Kriterien und ihre Gewichte",
+    "colCriterion": "Kriterium",
+    "colWeight": "Gewicht",
+    "colWhy": "Warum dieses Gewicht",
+    "rulesHeading": "Die Punkteregeln im Einzelnen",
+    "rulesIntro": "Jedes Kriterium besteht aus Regeln mit festem Anteil. Fehlt einer Regel die Datengrundlage, wird ihr Anteil auf die übrigen verteilt.",
+    "ofCriterion": "dieses Kriteriums",
+    "upTo": "bis",
+    "from": "ab",
+    "otherwise": "sonst",
+    "yesGives": "ja ergibt",
+    "noGives": "nein ergibt",
+    "notScoredHeading": "Was wir bewusst nicht bewerten",
+    "notScoredBody1": "Die Bonushöhe. 300 % mit 50x Umsatz sind weniger wert als 100 % mit 20x, und eine Bewertung nach der beworbenen Prozentzahl würde das umkehren. Bewertet werden Umsatzfaktor, Mindesteinzahlung, Frist und Höchsteinsatz.",
+    "notScoredBody2": "Ebenso Design und Atmosphäre: alles, was sich nicht zweimal gleich messen lässt.",
+    "missingHeading": "Wenn Daten fehlen",
+    "missingBody": "Eine fehlende Zahl ist kein Beleg für eine schlechte, deshalb gibt es dafür keine Null. In der Tabelle steht an dieser Stelle „noch nicht geprüft“, und auf den Redaktionellen Richtlinien steht, wie viele Anbieter davon betroffen sind.",
+    "faq": [
+      {
+        "question": "Zahlen Casinos für eine bessere Platzierung?",
+        "answer": "Nein. Wir bekommen eine Provision, wenn sich jemand über unsere Links anmeldet, und jeder solche Link ist als gesponsert markiert. Die Reihenfolge ergibt sich aus der Formel auf dieser Seite. In unseren Daten gibt es kein Feld für eine manuelle Platzierung. Das ist die einzige Version dieses Versprechens, die sich überprüfen lässt."
+      },
+      {
+        "question": "Wie oft werden die Noten neu berechnet?",
+        "answer": "Bei jedem Neuaufbau der Seite. Noten werden nirgends gespeichert, sondern jedes Mal aus den aktuellen Daten berechnet. Ändert sich eine Bonusbedingung, ändert sich die Note überall gleichzeitig."
+      },
+      {
+        "question": "Warum wiegt die Auszahlung am schwersten?",
+        "answer": "Mit 25 % ist sie das schwerste Kriterium, weil sie das Einzige ist, das Sie immer wieder erleben, und weil Anbieter sie am häufigsten zu gut darstellen. Ein Bonus ist ein einmaliges Ereignis. Eine Auszahlung ist es jedes Mal."
+      },
+      {
+        "question": "Was zählt für euch als Auszahlungstest?",
+        "answer": "Eigenes Geld, ein eigenes verifiziertes Konto, ein üblicher Betrag, und die Uhr läuft von der Bestätigung bis zum Eingang. Wir nehmen den Median, nicht den schnellsten Versuch: Eine glückliche Sofortauszahlung sagt nichts über die achte aus. Fehlgeschlagene oder zurückgebuchte Auszahlungen werden als solche erfasst, nicht aus der Stichprobe entfernt."
+      },
+      {
+        "question": "Kann ein Anbieter ohne deutsche Lizenz gut abschneiden?",
+        "answer": "Er kann, verliert aber 60 % des Lizenzkriteriums, also 12 % der Gesamtnote. Das ist ein echter Malus und soll es sein: Ohne deutsche Erlaubnis gibt es keine Behörde, an die Sie sich wenden können, und eine OASIS-Sperre greift dort nicht."
+      },
+      {
+        "question": "Was passiert, wenn ein Anbieter den Markt verlässt?",
+        "answer": "Die Bewertung bleibt online und wird als „nimmt keine Spieler mehr an“ markiert, der Anbieter fällt automatisch aus allen Listen, und die Partnerlinks werden abgeschaltet. Menschen suchen danach, was mit einer Seite passiert ist, die sie genutzt haben, und diese Frage verdient eine Antwort."
+      }
+    ]
+  },
+  "pages": {
+    "404": {
+      "lede": "Diese Seite gibt es nicht. Möglicherweise wurde sie verschoben, möglicherweise hat es sie nie gegeben."
+    },
+    "responsible-gambling": {
+      "lede": "Glücksspiel ist Unterhaltung mit negativem Erwartungswert. Hört es auf, Unterhaltung zu sein, gibt es die folgenden Werkzeuge, um es zu beenden. Keines davon kostet etwas.",
+      "limitsHeading": "Limits selbst setzen",
+      "limitsBody": "Jeder Anbieter mit deutscher Erlaubnis muss diese Funktionen im Konto bereitstellen. Setzen Sie sie, bevor Sie sie brauchen.",
+      "limitsList": [
+        "Einzahlungslimit, zusätzlich zum gesetzlichen Monatslimit von 1.000 € anbieterübergreifend",
+        "Verlustlimit und Zeitlimit pro Sitzung",
+        "Reality-Check: eine Einblendung, die nach einer eingestellten Zeit an die Spieldauer erinnert",
+        "Auszeit von 24 Stunden bis zu mehreren Wochen",
+        "Selbstsperre über OASIS, bundesweit und bei allen legalen Anbietern gleichzeitig"
+      ],
+      "oasisHeading": "Selbstsperre über OASIS",
+      "oasisWarning": "Wichtig: OASIS wird nur von Anbietern mit deutscher Erlaubnis abgefragt. Bei Anbietern ohne deutsche Lizenz greift eine bestehende Sperre nicht. Wer sich gesperrt hat und dort weiterspielen kann, hat keine Ausnahme gefunden, sondern eine Lücke.",
+      "helpHeading": "Wo Sie Hilfe bekommen",
+      "noOffersNote": "Diese Seite enthält bewusst keine Angebote und keine Handlungsaufforderung."
+    },
+    "editorial-policy": {
+      "lede": "Wie Geld auf diese Seite kommt, worauf es Einfluss hat und worauf nicht, und was wir tun, wenn wir uns geirrt haben.",
+      "sections": [
+        {
+          "heading": "Wie wir finanziert sind",
+          "body": [
+            "Wir erhalten eine Provision, wenn sich jemand über unsere Links bei einem Anbieter anmeldet. Jeder solche Link ist im Quelltext als gesponsert markiert."
+          ]
+        },
+        {
+          "heading": "Was sich damit nicht kaufen lässt",
+          "body": [
+            "Die Platzierung in einer Tabelle. Die Reihenfolge wird aus den sechs veröffentlichten Kriterien berechnet, und in unseren Daten gibt es kein Feld für eine manuelle Position.",
+            "Auch das Weglassen von Kritik lässt sich nicht kaufen. Was ein Anbieter nicht kann, steht in derselben Tabelle wie das, was er kann."
+          ]
+        },
+        {
+          "heading": "Wie wir mit Fehlern umgehen",
+          "body": [
+            "Stellt sich eine Angabe als falsch heraus, ändern wir die Daten. Beim nächsten Aufbau ändert sich jede Seite, die diese Angabe trägt, und das Prüfdatum wandert mit."
+          ]
+        },
+        {
+          "heading": "Was wir nicht tun",
+          "body": [
+            "Keine erfundenen Gewinnerzahlen, keine Zähler mit angeblich aktiven Spielern, keine ablaufenden Countdowns. Wo wir etwas nicht geprüft haben, steht das da."
+          ]
+        }
+      ]
+    },
+    "imprint": {
+      "lede": "Angaben gemäß § 5 DDG.",
+      "sections": [
+        {
+          "heading": "Diensteanbieter",
+          "body": [
+            "Die vollständigen Anbieterangaben (Betreiber, Anschrift, Vertretungsberechtigter, Kontakt und Registerdaten) werden vor Veröffentlichung ergänzt."
+          ]
+        },
+        {
+          "heading": "Verantwortlich für den Inhalt",
+          "body": [
+            "Die redaktionelle Verantwortung liegt bei der auf der Seite Redaktion genannten Person."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "lede": "Wie diese Seite mit Ihren Daten umgeht.",
+      "sections": [
+        {
+          "heading": "Was wir erheben",
+          "body": [
+            "Diese Seite ist statisch und setzt keine Tracking-Cookies. Beim Klick auf einen Partnerlink verlassen Sie unsere Seite; ab diesem Zeitpunkt gilt die Datenschutzerklärung des jeweiligen Anbieters."
+          ]
+        },
+        {
+          "heading": "Server-Logfiles",
+          "body": [
+            "Der Hoster erhebt technisch notwendige Zugriffsdaten. Die vollständige Erklärung samt Rechtsgrundlagen und Aufbewahrungsfristen wird vor Veröffentlichung ergänzt."
+          ]
+        }
+      ]
+    }
+  },
+  "compliance": {
+    "$sources": "Номер и часы работы горячей линии сверены с check-dein-spiel.de (портал BZgA). Ссылки на OASIS и список консультационных служб — с сайта GGL, Gemeinsame Glücksspielbehörde der Länder. Перед публикацией сверить ещё раз: контакты меняются.",
+    "ageStatement": "Glücksspiel ist erst ab 18 Jahren erlaubt und kann abhängig machen.",
+    "helplines": [
+      {
+        "name": "BZgA-Beratungstelefon zur Glücksspielsucht",
+        "phone": "0800 1 37 27 00",
+        "note": "kostenlos und anonym, Mo–Do 10–22 Uhr, Fr–So 10–18 Uhr",
+        "url": "https://www.check-dein-spiel.de/hilfe-fuer-spieler/telefon-beratung/"
+      },
+      {
+        "name": "Check dein Spiel – Online-Beratung der BZgA",
+        "url": "https://www.check-dein-spiel.de/online-beratung/"
+      },
+      {
+        "name": "GGL – Beratungs- und Hilfsangebote",
+        "url": "https://gluecksspiel-behoerde.de/de/praeventionspielerschutz/beratungs-und-hilfsangebote"
+      }
+    ],
+    "selfExclusionUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/die-spielerschutzmassnahmen-des-gluestv21-im-ueberblick",
+    "selfExclusionNote": "Die OASIS-Selbstsperre gilt bundesweit für alle lizenzierten Anbieter, dauert mindestens drei Monate und ist kostenlos. Der Antrag läuft über das Regierungspräsidium Darmstadt.",
+    "regulatorNote": "Für Online-Casinospiele in Deutschland ist die Gemeinsame Glücksspielbehörde der Länder (GGL) zuständig. Anbieter ohne deutsche Lizenz unterliegen ihr nicht.",
+    "disclaimer": "Wir sind ein unabhängiger Vergleichsdienst und kein Glücksspielanbieter. Wir nehmen keine Einzahlungen entgegen und betreiben keine Spiele."
+  },
+  "guide": {
+    "$note": "Короткие блоки для служебных страниц. Прежняя версия была сплошным текстом: на «So testen wir» до первой таблицы лежало 950 знаков в четыре абзаца. Шаги отвечают на тот же вопрос картинкой и одной строкой под ней.",
+    "howWeTest": [
+      { "icon": "grid", "title": "Daten sammeln", "text": "Bonusbedingungen, Lizenzregister, Zahlungswege und Limits. Jede Zahl bekommt ein Datum." },
+      { "icon": "check", "title": "An der Quelle prüfen", "text": "Geprüft heißt: wir haben es selbst gesehen. Sonst bleibt das Feld leer statt geschätzt." },
+      { "icon": "scale", "title": "Die Formel rechnet", "text": "Sechs Kriterien mit festen Gewichten. Von Hand verschiebt hier niemand etwas." }
+    ],
+    "weightsCaption": "Die sechs Kriterien ergeben zusammen 100 %.",
+    "policy": [
+      { "icon": "card", "title": "Womit wir Geld verdienen", "text": "Mit Provisionen der Anbieter, wenn Sie sich über unsere Links anmelden. Für Sie ändert sich am Angebot nichts." },
+      { "icon": "scale", "title": "Was sich davon nicht kaufen lässt", "text": "Die Note. Sie wird aus der veröffentlichten Formel berechnet und lässt sich nicht von Hand verändern." },
+      { "icon": "alert", "title": "Wenn wir uns irren", "text": "Wir korrigieren die Zahl und schreiben das Datum dazu. Stillschweigend geändert wird hier nichts." }
+    ],
+    "protect": [
+      { "icon": "card", "title": "Limits setzen", "text": "Einzahlung, Verlust und Zeit lassen sich im Konto begrenzen. Eine Senkung gilt sofort." },
+      { "icon": "clock", "title": "Auszeit nehmen", "text": "24 Stunden bis mehrere Wochen. Das Konto öffnet sich danach von selbst wieder." },
+      { "icon": "shield", "title": "Selbstsperre über OASIS", "text": "Mindestens drei Monate, bundesweit und bei allen Anbietern mit deutscher Lizenz gleichzeitig." }
+    ]
+  },
+  "sourcesTable": {
+    "heading": "Was bestätigt ist und was offen bleibt",
+    "intro": "Eine Angabe gilt bei uns erst dann als geprüft, wenn wir sie an der Quelle gesehen haben: in den Bonusbedingungen des Anbieters, im öffentlichen Register der Aufsicht oder in einer eigenen Auszahlung. Was das nicht erfüllt, bleibt offen und wird in den Tabellen als „noch nicht geprüft“ ausgewiesen statt geschätzt. Die Zahlen unten beziehen sich auf {count} Anbieter.",
+    "colField": "Angabe",
+    "colChecked": "an der Quelle bestätigt",
+    "colOpen": "noch offen",
+    "foot": "Die Liste entsteht nicht von Hand: Jeder Anbieterdatensatz führt mit, welche Felder beim letzten Abgleich nicht zu bestätigen waren, und diese Tabelle zählt sie zusammen. Sie ändert sich mit jedem Build.",
+    "fields": {
+      "bonus.amount": "Bonushöhe",
+      "bonus.matchPct": "Bonus in Prozent der Einzahlung",
+      "bonus.freeSpins": "Anzahl der Freispiele",
+      "bonus.wagering": "Umsatzfaktor",
+      "bonus.wageringApplies": "Worauf der Umsatz gerechnet wird",
+      "bonus.minDeposit": "Mindesteinzahlung für den Bonus",
+      "bonus.expiryDays": "Frist für den Umsatz",
+      "bonus.maxBet": "Höchsteinsatz während des Umsatzes",
+      "bonus.maxCashout": "Auszahlungsgrenze aus dem Bonus",
+      "payout.medianHours": "Von uns gemessene Auszahlungsdauer",
+      "payout.claimedHours": "Vom Anbieter angegebene Auszahlungsdauer",
+      "license.authority": "Zuständige Aufsicht",
+      "license.number": "Lizenznummer im Register",
+      "payments": "Zahlungsmethoden",
+      "providers": "Spieleanbieter",
+      "games.total": "Anzahl der Spiele",
+      "limits.minWithdrawal": "Mindestauszahlung",
+      "limits.monthlyDepositCap": "Monatliches Einzahlungslimit",
+      "support.*": "Support: Chat rund um die Uhr, Antwortzeit"
+    }
+  },
+  "authorRoles": {
+    "$note": "Должности и темы в data/authors.json записаны по-английски и приедут от заказчика вместе с настоящими именами. Немецкие подписи держатся здесь, чтобы страница редакции была на языке сайта до того, как профили заменят.",
+    "Editor in Chief": "Chefredaktion",
+    "Payments Editor": "Redaktion Zahlungen",
+    "Bonus Analyst": "Bonusanalyse",
+    "payout testing": "Auszahlungen messen",
+    "licensing": "Lizenzen",
+    "bonus terms": "Bonusbedingungen",
+    "withdrawal speed": "Auszahlungstempo",
+    "payment methods": "Zahlungsmethoden",
+    "KYC": "Verifizierung",
+    "wagering maths": "Umsatzrechnung",
+    "bonus value": "Bonuswert",
+    "terms and conditions": "Teilnahmebedingungen"
+  },
+  "authorsTable": {
+    "heading": "Wer wofür geradesteht",
+    "intro": "Jeder Anbieterdatensatz hat eine Person, die ihn verantwortet. Die Tabelle zeigt, wie viele Anbieter das jeweils sind und wann daran zuletzt etwas geändert wurde.",
+    "colAuthor": "Person",
+    "colRole": "Rolle",
+    "colSince": "im Team seit",
+    "colBrands": "verantwortete Anbieter",
+    "colUpdated": "zuletzt aktualisiert"
+  },
+  "toolsTable": {
+    "heading": "Schutzinstrumente und wer sie anbietet",
+    "intro": "Alle Instrumente unten stellt der Anbieter selbst bereit. Die letzte Spalte zeigt, bei wie vielen der von uns geprüften Anbieter das Instrument vorhanden ist, und wie viele davon eine deutsche Lizenz haben. Bei Anbietern ohne deutsche Lizenz gibt es keine Behörde, die die Einhaltung durchsetzt.",
+    "colTool": "Instrument",
+    "colWhat": "Was es bewirkt",
+    "colBrands": "Anbieter",
+    "colLicensed": "davon mit GGL-Lizenz",
+    "what": {
+      "deposit-limit": "Sie legen fest, wie viel Sie pro Tag, Woche oder Monat einzahlen dürfen. Eine Senkung gilt sofort, eine Anhebung erst nach Wartezeit.",
+      "loss-limit": "Deckelt den Verlust im gewählten Zeitraum. Ist die Grenze erreicht, ist der Einsatz gesperrt, auch wenn noch Guthaben da ist.",
+      "time-limit": "Begrenzt die Spielzeit pro Sitzung oder pro Tag.",
+      "reality-check": "Blendet in festen Abständen ein, wie lange Sie schon spielen und wie die Bilanz der Sitzung aussieht.",
+      "time-out": "Sperrt das Konto für einen kurzen Zeitraum, meist 24 Stunden bis 30 Tage. Danach öffnet es sich von selbst.",
+      "self-exclusion": "Sperrt das Konto bei diesem Anbieter für mindestens drei Monate. Zurücknehmen lässt sich das vor Ablauf nicht.",
+      "national-register": "Anbindung an OASIS, die bundesweite Sperrdatei. Eine Sperre dort gilt bei allen Anbietern mit deutscher Lizenz gleichzeitig."
+    }
+  },
+  "termSections": {
+    "free-spins": {
+      "heading": "Was Freispiele tatsächlich wert sind",
+      "body": [
+        "Der Wert eines Freispiels ergibt sich aus dem festgelegten Einsatz pro Runde, meist 0,10 € bis 0,20 €. Hundert Freispiele zu 0,10 € entsprechen also einem Spieleinsatz von 10 €, nicht einem Gewinn von 10 €. Bei einer Auszahlungsquote von 96 % bleiben davon im Erwartungswert 9,60 € übrig, verteilt über hundert Runden.",
+        "Darauf liegt in der Regel noch eine Umsatzbedingung, und zwar auf den Gewinn aus den Freispielen. Bei 35x auf einen Gewinn von 12 € sind das 420 € Einsatz. Manche Anbieter deckeln zusätzlich die auszahlbare Summe aus Freispielgewinnen auf 50 € oder 100 €, unabhängig davon, wie viel tatsächlich zusammenkommt.",
+        "Freispiele ohne Umsatzbedingung existieren, sind aber selten und meist auf zehn bis zwanzig Runden begrenzt. Sie stehen in der Tabelle oben in derselben Spalte wie alle anderen, weil der Unterschied nicht in der Anzahl liegt, sondern in den Zeilen darunter."
+      ]
+    },
+    "welcome-bonus": {
+      "heading": "Warum der Willkommensbonus bei deutschen Anbietern so klein ausfällt",
+      "body": [
+        "Ein Anbieter mit deutscher Erlaubnis darf pro Monat 1.000 € Einzahlung entgegennehmen, gerechnet über alle lizenzierten Anbieter zusammen. Ein Angebot über 3.000 € Bonusguthaben wäre unter dieser Grenze rechnerisch nicht einlösbar, und genau deshalb liegen die Beträge dort bei 100 € bis 200 €.",
+        "Der zweite Grund ist das Einsatzlimit von 1 € pro Runde. Es begrenzt, wie viel Umsatz in einer Stunde überhaupt entstehen kann, und macht hohe Umsatzfaktoren praktisch unerfüllbar. Wer die kleinen Beträge für Geiz hält, verwechselt die Marketingabteilung mit dem Gesetzgeber."
+      ]
+    },
+    "$note": "Раздел под конкретный терм. Нужен там, где соседние листинги собираются из одного и того же набора площадок и потому расходятся только числами: линтер ловил их как дубли при 39 % уникальности против нормы 40. Ключ — слаг терма.",
+    "sports-betting": {
+      "heading": "Was ein Casino mit Wettbereich von einem Buchmacher unterscheidet",
+      "body": [
+        "Ein reiner Buchmacher lebt von der Marge auf die Quote und optimiert sie auf zehntel Prozent. Ein Casino mit Wettbereich behandelt die Quoten als Zugabe zum Hauptgeschäft, und das ist an den Rändern sichtbar: bei Zweitligen, Frauensport und allem außerhalb der großen Ligen fehlen entweder die Märkte oder die Quoten liegen spürbar unter dem Marktschnitt.",
+        "Für Gelegenheitswetten auf Bundesliga und Champions League fällt das kaum ins Gewicht. Wer regelmäßig auf Nischen setzt, verliert über hundert Wetten mehr an der Marge als er an einem Bonus je gewinnt. Die Tabelle oben zeigt deshalb Lizenz und Auszahlungsdauer und nicht die Quotenhöhe: Letztere ändert sich stündlich und wäre in einer statischen Tabelle eine Lüge."
+      ]
+    },
+    "football-betting": {
+      "heading": "Wo bei Fußballwetten das Geld liegen bleibt",
+      "body": [
+        "Die Dreiwegwette auf Sieg, Unentschieden oder Niederlage ist der meistgespielte und zugleich der am dichtesten kalkulierte Markt. Die Marge liegt bei den Anbietern hier zwischen drei und acht Prozent, und der Unterschied entspricht bei hundert Wetten dem kompletten Willkommensbonus.",
+        "Teurer wird es bei den Zusatzmärkten. Torschützenwetten, Handicaps über zwei Tore und Spezialwetten auf Ecken oder Karten tragen regelmäßig zweistellige Margen. Sie sehen im Wettschein aus wie jede andere Position und sind der Grund, warum ein Kombischein aus fünf solchen Wetten rechnerisch kaum zu gewinnen ist."
+      ]
+    },
+    "tennis-betting": {
+      "heading": "Warum Tennis anders funktioniert als Mannschaftssport",
+      "body": [
+        "Es gibt kein Unentschieden, also nur zwei Ausgänge, und die Quoten wirken dadurch übersichtlicher. Der Haken liegt bei der Aufgabe: Gibt ein Spieler verletzt auf, gelten je nach Anbieter unterschiedliche Regeln. Manche werten die Wette als ungültig und erstatten den Einsatz, andere zahlen den Gegner als Sieger aus, sobald ein Satz beendet ist.",
+        "Diese Regel steht in den Wettbestimmungen und nicht am Wettschein. Bei den Anbietern in dieser Liste unterscheidet sie sich, und bei Turnieren mit dichtem Spielplan entscheidet sie über mehr Wetten, als man erwartet. Ein Blick vor der ersten Tenniswette lohnt daher mehr als jeder Quotenvergleich."
+      ]
+    },
+    "in-play-betting": {
+      "heading": "Live-Wetten: was die Verzögerung kostet",
+      "body": [
+        "Zwischen dem Geschehen im Stadion und Ihrem Bildschirm liegen je nach Übertragungsweg fünf bis dreißig Sekunden. Der Anbieter rechnet mit derselben Verzögerung und sichert sich zusätzlich mit einer Annahmesperre ab: Wetten werden bei Torgefahr für einige Sekunden gar nicht angenommen. Wer über Stream wettet, wettet daher immer auf eine Vergangenheit, die der Buchmacher schon kennt.",
+        "Der Cash-out gehört zum selben Mechanismus. Er sieht aus wie eine Absicherung und enthält einen Abschlag, der bei laufendem Spiel höher liegt als vor dem Anpfiff. Rechnerisch ist ein früher Cash-out fast immer teurer als das Ausspielen der Wette, und er wird trotzdem angeboten, weil er sich gut anfühlt."
+      ]
+    },
+    "best-online-casinos": {
+      "heading": "Was „bestes Casino“ hier tatsächlich heißt",
+      "body": [
+        "Die Reihenfolge in dieser Liste ist das Ergebnis einer Rechnung und keine Meinung. Sechs Kriterien mit festen Gewichten, dieselben Daten für alle Anbieter, keine Möglichkeit, eine Position von Hand zu setzen. Wer die Regeln nachliest und selbst rechnet, kommt auf dieselbe Reihenfolge.",
+        "Das macht die Liste überprüfbar und beantwortet trotzdem nicht Ihre Frage. Ein Anbieter auf Platz eins mit deutscher Lizenz führt kein Live-Roulette, weil er das nicht darf. Wenn Sie deshalb hier sind, ist der beste Anbieter dieser Liste für Sie der falsche, und die Liste sagt Ihnen das lieber deutlich, als eine Empfehlung zu geben, die nicht passt."
+      ]
+    },
+    "legal-online-casino": {
+      "heading": "Woran Sie eine deutsche Erlaubnis erkennen",
+      "body": [
+        "Die einzige belastbare Prüfung führt über die Whitelist der GGL. Suchen Sie dort nach dem Betreiber und nicht nach der Marke, denn im Register steht oft eine Gesellschaft mit ganz anderem Namen. Ein Siegel im Seitenfuß, eine Lizenznummer im Impressum und der Satz „lizenziert und reguliert“ sind kein Nachweis, weil sie sich hinschreiben lassen.",
+        "Zwei sichtbare Merkmale kommen dazu. Bei einer deutschen Erlaubnis ist der Einsatz an Automatenspielen auf 1 € pro Runde begrenzt, und nach einer Stunde Spiel erzwingt das System eine fünfminütige Pause. Wer bei einem angeblich lizenzierten Anbieter 5 € pro Spin setzen kann, hat die Antwort auch ohne Register."
+      ]
+    },
+    "casino-apps": {
+      "heading": "App oder Browser: der Unterschied ist kleiner als beworben",
+      "body": [
+        "Die meisten Casino-Apps sind verpackte Webseiten. Spielauswahl, Bonusbedingungen und Limits sind identisch mit der mobilen Seite, weil dieselbe Software dahinter läuft. Der echte Unterschied liegt bei der Anmeldung per Fingerabdruck und bei Benachrichtigungen, und Letztere sind bei einem Glücksspielangebot eher ein Argument dagegen.",
+        "Im App Store und bei Google Play sind Echtgeld-Casinos in Deutschland zusätzlich eingeschränkt. Ein Teil der Anbieter verteilt seine App deshalb als direkten Download, und dann fehlt die Prüfung des Stores. Wer das vermeiden will, spielt im Browser und legt sich ein Lesezeichen auf den Startbildschirm: technisch fast dasselbe, ohne Installation."
+      ]
+    }
+  },
+  "pageFit": {
+    "brandIndex": {
+      "heading": "Wann diese Übersicht der richtige Einstieg ist",
+      "pro": [
+        "Sie wollen erst sehen, welche Anbieter es überhaupt gibt, bevor Sie filtern",
+        "Sie vergleichen die Note gegen Bonus und Auszahlungsdauer in einer Ansicht",
+        "Sie suchen einen Anbieter, den Sie früher genutzt haben, und wollen seinen Status wissen"
+      ],
+      "con": [
+        "Sie brauchen eine bestimmte Zahlungsmethode: dafür sind die Listen nach Zahlungsweg schneller",
+        "Sie wollen den besten Bonus: die Reihenfolge hier richtet sich nach sechs Kriterien und nicht nach der Bonushöhe",
+        "Sie suchen Live-Tische: die führen nur die Anbieter ohne deutsche Erlaubnis"
+      ]
+    }
+  },
+  "pageFaq": {
+    "$note": "FAQ страниц без своей таксономии. На юридических страницах его нет намеренно: требование к контенту выводит их из-под этого правила.",
+    "brandIndex": [
+      {
+        "question": "Warum taucht ein Anbieter in mehreren Listen auf?",
+        "answer": "Weil die Listen unterschiedliche Fragen beantworten und derselbe Anbieter mehrere davon erfüllen kann. Wer PayPal annimmt und eine deutsche Lizenz hat, steht in beiden Listen. Das ist kein Doppeleintrag, sondern dieselbe Karteikarte aus einem anderen Blickwinkel, und die Daten dahinter sind identisch."
+      },
+      {
+        "question": "Warum stehen hier nur 18 Casinos und nicht 200?",
+        "answer": "Weil jeder Eintrag vier bestätigte Quellen und mindestens eine eigene Auszahlung voraussetzt. Eine Liste mit 200 Namen wäre in zwei Wochen zusammengetragen und würde zu 90 % aus abgeschriebenen Angaben der Anbieter bestehen. Wir nehmen lieber weniger auf und können zu jeder Zahl sagen, woher sie kommt."
+      },
+      {
+        "question": "Kann ein Casino sich hier einkaufen?",
+        "answer": "In die Liste nicht, und in eine bessere Position schon gar nicht. Die Reihenfolge berechnet eine Formel aus sechs Kriterien, und in unseren Daten gibt es kein Feld für eine manuelle Position. Wir verdienen an Provisionen, wenn jemand über unsere Links ein Konto eröffnet, und das gilt für alle Anbieter gleichermaßen."
+      },
+      {
+        "question": "Was bedeutet es, wenn bei einem Anbieter „noch nicht geprüft“ steht?",
+        "answer": "Dass wir diese Angabe an der Quelle nicht bestätigen konnten. Meistens fehlt sie in den Teilnahmebedingungen, manchmal widersprechen sich zwei Stellen beim Anbieter selbst. Ein plausibler Schätzwert wäre bequemer und würde Ihnen eine Sicherheit vortäuschen, die es nicht gibt."
+      },
+      {
+        "question": "Warum hat ein Anbieter mit kleinerem Bonus die bessere Note?",
+        "answer": "Weil die Bonushöhe gar nicht in die Formel eingeht. Bewertet werden Umsatzfaktor, Mindesteinzahlung, Frist und Höchsteinsatz, also die vier Zahlen, die darüber entscheiden, ob ein Bonus überhaupt freispielbar ist. 300 % mit 50x Umsatz sind nach dieser Rechnung weniger wert als 100 % mit 20x."
+      },
+      {
+        "question": "Wie erkenne ich, ob ein Anbieter noch aktiv ist?",
+        "answer": "Am Status neben dem Namen. Anbieter, die den deutschen Markt verlassen haben oder ihre Erlaubnis verloren haben, bleiben mit einem entsprechenden Vermerk stehen statt zu verschwinden. Auszahlungsanträge laufen dort meist noch, neue Einzahlungen nimmt das Konto nicht mehr an."
+      }
+    ],
+    "authors": [
+      {
+        "question": "Warum steht bei den Listen nicht die ganze Redaktion?",
+        "answer": "Weil eine Redaktion als Ganzes für nichts geradesteht. Ein Name über der Tabelle heißt: Diese Person hat die Zahlen erhoben oder nachgeprüft und ist ansprechbar, wenn etwas falsch ist. Die Tabelle auf dieser Seite zeigt, wie viele Anbieter das jeweils sind."
+      },
+      {
+        "question": "Warum stehen bei den Profilen Platzhalternamen?",
+        "answer": "Weil die Seite technisch fertig ist und die realen Profile noch nicht freigegeben sind. Sobald sie vorliegen, ersetzen Name, Foto und Werdegang die Platzhalter. Bis dahin steht der Hinweis offen auf der Seite, statt dass wir uns Personen ausdenken."
+      },
+      {
+        "question": "Wer entscheidet, welches Casino oben steht?",
+        "answer": "Niemand aus der Redaktion. Die Reihenfolge berechnet die Formel aus sechs Kriterien, und die Regeln dafür stehen offen. Die Redaktion entscheidet, welche Zahlen in die Daten kommen, und genau diese Zuständigkeit steht in der Tabelle auf dieser Seite."
+      },
+      {
+        "question": "Schreiben die Anbieter bei den Texten mit?",
+        "answer": "Nein. Es gibt keine Freigabe durch Anbieter, keine bezahlten Textbausteine und keine Vorabansicht vor Veröffentlichung. Anbieter melden sich gelegentlich mit Korrekturen zu einzelnen Zahlen, und die prüfen wir wie jede andere Quelle: an der Originalstelle."
+      },
+      {
+        "question": "Wie melde ich einen Fehler?",
+        "answer": "Über die Kontaktdaten im Impressum, am besten mit der Adresse der betroffenen Seite und der Angabe, welche Zahl falsch ist. Wir ändern die Daten und nicht den Text, damit die Korrektur auf allen Seiten ankommt, die diese Angabe tragen. Das Prüfdatum über der Tabelle wandert dabei mit."
+      },
+      {
+        "question": "Testet die Redaktion mit eigenem Geld?",
+        "answer": "Bei den Auszahlungen ja. Konto eröffnen, verifizieren, einzahlen, auszahlen und die Zeit bis zur Gutschrift protokollieren, das ist der einzige Weg, an diese Zahl zu kommen. Bonusbedingungen und Lizenzen dagegen werden gelesen und im Register nachgeschlagen, dafür braucht es kein Konto."
+      }
+    ],
+    "editorialPolicy": [
+      {
+        "question": "Warum steht der Provisionshinweis nicht über jeder Tabelle?",
+        "answer": "Er stand dort und ist als gelber Balken über der ersten Tabelle wieder verschwunden, weil er auf jeder Seite ein Viertel des ersten Bildschirms belegte. Jetzt steht er im Seitenfuß und auf dieser Seite ausführlich. Jeder Partnerlink bleibt im Quelltext als gesponsert markiert, das ist die Kennzeichnung, die zählt."
+      },
+      {
+        "question": "Verdient ihr an jedem Klick?",
+        "answer": "Nein, nur an einer tatsächlichen Registrierung beim Anbieter. Ein Klick allein bringt nichts ein. Deshalb gibt es hier auch keine Zwischenseiten mit Weiterleitungen und keine Elemente, die zum Klicken drängen sollen."
+      },
+      {
+        "question": "Warum listet ihr Anbieter ohne deutsche Lizenz?",
+        "answer": "Weil sie in Deutschland werben und Menschen ohnehin nach ihnen suchen. Sie wegzulassen würde die Frage nicht beantworten, sondern nur woandershin verschieben. Bei jedem dieser Anbieter steht dabei, was die fehlende Erlaubnis praktisch bedeutet, und das ist mehr als eine Warnung im Seitenfuß."
+      },
+      {
+        "question": "Was passiert, wenn ein Anbieter mit einer Angabe nicht einverstanden ist?",
+        "answer": "Wir prüfen die Quelle erneut. Stimmt der Einwand, ändern wir die Daten und das Prüfdatum. Stimmt er nicht, bleibt die Angabe stehen. Eine Provision ändert an diesem Ablauf nichts, und ein Anbieter kann eine korrekte Angabe nicht entfernen lassen."
+      },
+      {
+        "question": "Woher kommen die Auszahlungszeiten?",
+        "answer": "Aus eigenen Auszahlungen. Gemessen wird vom abgeschickten Antrag bis zur Gutschrift auf dem Zielkonto, die interne Freigabe des Anbieters steckt also mit drin. Angegeben wird der Median, weil ein einzelner Fall mit Rückfrage zur Verifizierung jeden Durchschnitt unbrauchbar machen würde."
+      },
+      {
+        "question": "Gibt es Inhalte, die von Anbietern bezahlt wurden?",
+        "answer": "Keine. Es gibt weder bezahlte Beiträge noch bezahlte Platzierungen in Ranglisten. Die einzige Geldquelle sind Provisionen für vermittelte Registrierungen, und deren Einfluss auf die Reihenfolge ist technisch ausgeschlossen, weil die Reihenfolge berechnet und nicht gesetzt wird."
+      }
+    ],
+    "responsibleGambling": [
+      {
+        "question": "Wie beantrage ich eine Selbstsperre?",
+        "answer": "Über das Onlineportal der Sperrdatei OASIS oder in Papierform beim Regierungspräsidium Darmstadt. Nötig sind Name, Geburtsdatum, Anschrift und ein Ausweisdokument. Der Antrag ist kostenlos, die Sperre wird binnen weniger Tage wirksam und gilt mindestens drei Monate."
+      },
+      {
+        "question": "Gilt die Sperre auch bei Anbietern ohne deutsche Lizenz?",
+        "answer": "Nein. OASIS wird nur von Anbietern mit deutscher Erlaubnis abgefragt. Wer sich sperren lässt und danach bei einem Anbieter ohne diese Erlaubnis weiterspielt, hat keine Lücke gefunden, sondern die eigene Entscheidung von vorher umgangen."
+      },
+      {
+        "question": "Kann ich die Sperre vorzeitig aufheben lassen?",
+        "answer": "Erst nach drei Monaten und nur auf eigenen Antrag. Automatisch läuft sie nicht aus. Das ist beabsichtigt: Der Moment, in dem eine Sperre lästig wird, ist selten der Moment, in dem sie nicht mehr gebraucht wird."
+      },
+      {
+        "question": "Was kann ich tun, wenn es jemanden in meinem Umfeld betrifft?",
+        "answer": "Eine Fremdsperre über OASIS ist möglich, wenn konkrete Anhaltspunkte für eine Gefährdung vorliegen. Sie kann von Angehörigen oder vom Arbeitgeber beantragt werden. Schulden zu übernehmen hilft dagegen in aller Regel nicht, darin sind sich die Beratungsstellen einig."
+      },
+      {
+        "question": "Wie hoch ist das gesetzliche Einzahlungslimit?",
+        "answer": "1.000 € im Monat, und zwar über alle Anbieter mit deutscher Erlaubnis zusammen. Gerechnet wird das über das System LUGAS. Ein eigenes, niedrigeres Limit lässt sich im Konto jederzeit setzen, eine Senkung gilt sofort und eine Anhebung erst nach Wartezeit."
+      },
+      {
+        "question": "Kostet die Beratung etwas?",
+        "answer": "Nein. Die Telefonnummern der Beratungsstellen sind kostenlos und anonym, auch für Angehörige. Eine Terminvergabe oder Wartezeit gibt es beim Telefon nicht."
+      }
+    ]
+  },
+  "pageContent": {
+    "$note": "Текстовые разделы страниц, у которых нет своей таксономии. Держатся в локали, а не в шаблонах, чтобы правка текста не требовала правки кода.",
+    "compare": [
+      {
+        "heading": "Zwei Gruppen, die man nicht direkt vergleichen kann",
+        "body": [
+          "In der Tabelle stehen Anbieter mit deutscher Erlaubnis neben Anbietern ohne. Das sieht nach einem Vergleich aus, ist aber eher eine Gegenüberstellung von zwei Angeboten mit unterschiedlichen Regeln. Bei der ersten Gruppe deckelt das Gesetz den Einsatz auf 1 € pro Spin und die Einzahlung auf 1.000 € im Monat, bei der zweiten gibt es beides nicht.",
+          "Deshalb fallen die Boni so unterschiedlich aus. Ein lizenzierter Anbieter kann kein Angebot bauen, das 4.000 € Bonusguthaben in Aussicht stellt, wenn im selben Monat nur 1.000 € eingezahlt werden dürfen. Wer die Zahlen nebeneinanderlegt, vergleicht nicht die Großzügigkeit der Marketingabteilungen, sondern zwei Rechtslagen."
+        ]
+      },
+      {
+        "heading": "Welche Spalte in welcher Situation zählt",
+        "body": [
+          "Wer selten spielt und den Bonus mitnehmen will, liest von rechts nach links: erst Umsatz, dann Frist, dann Betrag. Ein Angebot mit 20x auf den Bonus ist bei 100 € realistischer als eines mit 50x auf Bonus und Einzahlung bei 500 €, obwohl die zweite Zahl fünfmal größer aussieht.",
+          "Wer regelmäßig spielt und den Bonus ohnehin ablehnt, braucht nur zwei Spalten: Auszahlungsdauer und Lizenz. Die Bonusspalten sind dann Dekoration. Und wer eine bestimmte Zahlungsmethode braucht, sortiert am besten gar nicht, sondern filtert, weil ein Anbieter ohne den passenden Weg unabhängig von seiner Note ausscheidet."
+        ]
+      },
+      {
+        "heading": "Was diese Tabelle nicht leisten kann",
+        "body": [
+          "Sie sagt nichts über den Support in der Nacht, über die Bedienung auf einem alten Telefon und über die Frage, ob ein Anbieter bei einer strittigen Auszahlung kulant ist. Solche Dinge lassen sich nicht zweimal gleich messen, und was wir nicht messen können, bewerten wir nicht.",
+          "Auch die Spielauswahl steckt nur grob drin. Zwei Anbieter mit je 3.000 Titeln können sich vollständig unterscheiden, und ob Ihr Lieblingsspiel dabei ist, beantwortet keine Zahl in dieser Tabelle. Dafür führt der Weg über die Listen nach Spieleanbieter."
+        ]
+      }
+    ],
+    "brandIndex": [
+      {
+        "heading": "Was diese Übersicht von einer Bestenliste unterscheidet",
+        "body": [
+          "Eine Bestenliste beantwortet die Frage „welches ist das beste“. Diese Seite beantwortet die Frage „welche gibt es und was unterscheidet sie“. Der Unterschied ist nicht rhetorisch: Die erste Frage hat nur dann eine Antwort, wenn man weiß, wonach gefragt wird, und das weiß niemand außer Ihnen.",
+          "Praktisch heißt das: Sortieren Sie die Tabelle nach der Spalte, die Ihre Entscheidung trägt. Wer den Bonus mitnehmen will, sortiert nach Umsatz und liest die Bonusspalte erst danach. Wer regelmäßig auszahlt, sortiert nach Auszahlungsdauer und ignoriert die Bonusspalten ganz. Die Note ist die Vorsortierung für alle, die noch nicht wissen, worauf sie achten sollen."
+        ]
+      },
+      {
+        "heading": "Wie ein Anbieter in diese Liste kommt",
+        "body": [
+          "Aufgenommen wird ein Casino erst, wenn vier Dinge an der Quelle bestätigt sind: die Lizenz im Register der zuständigen Aufsicht, die Bonusbedingungen in den Teilnahmebedingungen des Anbieters, die Zahlungswege für Ein- und Auszahlung sowie die im Konto verfügbaren Schutzfunktionen. Fehlt eines davon, wartet der Eintrag.",
+          "Danach folgt mindestens eine eigene Auszahlung. Erst sie liefert die Zahl in der Spalte „Auszahlung“, und erst danach wird die Note vollständig berechnet. Das ist der Grund, warum hier weniger Namen stehen als bei Seiten, die jede Neueröffnung am Tag der Eröffnung aufnehmen."
+        ]
+      },
+      {
+        "heading": "Was die Note ist und was sie nicht ist",
+        "body": [
+          "Die Zahl neben jedem Namen kommt aus sechs Kriterien mit festen Gewichten. Auszahlungen und Tempo machen 25 % aus, Bonuswert 20 %, Lizenz und Sicherheit 20 %, der Rest verteilt sich auf Spiele, Zahlungswege und Support. Die Regeln dahinter stehen offen und lassen sich nachrechnen.",
+          "Eine Empfehlung ist die Note nicht. Sie sagt, wie ein Anbieter bei messbaren Dingen abschneidet, und weiß nichts über Ihre Situation. Wer Live-Roulette sucht, ist mit dem bestbewerteten Anbieter der Liste schlecht bedient, weil dieser als deutscher Lizenznehmer gar keine Live-Tische führen darf."
+        ]
+      },
+      {
+        "heading": "Warum abgemeldete Anbieter stehen bleiben",
+        "body": [
+          "Verlässt ein Casino den deutschen Markt oder verliert es seine Erlaubnis, verschwindet der Eintrag nicht. Er bekommt einen anderen Status und bleibt erreichbar. Wer Guthaben bei einem Anbieter hatte, der plötzlich nicht mehr erreichbar ist, sucht genau diese Information, und sie steht sonst nirgends.",
+          "Praktisch heißt das für Sie: Auszahlungsanträge laufen nach dem Rückzug meist noch, das Konto lässt sich aber nicht mehr aufladen. Bei Anbietern mit deutscher Erlaubnis ist die GGL Ansprechpartner, bei allen anderen bleibt nur der Support des Betreibers selbst."
+        ]
+      },
+      {
+        "heading": "Wie oft sich die Angaben ändern",
+        "body": [
+          "Bonusbedingungen prüfen wir monatlich nach, weil sie sich am häufigsten ändern und dabei selten angekündigt werden. Ein Umsatzfaktor springt von 30x auf 40x, und auf der Werbeseite steht weiterhin dieselbe Prozentzahl. Das Datum der letzten Prüfung steht über der Tabelle.",
+          "Lizenzangaben gleichen wir mit der Whitelist der GGL ab, sobald sich dort etwas bewegt. Auszahlungszeiten wachsen fortlaufend mit jeder gemessenen Auszahlung, der Median verschiebt sich also langsam und ohne Ankündigung."
+        ]
+      }
+    ],
+    "authors": [
+      {
+        "heading": "Was eine Auszahlungsmessung praktisch bedeutet",
+        "body": [
+          "Für jede gemessene Zahl entsteht ein echtes Konto: Registrierung, Verifizierung mit Ausweis und Adressnachweis, Einzahlung, Spiel, Auszahlungsantrag. Protokolliert wird der Zeitstempel des abgeschickten Antrags und der Zeitstempel der Gutschrift auf dem Zielkonto. Alles dazwischen ist die Bearbeitungszeit des Anbieters, und genau die interessiert.",
+          "Störfaktoren werden mitgeschrieben statt herausgerechnet. Eine Rückfrage zur Verifizierung, ein Wochenende, ein Feiertag: All das steht im Protokoll, und deshalb geben wir einen Median an und keinen Durchschnitt. Ein einziger Fall mit einer Woche Bearbeitungszeit würde einen Mittelwert unbrauchbar machen und über den typischen Ablauf nichts mehr sagen."
+        ]
+      },
+      {
+        "heading": "Warum drei Personen und nicht eine",
+        "body": [
+          "Die drei Arbeitsschritte hinter einer Bewertung verlangen unterschiedliche Aufmerksamkeit. Auszahlungen messen heißt: Konto eröffnen, verifizieren, einzahlen, auszahlen und die Zeit bis zur Gutschrift protokollieren. Bonusbedingungen prüfen heißt: Teilnahmebedingungen lesen und den nötigen Umsatz ausrechnen, oft über mehrere Absätze verteilt.",
+          "Die Freigabe liegt bei der Chefredaktion, und zwar getrennt von beiden. Wer eine Zahl selbst erhoben hat, prüft sie schlechter nach, das ist keine Frage der Sorgfalt. Deshalb steht über jeder Liste ein Name und nicht die Redaktion als Ganzes. Bei Streitfragen entscheidet die Quelle und nicht die Erfahrung: Wenn zwei Stellen beim Anbieter sich widersprechen, gilt die verbindlichere, also die Teilnahmebedingungen vor der Werbeseite."
+        ]
+      },
+      {
+        "heading": "Was in die Zuständigkeit fällt und was nicht",
+        "body": [
+          "Die Person über einer Liste verantwortet die Daten der dort aufgeführten Anbieter: Lizenz, Bonusbedingungen, Zahlungswege, gemessene Auszahlungen. Sie verantwortet nicht die Reihenfolge, denn die berechnet die Formel aus diesen Daten.",
+          "Das ist der praktische Unterschied zu Seiten, auf denen ein Autor eine Rangliste zusammenstellt. Hier lässt sich jede Position aus den veröffentlichten Regeln nachrechnen, und eine falsche Position hat immer eine falsche Zahl als Ursache. Genau deshalb ist die Zuständigkeit für Zahlen und nicht für Ranglisten definiert."
+        ]
+      },
+      {
+        "heading": "Wenn Sie einen Fehler finden",
+        "body": [
+          "Melden Sie ihn über die Kontaktdaten im Impressum, am besten mit der betroffenen Adresse und der Angabe, was dort falsch steht. Wir prüfen die Quelle erneut und ändern die Daten, nicht den Text der Seite. Beim nächsten Aufbau ändert sich damit jede Seite, die diese Angabe trägt.",
+          "Das Datum der Prüfung wandert mit. Wer eine Woche später wiederkommt, sieht am Datum über der Tabelle, dass etwas passiert ist, ohne den Text vergleichen zu müssen."
+        ]
+      }
+    ],
+    "editorialPolicy": [
+      {
+        "heading": "Wie ein Interessenkonflikt hier aussehen würde",
+        "body": [
+          "Der naheliegende Konflikt: Ein Anbieter zahlt eine höhere Provision, und dafür rutscht er in der Tabelle nach oben. Technisch geht das hier nicht, weil die Reihenfolge aus den Daten berechnet wird und kein Feld für eine Position existiert. Wer es prüfen will, nimmt die veröffentlichten Gewichte und rechnet eine beliebige Liste nach.",
+          "Der weniger naheliegende Konflikt ist der interessantere: Ein Anbieter mit guter Provision wird aufgenommen, ein Anbieter ohne Partnerprogramm nicht. Dagegen hilft nur Transparenz über die Aufnahmekriterien, und die stehen auf der Übersichtsseite aller Casinos. Anbieter ohne Partnerprogramm nehmen wir auf, sie bekommen dann statt eines Links den Hinweis, dass es keinen gibt."
+        ]
+      },
+      {
+        "heading": "Was eine Provision konkret ändert und was nicht",
+        "body": [
+          "Für Sie ändert sich am Angebot nichts: Der Bonus und die Bedingungen sind dieselben, ob Sie über unseren Link kommen oder die Adresse selbst eintippen. Die Provision zahlt der Anbieter aus seinem Marketingbudget, und sie fällt nur an, wenn tatsächlich ein Konto eröffnet wird.",
+          "Was sie nicht ändert, ist die Position in einer Tabelle. Die Reihenfolge berechnet die Formel aus sechs Kriterien, und in unseren Daten existiert kein Feld für eine manuelle Position. Das ist überprüfbar: Die Regeln stehen offen, und wer nachrechnet, kommt auf dieselbe Reihenfolge."
+        ]
+      },
+      {
+        "heading": "Warum wir Anbieter aufnehmen, von denen wir abraten",
+        "body": [
+          "Ein Teil der hier gelisteten Casinos hat keine deutsche Erlaubnis, und wir schreiben bei jedem davon dazu, was das praktisch bedeutet. Sie wegzulassen wäre bequemer, würde die Frage aber nicht beantworten, mit der Menschen ankommen: Diese Anbieter werben in Deutschland, und wer sie sucht, findet sie ohnehin.",
+          "Unsere Position dazu steht in den Listen selbst und nicht in einem Warnhinweis am Seitenende. Ohne zuständige Behörde gibt es bei einer einbehaltenen Auszahlung keinen Weg außer der Beschwerdestelle des Anbieters, und eine bestehende OASIS-Sperre greift dort nicht. Wer das weiß und trotzdem dort spielt, hat eine informierte Entscheidung getroffen."
+        ]
+      },
+      {
+        "heading": "Was wir bewusst nicht tun",
+        "body": [
+          "Keine erfundenen Gewinnerzahlen, keine Zähler mit angeblich gerade aktiven Spielern, keine ablaufenden Countdowns. Solche Elemente erzeugen Zeitdruck bei einer Entscheidung, bei der Zeitdruck genau das Falsche ist.",
+          "Keine Zahlen ohne Grundlage. Wo eine Angabe nicht an der Quelle zu bestätigen war, steht in der Tabelle „noch nicht geprüft“ und keine Schätzung. Wie viele Anbieter davon bei welchem Feld betroffen sind, steht in der Tabelle weiter oben auf dieser Seite."
+        ]
+      }
+    ],
+    "responsibleGambling": [
+      {
+        "heading": "Woran Sie merken, dass es kippt",
+        "body": [
+          "Die Übergänge sind selten dramatisch. Häufig sind es kleine Verschiebungen: Sie spielen länger als vorgenommen, erhöhen den Einsatz nach einer Verlustserie, um sie aufzuholen, oder verlegen das Spielen auf Zeiten, in denen niemand fragt. Geld, das für anderes gedacht war, wandert auf das Spielkonto.",
+          "Ein einfacher Test: Sagen Sie einer Person in Ihrem Umfeld, wie viel Sie in den letzten vier Wochen eingezahlt haben. Fällt Ihnen das schwer oder kennen Sie die Zahl nicht, ist das der Zeitpunkt für ein Einzahlungslimit. Die Kontoübersicht bei lizenzierten Anbietern zeigt die Summe auf Knopfdruck."
+        ]
+      },
+      {
+        "heading": "Was die Limits leisten und wo sie aufhören",
+        "body": [
+          "Das gesetzliche Einzahlungslimit von 1.000 € im Monat gilt anbieterübergreifend für alle Casinos mit deutscher Erlaubnis zusammen. Gerechnet wird es über das System LUGAS. Wer bei drei lizenzierten Anbietern je 400 € einzahlt, wird beim dritten gestoppt.",
+          "Bei Anbietern ohne deutsche Erlaubnis greift keine dieser Grenzen, weil sie nicht an LUGAS angebunden sind. Dasselbe gilt für die Selbstsperre: Eine OASIS-Sperre wird dort nicht abgefragt. Wer sich sperren lässt und anschließend woanders weiterspielt, hat die Sperre umgangen, und die eigene Entscheidung von vorher damit auch."
+        ]
+      },
+      {
+        "heading": "Was Angehörige tun können",
+        "body": [
+          "Eine Fremdsperre über OASIS ist möglich. Sie kann von Angehörigen, vom Arbeitgeber oder vom Anbieter selbst beantragt werden, wenn konkrete Anhaltspunkte für eine Gefährdung vorliegen. Zuständig ist das Regierungspräsidium Darmstadt, der Antrag ist kostenlos und die Sperre gilt mindestens ein Jahr.",
+          "Schulden zu übernehmen hilft in aller Regel nicht. Beratungsstellen berichten übereinstimmend, dass eine ausgeglichene Bilanz ohne Sperre den Rückfall eher beschleunigt. Die Telefonnummern weiter unten sind kostenlos und anonym, auch für Angehörige."
+        ]
+      },
+      {
+        "heading": "Sperre beantragen: der Ablauf",
+        "body": [
+          "Der Antrag läuft über das Onlineportal der Sperrdatei oder in Papierform beim Regierungspräsidium Darmstadt. Nötig sind Name, Geburtsdatum, Anschrift und ein Ausweisdokument. Die Sperre wird in der Regel binnen weniger Tage wirksam und gilt dann bei allen Anbietern mit deutscher Erlaubnis gleichzeitig, für Casino und Sportwetten.",
+          "Aufgehoben wird sie frühestens nach drei Monaten und nur auf eigenen Antrag. Sie läuft nicht automatisch aus: Ohne Antrag bleibt sie bestehen. Das ist Absicht, weil der Moment, in dem eine Sperre lästig wird, selten der Moment ist, in dem sie nicht mehr gebraucht wird."
+        ]
+      }
+    ]
+  },
+  "hubContent": {
+    "$note": "Текст разделов. У каждого хаба свой: общий шаблон на семь страниц требования к контенту запрещают прямым текстом, и линтер ловит это как дубль. Числа в текст не зашиваются, их считает шаблон.",
+    "payments": {
+      "fit": {
+              "heading": "Wann dieser Bereich weiterhilft",
+              "pro": [
+                      "Sie wissen, womit Sie zahlen wollen, und suchen die Anbieter, bei denen das auch zurück funktioniert",
+                      "Ihnen ist die Auszahlungsdauer wichtiger als die Bonushöhe",
+                      "Sie vergleichen Mindesteinzahlungen, weil Sie klein anfangen wollen"
+              ],
+              "con": [
+                      "Sie suchen einen bestimmten Bonus: dafür ist der Bereich Bonus der richtige Einstieg",
+                      "Ihnen ist die Aufsicht wichtiger als der Zahlungsweg: dann beginnen Sie bei den Lizenzen",
+                      "Sie erwarten Gebührenvergleiche: keiner der geprüften Anbieter erhebt eine prozentuale Auszahlungsgebühr"
+              ]
+      },
+      "sections": [
+        {
+          "heading": "Einzahlen und auszahlen sind zwei verschiedene Listen",
+          "body": [
+            "Auf der Zahlungsseite eines Casinos stehen die Methoden, mit denen Geld hereinkommt. Welche davon auch hinausführen, steht dort in der Regel nicht. Der Unterschied fällt erst auf, wenn die erste Auszahlung ansteht und plötzlich nur noch die Banküberweisung übrig ist.",
+            "PayPal ist das deutlichste Beispiel. Wer damit einzahlt, bekommt bei vielen Anbietern auch darüber ausgezahlt, aber eben nicht bei allen. Bei Paysafecard funktioniert der Rückweg grundsätzlich nicht: Der Gutschein ist ein Einwegprodukt, das Geld kommt über ein anderes Verfahren zurück. Diese Spalte führen wir für jede Methode getrennt, weil sie über die tatsächliche Wartezeit entscheidet."
+          ]
+        },
+        {
+          "heading": "Woher die Auszahlungszeiten in den Tabellen kommen",
+          "body": [
+            "Die Stundenangaben sind gemessene Werte aus eigenen Auszahlungen, nicht die Zusage aus den AGB. Gerechnet wird ab dem Zeitpunkt, an dem der Antrag im Konto abgeschickt ist, bis das Geld auf dem Zielkonto gutgeschrieben ist. Die interne Freigabe des Anbieters steckt also mit drin, und genau dort entstehen die Unterschiede.",
+            "Ein Median statt eines Durchschnitts: Eine einzelne Auszahlung, die wegen einer Nachfrage zur Verifizierung sechs Tage liegen bleibt, würde einen Mittelwert unbrauchbar machen. Am Wochenende dauert es bei Banküberweisungen ohnehin länger, das gilt für jeden Anbieter gleichermaßen und sagt über ihn wenig aus."
+          ]
+        },
+        {
+          "heading": "Was die Methode nicht beeinflusst",
+          "body": [
+            "Das monatliche Einzahlungslimit von 1.000 € hängt an der Lizenz und nicht am Zahlungsweg. Es gilt bei allen Anbietern mit deutscher Erlaubnis zusammen, gerechnet über das System LUGAS. Wer über drei lizenzierte Casinos je 400 € einzahlt, stößt beim dritten an die Grenze, unabhängig davon, ob er Visa, PayPal oder SEPA benutzt.",
+            "Ebenso wenig ändert die Methode etwas an der Verifizierung. Ausweis und Adressnachweis verlangt jeder lizenzierte Anbieter vor der ersten Auszahlung, und das dauert typischerweise einen Werktag. Wer die Prüfung gleich nach der Registrierung erledigt, verliert diesen Tag nicht später, wenn das Geld schon auf dem Weg sein soll."
+          ]
+        }
+      ]
+    },
+    "bonuses": {
+      "fit": {
+              "heading": "Wann sich der Blick hierher lohnt",
+              "pro": [
+                      "Sie wollen ausrechnen, was ein Angebot wirklich verlangt, statt Prozentzahlen zu vergleichen",
+                      "Sie prüfen Frist und Höchsteinsatz, bevor Sie zusagen",
+                      "Sie wollen wissen, wo ein Bonus ohne Code automatisch gutgeschrieben wird"
+              ],
+              "con": [
+                      "Sie spielen ohne Bonus: dann sagen Auszahlungsdauer und Lizenz mehr über den Anbieter",
+                      "Sie suchen ein Angebot ohne Einzahlung: davon gibt es unter deutscher Lizenz praktisch keines",
+                      "Sie wollen sofort auszahlen können: ein laufender Umsatz sperrt auch Ihr eigenes Guthaben"
+              ]
+      },
+      "sections": [
+        {
+          "heading": "Wie man den Wert eines Bonus in einer Minute ausrechnet",
+          "body": [
+            "Nehmen Sie den Bonusbetrag und multiplizieren Sie ihn mit dem Umsatzfaktor. Bezieht sich der Faktor auf „Bonus und Einzahlung“, verdoppeln Sie das Ergebnis noch einmal. Herauskommt der Einsatz, der nötig ist, bevor irgendetwas davon auszahlbar wird.",
+            "Ein Beispiel aus den Tabellen unten: 100 € Bonus bei 35x nur auf den Bonus verlangt 3.500 € Umsatz. Derselbe Faktor auf Bonus und Einzahlung verlangt 7.000 €. Bei einem Einsatzlimit von 1 € pro Spin sind das 7.000 Runden, und bei einem durchschnittlichen Spieltempo von zehn Sekunden pro Runde rund 19 Stunden reine Spielzeit."
+          ]
+        },
+        {
+          "heading": "Die Bedingung, die am häufigsten den Bonus kostet",
+          "body": [
+            "Fast jedes Angebot deckelt den Einsatz, solange der Umsatz läuft. Üblich sind 5 €, manchmal 4 € oder weniger. Ein einziger Spin darüber reicht bei den meisten Anbietern aus, damit Bonus und alle daraus entstandenen Gewinne verfallen, und ein Hinweis erscheint dabei nicht immer.",
+            "Der zweite Kandidat ist die Frist. Sie beginnt mit der Gutschrift und nicht mit dem ersten Spiel. Wer einen Bonus am Freitag annimmt, ihn aber erst am nächsten Wochenende einlösen will, hat bei sieben Tagen Frist bereits verloren. In den Listen unten reicht die Spanne von 7 bis 30 Tagen."
+          ]
+        },
+        {
+          "heading": "Wann kein Bonus die bessere Entscheidung ist",
+          "body": [
+            "Solange ein Umsatz offen ist, ist das gesamte Guthaben gesperrt, auch der Teil, den Sie selbst eingezahlt haben. Wer damit rechnet, zwischendurch etwas abzuheben, sollte das Angebot ablehnen. Bei den meisten Anbietern geht das direkt bei der Einzahlung mit einem Häkchen.",
+            "Ohne Bonus gelten außerdem keine Einsatzgrenzen aus den Teilnahmebedingungen und keine Sperrliste ausgeschlossener Spiele. Der Preis dafür ist offensichtlich: kein zusätzliches Guthaben. Bei kleinen Einzahlungen und kurzen Sitzungen ist das oft der günstigere Tausch."
+          ]
+        }
+      ]
+    },
+    "current": {
+      "fit": {
+              "heading": "Für welche Frage dieser Bereich gedacht ist",
+              "pro": [
+                      "Sie fangen bei null an und wollen sehen, welche Anbieter überhaupt in Frage kommen",
+                      "Sie wollen den Unterschied zwischen lizenzierten und übrigen Anbietern an Zahlen sehen",
+                      "Sie suchen eine App und wollen wissen, wer eine hat"
+              ],
+              "con": [
+                      "Sie haben schon einen Anbieter und wollen nur eine Bedingung prüfen: dafür sind die Fachlisten schneller",
+                      "Sie suchen Neueröffnungen: die nehmen wir erst nach der ersten gemessenen Auszahlung auf"
+              ]
+      },
+      "sections": [
+        {
+          "heading": "Wie Sie diese Listen sinnvoll kombinieren",
+          "body": [
+            "Beginnen Sie mit der Lizenzfrage, weil sie am meisten festlegt: Einsatzlimit, Einzahlungslimit, Sperrdatei und Zuständigkeit im Streitfall. Danach grenzen die Listen nach Zahlungsmethode und Bonusart auf drei bis vier Namen ein, und erst dann lohnt der Blick auf die Note.",
+            "Umgekehrt funktioniert es schlecht. Wer beim Gesamtranking anfängt und sich den ersten Eintrag merkt, landet oft bei einem Anbieter, dessen Zahlungsweg er gar nicht nutzt. Die Note misst sechs Kriterien und weiß nichts darüber, ob Sie PayPal haben."
+          ]
+        },
+        {
+          "heading": "Was hier steht und was nicht",
+          "body": [
+            "Dieser Bereich sammelt die Listen, die sich nicht über eine Zahlungsmethode oder eine Bonusart abgrenzen lassen: Gesamtranking, Apps, Anbieter mit deutscher Erlaubnis. Sie überschneiden sich absichtlich, weil Menschen mit unterschiedlichen Fragen ankommen und dieselben Casinos aus unterschiedlichen Winkeln brauchen.",
+            "Was hier nicht steht, sind Neuheiten um der Neuheit willen. Ein Casino landet erst dann in einer Liste, wenn Bonusbedingungen, Lizenz und Zahlungswege an der Quelle bestätigt sind und mindestens eine eigene Auszahlung gemessen wurde. Das kostet Aktualität und ist der Grund, warum hier weniger Namen stehen als bei Seiten, die jeden Neustart am selben Tag aufnehmen."
+          ]
+        },
+        {
+          "heading": "Warum die deutsche Lizenz die Ranglisten dominiert",
+          "body": [
+            "Anbieter mit GGL-Erlaubnis stehen in unseren Ranglisten weit oben, obwohl ihre Boni kleiner sind. Das liegt an der Gewichtung: Lizenz und Sicherheit machen 20 % der Note aus, Auszahlungen und Tempo 25 %. Bei beiden schneiden lizenzierte Anbieter systematisch besser ab, weil sie an OASIS angebunden sind und schneller freigeben.",
+            "Das Ergebnis ist keine Empfehlung gegen die übrigen Anbieter. Wer Live-Tische sucht oder mehr als 1 € pro Spin setzen will, findet das ausschließlich außerhalb der deutschen Erlaubnis. Die Formel bildet ab, was messbar ist, und die Entscheidung darüber, was Ihnen wichtig ist, nimmt sie Ihnen nicht ab."
+          ]
+        },
+        {
+          "heading": "Wie oft sich die Zahlen ändern",
+          "body": [
+            "Bonusbedingungen prüfen wir monatlich nach, Lizenzen bei jeder Änderung der GGL-Whitelist, Auszahlungszeiten fortlaufend mit jeder neuen Messung. Jede Zahl trägt das Datum ihrer letzten Prüfung, und dieses Datum steht über der Tabelle.",
+            "Verschwindet ein Anbieter vom Markt, bleibt sein Eintrag als abgemeldet stehen statt zu verschwinden. Wer wissen will, was mit einem Casino passiert ist, das er selbst genutzt hat, soll die Antwort hier finden und nicht in einem Forum suchen müssen."
+          ]
+        }
+      ]
+    },
+    "licenses": {
+      "fit": {
+              "heading": "Wem dieser Bereich etwas bringt",
+              "pro": [
+                      "Sie wollen wissen, was eine Lizenz praktisch ändert, bevor Sie sich entscheiden",
+                      "Sie möchten eine Erlaubnis im öffentlichen Register selbst nachschlagen",
+                      "Sie haben eine Selbstsperre und wollen verstehen, wo sie greift"
+              ],
+              "con": [
+                      "Sie suchen den größten Bonus: der steht fast immer bei Anbietern ohne deutsche Erlaubnis",
+                      "Ihnen geht es um Spielauswahl: die hängt am Anbieter und nicht an der Aufsicht"
+              ]
+      },
+      "sections": [
+        {
+          "heading": "So prüfen Sie eine Lizenz selbst",
+          "body": [
+            "Die GGL führt eine öffentliche Whitelist aller Anbieter mit deutscher Erlaubnis. Suchen Sie dort nach dem Betreibernamen und nicht nach der Marke: Ein Casino heißt im Register oft anders als auf seiner Startseite. Steht der Betreiber nicht drin, gibt es keine deutsche Erlaubnis, unabhängig davon, was im Fußbereich der Seite behauptet wird.",
+            "Bei Curaçao und Anjouan führt der Weg über das jeweilige Register der Aufsicht. Eine Lizenznummer im Seitenfuß ist dafür kein Nachweis: Sie lässt sich hinschreiben, ohne dass jemand sie vergeben hat. Erst der Treffer im Register der Behörde belegt etwas, und wir verlinken deshalb auf das Register und nicht auf die Bestätigungsseite des Anbieters."
+          ]
+        },
+        {
+          "heading": "Was die Erlaubnis praktisch verändert",
+          "body": [
+            "Unter deutscher Lizenz gilt ein Einsatzlimit von 1 € pro Spin an Automatenspielen, ein Einzahlungslimit von 1.000 € im Monat über alle Anbieter zusammen und eine fünfminütige Pause nach einer Stunde Spiel. Live-Tische, Roulette und Blackjack sind für private Anbieter gar nicht zugelassen. Wer diese Spiele sucht, sucht außerhalb.",
+            "Der Gegenwert steht selten in der Werbung: eine Behörde, die im Streitfall zuständig ist, eine Sperrdatei, die bei allen lizenzierten Anbietern gleichzeitig greift, und getrennte Spielerkonten. Bei einer Lizenz aus Anjouan gibt es in Deutschland keine Stelle, die für Sie eingreift, und die Beschwerde landet bei einer Verwaltung im Indischen Ozean."
+          ]
+        },
+        {
+          "heading": "Ist das Spielen ohne deutsche Lizenz strafbar?",
+          "body": [
+            "Für Spielerinnen und Spieler gibt es in Deutschland keine bekannte Strafverfolgung. Der Paragraf, um den es geht, richtet sich in der Praxis gegen Veranstalter. Rechtssicherheit ist das nicht, und wir raten niemandem, sich darauf zu verlassen.",
+            "Das eigentliche Risiko liegt woanders. Ohne zuständige Behörde gibt es bei einer einbehaltenen Auszahlung keinen Weg außer der Beschwerdestelle des Anbieters selbst. Zivilrechtliche Rückforderungsklagen gegen Casinos ohne deutsche Erlaubnis haben vor deutschen Gerichten schon Erfolg gehabt, dauern aber Jahre und setzen voraus, dass der Betreiber greifbar ist."
+          ]
+        }
+      ]
+    },
+    "providers": {
+      "fit": {
+              "heading": "Wann die Auswahl nach Studio sinnvoll ist",
+              "pro": [
+                      "Sie suchen einen bestimmten Titel und wollen wissen, wo er läuft",
+                      "Sie wollen sehen, welche Anbieter mehrere große Studios im Katalog haben",
+                      "Sie vergleichen die Größe der Kataloge zwischen lizenzierten und übrigen Anbietern"
+              ],
+              "con": [
+                      "Sie erwarten Aussagen über die Seriosität: ein Studio sagt darüber nichts",
+                      "Sie suchen Tischspiele eines Studios bei einem deutschen Anbieter: die gibt es dort nicht",
+                      "Ihnen kommt es auf die Auszahlungsquote an: die stellt das Casino ein, nicht das Studio"
+              ]
+      },
+      "sections": [
+        {
+          "heading": "Wonach sich die Auswahl wirklich lohnt",
+          "body": [
+            "Ein Studio im Katalog ist ein schwaches Kriterium, weil fast jedes größere Casino fast jedes größere Studio führt. Aussagekräftiger ist die Kombination: Wenn ein Anbieter Titel von acht bekannten Entwicklern zeigt, hat er acht Verträge und acht Prüfungen hinter sich.",
+            "Praktisch nützlich wird die Aufteilung erst bei einem konkreten Titel. Wer ein bestimmtes Spiel sucht, findet über die Studioliste die Anbieter, bei denen es überhaupt läuft, und vergleicht dann deren Bedingungen. Andersherum, also erst Casino und dann Spielsuche, kostet mehr Zeit."
+          ]
+        },
+        {
+          "heading": "Warum dasselbe Spiel nicht überall gleich läuft",
+          "body": [
+            "Viele Studios liefern ihre Titel mit mehreren einstellbaren Auszahlungsquoten aus. Derselbe Slot kann bei einem Casino mit 96,5 % laufen und bei einem anderen mit 94 %. Sichtbar wird das nur in den Spielinformationen, und selbst dort steht manchmal eine Spanne statt eines Werts.",
+            "Dazu kommt der Umfang. Unter deutscher Erlaubnis sind ausschließlich virtuelle Automatenspiele zugelassen. Tischspiele und Live-Formate desselben Studios fehlen dort vollständig, obwohl sie im Portfolio stehen. Ein Katalog mit 800 Titeln bei einem lizenzierten Anbieter und einer mit 3.000 bei einem Anbieter ohne deutsche Lizenz sind deshalb nicht vergleichbar."
+          ]
+        },
+        {
+          "heading": "Was ein Studio über ein Casino aussagt",
+          "body": [
+            "Wenig. Ein Entwickler verkauft Lizenzen an Betreiber und hat keinen Einfluss darauf, wie schnell dort ausgezahlt wird oder wie die Bonusbedingungen aussehen. Der Name auf dem Spiel sagt etwas über die Unterhaltung und nichts über die Bedingungen, unter denen Sie spielen.",
+            "Ein schwacher Hinweis bleibt trotzdem. Große Studios prüfen ihre Partner vor Vertragsabschluss, und ein Casino mit Titeln mehrerer bekannter Entwickler hat diese Prüfungen bestanden. Als Argument reicht das nicht: Dieselben Studios liefern auch an Anbieter ohne jede europäische Aufsicht."
+          ]
+        },
+        {
+          "heading": "Feature-Kauf und andere Unterschiede",
+          "body": [
+            "Der Direktkauf der Freispielrunde ist unter deutscher Lizenz verboten. Bei Anbietern ohne deutsche Erlaubnis ist er in vielen Titeln verfügbar und kostet meist das Achtzig- bis Hundertfache des Einsatzes. Das Studio liefert dasselbe Spiel, die Funktion ist je nach Markt abgeschaltet.",
+            "Auch Jackpot-Netzwerke über mehrere Casinos hinweg gibt es unter deutscher Erlaubnis nicht. Wer gezielt danach sucht, wird nur bei den Anbietern ohne deutsche Lizenz fündig, und tauscht dafür die Aufsicht ein."
+          ]
+        }
+      ]
+    },
+    "live": {
+      "fit": {
+              "heading": "Für wen Live-Tische passen und für wen nicht",
+              "pro": [
+                      "Sie wollen an einem echten Tisch spielen statt gegen einen Zufallsgenerator",
+                      "Ihnen sind Einsatzlimit und Monatslimit zu eng",
+                      "Sie suchen Formate wie Crazy Time, die es unter deutscher Lizenz nicht gibt"
+              ],
+              "con": [
+                      "Sie wollen im Streitfall eine deutsche Behörde ansprechen können",
+                      "Sie haben eine OASIS-Sperre und wollen, dass sie hält",
+                      "Sie nehmen Boni an: an Live-Tischen zählt der Einsatz meist nur zu 10 % zum Umsatz"
+              ]
+      },
+      "sections": [
+        {
+          "heading": "Bonus und Live-Tisch vertragen sich schlecht",
+          "body": [
+            "Einsätze an Live-Tischen zählen bei den meisten Anbietern nur zu 10 % zum Umsatz eines Bonus, bei manchen gar nicht. Wer 100 € Bonus mit 35x Umsatz annimmt und danach Roulette spielt, braucht statt 3.500 € rechnerisch 35.000 € Einsatz. Auf der Bonusseite steht das selten, in den Teilnahmebedingungen immer.",
+            "Die saubere Lösung ist unbequem: den Bonus ablehnen und mit eigenem Guthaben an den Tisch gehen. Dann gilt kein Einsatzlimit aus den Bonusbedingungen, keine Sperrliste ausgeschlossener Spiele, und das Guthaben bleibt jederzeit auszahlbar."
+          ]
+        },
+        {
+          "heading": "Warum es kein Live-Casino mit deutscher Lizenz gibt",
+          "body": [
+            "Der Glücksspielstaatsvertrag von 2021 erlaubt privaten Anbietern virtuelle Automatenspiele und Sportwetten. Online-Roulette und Online-Blackjack liegen bei den Ländern, und die haben die Konzessionen bislang nicht an private Betreiber vergeben. Jeder Anbieter mit Live-Tischen arbeitet daher ohne deutsche Erlaubnis, und daran ändert auch eine EU-Lizenz nichts.",
+            "Praktisch heißt das: kein Einsatzlimit von 1 € und kein Monatslimit von 1.000 €, aber auch keine OASIS-Abfrage und keine zuständige Behörde. Wer eine Selbstsperre laufen hat, kann sich hier weiterhin anmelden, und das ist kein Vorteil, sondern der eigentliche Grund, warum die Sperre existiert."
+          ]
+        },
+        {
+          "heading": "Was am Tisch tatsächlich kostet",
+          "body": [
+            "Beim europäischen Roulette liegt der Hausvorteil bei 2,7 %, beim amerikanischen mit der Doppelnull bei 5,26 %. Die Tische sehen fast gleich aus, und der Unterschied steht nur im Namen. Bei Blackjack hängt der Wert von den Regeln ab: Ob der Dealer bei Soft 17 zieht und ob Blackjack 3:2 oder 6:5 zahlt, macht mehr aus als jede Spielstrategie.",
+            "Die Zusatzwetten neben dem Haupteinsatz sind die teuerste Position am Tisch. Perfect Pairs, 21+3 und ähnliche Formate liegen regelmäßig über 5 % Hausvorteil, teils deutlich darüber. Sie sind bewusst so gebaut, dass sie im Spielfluss beiläufig wirken."
+          ]
+        },
+        {
+          "heading": "Technik und Grenzen",
+          "body": [
+            "Live-Tische brauchen eine stabile Verbindung. Bricht der Stream während einer laufenden Hand ab, wird nach den Tischregeln weitergespielt, und bei Blackjack heißt das in der Regel: stehen bleiben. Der Einsatz ist dann verloren oder gewonnen, ohne dass Sie etwas entscheiden konnten.",
+            "Bonusguthaben zählt an Live-Tischen bei den meisten Anbietern nur zu einem kleinen Teil zum Umsatz, oft zu 10 % und manchmal gar nicht. Wer einen Willkommensbonus angenommen hat und danach an den Tisch wechselt, verlängert den Umsatz um ein Vielfaches. Das steht in den Teilnahmebedingungen und nicht auf der Bonusseite."
+          ]
+        }
+      ]
+    },
+    "odds": {
+      "fit": {
+              "heading": "Wann Wetten beim Casino die richtige Wahl sind",
+              "pro": [
+                      "Sie wetten gelegentlich auf große Ligen und wollen ein Konto für beides",
+                      "Ihnen ist eine deutsche Erlaubnis wichtig: bei Sportwetten gibt es sie",
+                      "Sie brauchen Cash-out und Live-Wetten in derselben Oberfläche"
+              ],
+              "con": [
+                      "Sie wetten auf Nischenmärkte: dort fehlen entweder die Angebote oder die Quoten sind schwach",
+                      "Sie wollen die besten Quoten: ein spezialisierter Buchmacher rechnet schärfer",
+                      "Sie wollen Wett- und Casinoguthaben strikt trennen"
+              ]
+      },
+      "sections": [
+        {
+          "heading": "Wetten und Casino im selben Konto",
+          "body": [
+            "Bei den meisten Anbietern hier laufen Wetten und Automatenspiele über ein Guthaben. Getrennt sind trotzdem die Bonusrechnungen: Ein Wetteinsatz zählt nicht für einen Casinobonus, und umgekehrt zählt ein Spin nicht für die Umsatzbedingung einer Wettprämie.",
+            "Vor der ersten Wette lohnt ein Blick in die Auszahlungsspalte. Wettguthaben und Casinoguthaben werden zwar zusammen ausgezahlt, aber offene Wetten blockieren den Antrag, bis sie entschieden sind. Bei einer Kombiwette über drei Spieltage sind das im Zweifel zwei Wochen."
+          ]
+        },
+        {
+          "heading": "Sportwetten sind in Deutschland lizenzierbar",
+          "body": [
+            "Anders als beim Live-Casino gibt es für Sportwetten eine deutsche Erlaubnis, und mehrere große Anbieter haben sie. Das ändert die Ausgangslage: Wer wetten will, muss dafür nicht auf Anbieter ohne Aufsicht ausweichen. Die Konzession steht im Register der GGL und lässt sich in einer Minute prüfen.",
+            "Mit der Erlaubnis kommen Regeln, die den Preis beeinflussen. Auf jeden Einsatz fallen 5 % Wettsteuer an. Manche Anbieter übernehmen sie, andere ziehen sie vom Einsatz oder vom Gewinn ab, und der Unterschied entspricht bei regelmäßigem Wetten einer spürbaren Quotenverschlechterung."
+          ]
+        },
+        {
+          "heading": "Wo bei Wettanbietern das Geld verloren geht",
+          "body": [
+            "Der Quotenschlüssel ist die einbehaltene Marge. Bei einem Fußballspiel mit drei Ausgängen liegt sie je nach Anbieter zwischen 3 % und 8 %. Auf hundert Wetten gerechnet ist das der Unterschied zwischen einem knappen Minus und einem klaren.",
+            "Kombiwetten verstärken den Effekt, weil sich die Margen multiplizieren. Eine Fünferkombination bei 6 % Schlüssel je Spiel kostet rund ein Viertel des erwarteten Werts. Der Cash-out sieht dagegen aus wie Sicherheit, enthält aber ebenfalls einen Abschlag, und der ist bei laufendem Spiel höher als vorher."
+          ]
+        },
+        {
+          "heading": "Limits und Kontosperren",
+          "body": [
+            "Buchmacher dürfen die Höhe der angenommenen Wetten begrenzen und tun das bei erfolgreichen Konten regelmäßig. Aus einem Limit von 5.000 € werden dann 50 €, ohne Begründung und ohne Ankündigung. Rechtlich ist das zulässig, es steht in den AGB, und keine Aufsicht schreibt Buchmachern vor, jede Wette anzunehmen.",
+            "Das gesetzliche Einzahlungslimit von 1.000 € im Monat gilt für Wetten und Casino zusammen und über alle deutschen Anbieter hinweg. Wer beides bei einem Anbieter nutzt, sieht ein Guthaben, aber zwei getrennte Bonusrechnungen: Umsatz aus dem Wettbereich zählt nicht für einen Casinobonus und umgekehrt."
+          ]
+        }
+      ]
+    }
+  },
+  "hubTable": {
+    "$note": "Подписи колонок таблицы раздела. Каждый хаб получает свой набор: одинаковые колонки на семи страницах превращали бы разделы в семь копий одной таблицы.",
+    "heading": {
+      "payments": "Zahlungsmethoden nebeneinander",
+      "bonuses": "Bonusarten nebeneinander",
+      "current": "Unsere Listen nebeneinander",
+      "licenses": "Was die Aufsicht konkret ändert",
+      "providers": "Spieleanbieter nebeneinander",
+      "live": "Live-Tische nebeneinander",
+      "odds": "Wettmärkte nebeneinander"
+    },
+    "intro": {
+      "payments": "Wie viele Anbieter eine Methode annehmen, ab welchem Betrag sie damit arbeiten und wie lange das Geld zurück braucht. Die Auszahlungszeiten sind unsere eigenen Messungen, nicht die Angaben der Anbieter.",
+      "bonuses": "Was in jeder Bonusart tatsächlich zu holen ist und was der Anbieter dafür verlangt. Höchstbetrag und niedrigster Umsatz stammen von verschiedenen Anbietern, es ist kein Angebot, das beides zugleich hat.",
+      "current": "Die Listen dieses Bereichs mit Zahl der Anbieter, bester Note und dem Datum der letzten Prüfung.",
+      "licenses": "Vier Aufsichtsbehörden, dieselben sechs Fragen. Die Zahl in jeder Spalte sagt, bei wie vielen Anbietern dieser Aufsicht das zutrifft.",
+      "providers": "Welche Studios in wie vielen unserer Casinos laufen und welche davon eine deutsche Lizenz haben.",
+      "live": "Live-Tische gehören zu den Spielen, die eine deutsche Lizenz nicht abdeckt. Die Spalte mit der GGL-Lizenz zeigt genau das.",
+      "odds": "Wettmärkte mit der Zahl der Anbieter und den zwei Funktionen, nach denen beim Wetten am häufigsten gefragt wird."
+    },
+    "col": {
+      "payment": "Zahlungsmethode",
+      "bonusType": "Bonusart",
+      "list": "Liste",
+      "provider": "Spieleanbieter",
+      "liveGame": "Tisch",
+      "market": "Wettmarkt",
+      "authority": "Aufsicht",
+      "brands": "Anbieter",
+      "casinos": "Casinos",
+      "licensed": "mit GGL-Lizenz",
+      "minDepositFrom": "Einzahlung ab",
+      "payoutMedian": "Auszahlung Median",
+      "payoutFastest": "schnellste Auszahlung",
+      "bonusMax": "höchster Bonus",
+      "bonusMedian": "Bonus Median",
+      "wageringMedian": "Umsatz Median",
+      "spinsMax": "Freispiele bis",
+      "wageringFrom": "Umsatz ab",
+      "expiryShortest": "kürzeste Frist",
+      "bestScore": "Bestnote",
+      "scoreMedian": "Note Median",
+      "checkedLast": "zuletzt geprüft",
+      "monthlyCap": "Monatslimit 1.000 €",
+      "oasis": "OASIS-Sperrdatei",
+      "liveTables": "mit Live-Tischen",
+      "tablesPerCasino": "Tische je Casino",
+      "gamesMax": "größte Spielauswahl",
+      "inPlay": "mit Live-Wetten",
+      "cashout": "mit Cash-out",
+      "ownApp": "mit eigener App"
+    },
+    "noPage": "gefiltert in der Gesamtliste",
+    "sameSelection": "gleiche Anbieter wie {list}",
+    "alsoCovers": "deckt sich mit: {list}",
+    "orderNote": "Zuerst die Kategorien mit eigener Seite, danach die übrigen. Jede Spalte lässt sich anklicken und sortiert die Tabelle neu.",
+    "thinNote": "Kategorien mit weniger als {min} Anbietern bekommen keine eigene Seite: eine Liste mit zwei Einträgen hilft beim Vergleichen nicht. Ihre Zahlen stehen trotzdem hier, und der Name führt in die Gesamtliste, dort schon nach dieser Kategorie gefiltert."
+  },
+  "hubLabelsShort": {
+    "payments": "Zahlungen",
+    "bonuses": "Bonus",
+    "current": "Aktuell",
+    "licenses": "Lizenzen",
+    "providers": "Anbieter",
+    "live": "Live",
+    "odds": "Wetten"
+  },
+  "hubFaq": {
+    "payments": [
+      {
+        "question": "Welche Zahlungsmethode ist im Online Casino die beste?",
+        "answer": "Die, über die das Geld auch zurückkommt. Fast jede Methode funktioniert zum Einzahlen, aber nur ein Teil davon zum Auszahlen, und genau das steht auf den Seiten der Anbieter selten dabei. Wir führen für jede Methode eine eigene Spalte dazu. Wer schnell wieder an sein Geld will, fährt mit E-Wallets am besten; wer möglichst wenige Dritte dazwischen haben will, mit der Banküberweisung."
+      },
+      {
+        "question": "Mit welcher Methode kann ich im Casino auch auszahlen lassen?",
+        "answer": "Mit E-Wallets und der Banküberweisung durchgängig, mit Karten meistens, mit Gutscheinkarten nie. Ein Gutschein hat keinen Absender, an den Geld zurückfließen könnte. Wer damit einzahlt, richtet für die Auszahlung trotzdem eine zweite Methode ein. Auf jeder Methodenseite steht eine Tabelle, die pro Anbieter trennt, wo wir die Auszahlung bestätigt haben und wo die Prüfung noch aussteht."
+      },
+      {
+        "question": "Muss die Auszahlung auf denselben Weg gehen wie die Einzahlung?",
+        "answer": "In aller Regel ja, und zwar nicht aus Schikane: die Rückzahlung auf die Einzahlungsquelle ist eine Vorgabe aus der Geldwäscheprävention. Praktisch heißt das, dass die erste Auszahlung an der Methode scheitern kann, mit der Sie eingezahlt haben. Wer mit einer Gutscheinkarte startet, sollte deshalb von Anfang an eine zweite Methode im Konto hinterlegen und verifizieren lassen."
+      },
+      {
+        "question": "Ändert die Zahlungsmethode etwas am Einzahlungslimit?",
+        "answer": "Nein. Das Limit von 1.000 € pro Kalendermonat hängt an der deutschen Lizenz, nicht an der Methode, und es gilt anbieterübergreifend über das System LUGAS. Ist die Grenze erreicht, sind weitere Einzahlungen blockiert, auch bei einem anderen lizenzierten Anbieter. Die Methode bestimmt nur, wie schnell das Geld ankommt und ob es denselben Weg zurückgehen kann."
+      },
+      {
+        "question": "Wie lange dauert eine Auszahlung im Online Casino?",
+        "answer": "Zwei Zeiten addieren sich: die Freigabe durch den Anbieter und der Transport durch die Methode. Die Freigabe dauert bei der ersten Auszahlung am längsten, weil dabei meist die Verifizierung läuft. Danach entscheidet die Methode: E-Wallets sind am schnellsten, Karten am langsamsten, weil die Gutschrift noch einmal über den Kartenherausgeber geht. In unseren Tabellen steht, was der Anbieter angibt, und ob wir es selbst gemessen haben."
+      },
+      {
+        "question": "Warum muss ich mich vor der ersten Auszahlung verifizieren?",
+        "answer": "Weil das Geldwäschegesetz es verlangt, nicht weil der Anbieter Zeit gewinnen will. Nötig sind in der Regel ein Ausweisdokument und ein Nachweis der Adresse, bei Karten zusätzlich ein Beleg für die Karte. Der Ablauf lässt sich vorziehen: wer die Unterlagen direkt nach der Anmeldung hochlädt, wartet bei der ersten Auszahlung nicht doppelt."
+      }
+    ],
+    "bonuses": [
+      {
+        "question": "Welcher Casino Bonus lohnt sich wirklich?",
+        "answer": "Der mit dem geringsten nötigen Umsatz, und das ist selten der größte. Ein Bonus von 100 € mit 20x nur auf den Bonus verlangt 2.000 € Umsatz, ein Angebot über 3.000 € mit 50x auf Bonus und Einzahlung verlangt einen sechsstelligen Betrag. Auf jeder Bonusseite rechnen wir das für jeden Anbieter aus, statt nur den beworbenen Betrag zu wiederholen."
+      },
+      {
+        "question": "Was bedeutet die Umsatzbedingung genau?",
+        "answer": "Sie sagt, wie oft der Betrag eingesetzt werden muss, bevor Gewinne auszahlbar werden. Entscheidend ist der Zusatz dahinter: „35x auf den Bonus“ und „35x auf Bonus und Einzahlung“ stehen beide klein gedruckt da und unterscheiden sich im nötigen Umsatz um das Doppelte. In unseren Tabellen steht dieser Zusatz immer unter der Zahl, nicht in einer Fußnote."
+      },
+      {
+        "question": "Warum sind Boni bei deutschen Casinos nur 100 €?",
+        "answer": "Weil ein größerer Bonus unter deutscher Lizenz rechnerisch nicht freispielbar wäre. Bei 1 € Höchsteinsatz pro Drehung und 1.000 € Einzahlungslimit im Monat käme man mit einem Bonus über 1.000 € gar nicht durch die Umsatzbedingung. Die kleinen Beträge sind also keine Zurückhaltung des Anbieters, sondern eine Folge derselben Regeln, die den Spielerschutz ausmachen."
+      },
+      {
+        "question": "Verfällt der Bonus, wenn ich zu langsam spiele?",
+        "answer": "Ja, und daran scheitern mehr Boni als an der Höhe des Umsatzes. Die Frist läuft ab Gutschrift, meist zwischen sieben und dreißig Tagen, und mit ihr verfallen sowohl der Bonus als auch die daraus entstandenen Gewinne. Rechnen Sie den nötigen Umsatz durch die Zahl der Tage: was pro Tag übrig bleibt, müssen Sie tatsächlich spielen wollen."
+      },
+      {
+        "question": "Muss ich den Bonus überhaupt annehmen?",
+        "answer": "Nein, und bei vielen Anbietern ist das die bessere Wahl. Der Bonus bindet Ihr eigenes Guthaben an eine Umsatzbedingung: solange sie nicht erfüllt ist, kommt in aller Regel auch die eigene Einzahlung nicht heraus. Wer nur ausprobieren will, wie sich ein Anbieter anfühlt, wählt den Bonus im Einzahlungsdialog ab und behält die freie Verfügung über sein Geld."
+      },
+      {
+        "question": "Kann ich einen Bonus auszahlen lassen, ohne ihn freizuspielen?",
+        "answer": "Das Bonusguthaben selbst nicht. Bei den meisten Anbietern lässt sich der Bonus aber vor Erfüllung stornieren. Dann verfallen Bonus und daraus entstandene Gewinne, und das verbleibende eigene Guthaben wird wieder frei. Wo diese Möglichkeit fehlt, steht sie nicht in der Werbung, sondern in den Bonusbedingungen. Prüfen Sie das, bevor Sie einzahlen, nicht danach."
+      }
+    ],
+    "licenses": [
+      {
+        "question": "Woran erkenne ich eine gültige Casino-Lizenz?",
+        "answer": "Am öffentlichen Register der Aufsicht, nicht am Siegel im Fußbereich der Seite. Für Deutschland führt die Gemeinsame Glücksspielbehörde der Länder eine Whitelist aller erlaubten Anbieter; dort steht der Name der Betreibergesellschaft, nicht die Marke, und die beiden unterscheiden sich oft. In jeder Bewertung verlinken wir das passende Register direkt, damit die Prüfung zwei Klicks kostet statt einer Suche."
+      },
+      {
+        "question": "Was ändert die Lizenz für mich praktisch?",
+        "answer": "Vier Dinge: 1 € Höchsteinsatz pro Drehung, 1.000 € Einzahlung im Monat über alle deutschen Anbieter zusammen, Anbindung an die Sperrdatei OASIS und eine Behörde, die im Streitfall zuständig ist. Dazu kommt eine Einschränkung, die viele überrascht: Live-Casino und Tischspiele dürfen Anbieter mit deutscher Erlaubnis gar nicht führen."
+      },
+      {
+        "question": "Ist Spielen bei Anbietern ohne deutsche Lizenz strafbar?",
+        "answer": "Reguliert wird der Anbieter, nicht der Kunde. Was fehlt, sind die Schutzmechanismen: kein Einsatz- und kein Einzahlungslimit, keine OASIS-Abfrage und keine deutsche Stelle, die eine ausbleibende Auszahlung für Sie klären kann. Zuständig wäre die Aufsicht des Lizenzlandes. Bei den Anbietern dieser Kategorie sitzt sie in Anjouan, Curaçao oder Tobique."
+      },
+      {
+        "question": "Warum steht bei manchen Anbietern Curaçao oder Anjouan?",
+        "answer": "Das sind Lizenzen aus Ländern mit deutlich niedrigeren Anforderungen und Gebühren als in Deutschland. Sie erlauben dem Anbieter, überhaupt reguliert aufzutreten, geben Ihnen als deutschem Spieler aber keine Stelle, an die Sie sich wenden können. In unserer Formel wiegt das Kriterium „Lizenz und Sicherheit“ 20 %. Solche Anbieter landen dadurch weiter unten, ohne dass jemand sie dorthin schiebt."
+      },
+      {
+        "question": "Was ist OASIS und wie beantrage ich eine Sperre?",
+        "answer": "OASIS ist die bundesweite Sperrdatei. Jeder Anbieter mit deutscher Erlaubnis fragt sie vor der Anmeldung und vor jeder Einzahlung ab, eine Sperre gilt damit sofort bei allen lizenzierten Anbietern gleichzeitig. Sie dauert mindestens drei Monate, ist kostenlos und wird über das Regierungspräsidium Darmstadt beantragt. Anbieter ohne deutsche Lizenz fragen OASIS nicht ab. Dort greift die Sperre nicht."
+      }
+    ],
+    "providers": [
+      {
+        "question": "Warum steht bei jedem Casino ein anderer Spieleanbieter?",
+        "answer": "Weil Casinos die Spiele nicht selbst entwickeln, sondern von Studios einkaufen, und jedes Studio einzeln lizenziert wird. Zwei Anbieter mit demselben Studio führen deshalb dieselben Titel. Der Unterschied liegt dann bei Bonus, Auszahlung und Lizenz, nicht beim Spiel. Für die Auswahl ist das Studio also seltener entscheidend, als die Werbung vermuten lässt."
+      },
+      {
+        "question": "Sind die Spiele bei jedem Anbieter gleich eingestellt?",
+        "answer": "Die Auszahlungsquote eines Titels wird vom Studio festgelegt, einzelne Spiele erlauben dem Casino aber mehrere Varianten davon. Prüfbar ist der Wert nur in den Spielinformationen selbst, und zwar bei dem Anbieter, bei dem Sie gerade sind. Unter deutscher Lizenz kommt hinzu, dass nur virtuelle Automatenspiele erlaubt sind. Tischspiele desselben Studios fehlen dort."
+      },
+      {
+        "question": "Was bedeutet RTP bei einem Spielautomaten?",
+        "answer": "Ein Durchschnittswert über sehr viele Runden, angegeben in Prozent. Über Ihren Abend sagt er nichts: über zwanzig Drehungen ist der Wert ohne Bedeutung, er beschreibt das Verhalten über Millionen. Nachlesen lässt er sich in den Spielinformationen, und zwar bei dem Anbieter, bei dem Sie gerade sind, denn einzelne Titel erlauben dem Casino mehrere Varianten desselben Spiels."
+      },
+      {
+        "question": "Warum fehlen bei deutschen Anbietern Tischspiele desselben Studios?",
+        "answer": "Weil unter deutscher Lizenz nur virtuelle Automatenspiele erlaubt sind. Ein Studio, dessen Automaten Sie bei einem lizenzierten Anbieter finden, produziert oft auch Roulette- und Blackjack-Varianten. Die dürfen dort schlicht nicht angeboten werden. Das ist kein Zeichen für ein kleineres Angebot des Anbieters, sondern die Folge derselben Regel, die auch das Live-Casino ausschließt."
+      },
+      {
+        "question": "Sagt der Spieleanbieter etwas über die Seriosität des Casinos aus?",
+        "answer": "Wenig. Große Studios liefern an fast jeden lizenzierten Anbieter, ihre Anwesenheit ist deshalb kein Gütesiegel. Aussagekräftiger sind Lizenz, Auszahlungspraxis und Bonusbedingungen, also genau die Kriterien, aus denen sich unsere Note zusammensetzt. Das Studio entscheidet darüber, welche Titel Sie finden, nicht darüber, ob Ihr Geld zurückkommt."
+      }
+    ],
+    "live": [
+      {
+        "question": "Was ist ein Live-Casino?",
+        "answer": "Ein per Video übertragener echter Tisch mit einem Menschen als Dealer, an dem Sie über eine Schaltfläche setzen. Der Unterschied zum Automatenspiel ist nicht die Optik, sondern der Rhythmus: die Runde dauert so lange, wie sie am echten Tisch dauert, und Sie spielen mit anderen zusammen. Einsatzgrenzen setzt jeder Tisch selbst, sie stehen im Lobby-Fenster."
+      },
+      {
+        "question": "Warum gibt es kein Live-Casino mit deutscher Lizenz?",
+        "answer": "Weil private Anbieter in Deutschland bundesweit nur virtuelle Automatenspiele, Online-Poker und Sportwetten anbieten dürfen. Live-Tische zählen zum Online-Casino und bleiben den Ländern und ihren Spielbanken vorbehalten. Jeder Anbieter, der Live-Roulette bewirbt, arbeitet für dieses Angebot ohne deutsche Erlaubnis, mit allem, was daran hängt: keine Limits, aber auch keine OASIS-Anbindung."
+      },
+      {
+        "question": "Zählt Live-Casino für den Bonusumsatz?",
+        "answer": "Meistens nur zu einem kleinen Teil oder gar nicht. Bei fast allen Anbietern tragen Automatenspiele 100 % zum Umsatz bei, Tischspiele und Live-Tische dagegen 10 % oder null. Wer einen Bonus annimmt und danach am Live-Tisch spielt, erfüllt die Bedingung praktisch nicht. Die Gewichtung steht in den Bonusbedingungen des jeweiligen Anbieters."
+      },
+      {
+        "question": "Brauche ich für Live-Casino eine Kamera?",
+        "answer": "Nein. Die Übertragung läuft nur in eine Richtung: Sie sehen den Tisch und den Dealer, gesehen werden Sie nicht. Kommuniziert wird über ein Textfeld. Was Sie brauchen, ist eine stabile Verbindung. Bricht sie mitten in der Runde ab, läuft die Runde ohne Sie weiter, und ein bereits platzierter Einsatz bleibt platziert."
+      },
+      {
+        "question": "Welche Einsätze sind am Live-Tisch üblich?",
+        "answer": "Das entscheidet der Tisch, nicht der Anbieter. Mindest- und Höchsteinsatz stehen im Lobby-Fenster und unterscheiden sich zwischen den Tischen desselben Anbieters deutlich, von wenigen Cent bis in den vierstelligen Bereich. Das deutsche Limit von 1 € pro Runde greift hier nicht, weil es an die deutsche Erlaubnis gebunden ist und Live-Casino diese Erlaubnis nicht bekommt."
+      }
+    ],
+    "odds": [
+      {
+        "question": "Sind Sportwetten in Deutschland legal?",
+        "answer": "Ja, mit Erlaubnis. Sportwetten sind die eine Vertikale, für die private Anbieter bundesweit eine deutsche Lizenz bekommen können, anders als beim Online-Casino mit Tischspielen. Viele der hier gelisteten Anbieter haben eine. Welche Erlaubnis ein Anbieter genau hat, steht in der Spalte „Lizenz“ und in seiner Bewertung, mitsamt Link ins öffentliche Register."
+      },
+      {
+        "question": "Gilt das Einzahlungslimit auch für Sportwetten?",
+        "answer": "Ja. Die 1.000 € pro Kalendermonat gelten für das Konto beim lizenzierten Anbieter insgesamt, nicht getrennt nach Wetten und Automatenspiel. Wer beides beim selben Anbieter nutzt, teilt sich einen Topf, und geprüft wird das anbieterübergreifend über das System LUGAS. Anbieter ohne deutsche Erlaubnis sind daran nicht angeschlossen."
+      },
+      {
+        "question": "Kann ich Wettbonus und Casinobonus zusammen nutzen?",
+        "answer": "In aller Regel nicht. Beides sind getrennte Angebote mit eigenem Umsatz und eigener Frist, und im Einzahlungsdialog lässt sich meist nur eines auswählen. Ein Wettbonus verlangt statt eines Umsatzfaktors oft eine Mindestquote, unter der die Wette gar nicht zählt. Rückwirkend ändern lässt sich die Wahl bei kaum einem Anbieter."
+      },
+      {
+        "question": "Was bedeutet die Quote bei einer Sportwette?",
+        "answer": "Sie sagt, das Wievielfache des Einsatzes im Gewinnfall zurückkommt, Einsatz eingeschlossen. Eine Quote von 2,00 verdoppelt den Einsatz, 1,50 gibt die Hälfte obendrauf. In der Quote steckt bereits die Marge des Anbieters, und die unterscheidet sich zwischen Anbietern für dasselbe Ereignis. Bei häufig gespielten Märkten lohnt der Vergleich mehr als jeder Bonus."
+      },
+      {
+        "question": "Was ist eine Mindestquote beim Wettbonus?",
+        "answer": "Die Grenze, ab der eine Wette überhaupt für die Bonusbedingung zählt. Üblich sind Werte um 1,50 bis 2,00. Wetten darunter erfüllen die Bedingung nicht, auch wenn sie gewinnen. Das ist die häufigste Stelle, an der ein Wettbonus scheitert. Die Zahl steht in den Bonusbedingungen, nicht in der Werbung daneben."
+      }
+    ],
+    "current": [
+      {
+        "question": "Wie oft werden die Angaben hier geprüft?",
+        "answer": "Jede Bonusbedingung und jede Auszahlungsangabe trägt ihr eigenes Prüfdatum, sichtbar auf jeder Liste und in jeder Bewertung. Das Datum kommt aus den Daten und wird nicht von Hand in den Text geschrieben. Es kann also nicht stehen bleiben, während sich die Zahl darunter ändert. Was wir noch nicht geprüft haben, steht als „noch nicht geprüft“ da und nicht als Schätzwert."
+      },
+      {
+        "question": "Was passiert, wenn ein Anbieter den Markt verlässt?",
+        "answer": "Er verschwindet nicht still aus den Listen, sondern wandert in den Abschnitt „Nimmt keine Spieler mehr an“ und behält seine Bewertung. Die Frage „was ist mit diesem Anbieter passiert“ verdient eine Antwort, und wer nach ihm sucht, soll sie finden statt auf eine 404-Seite zu stoßen. Das Datum der letzten Prüfung bleibt dabei sichtbar."
+      },
+      {
+        "question": "Woher kommen die Angaben in den Tabellen?",
+        "answer": "Von den Anbieterseiten selbst, geprüft und mit Datum versehen. Was wir nicht an der Quelle bestätigen konnten, steht als „noch nicht geprüft“ da und nicht als runde Zahl. Eigene Messungen, etwa wie lange eine Auszahlung tatsächlich dauert, kennzeichnen wir getrennt von dem, was der Anbieter angibt, weil das zwei verschiedene Dinge sind."
+      },
+      {
+        "question": "Warum ändert sich die Note eines Anbieters?",
+        "answer": "Weil sie bei jeder Neuerstellung der Seite aus den aktuellen Daten neu gerechnet wird und nirgends gespeichert ist. Ändert ein Anbieter seine Umsatzbedingung, bewegt sich die Note beim nächsten Durchlauf von selbst. Umgekehrt kann sie steigen, wenn wir ein bisher ungeprüftes Kriterium nachtragen: Ein Kriterium ohne Daten fällt aus der Rechnung heraus, statt eine Null zu bekommen."
+      },
+      {
+        "question": "Kann ich sehen, was sich zuletzt geändert hat?",
+        "answer": "Auf jeder Liste steht das Datum der letzten Prüfung, und zwar aus den Daten und nicht von Hand in den Text geschrieben. Anbieter, die den Markt verlassen haben, bleiben mit ihrer Bewertung online und wandern in den Abschnitt „Nimmt keine Spieler mehr an“. So bleibt nachvollziehbar, was aus einem Anbieter geworden ist, statt dass er stillschweigend aus der Liste fällt."
+      }
+    ]
+  },
+  "$hubFaqNote": "Вопросы хабов написаны руками по разделам. Раньше на всех семи стоял один набор про устройство самого сайта — это не то, что люди ищут, и на семи страницах подряд читается как шаблон."
+}

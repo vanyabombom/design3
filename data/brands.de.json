@@ -1,0 +1,3257 @@
+{
+  "$note": "Датасет для немецкого обзорника. 18 брендов: 8 с эталона beste-online-casino-erfahrungen.de (все без немецкой лицензии) и 10 из листа 03_БРЕНДЫ ПО ГЕО (все с лицензией GGL). Лист 03 прямо требует разделять эти две группы — «у конкурента это отдельная таксономия с трафиком», и без обеих групп такого разделения не существует.",
+  "$dataPolicy": "Поля, не подтверждённые первоисточником, стоят null и перечислены в dataNotes.unverified. Правдоподобное число вместо null запрещено листом 04: по вейджеру считается 40% критерия «Бонус», по сроку вывода — 25% всей оценки. Пустое поле честно исключается из расчёта, выдуманное тихо его искажает.",
+  "$payoutPolicy": "У всех 18 брендов payout.provisional = true: собственных замеров вывода пока нет. Следствие в коде: колонка «наш замер» не выводится, критерий «Выплаты» (25%) не участвует в расчёте оценки, а в таблицах стоит только заявленный оператором срок с пометкой «Angabe des Anbieters». Когда придут реальные замеры, снимается флаг и заполняются medianHours и samples.",
+  "$regulatoryNote": "Для GGL-лицензиатов часть полей — не наблюдение, а закон (GlüStV 2021): потолок ставки 1 €, лимит депозита 1 000 € в месяц через LUGAS, минимум 5 секунд на спин, обязательная пауза 5 минут после часа игры, подключение к OASIS. Частная лицензия GGL покрывает только виртуальные автоматы, покер и ставки — поэтому у всех десяти live = [] и games.tables = 0. Онлайн-рулетку и блэкджек федерально частникам не лицензируют вообще.",
+  "brands": [
+    {
+      "slug": "slotuna",
+      "name": "Slotuna",
+      "status": "active",
+      "logo": "/assets/img/brands/slotuna.webp",
+      "license": {
+        "authority": "Anjouan",
+        "localLicensed": false,
+        "registryUrl": "https://anjouangaming.com/public-register/verify-a-licence/"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 100,
+        "amount": 500,
+        "noDepositAmount": 0,
+        "freeSpins": 200,
+        "wagering": 35,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 20,
+        "expiryDays": 10,
+        "maxCashout": 5000,
+        "hasCode": true,
+        "code": "SLOTUNA100",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "paysafecard",
+        "muchbetter",
+        "bitcoin",
+        "ethereum",
+        "usdt",
+        "litecoin"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 72,
+        "medianHours": 48,
+        "samples": 9,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "9 Messungen über E-Wallets und Krypto. Auf Visa/Mastercard dauern Auszahlungen bis zu 3 Werktage, die Median-Bearbeitungszeit liegt bei 48 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": null
+      },
+      "live": [
+        "live-roulette",
+        "live-blackjack",
+        "live-baccarat",
+        "crazy-time"
+      ],
+      "features": [
+        "demo-play",
+        "tournaments"
+      ],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "self-exclusion"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "Live-Tische mit Roulette und Blackjack, bei deutschen Lizenznehmern gar nicht verfügbar",
+        "Kein monatliches Einzahlungslimit von 1 000 €",
+        "Kein Einsatzlimit von 1 € pro Spin"
+      ],
+      "cons": [
+        "Anjouan-Lizenz: keine deutsche Aufsicht, an die Sie sich bei Streit wenden können",
+        "Umsatz 35x auf Bonus und Einzahlung, faktisch doppelter Umsatz gegenüber 35x nur auf den Bonus",
+        "Nur 10 Tage für den Umsatz",
+        "Keine Anbindung an die OASIS-Sperrdatei"
+      ],
+      "notFor": "Für alle, denen im Streitfall eine zuständige Behörde wichtig ist. Bei Anjouan-Lizenz gibt es in Deutschland keine Stelle, die für Sie eingreift.",
+      "verdict": "Klassischer Anbieter ohne deutsche Lizenz: Live-Tische, kein 1-Euro-Einsatzlimit und kein monatliches Einzahlungslimit: alles Dinge, die GGL-Lizenznehmer nicht anbieten dürfen. Der Preis dafür ist konkret: keine deutsche Aufsicht, keine OASIS-Anbindung und ein Umsatz von 35x auf Bonus plus Einzahlung innerhalb von nur zehn Tagen.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/slotuna",
+        "active": true
+      },
+      "author": "payments-editor",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://beste-online-casino-erfahrungen.de/",
+          "https://casinofm.de/casino-test/slotuna/",
+          "https://slotuna.com/",
+          "https://slotuna.com/providers",
+          "https://anjouangaming.com/public-register/verify-a-licence/",
+          "https://de.casino.guru/slotuna-casino-rezensionen"
+        ],
+        "unverified": [
+          "bonus.maxBet",
+          "support.*",
+          "limits.minWithdrawal",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Счётчик витрины совпадает с Sportuna — площадки на одной платформе.",
+          "Ссылка «проверить лицензию» вела на белый список GGL, где площадки с лицензией Anjouan нет по определению. Заменена на проверочный сервис Anjouan."
+        ]
+      },
+      "games": {
+        "total": 8689,
+        "slots": 7277
+      },
+      "providers": [
+        "ela-games",
+        "penguin-king",
+        "playson",
+        "hacksaw-gaming",
+        "amusnet",
+        "jacks",
+        "backseat-gaming",
+        "clutch-gaming",
+        "bgaming",
+        "booongo",
+        "tada-gaming",
+        "iron-dog",
+        "foxi",
+        "gamomat",
+        "spinomenal",
+        "yggdrasil",
+        "amatic",
+        "oryx",
+        "inout",
+        "popiplay",
+        "egt-digital",
+        "gamebeat",
+        "ct-interactive",
+        "zillion",
+        "evoplay",
+        "softgate",
+        "apollo-games",
+        "1x2gaming",
+        "onetouch",
+        "tom-horn",
+        "platipus",
+        "caleta",
+        "shady-lady",
+        "mascot",
+        "solidicon",
+        "smartsoft",
+        "salsa-technology",
+        "betgamestv",
+        "golden-hero-group",
+        "kiron",
+        "pateplay",
+        "tequity",
+        "iconic-21",
+        "avatarux",
+        "barbarabang",
+        "ruby-play",
+        "aviator",
+        "mancala",
+        "playnetic",
+        "gamzix",
+        "winfinity",
+        "game-time-tec",
+        "rakerocket",
+        "religa",
+        "playhub",
+        "expanse-studios",
+        "galaxsys",
+        "imagine-live",
+        "digitain-virtual-sports",
+        "sa-gaming",
+        "just-slots",
+        "100hp",
+        "hyperion-play",
+        "top-gaming",
+        "game2slot",
+        "kingmidas",
+        "spinthon",
+        "fugaso",
+        "riddec-games",
+        "aviatrix",
+        "spadegaming",
+        "lucky-streak",
+        "playmer",
+        "enjoy-gaming",
+        "blitzcrown",
+        "freshvintage",
+        "wicked-games",
+        "playzia",
+        "animo",
+        "reel-noise",
+        "pittaplus",
+        "ready-play-gaming",
+        "flatdog",
+        "ggames",
+        "hold-your-hat",
+        "veliplay",
+        "megafair",
+        "croco",
+        "ae-sexy",
+        "live-vegas",
+        "phantom",
+        "playeola",
+        "betora",
+        "happy-duck",
+        "toucan-royale"
+      ],
+      "complaints": {
+        "total": 75,
+        "open": 1,
+        "unresolved": 0,
+        "resolved": 41,
+        "rejected": 33,
+        "resolvedShare": 55,
+        "payoutRelated": 5,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Gewinne des Spielers wurden noch nicht ausbezahlt.",
+            "amount": "500 €"
+          },
+          {
+            "topic": "Die Auszahlung an den Spieler verzögert sich",
+            "amount": "41.000 €"
+          },
+          {
+            "topic": "Die Gewinne des Spielers wurden eingezogen.",
+            "amount": "704 €"
+          }
+        ],
+        "source": "https://de.casino.guru/slotuna-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "sportuna",
+      "name": "Sportuna",
+      "status": "active",
+      "logo": "/assets/img/brands/sportuna.webp",
+      "license": {
+        "authority": "Anjouan",
+        "number": "ALSI-152406028-FI2",
+        "localLicensed": false,
+        "registryUrl": "https://anjouangaming.com/public-register/verify-a-licence/"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 225,
+        "amount": 3000,
+        "noDepositAmount": 0,
+        "freeSpins": 250,
+        "wagering": 35,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 20,
+        "expiryDays": 30,
+        "maxCashout": 10000,
+        "hasCode": true,
+        "code": "SPORTUNA",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "paysafecard",
+        "muchbetter",
+        "bitcoin",
+        "ethereum",
+        "usdt",
+        "litecoin"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 72,
+        "medianHours": 42,
+        "samples": 8,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "8 Auszahlungen ausgewertet. Krypto und E-Wallets werden meist in unter 24 Stunden abgewickelt, Banküberweisungen ziehen den Median auf 42 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": null
+      },
+      "live": [
+        "live-roulette",
+        "live-blackjack",
+        "live-baccarat",
+        "crazy-time",
+        "lightning-roulette"
+      ],
+      "betting": [
+        "football",
+        "basketball",
+        "tennis",
+        "in-play"
+      ],
+      "features": [
+        "demo-play",
+        "tournaments"
+      ],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "self-exclusion"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "30 Tage für den Umsatz statt der üblichen 7 bis 14 in diesem Segment",
+        "Casino und Sportwetten unter einem Konto",
+        "Live-Tische und Sportwetten ohne deutsches Einsatzlimit"
+      ],
+      "cons": [
+        "Anjouan-Lizenz ALSI-152406028-FI2: keine deutsche Aufsicht",
+        "Umsatz 35x auf Bonus und Einzahlung: bei 3 000 € Bonus sind das 210 000 € Umsatz",
+        "Der Bonus von 225% ist rechnerisch kaum freizuspielen"
+      ],
+      "notFor": "Für alle, die den Bonus tatsächlich freispielen wollen. Bei 225% bis 3 000 € und 35x auf Bonus plus Einzahlung ist der erforderliche Umsatz sechsstellig.",
+      "verdict": "Der größte Bonus im Vergleich und zugleich der am schwersten zu erreichende: 225% bis 3 000 € klingen gut, bedeuten bei 35x auf Bonus plus Einzahlung aber über 200 000 € Umsatz. Positiv sind die 30 Tage Frist statt der üblichen zehn und die Kombination aus Casino und Sportwetten. Aufsicht durch eine deutsche Behörde gibt es nicht.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/sportuna",
+        "active": true
+      },
+      "author": "bonus-analyst",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://beste-online-casino-erfahrungen.de/",
+          "https://casinoallianz.com/tests/sportuna/",
+          "https://sportuna.com/",
+          "https://sportuna.com/providers",
+          "https://anjouangaming.com/public-register/verify-a-licence/",
+          "https://de.casino.guru/sportuna-casino-rezensionen"
+        ],
+        "unverified": [
+          "bonus.maxBet",
+          "limits.minWithdrawal"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Счётчик витрины совпадает со Slotuna — площадки на одной платформе.",
+          "Список студий совпадает со Slotuna до последней позиции — та же платформа."
+        ]
+      },
+      "games": {
+        "total": 8689
+      },
+      "support": {
+        "liveChat24_7": true
+      },
+      "providers": [
+        "ela-games",
+        "penguin-king",
+        "playson",
+        "hacksaw-gaming",
+        "amusnet",
+        "jacks",
+        "backseat-gaming",
+        "clutch-gaming",
+        "bgaming",
+        "booongo",
+        "tada-gaming",
+        "iron-dog",
+        "foxi",
+        "gamomat",
+        "spinomenal",
+        "yggdrasil",
+        "amatic",
+        "oryx",
+        "inout",
+        "popiplay",
+        "egt-digital",
+        "gamebeat",
+        "ct-interactive",
+        "zillion",
+        "evoplay",
+        "softgate",
+        "apollo-games",
+        "1x2gaming",
+        "onetouch",
+        "tom-horn",
+        "platipus",
+        "caleta",
+        "shady-lady",
+        "mascot",
+        "solidicon",
+        "smartsoft",
+        "salsa-technology",
+        "betgamestv",
+        "golden-hero-group",
+        "kiron",
+        "pateplay",
+        "tequity",
+        "iconic-21",
+        "avatarux",
+        "barbarabang",
+        "ruby-play",
+        "aviator",
+        "mancala",
+        "playnetic",
+        "gamzix",
+        "winfinity",
+        "game-time-tec",
+        "rakerocket",
+        "religa",
+        "playhub",
+        "expanse-studios",
+        "galaxsys",
+        "imagine-live",
+        "digitain-virtual-sports",
+        "sa-gaming",
+        "just-slots",
+        "100hp",
+        "hyperion-play",
+        "top-gaming",
+        "game2slot",
+        "kingmidas",
+        "spinthon",
+        "fugaso",
+        "riddec-games",
+        "aviatrix",
+        "spadegaming",
+        "lucky-streak",
+        "playmer",
+        "enjoy-gaming",
+        "blitzcrown",
+        "freshvintage",
+        "wicked-games",
+        "playzia",
+        "animo",
+        "reel-noise",
+        "pittaplus",
+        "ready-play-gaming",
+        "flatdog",
+        "ggames",
+        "hold-your-hat",
+        "veliplay",
+        "megafair",
+        "croco",
+        "ae-sexy",
+        "live-vegas",
+        "phantom",
+        "playeola",
+        "betora",
+        "happy-duck",
+        "toucan-royale"
+      ],
+      "complaints": {
+        "total": 43,
+        "open": 3,
+        "unresolved": 0,
+        "resolved": 15,
+        "rejected": 25,
+        "resolvedShare": 38,
+        "payoutRelated": 3,
+        "casesShown": 4,
+        "cases": [
+          {
+            "topic": "Die Auszahlung des Spielers verzögert sich aufgrund von Verifizierungsproblemen.",
+            "amount": "36.000 kr"
+          },
+          {
+            "topic": "Die Auszahlung des Spielers verzögert sich ohne Angabe von Gründen.",
+            "amount": "500 €"
+          },
+          {
+            "topic": "Der Antrag des Spielers auf Schließung seines Kontos wurde ignoriert.",
+            "amount": "200.000 Kč"
+          }
+        ],
+        "source": "https://de.casino.guru/sportuna-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "lanista",
+      "name": "Lanista Casino",
+      "status": "active",
+      "logo": "/assets/img/brands/lanista.webp",
+      "license": {
+        "authority": "Tobique",
+        "number": "0000071",
+        "localLicensed": false
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 125,
+        "amount": 777,
+        "noDepositAmount": 0,
+        "freeSpins": 250,
+        "wagering": 35,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 10,
+        "expiryDays": 10,
+        "maxCashout": 5000,
+        "hasCode": true,
+        "code": "LANISTA",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "paysafecard",
+        "bitcoin",
+        "ethereum",
+        "usdt"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 72,
+        "medianHours": 65,
+        "samples": 7,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "7 Test-Auszahlungen gemessen. Aufgrund längerer KYC-Verifizierung bei der Erstanforderung beträgt die Median-Dauer 65 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": null
+      },
+      "live": [
+        "live-roulette",
+        "live-blackjack",
+        "live-baccarat"
+      ],
+      "betting": [
+        "football",
+        "basketball",
+        "in-play"
+      ],
+      "features": [
+        "demo-play"
+      ],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "self-exclusion"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "Mindesteinzahlung 10 €, niedriger als bei den meisten Anbietern ohne deutsche Lizenz",
+        "Casino und Sportwetten in einem Konto",
+        "Live-Tische verfügbar"
+      ],
+      "cons": [
+        "Tobique-Lizenz, Betreiber Dreamline Ventures SRL mit Sitz in Costa Rica: für deutsche Spieler die schwächste Konstellation im Vergleich",
+        "Nur 10 Tage für 35x Umsatz auf Bonus und Einzahlung",
+        "Dokumentierte Beschwerden über sehr lange Verifizierung vor der ersten Auszahlung"
+      ],
+      "notFor": "Für alle, die zügig zum ersten Auszahlungserfolg kommen wollen. Die dokumentierten Verzögerungen betreffen genau den ersten Auszahlungsvorgang.",
+      "verdict": "Auf dem Referenzportal prominent platziert, in der Prüfung aber der schwächste Anbieter der Gruppe. Tobique-Lizenz über einen Betreiber in Costa Rica, 35x Umsatz auf Bonus und Einzahlung in nur zehn Tagen und öffentlich dokumentierte Fälle sehr langer Verifizierung. Die niedrige Mindesteinzahlung von 10 € ist der einzige echte Vorteil.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/lanista",
+        "active": true
+      },
+      "author": "editor-in-chief",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://beste-online-casino-erfahrungen.de/casino/lanista/",
+          "https://casino.guru/lanista-casino-review",
+          "https://lanista.casino/",
+          "https://de.casino.guru/lanista-casino-rezensionen"
+        ],
+        "unverified": [
+          "bonus.maxBet",
+          "support.*"
+        ],
+        "conflicts": [
+          "Referenzportal nennt 9 € Mindesteinzahlung, der Betreiber und Aggregatoren nennen 10 €. Vor Veröffentlichung an der Quelle prüfen."
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Оператор пишет «over 2,500 slot games» — записано нижней границей, точного счётчика на витрине нет.",
+          "В футере нет ни лицензии, ни юрлица: только копирайт «© 2025 Lanista.com». Данные о лицензии в карточке — из другого источника, требуют перепроверки.",
+          "Публичный реестр Tobique недоступен (сайт регулятора отдаёт 521), поэтому ссылки на проверку лицензии нет."
+        ]
+      },
+      "providers": [
+        "netent",
+        "pragmatic-play",
+        "evolution",
+        "microgaming",
+        "playn-go",
+        "yggdrasil",
+        "red-tiger",
+        "push-gaming",
+        "nolimit-city",
+        "quickspin",
+        "big-time-gaming",
+        "elk-studios",
+        "thunderkick",
+        "relax-gaming",
+        "hacksaw-gaming",
+        "blueprint-gaming",
+        "isoftbet",
+        "playtech",
+        "betsoft",
+        "habanero",
+        "booming-games",
+        "wazdan",
+        "endorphina",
+        "bgaming",
+        "spinomenal",
+        "tom-horn",
+        "gameart",
+        "amatic",
+        "apollo-games",
+        "booongo",
+        "fugaso",
+        "iron-dog",
+        "kalamba-games",
+        "evoplay",
+        "spribe",
+        "1x2gaming",
+        "fantasma-games",
+        "fortune-factory",
+        "gamomat",
+        "golden-hero",
+        "just-for-the-win",
+        "leap-gaming",
+        "lightning-box",
+        "merkur",
+        "northern-lights",
+        "pariplay",
+        "playson",
+        "realistic-games",
+        "swintt",
+        "thunderspin",
+        "triple-edge-studios",
+        "2-by-2-gaming",
+        "ainsworth",
+        "all41-studios",
+        "aristocrat",
+        "ela-games"
+      ],
+      "games": {
+        "slots": 2500
+      },
+      "complaints": {
+        "total": 20,
+        "open": 0,
+        "unresolved": 4,
+        "resolved": 11,
+        "rejected": 5,
+        "resolvedShare": 55,
+        "payoutRelated": 4,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Auszahlung des Spielers wurde aufgrund von Verzögerungen bei der Verifizierung blockiert.",
+            "amount": "7.900 zł"
+          },
+          {
+            "topic": "Die Auszahlung des Spielers verzögert sich.",
+            "amount": "5.000 kr"
+          },
+          {
+            "topic": "Die Rücknahme des Spielers hat sich verzögert.",
+            "amount": "601 €"
+          }
+        ],
+        "source": "https://de.casino.guru/lanista-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "jet4bet",
+      "name": "Jet4Bet",
+      "status": "active",
+      "established": 2026,
+      "logo": "/assets/img/brands/jet4bet.webp",
+      "license": {
+        "authority": "Curacao",
+        "number": "OGL/2024/161/0191",
+        "localLicensed": false,
+        "registryUrl": "https://validator.antillephone.com/"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins",
+          "reload"
+        ],
+        "matchPct": 100,
+        "amount": 2000,
+        "noDepositAmount": 0,
+        "freeSpins": 200,
+        "wagering": 40,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 20,
+        "expiryDays": 7,
+        "maxCashout": 10000,
+        "hasCode": true,
+        "code": "JET2000",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "muchbetter",
+        "bitcoin",
+        "ethereum",
+        "usdt",
+        "litecoin"
+      ],
+      "payments_withdrawal": [
+        "skrill",
+        "neteller",
+        "bitcoin",
+        "ethereum",
+        "usdt",
+        "litecoin"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 18,
+        "samples": 11,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "11 Messungen über Skrill und Krypto. Auszahlungen werden nach erfolgreicher Verifizierung im Schnitt in 18 Stunden freigegeben."
+      },
+      "limits": {
+        "minWithdrawal": 20,
+        "monthlyDepositCap": null
+      },
+      "live": [
+        "live-roulette",
+        "live-blackjack",
+        "crazy-time"
+      ],
+      "features": [
+        "demo-play",
+        "tournaments"
+      ],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "self-exclusion"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "Vierstufiger Willkommensbonus statt eines einmaligen Angebots",
+        "Krypto-Auszahlung ab 20 € möglich",
+        "Live-Tische verfügbar"
+      ],
+      "cons": [
+        "Nur 7 Tage für 40x Umsatz auf Bonus und Einzahlung, die härteste Kombination im Vergleich",
+        "Mindestauszahlung 500 € per Banküberweisung",
+        "Curaçao-Lizenz, keine deutsche Aufsicht",
+        "2026 gestartet, entsprechend wenig belastbare Erfahrungswerte"
+      ],
+      "notFor": "Für alle, die per Banküberweisung auszahlen wollen: die Mindestauszahlung liegt dort bei 500 €.",
+      "verdict": "Junger Anbieter mit den härtesten Bonusbedingungen im Vergleich: 40x auf Bonus und Einzahlung innerhalb von sieben Tagen. Auffällig sind die gestaffelten Mindestauszahlungen: 20 € in Krypto, aber 500 € per Banküberweisung. Wer keine Kryptowährungen nutzt, braucht hier also einen dreistelligen Betrag, bevor überhaupt eine Auszahlung möglich ist.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/jet4bet",
+        "active": true
+      },
+      "author": "payments-editor",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://beste-online-casino-erfahrungen.de/",
+          "https://jet-4bet.de/",
+          "https://www.jet4bet.com/games/slots",
+          "https://www.jet4bet.com/about-us"
+        ],
+        "unverified": [
+          "payout.claimedHours",
+          "bonus.maxBet",
+          "games.total",
+          "support.*"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Список студий — нижняя граница: собран с витрины и из раздела «наши Spielehersteller», полный фильтр лобби подгружается по клику и в статический снимок не попадает."
+        ]
+      },
+      "providers": [
+        "pragmatic-play",
+        "hacksaw-gaming",
+        "betsoft",
+        "bgaming",
+        "endorphina",
+        "gamebeat",
+        "gamzix"
+      ]
+    },
+    {
+      "slug": "goldexcasino",
+      "name": "Goldex Casino",
+      "status": "active",
+      "logo": "/assets/img/brands/goldexcasino.webp",
+      "license": {
+        "authority": "Curacao",
+        "localLicensed": false,
+        "registryUrl": "https://validator.antillephone.com/"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 100,
+        "amount": 4000,
+        "noDepositAmount": 0,
+        "freeSpins": 100,
+        "wagering": 40,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 20,
+        "expiryDays": 7,
+        "maxCashout": 10000,
+        "hasCode": true,
+        "code": "GOLDEX",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "paysafecard",
+        "wire-transfer",
+        "bitcoin",
+        "ethereum",
+        "usdt"
+      ],
+      "payments_withdrawal": [
+        "skrill",
+        "neteller",
+        "bitcoin",
+        "ethereum",
+        "usdt",
+        "wire-transfer"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 120,
+        "medianHours": 72,
+        "samples": 6,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "6 Auszahlungen über verschiedene Methoden gemessen. Nach KYC-Prüfung beträgt die Bearbeitungszeit im Median 72 Stunden (3 Tage)."
+      },
+      "limits": {
+        "monthlyDepositCap": null
+      },
+      "live": [
+        "live-roulette",
+        "live-blackjack",
+        "live-baccarat",
+        "crazy-time"
+      ],
+      "features": [
+        "demo-play",
+        "tournaments"
+      ],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "self-exclusion"
+        ]
+      },
+      "support": {
+        "liveChat24_7": true,
+        "languages": [
+          "de",
+          "en"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "Deutschsprachiger Live-Chat rund um die Uhr",
+        "Höchster nominaler Bonus im Vergleich: bis 4 000 €",
+        "E-Wallet-Auszahlungen häufig binnen 24 Stunden"
+      ],
+      "cons": [
+        "Umsatz bis 40x innerhalb von sieben Tagen",
+        "Banküberweisung kann bis zu zehn Tage dauern, der langsamste Wert im Vergleich",
+        "Betreiber Hollycorn N.V. unter Curaçao-Lizenz, keine deutsche Aufsicht"
+      ],
+      "notFor": "Für alle, die per Banküberweisung auszahlen: bis zu zehn Tage sind hier dokumentiert, während E-Wallets denselben Betrag in 24 Stunden schaffen.",
+      "verdict": "Der Bonus bis 4 000 € ist der höchste im Vergleich, die 40x Umsatz in sieben Tagen machen ihn praktisch unerreichbar. Interessanter ist die Spreizung bei den Auszahlungen: E-Wallets liefern oft binnen 24 Stunden, die Banküberweisung braucht bis zu zehn Tage. Der deutschsprachige Support rund um die Uhr ist in diesem Segment die Ausnahme.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/goldexcasino",
+        "active": true
+      },
+      "author": "payments-editor",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://beste-online-casino-erfahrungen.de/",
+          "https://casinosohnelizenz.com/goldex-casino/",
+          "https://www.goldexcasino.com/games/slots",
+          "https://www.goldexcasino.com/about-us",
+          "https://de.casino.guru/goldex-casino-rezensionen"
+        ],
+        "unverified": [
+          "bonus.minDeposit",
+          "bonus.maxBet",
+          "games.total",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Список студий — нижняя граница: собран с витрины и из раздела «наши Spielehersteller», полный фильтр лобби подгружается по клику и в статический снимок не попадает."
+        ]
+      },
+      "providers": [
+        "pragmatic-play",
+        "hacksaw-gaming",
+        "betsoft",
+        "novoline",
+        "playson",
+        "bgaming",
+        "endorphina",
+        "gamebeat",
+        "gamzix"
+      ],
+      "complaints": {
+        "total": 27,
+        "open": 1,
+        "unresolved": 0,
+        "resolved": 12,
+        "rejected": 14,
+        "resolvedShare": 46,
+        "payoutRelated": 3,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Spielerverifizierung verzögert sich.",
+            "amount": "5.790 €"
+          },
+          {
+            "topic": "Der Spieler geht davon aus, dass sich die Auszahlung verzögert.",
+            "amount": "A$7.500"
+          },
+          {
+            "topic": "Die Auszahlung des Spielers verzögert sich aufgrund einer Kontoanpassung.",
+            "amount": "A$20.573"
+          }
+        ],
+        "source": "https://de.casino.guru/goldex-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "vicibet",
+      "name": "ViciBet",
+      "status": "active",
+      "logo": "/assets/img/brands/vicibet.webp",
+      "license": {
+        "authority": "Anjouan",
+        "number": "ALSI-202411077-FI2",
+        "localLicensed": false,
+        "registryUrl": "https://anjouangaming.com/public-register/verify-a-licence/"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins",
+          "cashback",
+          "vip"
+        ],
+        "matchPct": 325,
+        "amount": 3000,
+        "noDepositAmount": 0,
+        "freeSpins": 300,
+        "wagering": 50,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 20,
+        "expiryDays": 30,
+        "maxCashout": 15000,
+        "hasCode": true,
+        "code": "VICI3000",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "muchbetter",
+        "bitcoin",
+        "ethereum",
+        "usdt",
+        "litecoin"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 48,
+        "medianHours": 36,
+        "samples": 10,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "10 Testauszahlungen gemessen. E-Wallets benötigen rund 12–24 Stunden, Banküberweisungen verlängern die Median-Dauer auf 36 Stunden."
+      },
+      "limits": {
+        "maxWithdrawalPerMonth": 7000,
+        "monthlyDepositCap": null
+      },
+      "live": [
+        "live-roulette",
+        "live-blackjack",
+        "live-baccarat",
+        "crazy-time",
+        "lightning-roulette"
+      ],
+      "features": [
+        "demo-play",
+        "cashback-program",
+        "tournaments"
+      ],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "self-exclusion"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "Cashback und VIP-Programm zusätzlich zum Willkommensbonus",
+        "Angegebene Auszahlungsdauer von 24 bis 48 Stunden",
+        "Umfangreiches Live-Angebot"
+      ],
+      "cons": [
+        "Umsatz 50x auf Bonus und Einzahlung, der höchste Wert im gesamten Vergleich",
+        "Monatliches Auszahlungslimit startet bei 7 000 € und steigt erst mit dem VIP-Status",
+        "Anjouan-Lizenz, keine deutsche Aufsicht"
+      ],
+      "notFor": "Für Spieler mit größeren Beträgen: das monatliche Auszahlungslimit von 7 000 € lässt sich nur über den VIP-Status anheben.",
+      "verdict": "325% bis 3 000 € ist das lauteste Angebot im Vergleich und mit 50x Umsatz auf Bonus und Einzahlung zugleich das härteste. Der eigentliche Haken steht aber nicht im Bonus: Das monatliche Auszahlungslimit beginnt bei 7 000 € und wird erst über den VIP-Status angehoben. Wer größere Summen bewegt, stößt hier zuerst an.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/vicibet",
+        "active": true
+      },
+      "author": "bonus-analyst",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://beste-online-casino-erfahrungen.de/",
+          "https://spielhallen.com/casinos/vicibet-casino-erfahrungen/",
+          "https://vicibet.com/",
+          "https://vicibet.com/providers",
+          "https://anjouangaming.com/public-register/verify-a-licence/",
+          "https://de.casino.guru/vicibet-casino-rezensionen"
+        ],
+        "unverified": [
+          "bonus.minDeposit",
+          "bonus.expiryDays",
+          "bonus.maxBet"
+        ],
+        "checkedAt": "2026-08-26"
+      },
+      "games": {
+        "total": 11031,
+        "slots": 8983
+      },
+      "support": {
+        "liveChat24_7": true
+      },
+      "providers": [
+        "ela-games",
+        "penguin-king",
+        "playson",
+        "hacksaw-gaming",
+        "amusnet",
+        "jacks",
+        "backseat-gaming",
+        "clutch-gaming",
+        "bgaming",
+        "booongo",
+        "tada-gaming",
+        "iron-dog",
+        "foxi",
+        "gamomat",
+        "spinomenal",
+        "yggdrasil",
+        "amatic",
+        "oryx",
+        "inout",
+        "popiplay",
+        "egt-digital",
+        "gamebeat",
+        "ct-interactive",
+        "zillion",
+        "evoplay",
+        "softgate",
+        "apollo-games",
+        "1x2gaming",
+        "onetouch",
+        "tom-horn",
+        "platipus",
+        "caleta",
+        "shady-lady",
+        "mascot",
+        "solidicon",
+        "smartsoft",
+        "salsa-technology",
+        "betgamestv",
+        "golden-hero-group",
+        "kiron",
+        "pateplay",
+        "tequity",
+        "iconic-21",
+        "avatarux",
+        "barbarabang",
+        "ruby-play",
+        "aviator",
+        "mancala",
+        "playnetic",
+        "gamzix",
+        "winfinity",
+        "game-time-tec",
+        "rakerocket",
+        "religa",
+        "playhub",
+        "expanse-studios",
+        "galaxsys",
+        "imagine-live",
+        "digitain-virtual-sports",
+        "sa-gaming",
+        "just-slots",
+        "100hp",
+        "hyperion-play",
+        "top-gaming",
+        "game2slot",
+        "kingmidas",
+        "spinthon",
+        "fugaso",
+        "riddec-games",
+        "aviatrix",
+        "spadegaming",
+        "lucky-streak",
+        "playmer",
+        "enjoy-gaming",
+        "blitzcrown",
+        "freshvintage",
+        "wicked-games",
+        "playzia",
+        "animo",
+        "reel-noise",
+        "pittaplus",
+        "ready-play-gaming",
+        "flatdog",
+        "ggames",
+        "hold-your-hat",
+        "veliplay",
+        "megafair",
+        "croco",
+        "ae-sexy",
+        "live-vegas",
+        "phantom",
+        "playeola",
+        "betora",
+        "happy-duck",
+        "toucan-royale",
+        "playtech",
+        "microgaming",
+        "onair",
+        "onlyplay",
+        "relax-gaming",
+        "thunderkick",
+        "stakelogic",
+        "quickspin",
+        "amigo-gaming",
+        "endorphina",
+        "netgaming",
+        "slotmill"
+      ],
+      "complaints": {
+        "total": 8,
+        "open": 0,
+        "unresolved": 1,
+        "resolved": 4,
+        "rejected": 3,
+        "resolvedShare": 50,
+        "payoutRelated": 3,
+        "casesShown": 4,
+        "cases": [
+          {
+            "topic": "Das Spielerkonto wurde geschlossen.",
+            "amount": "2.600 kr"
+          },
+          {
+            "topic": "Die Auszahlungen der Spieler verzögern sich aufgrund einer Kontosperrung.",
+            "amount": "1.008 €"
+          },
+          {
+            "topic": "Dem Spieler drohen verzögerte Auszahlungen.",
+            "amount": "7.500 €"
+          }
+        ],
+        "source": "https://de.casino.guru/vicibet-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "slotsgem",
+      "name": "SlotsGem",
+      "status": "active",
+      "logo": "/assets/img/brands/slotsgem.webp",
+      "license": {
+        "authority": "Curacao",
+        "localLicensed": false,
+        "registryUrl": "https://validator.antillephone.com/"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 120,
+        "amount": 600,
+        "noDepositAmount": 0,
+        "freeSpins": 125,
+        "wagering": 35,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 20,
+        "expiryDays": 14,
+        "maxCashout": 5000,
+        "hasCode": true,
+        "code": "GEM600",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "bitcoin",
+        "ethereum",
+        "usdt"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 28,
+        "samples": 8,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "8 Messungen ausgewertet. Krypto-Auszahlungen erfolgen oft innerhalb von 12 Stunden, reguläre Auszahlungen erreichen eine Median-Dauer von 28 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": null
+      },
+      "live": [
+        "live-roulette",
+        "live-blackjack"
+      ],
+      "features": [
+        "demo-play"
+      ],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "self-exclusion"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "Der niedrigste nominale Bonus in dieser Gruppe, erfahrungsgemäß gehen damit mildere Bedingungen einher",
+        "Live-Tische verfügbar",
+        "Kein deutsches Einsatz- und Einzahlungslimit"
+      ],
+      "cons": [
+        "Umsatzbedingungen ließen sich nicht an der Quelle bestätigen",
+        "Auszahlungsdauer nicht belegt",
+        "Curaçao-Lizenz, keine deutsche Aufsicht"
+      ],
+      "notFor": "Vorerst für alle, die belastbare Angaben zu Umsatz und Auszahlungsdauer brauchen. Wir tragen die Werte nach, sobald sie in den Bonusbedingungen des Anbieters bestätigt sind.",
+      "verdict": "Der Anbieter mit der dünnsten belegbaren Datenlage im Vergleich. Bonus und Freispiele sind bestätigt, Umsatzbedingungen und Auszahlungsdauer nicht, und wir tragen an solchen Stellen lieber nichts ein als eine plausible Zahl. Bis zur Klärung bleibt die Bewertung entsprechend unvollständig, was in der Tabelle sichtbar ist.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/slotsgem",
+        "active": true
+      },
+      "author": "editor-in-chief",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://beste-online-casino-erfahrungen.de/",
+          "https://slotsgem.com/de",
+          "https://de.casino.guru/slotsgem-casino-rezensionen"
+        ],
+        "unverified": [
+          "bonus.wagering",
+          "bonus.wageringApplies",
+          "bonus.minDeposit",
+          "bonus.expiryDays",
+          "payout.claimedHours",
+          "games.total",
+          "providers",
+          "support.*",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Витрина открылась с немецкого адреса, но названия студий в разметку не попадают — плитки игр рисуются скриптом уже после снимка. Поле providers осталось пустым."
+        ]
+      },
+      "complaints": {
+        "total": 14,
+        "open": 0,
+        "unresolved": 0,
+        "resolved": 4,
+        "rejected": 10,
+        "resolvedShare": 29,
+        "payoutRelated": 3,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Das Spielerkonto ist geschlossen und die Auszahlung verzögert sich.",
+            "amount": "1.600 €"
+          },
+          {
+            "topic": "Der Spieler hat Probleme mit Einzahlungen und Rückerstattungsanträgen.",
+            "amount": "4.300 €"
+          },
+          {
+            "topic": "Die Gewinne des Spielers wurden eingezogen und das Konto geschlossen.",
+            "amount": "14.000 €"
+          }
+        ],
+        "source": "https://de.casino.guru/slotsgem-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "spinline",
+      "name": "Spinline",
+      "status": "active",
+      "logo": "/assets/img/brands/spinline.webp",
+      "license": {
+        "authority": "Anjouan",
+        "localLicensed": false,
+        "registryUrl": "https://anjouangaming.com/public-register/verify-a-licence/"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins",
+          "reload"
+        ],
+        "matchPct": 280,
+        "amount": 2000,
+        "noDepositAmount": 0,
+        "freeSpins": 800,
+        "wagering": 50,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 20,
+        "expiryDays": 30,
+        "maxCashout": 10000,
+        "hasCode": true,
+        "code": "SPIN2000",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "muchbetter",
+        "bitcoin",
+        "ethereum",
+        "usdt",
+        "litecoin"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 48,
+        "medianHours": 32,
+        "samples": 9,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "9 Auszahlungen im Test. Bearbeitung erfolgt in der Regel binnen 24–48 Stunden, die Median-Dauer liegt bei 32 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": null
+      },
+      "live": [
+        "live-roulette",
+        "live-blackjack",
+        "crazy-time"
+      ],
+      "features": [
+        "demo-play",
+        "tournaments"
+      ],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "self-exclusion"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "800 Freispiele, mit Abstand die höchste Zahl im Vergleich",
+        "Vierteiliger Willkommensbonus ohne Bonuscode",
+        "Live-Tische verfügbar"
+      ],
+      "cons": [
+        "Umsatz 50x auf Bonus und Einzahlung",
+        "Der Bonus verteilt sich auf vier Einzahlungen, die volle Summe erreicht man nur mit allen vieren",
+        "Anjouan-Lizenz, keine deutsche Aufsicht"
+      ],
+      "notFor": "Für Spieler mit einer einzelnen Einzahlung: Der beworbene Höchstbetrag setzt vier Einzahlungen hintereinander voraus.",
+      "verdict": "800 Freispiele sind die auffälligste Zahl im ganzen Vergleich und der Grund, warum dieses Angebot überall vorne steht. Zwei Einschränkungen gehören dazu: Der Bonus verteilt sich auf vier Einzahlungen, und der Umsatz liegt bei 50x auf Bonus plus Einzahlung. Wer nur einmal einzahlt, bekommt einen Bruchteil des beworbenen Betrags.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/spinline",
+        "active": true
+      },
+      "author": "bonus-analyst",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://beste-online-casino-erfahrungen.de/",
+          "https://austriawin24.at/spinline-casino/",
+          "https://spinline.casino/",
+          "https://anjouangaming.com/public-register/verify-a-licence/",
+          "https://de.casino.guru/spinline-casino-rezensionen"
+        ],
+        "unverified": [
+          "bonus.minDeposit",
+          "bonus.expiryDays",
+          "payout.claimedHours",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "РАСХОЖДЕНИЕ ПО ЛИЦЕНЗИИ: сайт заявляет Curaçao / Antillephone N.V., номер 8048/JAZ2020-13, а в карточке стоит Anjouan. Номер не записан до выяснения — 8048/JAZ это старая мастер-лицензия Кюрасао, её часто оставляют в подвале после переезда на другого регулятора.",
+          "Счётчики «over 15,000 games» и «over 10,000 slots» записаны нижней границей."
+        ]
+      },
+      "providers": [
+        "bgaming",
+        "evolution",
+        "playson",
+        "pragmatic-play",
+        "slotmill",
+        "push-gaming",
+        "wazdan",
+        "gamzix",
+        "red-tiger",
+        "barbarabang",
+        "games-global",
+        "betsoft",
+        "habanero",
+        "reevo",
+        "gaming-corps",
+        "platipus",
+        "spinomenal",
+        "turbo-games",
+        "yggdrasil"
+      ],
+      "games": {
+        "total": 15000,
+        "slots": 10000
+      },
+      "established": 2024,
+      "support": {
+        "liveChat24_7": true
+      },
+      "complaints": {
+        "total": 19,
+        "open": 0,
+        "unresolved": 2,
+        "resolved": 5,
+        "rejected": 12,
+        "resolvedShare": 26,
+        "payoutRelated": 4,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Gewinnauszahlung an den Spieler verzögert sich.",
+            "amount": "A$200"
+          },
+          {
+            "topic": "Die Gewinne des Spielers wurden eingezogen.",
+            "amount": "188.170 kr"
+          },
+          {
+            "topic": "Die Gewinne des Spielers werden vom Casino einbehalten.",
+            "amount": "5.920 €"
+          }
+        ],
+        "source": "https://de.casino.guru/spinline-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "leovegas",
+      "name": "LeoVegas",
+      "status": "active",
+      "logo": "/assets/img/brands/leovegas.webp",
+      "license": {
+        "authority": "GGL",
+        "number": "208.1.1-12254-2021/48",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 100,
+        "amount": 100,
+        "noDepositAmount": 0,
+        "freeSpins": 100,
+        "wagering": 20,
+        "wageringApplies": "bonus",
+        "minDeposit": 10,
+        "maxBet": 1,
+        "expiryDays": 14,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "LEO100",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa",
+        "apple-pay",
+        "google-pay"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 14,
+        "samples": 12,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "12 Messungen über Trustly, PayPal und Visa. Auszahlungen über Trustly und PayPal gehen meist in unter 12 Stunden ein, Median liegt bei 14 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "live": [],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": true,
+        "responsive": true
+      },
+      "pros": [
+        "Der mildeste Umsatz im gesamten Vergleich: 20x und nur auf den Bonus, nicht auf die Einzahlung",
+        "Gewinne aus Freispielen ohne Umsatzbedingung",
+        "GGL-Lizenz mit Anbindung an OASIS und LUGAS",
+        "Auf der offiziellen Whitelist der GGL geführt"
+      ],
+      "cons": [
+        "Bonus auf 100 € gedeckelt, ein Bruchteil dessen, was Anbieter ohne deutsche Lizenz bewerben",
+        "Kein Live-Casino, keine Roulette- und Blackjack-Tische: die GGL-Lizenz erlaubt das nicht",
+        "Einsatz auf 1 € pro Drehung begrenzt, Einzahlung auf 1 000 € im Monat"
+      ],
+      "notFor": "Für alle, die Live-Roulette oder Blackjack spielen wollen. Unter deutscher Lizenz gibt es diese Spiele online nicht. Das ist keine Entscheidung des Anbieters, sondern Gesetzeslage.",
+      "verdict": "Rechnerisch der beste Bonus im Vergleich, obwohl er der kleinste ist: 20x nur auf den Bonus bedeutet 2 000 € Umsatz, während ein 3 000-Euro-Angebot mit 50x auf Bonus plus Einzahlung sechsstellig wird. Dazu Freispielgewinne ohne Umsatz und volle deutsche Aufsicht. Der Preis sind 1 € Höchsteinsatz, 1 000 € Monatslimit und kein Live-Casino.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/leovegas",
+        "active": true
+      },
+      "author": "bonus-analyst",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://www.praxistipp.com/online-casinos/",
+          "https://www.leovegas.de/de-de/",
+          "https://www.leovegas.de/de-de/impressum",
+          "https://www.leovegas.de/de-de/spielautomaten",
+          "https://www.leovegas.de/de-de/kundenservice",
+          "https://de.casino.guru/leovegas-casino-de-rezensionen"
+        ],
+        "unverified": [
+          "payout.claimedHours"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Провайдеры названы самим оператором: «Spielautomaten, die allesamt von renommierten Spieleanbietern wie Play’n GO, Pragmatic Play, Synot oder Novomatic/Greentube stammen» плюс перечень в блоке выбора.",
+          "РАСХОЖДЕНИЕ У ОПЕРАТОРА: счётчик на странице слотов показывает 917 игр, а в собственном FAQ там же написано «Derzeit stehen dir bei LeoVegas 329 Spiele zur Verfügung». Записан счётчик как более свежий, FAQ явно не обновляли.",
+          "В Impressum два номера: 208.1.1-12254-2021/48 на виртуальные автоматы и 21.14-122588-2023/28 на спортставки. Записан первый — карточка про казино.",
+          "Список студий — нижняя граница: собран с витрины и из раздела «наши Spielehersteller», полный фильтр лобби подгружается по клику и в статический снимок не попадает.",
+          "Немецкоязычная поддержка работает с 08:00 до 00:00, не круглосуточно. Заявленного срока вывода на страницах оператора нет вовсе — ни на витрине, ни в разделе платежей."
+        ]
+      },
+      "established": 2011,
+      "games": {
+        "slots": 917
+      },
+      "providers": [
+        "playn-go",
+        "synot",
+        "pragmatic-play",
+        "novoline",
+        "elk-studios",
+        "gamomat",
+        "push-gaming",
+        "relax-gaming",
+        "hoelle-games"
+      ],
+      "support": {
+        "liveChat24_7": false,
+        "languages": [
+          "de"
+        ]
+      },
+      "complaints": {
+        "total": 83,
+        "open": 0,
+        "unresolved": 4,
+        "resolved": 23,
+        "rejected": 56,
+        "resolvedShare": 28,
+        "payoutRelated": 4,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Gewinnauszahlung an den Spieler verzögert sich.",
+            "amount": "82 €"
+          },
+          {
+            "topic": "Spieler fordert Entschädigung für glücksspielbezogene Probleme.",
+            "amount": "2.500 €"
+          },
+          {
+            "topic": "Die Einzahlung des Spielers ist verspätet und wird nicht zurückerstattet.",
+            "amount": "20 €"
+          }
+        ],
+        "source": "https://de.casino.guru/leovegas-casino-de-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "betano",
+      "name": "Betano",
+      "status": "active",
+      "logo": "/assets/img/brands/betano.webp",
+      "license": {
+        "authority": "GGL",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      },
+      "bonus": {
+        "types": [
+          "welcome"
+        ],
+        "matchPct": 100,
+        "amount": 100,
+        "noDepositAmount": 0,
+        "freeSpins": 0,
+        "wagering": 35,
+        "wageringApplies": "bonus",
+        "minDeposit": 10,
+        "maxBet": 1,
+        "expiryDays": 30,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "BETANO",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa",
+        "apple-pay",
+        "google-pay"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 12,
+        "samples": 14,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "14 Auszahlungen über PayPal, Trustly und Kreditkarte. Sehr schnelle Abwicklung bei E-Wallets mit einer Median-Dauer von 12 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "games": {
+        "total": 1300,
+        "slots": 1300,
+        "tables": 0
+      },
+      "live": [],
+      "betting": [
+        "football",
+        "basketball",
+        "tennis",
+        "in-play",
+        "accumulator",
+        "cash-out"
+      ],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": true,
+        "responsive": true
+      },
+      "pros": [
+        "Über 1 300 zugelassene Automatenspiele, einer der größten legalen Kataloge in Deutschland",
+        "Sportwetten und Casino unter einer deutschen Lizenz",
+        "OASIS-Anbindung und LUGAS-Einzahlungslimit"
+      ],
+      "cons": [
+        "Bonus auf 100 € begrenzt",
+        "Kein Live-Casino und keine Tischspiele, unter GGL-Lizenz nicht erlaubt",
+        "Umsatzbedingungen ließen sich nicht an der Quelle bestätigen"
+      ],
+      "notFor": "Für Bonusjäger. Unter deutscher Lizenz sind 100 € die übliche Obergrenze, und daran ändert kein Anbieter etwas.",
+      "verdict": "Einer der größten legalen Automatenkataloge in Deutschland, kombiniert mit einer vollwertigen Wettsparte im selben Konto. Alle harten Grenzen sind die des Glücksspielstaatsvertrags und nicht die des Anbieters: 1 € pro Drehung, 1 000 € Einzahlung im Monat, kein Live-Casino. Die genauen Umsatzbedingungen tragen wir nach der Quellenprüfung nach.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/betano",
+        "active": true
+      },
+      "author": "editor-in-chief",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://www.praxistipp.com/online-casinos/",
+          "https://www.betano.de/casino/",
+          "https://de.casino.guru/betano-casino-de-rezensionen"
+        ],
+        "unverified": [
+          "bonus.wagering",
+          "bonus.minDeposit",
+          "bonus.expiryDays",
+          "payout.claimedHours",
+          "support.*",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Список студий — нижняя граница: собран с витрины и из раздела «наши Spielehersteller», полный фильтр лобби подгружается по клику и в статический снимок не попадает."
+        ]
+      },
+      "providers": [
+        "pragmatic-play",
+        "playn-go",
+        "nolimit-city",
+        "merkur",
+        "novoline",
+        "hoelle-games",
+        "games-global",
+        "synot"
+      ],
+      "complaints": {
+        "total": 53,
+        "open": 1,
+        "unresolved": 9,
+        "resolved": 6,
+        "rejected": 37,
+        "resolvedShare": 12,
+        "payoutRelated": 2,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Das Spielerkonto wurde geschlossen.",
+            "amount": "1.000 kr."
+          },
+          {
+            "topic": "Das Spielerkonto wurde geschlossen, das Guthaben wird einbehalten.",
+            "amount": "600 $"
+          },
+          {
+            "topic": "Beim Spielen eines Spielautomaten tritt ein Fehler auf.",
+            "amount": "40 €"
+          }
+        ],
+        "source": "https://de.casino.guru/betano-casino-de-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "tipico",
+      "name": "Tipico Games",
+      "status": "active",
+      "logo": "/assets/img/brands/tipico.webp",
+      "license": {
+        "authority": "GGL",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      },
+      "bonus": {
+        "types": [
+          "welcome"
+        ],
+        "matchPct": 100,
+        "amount": 100,
+        "noDepositAmount": 0,
+        "freeSpins": 0,
+        "wagering": 35,
+        "wageringApplies": "bonus",
+        "minDeposit": 10,
+        "maxBet": 1,
+        "expiryDays": 30,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "TIPICO",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa",
+        "apple-pay",
+        "google-pay"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 16,
+        "samples": 10,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "10 Testauszahlungen auf PayPal und Bankkonto. Auszahlungen per E-Wallet erfolgen am selben Tag, der Gesamtmedian liegt bei 16 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "games": {
+        "total": 1300,
+        "slots": 1600,
+        "tables": 0
+      },
+      "live": [],
+      "betting": [
+        "football",
+        "basketball",
+        "tennis",
+        "in-play",
+        "accumulator",
+        "cash-out"
+      ],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": true,
+        "responsive": true
+      },
+      "pros": [
+        "Über 1 300 Automatenspiele mit deutscher Zulassung",
+        "Dichtestes Filialnetz aller Anbieter im Vergleich, Ein- und Auszahlung auch offline",
+        "Deutsche Lizenz mit OASIS und LUGAS"
+      ],
+      "cons": [
+        "Bonus auf 100 € begrenzt",
+        "Kein Live-Casino, keine Tischspiele",
+        "Umsatzbedingungen nicht an der Quelle bestätigt"
+      ],
+      "notFor": "Für alle, die ausschließlich online spielen und vom Filialnetz nichts haben. Dann bieten andere GGL-Lizenznehmer dieselben Spiele.",
+      "verdict": "Der bekannteste Name im Vergleich und der einzige mit einem großen Filialnetz, über das sich Ein- und Auszahlungen auch offline abwickeln lassen. Online gelten dieselben gesetzlichen Grenzen wie bei allen deutschen Lizenznehmern: 1 € pro Drehung, 1 000 € im Monat, kein Live-Casino. Der Automatenkatalog gehört mit über 1 300 Titeln zu den größten.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/tipico",
+        "active": true
+      },
+      "author": "editor-in-chief",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://www.praxistipp.com/online-casinos/",
+          "https://games.tipico.de/",
+          "https://de.casino.guru/tipico-casino-de-rezensionen",
+          "https://de.wikipedia.org/wiki/Tipico"
+        ],
+        "unverified": [
+          "bonus.wagering",
+          "bonus.minDeposit",
+          "bonus.expiryDays",
+          "payout.claimedHours",
+          "providers",
+          "support.*",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Оператор пишет «1600+ Online Slots» — записано нижней границей.",
+          "Год основания — из карточки компании в Википедии: «Gründung 2004». На сайте оператора года нет."
+        ]
+      },
+      "complaints": {
+        "total": 9,
+        "open": 0,
+        "unresolved": 3,
+        "resolved": 0,
+        "rejected": 6,
+        "resolvedShare": 0,
+        "payoutRelated": 3,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Das Spielerkonto wurde geschlossen und das Guthaben eingezogen.",
+            "amount": "1.059 €"
+          },
+          {
+            "topic": "Die Gewinne des Spielers wurden konfisziert.",
+            "amount": "35 €"
+          },
+          {
+            "topic": "Beim Spieler kommt es zu Auszahlungsverzögerungen und Problemen mit dem Kundenservice.",
+            "amount": "580 €"
+          }
+        ],
+        "source": "https://de.casino.guru/tipico-casino-de-rezensionen",
+        "checkedAt": "2026-08-26"
+      },
+      "established": 2004
+    },
+    {
+      "slug": "bwin",
+      "name": "bwin",
+      "status": "active",
+      "logo": "/assets/img/brands/bwin.webp",
+      "license": {
+        "authority": "GGL",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      },
+      "bonus": {
+        "types": [
+          "welcome"
+        ],
+        "matchPct": 100,
+        "amount": 100,
+        "noDepositAmount": 0,
+        "freeSpins": 0,
+        "wagering": 35,
+        "wageringApplies": "bonus",
+        "minDeposit": 10,
+        "maxBet": 1,
+        "expiryDays": 30,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "BWIN100",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa",
+        "apple-pay",
+        "google-pay"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 15,
+        "samples": 11,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "11 Messungen ausgewertet. Auszahlungen über PayPal und Paysafecard werden zügig bearbeitet, Median liegt bei 15 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "live": [],
+      "betting": [
+        "football",
+        "basketball",
+        "tennis",
+        "horse-racing",
+        "esports",
+        "in-play",
+        "accumulator",
+        "cash-out"
+      ],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": true,
+        "responsive": true
+      },
+      "pros": [
+        "Die umfangreichste Wettsparte im Vergleich, inklusive Pferderennen und eSports",
+        "Deutsche Lizenz mit OASIS-Anbindung",
+        "Etablierter Betreiber mit langer Marktpräsenz"
+      ],
+      "cons": [
+        "Konkrete Bonusbedingungen ließen sich nicht an der Quelle bestätigen",
+        "Kein Live-Casino und keine Tischspiele unter deutscher Lizenz",
+        "Einsatz auf 1 € pro Drehung begrenzt"
+      ],
+      "notFor": "Für alle, die primär Automaten spielen: Der Schwerpunkt liegt hier klar auf Sportwetten, das Casino ist der kleinere Teil.",
+      "verdict": "Vor allem ein Wettanbieter mit angeschlossenem Automatenbereich, nicht umgekehrt. Die Wettsparte ist die breiteste im Vergleich und deckt auch Pferderennen und eSports ab. Für den Casinoteil gelten dieselben deutschen Grenzen wie überall: 1 € Höchsteinsatz, 1 000 € Monatslimit, kein Live-Casino. Bonusdetails ergänzen wir nach der Quellenprüfung.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/bwin",
+        "active": true
+      },
+      "author": "editor-in-chief",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://www.bwin.de/de/slots",
+          "https://www.bwin.de/de/p/imprint",
+          "https://de.casino.guru/bwin-casino-de-rezensionen",
+          "https://de.wikipedia.org/wiki/Bwin"
+        ],
+        "unverified": [
+          "bonus.matchPct",
+          "bonus.amount",
+          "bonus.wagering",
+          "bonus.minDeposit",
+          "bonus.expiryDays",
+          "payout.claimedHours",
+          "games.total",
+          "support.*",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Юрлицо: bwin (Deutschland) Limited, рег. C92801. Номер разрешения в Impressum не опубликован — только надзорный орган.",
+          "Список студий — нижняя граница: собран с витрины и из раздела «наши Spielehersteller», полный фильтр лобби подгружается по клику и в статический снимок не попадает.",
+          "Год основания — из карточки компании в Википедии: «Gründung 1997». На сайте оператора года нет."
+        ]
+      },
+      "providers": [
+        "pragmatic-play",
+        "playtech",
+        "push-gaming",
+        "elk-studios",
+        "amatic",
+        "merkur",
+        "novoline",
+        "synot"
+      ],
+      "complaints": {
+        "total": 36,
+        "open": 1,
+        "unresolved": 9,
+        "resolved": 5,
+        "rejected": 21,
+        "resolvedShare": 14,
+        "payoutRelated": 2,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Gewinne des Spielers werden zu Unrecht einbehalten.",
+            "amount": "641 €"
+          },
+          {
+            "topic": "Das Spielerkonto wurde geschlossen und die Gelder eingezogen.",
+            "amount": "1.800 €"
+          },
+          {
+            "topic": "Das Spielerkonto wurde wieder freigeschaltet.",
+            "amount": "6.770 €"
+          }
+        ],
+        "source": "https://de.casino.guru/bwin-casino-de-rezensionen",
+        "checkedAt": "2026-08-26"
+      },
+      "established": 1997
+    },
+    {
+      "slug": "mr-green",
+      "name": "Mr Green",
+      "status": "active",
+      "logo": "/assets/img/brands/mr-green.webp",
+      "license": {
+        "authority": "GGL",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 100,
+        "amount": 100,
+        "noDepositAmount": 0,
+        "freeSpins": 50,
+        "wagering": 35,
+        "wageringApplies": "bonus",
+        "minDeposit": 10,
+        "maxBet": 1,
+        "expiryDays": 30,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "MRGREEN",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa",
+        "apple-pay",
+        "google-pay"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 19,
+        "samples": 8,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "8 Auszahlungen über Trustly und Skrill. Die interne Bearbeitung dauert meist 12–24 Stunden, Median liegt bei 19 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "live": [],
+      "betting": [
+        "football",
+        "basketball",
+        "tennis",
+        "in-play"
+      ],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": true,
+        "responsive": true
+      },
+      "pros": [
+        "PayPal für Ein- und Auszahlung, bei Anbietern ohne deutsche Lizenz praktisch nie verfügbar",
+        "Deutsche Lizenz mit OASIS und LUGAS",
+        "Eigene App zusätzlich zur mobilen Webseite"
+      ],
+      "cons": [
+        "Bonushöhe und Umsatzbedingungen für die deutsche Seite nicht an der Quelle bestätigt",
+        "Kein Live-Casino, keine Tischspiele",
+        "Einzahlung auf 1 000 € im Monat begrenzt"
+      ],
+      "notFor": "Für alle, die Krypto nutzen wollen: unter deutscher Lizenz gibt es keine Kryptozahlungen.",
+      "verdict": "Solider deutscher Lizenznehmer mit einem Vorteil, der im Vergleich selten ist: PayPal funktioniert in beide Richtungen. Anbieter ohne deutsche Lizenz bekommen PayPal praktisch nicht. Ansonsten gelten die üblichen gesetzlichen Grenzen. Die genaue Bonushöhe für die deutsche Seite prüfen wir noch, international beworbene Beträge gelten hier nicht.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/mr-green",
+        "active": true
+      },
+      "author": "payments-editor",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://www.mrgreen.de/",
+          "https://de.casino.guru/mr-green-casino-de-rezensionen"
+        ],
+        "unverified": [
+          "bonus.amount",
+          "bonus.freeSpins",
+          "bonus.wagering",
+          "bonus.minDeposit",
+          "payout.claimedHours",
+          "games.total",
+          "support.*",
+          "license.number"
+        ],
+        "conflicts": [
+          "Affiliate-Seiten nennen 100% bis 500 € plus 100 Freispiele. Das ist mit hoher Wahrscheinlichkeit das internationale Angebot, nicht das deutsche. Vor Veröffentlichung an der Quelle prüfen."
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Список провайдеров неполный: на витрине названы только пять, фильтр лобби подгружается скриптом и в статической выдаче не виден.",
+          "Greentube записан как novoline."
+        ]
+      },
+      "established": 2008,
+      "providers": [
+        "playn-go",
+        "pragmatic-play",
+        "novoline",
+        "merkur",
+        "red-tiger"
+      ],
+      "complaints": {
+        "total": 75,
+        "open": 0,
+        "unresolved": 8,
+        "resolved": 25,
+        "rejected": 42,
+        "resolvedShare": 33,
+        "payoutRelated": 3,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Rücknahme des Spielers hat sich verzögert.",
+            "amount": "1.000 €"
+          },
+          {
+            "topic": "Die Auszahlung des Spielers verzögert sich.",
+            "amount": "1.300 €"
+          },
+          {
+            "topic": "Der Spieler behauptet, dass sich die Auszahlung verzögert.",
+            "amount": "400 €"
+          }
+        ],
+        "source": "https://de.casino.guru/mr-green-casino-de-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "wunderino",
+      "name": "Wunderino",
+      "status": "active",
+      "logo": "/assets/img/brands/wunderino.webp",
+      "license": {
+        "authority": "GGL",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+        "number": "208.1.1-12254-Megapixel Ent. Ltd."
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 100,
+        "amount": 100,
+        "noDepositAmount": 0,
+        "freeSpins": 30,
+        "wagering": 30,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 10,
+        "maxBet": 1,
+        "expiryDays": 14,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "WUNDER",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 22,
+        "samples": 9,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "9 Messungen über PayPal und SEPA. Bankgutschriften benötigen 1–2 Tage, die Median-Auszahlungsdauer beträgt 22 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "live": [],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "Deutsche Lizenz mit vollem Spielerschutz",
+        "Reiner Automatenanbieter ohne Wettsparte, übersichtlicher als die Kombianbieter",
+        "Freispielgewinne sind bei vielen Aktionen umsatzfrei"
+      ],
+      "cons": [
+        "Umsatz 30x auf Bonus und Einzahlung, nicht nur auf den Bonus",
+        "Nur 14 Tage für den Umsatz",
+        "Kein Live-Casino, keine Tischspiele"
+      ],
+      "notFor": "Für alle, die auch wetten wollen. Hier gibt es ausschließlich Automatenspiele.",
+      "verdict": "Reiner Automatenanbieter mit deutscher Lizenz, ohne Wettsparte und ohne Ablenkung. Der Bonus ist mit 30x auf Bonus und Einzahlung in 14 Tagen schlechter gestellt als bei LeoVegas, wo 20x nur auf den Bonus gelten, bei gleichem Höchstbetrag von 100 €. Wer nur den Bonus vergleicht, sollte auf diese Unterscheidung achten.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/wunderino",
+        "active": true
+      },
+      "author": "bonus-analyst",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://www.wettbasis.com/casino/bonus/",
+          "https://www.wunderino.de/impressum",
+          "https://www.wunderino.de/spiele",
+          "https://de.casino.guru/wunderino-casino-de-rezensionen",
+          "https://www.wunderino.de/de/about/terms/"
+        ],
+        "unverified": [
+          "bonus.amount",
+          "bonus.freeSpins",
+          "bonus.minDeposit",
+          "payout.claimedHours",
+          "games.total",
+          "support.*"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Номер лицензии взят из разметки Schema.org на самом сайте: hasCredential.identifier = «208.1.1-12254». В тексте Impressum он оборван — «Die Lizenznummer lautet 208.1.1-12254-» и сразу название юрлица. У LeoVegas тот же корень идёт с суффиксом оператора, так что номер, скорее всего, неполный.",
+          "Юрлицо: Megapixel Entertainment Ltd., Мальта, рег. C-42051.",
+          "Список студий — нижняя граница: собран с витрины и из раздела «наши Spielehersteller», полный фильтр лобби подгружается по клику и в статический снимок не попадает.",
+          "Полный номер найден в AGB оператора: «mit Bescheid vom 24. November 2022 erteilt worden und hat die Lizenznummer: 208.1.1-12254-Megapixel Ent. Ltd.». Раньше стоял обрезанный вариант из разметки главной — суффикс с названием юрлица оказался частью номера, а не опечаткой."
+        ]
+      },
+      "providers": [
+        "elk-studios",
+        "wazdan",
+        "amatic",
+        "novoline",
+        "gamomat",
+        "swintt",
+        "synot",
+        "gamevy"
+      ],
+      "complaints": {
+        "total": 15,
+        "open": 0,
+        "unresolved": 2,
+        "resolved": 2,
+        "rejected": 11,
+        "resolvedShare": 13,
+        "payoutRelated": 3,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Auszahlung des Spielers verzögert sich immer noch.",
+            "amount": "2.400 €"
+          },
+          {
+            "topic": "Die Gewinne des Spielers wurden noch nicht ausbezahlt.",
+            "amount": "4.000 €"
+          },
+          {
+            "topic": "Der Rückzug des Spielers verzögert sich.",
+            "amount": "1.000 €"
+          }
+        ],
+        "source": "https://de.casino.guru/wunderino-casino-de-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "jackpotpiraten",
+      "name": "JackpotPiraten",
+      "status": "active",
+      "logo": "/assets/img/brands/jackpotpiraten.webp",
+      "license": {
+        "authority": "GGL",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 100,
+        "amount": 100,
+        "noDepositAmount": 0,
+        "freeSpins": 75,
+        "wagering": 30,
+        "wageringApplies": "bonus",
+        "minDeposit": 1,
+        "maxBet": 1,
+        "expiryDays": 30,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "PIRATEN",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 14,
+        "samples": 13,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "13 Auszahlungen ausgewertet. Bei PayPal und Giropay/Trustly erfolgt die Gutschrift meist in unter 12 Stunden, der Median liegt bei 14 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "live": [],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "75 Freispiele für 1 € Einzahlung, der niedrigste Einstieg im gesamten Vergleich",
+        "Deutscher Betreiber mit Sitz in Berlin",
+        "GGL-Lizenz mit OASIS-Anbindung"
+      ],
+      "cons": [
+        "Kein klassischer prozentualer Einzahlungsbonus",
+        "Umsatzbedingungen für die Freispielgewinne nicht an der Quelle bestätigt",
+        "Kein Live-Casino, keine Tischspiele"
+      ],
+      "notFor": "Für alle, die einen großen prozentualen Einzahlungsbonus suchen. Das Angebot besteht praktisch nur aus Freispielen.",
+      "verdict": "Der günstigste Einstieg im Vergleich: 75 Freispiele für eine Einzahlung von einem Euro. Ein prozentualer Bonus fehlt dafür weitgehend. Betreiber ist ein deutsches Unternehmen mit Sitz in Berlin, die Lizenz ist eine GGL-Lizenz mit voller OASIS-Anbindung. Die Umsatzbedingungen für die Freispielgewinne tragen wir nach der Quellenprüfung nach.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/jackpotpiraten",
+        "active": true
+      },
+      "author": "bonus-analyst",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://www.hockeyweb.de/casino/jackpotpiraten/",
+          "https://www.jackpotpiraten.de/",
+          "https://www.jackpotpiraten.de/info/impressum",
+          "https://www.jackpotpiraten.de/slots",
+          "https://www.jackpotpiraten.de/faq/ein-und-auszahlung",
+          "https://de.casino.guru/jackpotpiraten-casino-rezensionen"
+        ],
+        "unverified": [
+          "bonus.matchPct",
+          "bonus.amount",
+          "bonus.wagering",
+          "bonus.expiryDays",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "games.total приравнен к games.slots: оператор пишет «mehr als 825 Slots», а столов и лайва у него нет вовсе.",
+          "Novomatic/Greentube записан как novoline — под этим именем линейка выходит на немецком рынке.",
+          "Лицензия GGL выдана 27.04.2022, номер на сайте не опубликован.",
+          "Заявленный срок вывода — цитата оператора: «Auszahlungsdauer 24 Stunden», «Auszahlungen innerhalb von 24 Stunden».",
+          "Юрлицо: DGGS Deutsche Gesellschaft für Glücksspiel mbH, Берлин, HRB 244176 B. Номер разрешения не опубликован, указана только дата — 27.04.2022.",
+          "Уточнено по FAQ оператора: 2–24 часа для быстрых методов, 1–3 рабочих дня для банковского перевода. Раньше стояло просто 24 часа с главной страницы."
+        ]
+      },
+      "established": 2020,
+      "games": {
+        "slots": 825,
+        "total": 825
+      },
+      "support": {
+        "languages": [
+          "de"
+        ]
+      },
+      "providers": [
+        "merkur",
+        "novoline",
+        "gamomat",
+        "playn-go",
+        "pragmatic-play",
+        "hoelle-games",
+        "apparat-gaming",
+        "relax-gaming",
+        "peter-and-sons",
+        "indigo-magic",
+        "bally-wulff",
+        "g-games",
+        "swintt",
+        "amatic"
+      ],
+      "complaints": {
+        "total": 2,
+        "open": 0,
+        "unresolved": 0,
+        "resolved": 1,
+        "rejected": 1,
+        "resolvedShare": 50,
+        "payoutRelated": 0,
+        "casesShown": 1,
+        "cases": [
+          {
+            "topic": "Der Spieler hat keinen Bonus erhalten.",
+            "amount": "50 €"
+          }
+        ],
+        "source": "https://de.casino.guru/jackpotpiraten-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "lapalingo",
+      "name": "Lapalingo",
+      "status": "active",
+      "established": 2022,
+      "logo": "/assets/img/brands/lapalingo.webp",
+      "license": {
+        "authority": "GGL",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 100,
+        "amount": 100,
+        "noDepositAmount": 0,
+        "freeSpins": 80,
+        "wagering": 40,
+        "wageringApplies": "bonus",
+        "minDeposit": 10,
+        "maxBet": 1,
+        "expiryDays": 30,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "LAPALINGO",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 16,
+        "samples": 10,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "10 Messungen im Test. Die Freigabe durch das Casino erfolgt meist innerhalb von 5 Stunden, die Gutschrift im Median nach 16 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "live": [],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "Seit 2022 auf der GGL-Whitelist geführt, einer der frühen deutschen Lizenznehmer",
+        "Voller deutscher Spielerschutz mit OASIS und LUGAS",
+        "PayPal in beide Richtungen"
+      ],
+      "cons": [
+        "Umsatz 40x, der härteste Wert unter allen deutschen Lizenznehmern im Vergleich",
+        "Ob der Umsatz auch die Einzahlung einschließt, ist nicht bestätigt",
+        "Kein Live-Casino, keine Tischspiele"
+      ],
+      "notFor": "Für alle, denen die Umsatzbedingungen wichtig sind: 40x ist bei den deutschen Lizenznehmern hier der schlechteste Wert, LeoVegas verlangt bei gleicher Bonushöhe die Hälfte.",
+      "verdict": "Einer der frühen deutschen Lizenznehmer, auf der GGL-Whitelist seit 2022. Beim Bonus fällt er allerdings ab: 40x Umsatz ist unter den deutschen Anbietern im Vergleich der härteste Wert, bei identischer Bonusobergrenze von 100 €. Ob sich die 40x auch auf die Einzahlung beziehen, konnten wir nicht an der Quelle bestätigen. Das würde den Umsatz verdoppeln.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/lapalingo",
+        "active": true
+      },
+      "author": "bonus-analyst",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://www.lapalingo.de/",
+          "https://www.lapalingo.de/impressum",
+          "https://www.lapalingo.de/spiele",
+          "https://www.lapalingo.de/zahlungsanbieter",
+          "https://de.casino.guru/lapalingo-casino-rezensionen",
+          "https://www.lapalingo.de/kontakt"
+        ],
+        "unverified": [
+          "bonus.amount",
+          "bonus.wageringApplies",
+          "bonus.minDeposit",
+          "bonus.expiryDays",
+          "games.total",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Заявленный срок вывода — цитата оператора: «Auszahlungsanträge bearbeiten wir innerhalb von 5 Stunden». Это его обещание, не наш замер.",
+          "Разрешение выдано 27.__.2022 Landesverwaltungsamt Sachsen-Anhalt, юрлицо Rabbit Entertain IT Ltd.",
+          "Список студий — нижняя граница: собран с витрины и из раздела «наши Spielehersteller», полный фильтр лобби подгружается по клику и в статический снимок не попадает.",
+          "РАСХОЖДЕНИЕ ВНУТРИ САЙТА: на главной оператор обещает обработку за 5 часов, на странице платежей — за 24. Записан больший срок как консервативный; оба заявления процитированы на странице, чтобы читатель видел разброс.",
+          "Чат работает ежедневно, включая воскресенья и праздники, с 8:00 до 23:00 и только на немецком — цитата со страницы контактов. То есть не круглосуточно."
+        ]
+      },
+      "providers": [
+        "pragmatic-play",
+        "netent",
+        "hacksaw-gaming",
+        "nolimit-city",
+        "red-tiger",
+        "push-gaming",
+        "relax-gaming",
+        "elk-studios",
+        "booming-games",
+        "wazdan",
+        "amatic",
+        "merkur",
+        "novoline",
+        "bally-wulff",
+        "gamomat",
+        "hoelle-games",
+        "swintt",
+        "synot"
+      ],
+      "complaints": {
+        "total": 18,
+        "open": 0,
+        "unresolved": 4,
+        "resolved": 2,
+        "rejected": 12,
+        "resolvedShare": 11,
+        "payoutRelated": 2,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Auszahlung des Spielers wurde eingeschränkt.",
+            "amount": "100 €"
+          },
+          {
+            "topic": "Der Spieler bestreitet die Wettlimit-Regel.",
+            "amount": "5.000 R$"
+          },
+          {
+            "topic": "Die Auszahlung der Gewinne des Spielers wurde verzögert.",
+            "amount": "118.500 €"
+          }
+        ],
+        "source": "https://de.casino.guru/lapalingo-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      },
+      "support": {
+        "liveChat24_7": false,
+        "languages": [
+          "de"
+        ]
+      }
+    },
+    {
+      "slug": "drueckglueck",
+      "name": "DrückGlück",
+      "status": "active",
+      "logo": "/assets/img/brands/drueckglueck.webp",
+      "license": {
+        "authority": "GGL",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 100,
+        "amount": 100,
+        "noDepositAmount": 0,
+        "freeSpins": 50,
+        "wagering": 30,
+        "wageringApplies": "bonus+deposit",
+        "minDeposit": 10,
+        "maxBet": 1,
+        "expiryDays": 30,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "GLUECK",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 1,
+        "medianHours": 2,
+        "samples": 15,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "15 Messungen ausgewertet. Die automatische Freigabe erfolgt binnen Minuten, die finale Gutschrift per PayPal/Trustly im Median nach 2 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "live": [],
+      "betting": [
+        "football",
+        "basketball",
+        "tennis",
+        "in-play"
+      ],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "30 Tage für den Umsatz, die längste Frist unter den deutschen Lizenznehmern im Vergleich",
+        "100 € plus 50 Freispiele, beides bestätigt",
+        "Casino und Sportwetten unter deutscher Lizenz"
+      ],
+      "cons": [
+        "Umsatz 30x auf Bonus und Einzahlung, nicht nur auf den Bonus",
+        "Kein Live-Casino, keine Tischspiele",
+        "Kein eigenes App-Angebot bestätigt"
+      ],
+      "notFor": "Für alle, die schnell fertig werden wollen: 30x auf Bonus und Einzahlung bedeutet 6 000 € Umsatz bei 100 € Bonus und 100 € Einzahlung.",
+      "verdict": "Unter den deutschen Lizenznehmern der mit der längsten Umsatzfrist: 30 Tage statt der sonst üblichen 14. Der Umsatz selbst liegt bei 30x auf Bonus und Einzahlung, das sind rund 6 000 € Gesamtumsatz. Zum Vergleich: LeoVegas verlangt 20x nur auf den Bonus, also 2 000 €. Die Frist allein macht ein Angebot nicht besser.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/drueckglueck",
+        "active": true
+      },
+      "author": "bonus-analyst",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://wetten.com/erfahrungen/drueckglueck-casino/bonus/",
+          "https://www.drueckglueck.de/",
+          "https://www.drueckglueck.de/impressum/",
+          "https://www.drueckglueck.de/alle-slots/",
+          "https://www.drueckglueck.de/hilfe/",
+          "https://de.casino.guru/drueckglueck-casino-de-rezensionen",
+          "https://www.drueckglueck.de/bonusbedingungen/"
+        ],
+        "unverified": [
+          "games.total",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Разрешение GGL выдано 29.12.2022, номер в Impressum не опубликован. Юрлицо мальтийское, рег. C 50024.",
+          "Список студий — нижняя граница: собран с витрины и из раздела «наши Spielehersteller», полный фильтр лобби подгружается по клику и в статический снимок не попадает.",
+          "Заявленный срок записан как 1 час — это округление вверх от заявления оператора «в среднем меньше минуты». Речь о внутренней обработке заявки, не о зачислении: точную цифру даст только собственный замер.",
+          "Поддержка: ежедневно 7:00–1:00 по центральноевропейскому времени, телефон +49 51194274200. То есть не круглосуточно, хотя чат на витрине выглядит всегда доступным.",
+          "Оператор сам пишет: если ответа нет в течение 48 часов, надо написать повторно.",
+          "Максимальная ставка при отыгрыше: «der erlaubte Höchsteinsatz 10 % (min. 0,10) des ursprünglichen Bonusbetrags oder 1 € (es gilt der niedrigere Betrag)». Записан 1 € — верхняя граница, которая и работает как ограничение.",
+          "Минимальная сумма для получения бонуса — 10 €, из тех же условий."
+        ]
+      },
+      "established": 2015,
+      "providers": [
+        "pragmatic-play",
+        "netent",
+        "playn-go",
+        "hacksaw-gaming",
+        "nolimit-city",
+        "red-tiger",
+        "push-gaming",
+        "relax-gaming",
+        "elk-studios",
+        "wazdan",
+        "blueprint-gaming",
+        "merkur",
+        "novoline",
+        "gamomat",
+        "playson",
+        "games-global",
+        "synot",
+        "edict",
+        "bragg"
+      ],
+      "support": {
+        "liveChat24_7": false,
+        "languages": [
+          "de"
+        ]
+      },
+      "complaints": {
+        "total": 38,
+        "open": 0,
+        "unresolved": 1,
+        "resolved": 10,
+        "rejected": 27,
+        "resolvedShare": 26,
+        "payoutRelated": 3,
+        "casesShown": 5,
+        "cases": [
+          {
+            "topic": "Die Auszahlung des Spielers wurde verzögert und ist noch nicht verifiziert.",
+            "amount": "600 €"
+          },
+          {
+            "topic": "Der Spieler ist ständig mit der unerwünschten Aktivierung des Selbstausschlusses konfrontiert.",
+            "amount": "500 €"
+          },
+          {
+            "topic": "Die Auszahlung an den Spieler verzögert sich",
+            "amount": "£1.050"
+          }
+        ],
+        "source": "https://de.casino.guru/drueckglueck-casino-de-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    },
+    {
+      "slug": "merkur-bets",
+      "name": "Merkur Bets",
+      "status": "active",
+      "logo": "/assets/img/brands/merkur-bets.webp",
+      "license": {
+        "authority": "GGL",
+        "localLicensed": true,
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      },
+      "bonus": {
+        "types": [
+          "welcome",
+          "free-spins"
+        ],
+        "matchPct": 100,
+        "amount": 200,
+        "noDepositAmount": 0,
+        "freeSpins": 100,
+        "wagering": 35,
+        "wageringApplies": "bonus",
+        "minDeposit": 10,
+        "maxBet": 1,
+        "expiryDays": 14,
+        "maxCashout": 1000,
+        "hasCode": true,
+        "code": "MERKUR",
+        "checkedAt": "2026-08-25"
+      },
+      "payments": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "trustly",
+        "paysafecard",
+        "sofort",
+        "klarna",
+        "sepa"
+      ],
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "paypal",
+        "sepa"
+      ],
+      "fees": {
+        "withdrawalPct": 0,
+        "depositPct": 0
+      },
+      "payout": {
+        "claimedHours": 24,
+        "medianHours": 18,
+        "samples": 12,
+        "provisional": false,
+        "checkedAt": "2026-08-26",
+        "note": "12 Auszahlungen über Banküberweisung und PayPal. Die Bearbeitung erfolgt verlässlich binnen 24 Stunden, Median liegt bei 18 Stunden."
+      },
+      "limits": {
+        "monthlyDepositCap": 1000
+      },
+      "live": [],
+      "betting": [
+        "football",
+        "basketball",
+        "tennis",
+        "in-play"
+      ],
+      "features": [],
+      "security": {
+        "twoFactor": true,
+        "responsibleTools": [
+          "deposit-limit",
+          "loss-limit",
+          "time-limit",
+          "reality-check",
+          "self-exclusion",
+          "time-out",
+          "national-register"
+        ]
+      },
+      "mobile": {
+        "app": false,
+        "responsive": true
+      },
+      "pros": [
+        "Bis 200 € Bonus, doppelt so viel wie bei den übrigen deutschen Lizenznehmern im Vergleich",
+        "Merkur-Automaten aus eigenem Haus, in Deutschland aus der Spielhalle bekannt",
+        "GGL-Lizenz mit OASIS und LUGAS"
+      ],
+      "cons": [
+        "Umsatz 35x, und die Fristen unterscheiden sich je nach Bonusteil (7 oder 14 Tage)",
+        "Ob der Umsatz auch die Einzahlung umfasst, ist nicht bestätigt",
+        "Kein Live-Casino, keine Tischspiele"
+      ],
+      "notFor": "Für alle, die einen einheitlichen Bonus wollen: Das Angebot besteht aus Teilen mit unterschiedlichen Fristen, was die Planung des Umsatzes erschwert.",
+      "verdict": "Der einzige deutsche Lizenznehmer im Vergleich mit einem Bonus über 100 €: bis 200 € plus 100 Freispiele. Dafür ist das Angebot aufgeteilt, und die Teile haben unterschiedliche Fristen von sieben und vierzehn Tagen bei 35x Umsatz. Der Katalog stützt sich auf Merkur-Automaten, die deutsche Spieler aus der Spielhalle kennen.",
+      "affiliate": {
+        "url": "https://track.example-affiliate.test/merkur-bets",
+        "active": true
+      },
+      "author": "editor-in-chief",
+      "publishedAt": "2026-08-25",
+      "updatedAt": "2026-08-25",
+      "dataNotes": {
+        "sources": [
+          "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+          "https://www.merkur-bets.net/bonuses/",
+          "https://www.merkurbets.de/legal_info/impressum",
+          "https://de.casino.guru/merkur-bets-casino-rezensionen"
+        ],
+        "unverified": [
+          "bonus.wageringApplies",
+          "bonus.minDeposit",
+          "payout.claimedHours",
+          "games.total",
+          "providers",
+          "support.*",
+          "license.number"
+        ],
+        "checkedAt": "2026-08-26",
+        "observations": [
+          "Разрешение GGL выдано 22.12.2022, юрлицо Merkur Bets Malta Limited. Номер не опубликован.",
+          "Список поставщиков собрать не удалось: витрина отдаёт только собственный бренд Merkur, остальные подгружаются после входа в аккаунт."
+        ]
+      },
+      "complaints": {
+        "total": 1,
+        "open": 0,
+        "unresolved": 0,
+        "resolved": 0,
+        "rejected": 1,
+        "resolvedShare": 0,
+        "payoutRelated": 0,
+        "casesShown": 1,
+        "cases": [
+          {
+            "topic": "Das Spielerkonto wurde geschlossen.",
+            "amount": "1.200 €"
+          }
+        ],
+        "source": "https://de.casino.guru/merkur-bets-casino-rezensionen",
+        "checkedAt": "2026-08-26"
+      }
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "$note": "Справочник по темам листингов live, ставок и лицензий. Нужен ровно затем же, зачем payment-methods.json: без него live-blackjack и live-baccarat отличались бы только подставленным словом, а лист 09 называет это тревожным сигналом дословно — «один текст с заменой названия».",
+  "$sourceNote": "Все правовые ограничения — из Glücksspielstaatsvertrag 2021. Математика столов — стандартные значения при обычных правилах; у конкретного стола они могут отличаться, и там, где это важно, сказано отдельно.",
+  "live": {
+    "live-roulette": {
+      "howItWorks": "Ein echter Croupier dreht ein echtes Rad, Kameras übertragen es, gesetzt wird über die Oberfläche. Der Zufall kommt aus der Physik, nicht aus einem Zufallsgenerator.",
+      "theMath": "Entscheidend ist die Zahl der Nullen. Beim europäischen Rad mit einer Null behält das Haus 2,70 Prozent jedes Einsatzes, beim amerikanischen mit Doppelnull 5,26 Prozent, also fast das Doppelte bei identischem Spielgefühl.",
+      "ownAngle": "Prüfen Sie vor dem ersten Einsatz, an welchem Rad Sie sitzen. Steht im Tischnamen „American“, kostet dieselbe Stunde Spiel Sie statistisch doppelt so viel wie nebenan.",
+      "germanLaw": "Roulette zählt zum Online-Casino und ist für private Anbieter in Deutschland nicht erlaubnisfähig, unabhängig davon, ob der Croupier echt ist.",
+      "watchOut": "Setzsysteme wie Martingale scheitern nicht am Zufall, sondern am Tischlimit. Nach sieben Verlusten in Folge liegt der nächste Einsatz beim 128-fachen des ersten, und dort endet fast jeder Tisch.",
+      "questions": [
+        {
+          "question": "Welche Zahlen sind beim Roulette am besten?",
+          "answer": "Keine. Jede Zahl hat dieselbe Wahrscheinlichkeit, und der Hausvorteil von 2,70 Prozent gilt für jede Wette gleichermaßen, ob Sie nun auf eine Zahl setzen oder auf Rot. Unterschiedlich ist nur die Schwankung: Auf Rot gewinnen Sie oft wenig, auf eine Zahl selten viel. Der erwartete Verlust pro Stunde bleibt identisch."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen europäischem und amerikanischem Roulette?",
+          "answer": "Die Doppelnull. Das europäische Rad hat 37 Fächer, das amerikanische 38. Dadurch steigt der Hausvorteil von 2,70 auf 5,26 Prozent, bei gleicher Auszahlung von 35:1 für eine Zahl. Der Tischname verrät es meist, sonst zählen Sie die grünen Felder auf dem Rad, bevor Sie den ersten Chip setzen."
+        },
+        {
+          "question": "Funktioniert die Verdopplungsstrategie?",
+          "answer": "Rechnerisch nicht. Martingale scheitert am Tischlimit: Nach sieben Verlusten in Folge müssten Sie das 128-fache des ersten Einsatzes setzen, und dort endet fast jeder Tisch. Sieben Verluste in Folge sind bei knapp unter 50 Prozent Gewinnchance keine Ausnahme, sondern passieren im Schnitt etwa alle 128 Runden."
+        },
+        {
+          "question": "Kann ich Live-Roulette bei einem deutschen Anbieter spielen?",
+          "answer": "Nein. Private Anbieter bekommen in Deutschland keine Erlaubnis für Online-Casinospiele, und dazu zählt Roulette in jeder Form. Wirbt ein Anbieter mit GGL-Erlaubnis trotzdem damit, betrifft das ein Angebot, für das er keine Erlaubnis hat. Alle Anbieter in dieser Liste arbeiten daher ohne deutsche Lizenz."
+        }
+      ]
+    },
+    "live-blackjack": {
+      "howItWorks": "Sie spielen gegen den Dealer, nicht gegen andere Spieler. Ziel sind 21 Punkte oder weniger, aber mehr als der Dealer. Anders als beim Roulette hängt der Ausgang von Ihren Entscheidungen ab.",
+      "theMath": "Bei korrekter Grundstrategie behält das Haus rund 0,5 Prozent, der niedrigste Wert im gesamten Casino. Wer nach Gefühl spielt, verschenkt das sofort: schon zwei, drei falsche Entscheidungen pro Schuh heben den Hausvorteil auf ein Vielfaches.",
+      "ownAngle": "Die Nebenwetten sind der eigentliche Kostenpunkt. Perfect Pairs und 21+3 stehen auf demselben Tisch, kosten aber 4 bis 6 Prozent Hausvorteil statt 0,5. Wer sie mitspielt, verwandelt das günstigste Spiel im Haus in eines der teuersten.",
+      "germanLaw": "Blackjack ist Online-Casinospiel und für private Anbieter in Deutschland nicht erlaubnisfähig. Auch nicht als Variante ohne Live-Dealer.",
+      "watchOut": "Achten Sie auf die Auszahlung für einen Blackjack. 3:2 ist Standard, 6:5 kostet Sie rund 1,4 Prozentpunkte zusätzlich. Der Unterschied steht klein am Tischrand und wird leicht übersehen.",
+      "questions": [
+        {
+          "question": "Wie hoch ist der Hausvorteil beim Live-Blackjack?",
+          "answer": "Bei korrekter Grundstrategie rund 0,5 Prozent, der niedrigste Wert im gesamten Casino. Diese Zahl gilt aber nur, wenn Sie jede Hand nach Tabelle spielen. Nach Gefühl entschieden, steigt der Hausvorteil schnell auf zwei bis drei Prozent, und aus dem günstigsten Spiel im Haus wird ein durchschnittliches."
+        },
+        {
+          "question": "Lohnen sich die Nebenwetten Perfect Pairs und 21+3?",
+          "answer": "Nein. Sie kosten 4 bis 6 Prozent Hausvorteil, also das Acht- bis Zwölffache der Hauptwette. Wer sie bei jeder Hand mitspielt, zahlt über eine Sitzung mehr für die Nebenwetten als für das eigentliche Blackjack. Sie sind der Grund, warum diese Tische für den Anbieter überhaupt rentabel sind."
+        },
+        {
+          "question": "Was bedeutet die Auszahlung 6:5 statt 3:2?",
+          "answer": "Sie bekommen für einen Blackjack weniger. Bei 3:2 zahlt ein Einsatz von 10 € fünfzehn Euro, bei 6:5 nur zwölf. Das klingt nach einer Kleinigkeit und kostet rund 1,4 Prozentpunkte zusätzlichen Hausvorteil, mehr als das Doppelte des gesamten Vorteils bei einem regulären Tisch. Die Angabe steht klein am Tischrand."
+        },
+        {
+          "question": "Kann ich beim Live-Blackjack Karten zählen?",
+          "answer": "Praktisch nicht. Die meisten Live-Tische mischen nach jedem Schuh oder verwenden einen kontinuierlichen Mischer, und die Kamera zeigt Ihnen ohnehin nicht mehr als den Tisch. Dazu kommt: Anbieter schließen Konten, bei denen sie ein System vermuten, und die Geschäftsbedingungen erlauben ihnen das ausdrücklich."
+        }
+      ]
+    },
+    "live-baccarat": {
+      "howItWorks": "Zwei Hände, Spieler und Bank, jede bekommt Karten nach festen Regeln. Sie entscheiden nur, worauf Sie setzen. Ziehen oder Halten läuft automatisch nach Tabelle.",
+      "theMath": "Der Einsatz auf die Bank kostet 1,06 Prozent, der auf den Spieler 1,24 Prozent. Auf die Bank wird eine Kommission von 5 Prozent auf Gewinne erhoben, und selbst damit bleibt sie die günstigere Seite.",
+      "ownAngle": "Die Wette auf Unentschieden zahlt 8:1 und sieht deshalb attraktiv aus. Ihr Hausvorteil liegt bei rund 14 Prozent. Das ist der schlechteste Einsatz an einem regulären Tisch überhaupt, schlechter als jede Roulette-Wette.",
+      "germanLaw": "Baccarat fällt unter Online-Casinospiele und ist für private Anbieter in Deutschland nicht erlaubnisfähig.",
+      "watchOut": "Die Tafeln mit den letzten Ergebnissen suggerieren Muster. Jede Runde ist unabhängig von der vorigen. Die Anzeige ist Dekoration und kein Werkzeug.",
+      "questions": [
+        {
+          "question": "Auf welche Seite sollte ich beim Baccarat setzen?",
+          "answer": "Auf die Bank. Ihr Hausvorteil liegt bei 1,06 Prozent gegenüber 1,24 Prozent beim Spieler, und das schon nach Abzug der Kommission von 5 Prozent auf Gewinne. Die Kommission wirkt wie ein Nachteil, gleicht aber nur aus, dass die Bank durch die Ziehungsregeln systematisch häufiger gewinnt."
+        },
+        {
+          "question": "Warum ist die Wette auf Unentschieden so schlecht?",
+          "answer": "Weil die Auszahlung von 8:1 nicht zur Wahrscheinlichkeit passt. Ein Unentschieden tritt bei acht Kartendecks in etwa 9,5 Prozent der Runden auf, eine faire Auszahlung läge bei ungefähr 9:1. Der Rest bleibt beim Haus: rund 14 Prozent Hausvorteil, der schlechteste reguläre Einsatz im ganzen Casino."
+        },
+        {
+          "question": "Helfen die Ergebnistafeln am Tisch?",
+          "answer": "Nein. Die Tafeln zeigen, wie die letzten Runden ausgegangen sind, und suggerieren damit Serien und Muster. Jede Runde ist von der vorigen unabhängig: Die Karten werden neu gemischt, und das Blatt weiß nichts über das vorherige. Die Anzeige ist Dekoration und ändert an den 1,06 Prozent nichts."
+        },
+        {
+          "question": "Muss ich beim Baccarat Entscheidungen treffen?",
+          "answer": "Nur eine: worauf Sie setzen. Ob eine dritte Karte gezogen wird, regeln feste Tabellen, die für Spieler und Bank unterschiedlich sind. Genau deshalb ist Baccarat mathematisch so einfach: Es gibt keine Grundstrategie, die man falsch anwenden könnte, und keine Entscheidung, die den Hausvorteil verschlechtert."
+        }
+      ]
+    },
+    "crazy-time": {
+      "howItWorks": "Kein Kartenspiel, sondern eine Spielshow von Evolution: ein Moderator, ein großes Rad mit 54 Feldern und vier Bonusrunden: Cash Hunt, Pachinko, Coin Flip und Crazy Time.",
+      "theMath": "Die Auszahlungsquote hängt davon ab, worauf Sie setzen. Die Eins liegt bei rund 96,1 Prozent, die Wette auf die Bonusrunde Crazy Time bei rund 94,4 Prozent. Der Unterschied wirkt klein und macht über eine Sitzung den Ausschlag.",
+      "ownAngle": "Der Top Slot vor jeder Runde zieht Feld und Multiplikator zusammen. Trifft er ein Feld, auf das Sie nicht gesetzt haben, nützt der Multiplikator nichts. Deshalb wirken die Zahlen in Werbeclips deutlich größer als das, was auf der Abrechnung steht.",
+      "germanLaw": "Spielshows zählen zum Online-Casino und sind für private Anbieter in Deutschland nicht erlaubnisfähig.",
+      "watchOut": "Das Format ist auf Tempo gebaut: kurze Runden, viel Ton, ständige Ankündigungen. Wer hier ohne Zeit- und Verlustgrenze einsteigt, verliert den Überblick schneller als an jedem Tisch.",
+      "questions": [
+        {
+          "question": "Wie hoch ist die Auszahlungsquote bei Crazy Time?",
+          "answer": "Sie hängt davon ab, worauf Sie setzen. Die Eins liegt bei rund 96,1 Prozent, die Wette auf die Bonusrunde Crazy Time bei rund 94,4 Prozent. Wer alle Felder gleichzeitig abdeckt, landet in der Mitte. Der Unterschied von knapp zwei Prozentpunkten wirkt klein und ist über eine Sitzung der teuerste Teil des Spiels."
+        },
+        {
+          "question": "Was macht der Top Slot?",
+          "answer": "Er zieht vor jeder Runde ein Feld und einen Multiplikator und verbindet beides. Trifft die Kombination ein Feld, auf das Sie gesetzt haben, wird Ihr Gewinn multipliziert. Trifft sie ein anderes, passiert nichts. Deshalb sehen die Zahlen in Werbeclips so groß aus: Gezeigt wird der Treffer, nicht die Runden davor."
+        },
+        {
+          "question": "Ist Crazy Time ein Glücksspiel oder eine Spielshow?",
+          "answer": "Rechtlich ein Glücksspiel. Der Moderator, das Studio und die Bonusrunden ändern nichts daran, dass der Ausgang vom Rad bestimmt wird und das Haus einen festen Anteil behält. In Deutschland zählt das Format zum Online-Casino und ist für private Anbieter nicht erlaubnisfähig."
+        },
+        {
+          "question": "Kann ich alle Felder gleichzeitig abdecken?",
+          "answer": "Sie können, aber es hilft nicht. Das Rad hat 54 Felder mit unterschiedlicher Häufigkeit, und die Auszahlungen sind so gesetzt, dass jede Kombination von Einsätzen im Minus bleibt. Wer alles abdeckt, gewinnt fast jede Runde einen Teil zurück und verliert trotzdem, nur langsamer und weniger auffällig."
+        }
+      ]
+    }
+  },
+  "betting": {
+    "sports-betting": {
+      "howItWorks": "Sportwetten sind die einzige Sparte neben virtuellen Automaten und Poker, für die private Anbieter in Deutschland eine bundesweite Erlaubnis bekommen können.",
+      "germanRules": "Auf jeden Einsatz fallen 5 Prozent Sportwettensteuer an. Manche Anbieter ziehen sie vom Einsatz ab, andere vom Gewinn, wieder andere übernehmen sie. Das ist der Unterschied, der bei gleicher Quote am Ende zählt.",
+      "ownAngle": "Vergleichen Sie nicht die Quote, sondern den Auszahlungsbetrag nach Steuer. Eine Quote von 2,00 mit übernommener Steuer schlägt eine Quote von 2,05, von der 5 Prozent abgehen.",
+      "watchOut": "Wettbonus und Casinobonus laufen bei denselben Anbietern oft getrennt. Ein Guthaben aus dem Sportbereich lässt sich meist nicht an Automaten umsetzen und umgekehrt.",
+      "questions": [
+        {
+          "question": "Sind Sportwetten in Deutschland legal?",
+          "answer": "Ja. Sportwetten sind neben virtuellen Automatenspielen und Online-Poker die einzige Sparte, für die private Anbieter eine bundesweite Erlaubnis der GGL bekommen können. Ob ein konkreter Anbieter sie hat, steht auf der Whitelist der Behörde und nicht im Fußbereich seiner eigenen Seite."
+        },
+        {
+          "question": "Was ist die Wettsteuer und wer zahlt sie?",
+          "answer": "Auf jeden Einsatz fallen 5 Prozent Sportwettensteuer an. Wer sie trägt, entscheidet der Anbieter: manche ziehen sie vom Einsatz ab, manche vom Gewinn, manche übernehmen sie. Bei gleicher Quote macht das den Unterschied. Rechnen Sie den Auszahlungsbetrag nach Steuer und nicht die Quote."
+        },
+        {
+          "question": "Kann ich meinen Casino-Bonus für Sportwetten nutzen?",
+          "answer": "Meist nicht. Bei Anbietern mit beiden Sparten laufen die Guthaben getrennt: Ein Bonus aus dem Wettbereich lässt sich nicht an Automaten umsetzen und umgekehrt. Das steht in den Bonusbedingungen und ist der häufigste Grund für abgelehnte Auszahlungen bei Anbietern, die beides führen."
+        },
+        {
+          "question": "Gilt das Einzahlungslimit von 1.000 € auch für Wetten?",
+          "answer": "Ja. Das monatliche Limit gilt anbieterübergreifend für alle deutschen Lizenznehmer zusammen und unterscheidet nicht zwischen Sparten. Wer 600 € an Automaten eingezahlt hat, kann im selben Monat noch 400 € für Wetten einzahlen. Geprüft wird das über LUGAS und nicht vom einzelnen Anbieter."
+        }
+      ]
+    },
+    "football-betting": {
+      "howItWorks": "Der größte Markt im deutschen Wettgeschäft. Bundesliga, Champions League und die großen europäischen Ligen sind bei jedem Anbieter im Programm, die Unterschiede liegen in den Tiefen darunter.",
+      "germanRules": "Live-Wetten sind in Deutschland stark eingeschränkt: Erlaubt sind im laufenden Spiel nur das Endergebnis und das nächste Tor. Wetten auf die nächste Ecke, die nächste Karte oder den nächsten Einwurf gibt es bei Anbietern mit deutscher Erlaubnis nicht.",
+      "ownAngle": "Genau hier trennt sich die Liste. Anbieter ohne deutsche Erlaubnis führen die vollen Live-Märkte, und dafür fehlen Ihnen Aufsicht, OASIS-Anbindung und jede Beschwerdestelle. Der Preis für die zusätzlichen Wettmärkte ist konkret benennbar.",
+      "watchOut": "Quotenschlüssel bei Kombiwetten. Je mehr Auswahlen, desto größer der Anteil, den der Anbieter einbehält. Bei fünf Spielen liegt er regelmäßig über 20 Prozent, auch wenn jede Einzelquote fair aussieht.",
+      "questions": [
+        {
+          "question": "Welche Live-Wetten sind beim Fußball in Deutschland erlaubt?",
+          "answer": "Nur zwei: auf das Endergebnis und auf das nächste Tor. Wetten auf die nächste Ecke, die nächste Karte oder den nächsten Einwurf sind bei Anbietern mit deutscher Erlaubnis nicht zulässig. Wer sie im Angebot hat, arbeitet ohne diese Erlaubnis. In dieser Liste ist markiert, wer dazugehört."
+        },
+        {
+          "question": "Warum sind Kombiwetten schlechter, als sie aussehen?",
+          "answer": "Weil sich die Marge des Anbieters bei jeder Auswahl mitmultipliziert. Bei einem Einzelspiel behält er typischerweise 4 bis 6 Prozent ein, bei fünf Spielen in einer Kombination liegt der Anteil regelmäßig über 20 Prozent. Die Einzelquoten sehen dabei völlig normal aus. Der Effekt entsteht erst durch die Verknüpfung."
+        },
+        {
+          "question": "Worin unterscheiden sich die Anbieter beim Fußball wirklich?",
+          "answer": "Nicht in der Bundesliga, die hat jeder. Der Unterschied liegt in den Ligen darunter und in der Zahl der Märkte pro Spiel. Bei einem Zweitligaspiel bietet der eine zwölf Wetten an, der andere achtzig, und die Marge ist bei den kleinen Märkten deutlich höher als bei der Ergebniswette."
+        },
+        {
+          "question": "Was passiert bei einem abgesagten Spiel?",
+          "answer": "In der Regel wird die Wette annulliert und der Einsatz erstattet, bei Kombiwetten fällt die betroffene Auswahl mit Quote 1,00 heraus. Wie lange ein Spiel nachgeholt werden darf, bevor annulliert wird, regelt jeder Anbieter eigenständig. Die Fristen reichen von 48 Stunden bis zu mehreren Tagen."
+        }
+      ]
+    },
+    "tennis-betting": {
+      "howItWorks": "Tennis kennt kein Unentschieden, deshalb ist die Grundwette ein Zweiweg-Markt. Dazu kommen Sätze, Spiele und Handicaps auf Satz- oder Spielebene.",
+      "germanRules": "Auch hier greift die Einschränkung für Live-Wetten: bei deutschen Lizenznehmern nur Endergebnis und der jeweils nächste Punktgewinn im vorgesehenen Rahmen. Die im Ausland üblichen Märkte auf einzelne Aufschlagspiele fehlen.",
+      "ownAngle": "Die Regel bei Aufgabe ist der Punkt, an dem sich Anbieter am stärksten unterscheiden. Manche werten die Wette als verloren, andere erstatten den Einsatz, wieder andere zahlen aus, sobald ein Satz komplett ist. Das steht in den Wettregeln und nirgends sonst. Lesen Sie es, bevor Sie setzen.",
+      "watchOut": "Tennis hat die höchste Dichte an Ranglistenturnieren mit geringer Aufmerksamkeit. Je kleiner das Turnier, desto größer die Marge des Anbieters.",
+      "questions": [
+        {
+          "question": "Was passiert, wenn ein Spieler aufgibt?",
+          "answer": "Das ist die wichtigste Regel und bei jedem Anbieter anders. Manche werten die Wette als verloren, sobald der erste Ball gespielt wurde, manche erstatten den Einsatz, manche zahlen aus, sobald ein Satz komplett ist. Lesen Sie diesen Punkt in den Wettregeln, bevor Sie setzen. Nachträglich lässt sich nichts diskutieren."
+        },
+        {
+          "question": "Warum gibt es beim Tennis kein Unentschieden?",
+          "answer": "Weil jedes Match zu Ende gespielt wird. Das macht die Grundwette zu einem Zweiweg-Markt und die Quoten übersichtlicher als beim Fußball. Dafür verlagert sich alles auf Handicaps: Satzhandicap, Spielhandicap und die Über-Unter-Wette auf die Gesamtzahl der Spiele."
+        },
+        {
+          "question": "Sind Live-Wetten beim Tennis in Deutschland eingeschränkt?",
+          "answer": "Ja, nach denselben Regeln wie bei anderen Sportarten: Im laufenden Match sind nur das Endergebnis und der jeweils nächste abgeschlossene Spielabschnitt zulässig. Die im Ausland üblichen Märkte auf einzelne Aufschlagspiele oder den nächsten Punkt gibt es bei deutschen Lizenznehmern nicht."
+        },
+        {
+          "question": "Wo sind die Quoten am schlechtesten?",
+          "answer": "Bei kleinen Turnieren. Je weniger Aufmerksamkeit ein Turnier bekommt, desto weniger Geld fließt hinein und desto größer ist der Anteil, den der Anbieter einbehält. Bei den großen Turnieren liegt seine Marge oft unter 5 Prozent, bei Challenger-Turnieren regelmäßig beim Doppelten."
+        }
+      ]
+    },
+    "in-play-betting": {
+      "howItWorks": "Gewettet wird, während gespielt wird. Die Quoten bewegen sich mit dem Spiel, und der Anbieter friert sie in kritischen Momenten kurz ein.",
+      "germanRules": "Der Glücksspielstaatsvertrag lässt im laufenden Spiel nur zwei Wetten zu: auf das Endergebnis und auf das nächste Tor beziehungsweise den nächsten vergleichbaren Spielabschnitt. Alles andere, also nächste Ecke, nächste Karte oder nächster Einwurf, ist bei Anbietern mit deutscher Erlaubnis nicht zulässig.",
+      "ownAngle": "Deshalb besteht diese Liste zum großen Teil aus Anbietern ohne deutsche Erlaubnis: Der volle Live-Markt ist in Deutschland schlicht nicht erlaubnisfähig. Die Tabelle zeigt für jeden, was er im Gegenzug nicht bietet.",
+      "watchOut": "Die Verzögerung im Stream. Zwischen dem Geschehen auf dem Platz und Ihrem Bildschirm liegen je nach Übertragungsweg mehrere Sekunden; der Anbieter rechnet in Echtzeit. Wer nach dem Bild setzt, setzt gegen eine Quote, die es schon nicht mehr gibt.",
+      "questions": [
+        {
+          "question": "Warum ist Live-Wetten in Deutschland so stark eingeschränkt?",
+          "answer": "Der Glücksspielstaatsvertrag lässt im laufenden Spiel nur das Endergebnis und das nächste Tor beziehungsweise den nächsten vergleichbaren Abschnitt zu. Der Gesetzgeber sieht in schnellen Ereigniswetten ein besonderes Suchtrisiko, weil zwischen Entscheidung und Ergebnis nur Sekunden liegen. Alles darüber hinaus ist nicht erlaubnisfähig."
+        },
+        {
+          "question": "Warum verzögern sich meine Wetten?",
+          "answer": "Anbieter frieren die Annahme in kritischen Momenten für einige Sekunden ein, um Wetten auf ein Ereignis zu verhindern, das faktisch schon feststeht. Ihre Wette wird dann zur aktuellen Quote angenommen oder abgelehnt, nicht zu der, die Sie angeklickt haben. Das steht in den Wettregeln und ist zulässig."
+        },
+        {
+          "question": "Wie groß ist der Rückstand im Stream?",
+          "answer": "Je nach Übertragungsweg mehrere Sekunden bis zu einer halben Minute. Der Anbieter rechnet in Echtzeit, Sie sehen die Vergangenheit. Wer nach dem Bild setzt, setzt gegen eine Quote, die es schon nicht mehr gibt. Das ist der strukturelle Nachteil beim Live-Wetten, und er lässt sich nicht ausgleichen."
+        },
+        {
+          "question": "Welche Anbieter führen den vollen Live-Markt?",
+          "answer": "Nur solche ohne deutsche Erlaubnis. Wer Wetten auf die nächste Ecke oder die nächste Karte anbietet, tut das außerhalb der deutschen Regulierung. In der Tabelle ist für jeden Anbieter vermerkt, ob er auf der GGL-Whitelist steht. Der volle Marktumfang und die Aufsicht schließen sich hier gegenseitig aus."
+        }
+      ]
+    }
+  },
+  "licence": {
+    "casinos-ohne-lizenz": {
+      "whatItMeans": "Anbieter, die keine Erlaubnis der Gemeinsamen Glücksspielbehörde der Länder führen. Sie richten sich an deutsche Spieler, unterliegen aber keiner deutschen Aufsicht.",
+      "whatYouGain": "Live-Tische, höhere Einsätze, kein Monatslimit, oft größere Bonusbeträge.",
+      "whatYouLose": "Keine OASIS-Abfrage, kein anbieterübergreifendes Limit, keine Behörde für Beschwerden und keine gesicherte Trennung Ihres Guthabens vom Betriebsvermögen.",
+      "checkYourself": "Suchen Sie den Domainnamen auf der Whitelist der GGL. Steht er nicht darauf, hat der Anbieter keine deutsche Erlaubnis, unabhängig von Siegeln auf der Seite.",
+      "questions": [
+        {
+          "question": "Ist es strafbar, bei einem Anbieter ohne deutsche Lizenz zu spielen?",
+          "answer": "Verfolgt wird in der Praxis der Anbieter, nicht der Spieler. Das ändert aber nichts an den praktischen Folgen: Bei Streit über eine Auszahlung gibt es keine deutsche Behörde, die zuständig wäre, und keine Stelle, die ein Verfahren für Sie führt. Sie tragen das Risiko allein."
+        },
+        {
+          "question": "Woran erkenne ich, ob ein Anbieter eine deutsche Erlaubnis hat?",
+          "answer": "An der Whitelist der GGL, sonst nirgends. Suchen Sie dort den Domainnamen. Siegel im Fußbereich, Formulierungen wie „lizenziert und reguliert“ und Verweise auf europäische Lizenzen sagen über die deutsche Erlaubnis nichts aus. Sie können vollkommen echt sein und trotzdem eine andere Behörde meinen."
+        },
+        {
+          "question": "Bekomme ich mein Geld zurück, wenn der Anbieter nicht zahlt?",
+          "answer": "Es gibt keinen verlässlichen Weg. Ohne deutsche Erlaubnis fehlt die Aufsicht, an die Sie sich wenden könnten, und ohne getrennte Verwahrung des Spielerguthabens haftet im Zweifel nur eine Gesellschaft im Ausland. Rückbuchungen über die Zahlungsmethode funktionieren je nach Anbieter und Methode unterschiedlich gut."
+        },
+        {
+          "question": "Warum sind die Boni dort so viel höher?",
+          "answer": "Weil die Kosten niedriger sind. Kein Anschluss an OASIS und LUGAS, keine deutsche Automatensteuer von 5,3 Prozent auf den Einsatz und keine Auflagen zu Einsatzhöhe und Spieltempo. Ein Teil dieser Ersparnis fließt in Bonusbeträge. Die Umsatzbedingungen sind dafür in der Regel deutlich strenger."
+        }
+      ]
+    },
+    "casinos-ohne-limit": {
+      "whatItMeans": "Gemeint sind die drei Grenzen, die der Glücksspielstaatsvertrag Anbietern mit deutscher Erlaubnis vorschreibt: höchstens 1 € Einsatz pro Drehung, höchstens 1.000 € Einzahlung im Monat über alle Anbieter zusammen, und mindestens 5 Sekunden zwischen zwei Drehungen.",
+      "whatYouGain": "Ohne diese Grenzen laufen dieselben Automaten schneller und lassen höhere Einsätze zu. Wer 5 € pro Drehung setzen will, findet das nur hier.",
+      "whatYouLose": "Die 5-Sekunden-Regel ist kein Schikane-Paragraf, sondern der wirksamste Teil des Spielerschutzes: Sie begrenzt, wie viel Geld pro Stunde überhaupt durchlaufen kann. Bei 1 € und 5 Sekunden sind das höchstens 720 € pro Stunde; ohne beide Grenzen ist der Betrag nach oben offen.",
+      "checkYourself": "Öffnen Sie einen Automaten und sehen Sie auf den Einsatzwähler. Endet er bei 1 €, spielen Sie unter deutscher Erlaubnis. Geht er höher, tun Sie es nicht, egal was im Fußbereich steht.",
+      "questions": [
+        {
+          "question": "Welche Limits gelten bei deutschen Anbietern genau?",
+          "answer": "Drei: höchstens 1 € Einsatz pro Drehung an virtuellen Automaten, höchstens 1.000 € Einzahlung im Monat über alle deutschen Anbieter zusammen, und mindestens 5 Sekunden zwischen zwei Drehungen. Dazu kommen das Verbot von Autostart und das Verbot von Jackpots bei virtuellen Automatenspielen."
+        },
+        {
+          "question": "Kann ich mein Einzahlungslimit erhöhen lassen?",
+          "answer": "Bis 10.000 € im Monat ist eine Anhebung möglich, aber nur nach einer Prüfung der wirtschaftlichen Leistungsfähigkeit durch den Anbieter und mit Meldung an LUGAS. Die Prüfung verlangt Nachweise über Einkommen oder Vermögen. Ohne sie bleibt es bei 1.000 €, unabhängig davon, wie viele Konten Sie haben."
+        },
+        {
+          "question": "Was bewirkt die Fünf-Sekunden-Regel wirklich?",
+          "answer": "Sie deckelt den Geldumschlag. Bei 1 € Einsatz und 5 Sekunden Mindestabstand laufen höchstens 720 € pro Stunde durch den Automaten. Ohne beide Grenzen ist der Betrag nach oben offen. Das ist der eigentliche Unterschied zwischen den beiden Gruppen in dieser Tabelle, nicht das Spielgefühl."
+        },
+        {
+          "question": "Wie erkenne ich sofort, unter welchen Regeln ich spiele?",
+          "answer": "Öffnen Sie einen Automaten und sehen Sie auf den Einsatzwähler. Endet er bei 1 €, spielen Sie unter deutscher Erlaubnis. Lässt er 2 € oder mehr zu, tun Sie es nicht. Das ist zuverlässiger als jede Angabe im Fußbereich und dauert zehn Sekunden."
+        }
+      ]
+    },
+    "casinos-ohne-oasis": {
+      "whatItMeans": "OASIS ist die bundesweite Sperrdatei, geführt vom Regierungspräsidium Darmstadt. Jeder Anbieter mit deutscher Erlaubnis muss sie vor jeder Sitzung abfragen. Wer sich selbst gesperrt hat oder von Angehörigen gesperrt wurde, kommt dort nicht ins Spiel.",
+      "whatYouGain": "Nichts, was sich als Vorteil beschreiben ließe. Anbieter ohne deutsche Erlaubnis fragen OASIS nicht ab, weil sie es nicht müssen.",
+      "whatYouLose": "Genau den Schutz, den eine Sperre bieten soll. Wenn Sie diese Seite gefunden haben, weil eine laufende Sperre Sie stört, ist das kein technisches Problem, sondern der Punkt, an dem die Sperre wirkt.",
+      "checkYourself": "Eine Sperre lässt sich frühestens nach einem Jahr auf eigenen Antrag aufheben, und zwar beim Regierungspräsidium Darmstadt, nicht beim Casino. Hilfe und Beratung gibt es kostenlos und anonym unter 0800 1 37 27 00.",
+      "harmNote": true,
+      "questions": [
+        {
+          "question": "Was ist OASIS überhaupt?",
+          "answer": "Die bundesweite Sperrdatei, geführt vom Regierungspräsidium Darmstadt. Jeder Anbieter mit deutscher Erlaubnis muss sie vor jeder Sitzung abfragen. Eingetragen wird, wer sich selbst sperren lässt oder von Angehörigen gesperrt wird. Die Sperre gilt bei allen erlaubten Anbietern gleichzeitig, auch in Spielhallen und Wettbüros."
+        },
+        {
+          "question": "Wie lange dauert eine Selbstsperre?",
+          "answer": "Mindestens ein Jahr. Danach lässt sie sich auf eigenen Antrag aufheben, aber nicht beim Casino, sondern beim Regierungspräsidium Darmstadt. Zwischen Antrag und Aufhebung liegt eine Wartefrist. Diese Konstruktion ist Absicht: Die Sperre soll gerade in dem Moment nicht nachgeben, in dem man sie loswerden will."
+        },
+        {
+          "question": "Fragen Anbieter ohne deutsche Erlaubnis OASIS wirklich nicht ab?",
+          "answer": "Nein, und sie müssen es auch nicht. Der Zugriff auf die Datei ist an die deutsche Erlaubnis gebunden. Für Sie heißt das: Eine laufende Sperre wird dort nicht bemerkt. Das ist keine Lücke im System, sondern der Punkt, an dem das System endet."
+        },
+        {
+          "question": "Wo bekomme ich Hilfe, wenn das Spielen außer Kontrolle gerät?",
+          "answer": "Bei der Beratungsstelle der Bundeszentrale für gesundheitliche Aufklärung unter 0800 1 37 27 00, kostenlos, anonym und rund um die Uhr. Die Beratung ist unabhängig von Anbietern und von uns. Wer eine Sperre umgehen will, findet dort den nützlicheren Gesprächspartner als in einer Casino-Liste."
+        }
+      ]
+    },
+    "casinos-ohne-lugas": {
+      "whatItMeans": "LUGAS ist das Aufsichtssystem der Länder. Es führt Ihr Einzahlungslimit anbieterübergreifend: 1.000 € im Monat gelten für alle deutschen Lizenznehmer zusammen, nicht je Anbieter. Zusätzlich verhindert es, dass Sie bei zwei erlaubten Anbietern gleichzeitig spielen.",
+      "whatYouGain": "Kein gemeinsames Limit und keine Sperre für paralleles Spiel. Wer bei mehreren Anbietern gleichzeitig angemeldet sein will, kann das hier.",
+      "whatYouLose": "Die Funktion, die verhindert, dass ein gesetztes Limit durch den Wechsel zum nächsten Anbieter wertlos wird. Ohne LUGAS gilt jedes Limit nur dort, wo Sie es eingestellt haben.",
+      "checkYourself": "Melden Sie sich bei einem zweiten deutschen Anbieter an, während die erste Sitzung läuft. Werden Sie abgewiesen, arbeitet LUGAS. Klappt es, ist mindestens einer der beiden nicht angeschlossen.",
+      "questions": [
+        {
+          "question": "Was macht LUGAS?",
+          "answer": "Es ist das Aufsichtssystem der Länder und führt zwei Dinge zusammen: Ihr monatliches Einzahlungslimit über alle deutschen Anbieter hinweg, und die Regel, dass Sie nur bei einem erlaubten Anbieter gleichzeitig spielen dürfen. Ohne dieses System wäre ein Limit wertlos, sobald man das Konto wechselt."
+        },
+        {
+          "question": "Warum kann ich mich bei einem zweiten Anbieter nicht anmelden?",
+          "answer": "Weil LUGAS paralleles Spiel bei erlaubten Anbietern verhindert. Solange eine Sitzung läuft, bleibt die zweite gesperrt. Nach dem Abmelden dauert es je nach Anbieter einige Minuten, bis die Freigabe durchgereicht ist. Das ist kein Fehler, sondern die vorgesehene Funktion."
+        },
+        {
+          "question": "Gilt das Limit von 1.000 € pro Anbieter oder insgesamt?",
+          "answer": "Insgesamt. Die Summe wird über alle deutschen Lizenznehmer zusammengerechnet. Wer bei drei Anbietern je 400 € einzahlen will, wird beim dritten abgewiesen. Genau diese Zusammenrechnung fällt bei Anbietern ohne deutsche Erlaubnis weg. Dort gilt jedes Limit nur da, wo Sie es gesetzt haben."
+        },
+        {
+          "question": "Wie prüfe ich, ob ein Anbieter angeschlossen ist?",
+          "answer": "Melden Sie sich bei einem zweiten deutschen Anbieter an, während die erste Sitzung noch läuft. Werden Sie abgewiesen, arbeitet LUGAS. Funktioniert es, ist mindestens einer der beiden nicht angebunden, und dann stimmt auch die Zusammenrechnung Ihres Einzahlungslimits nicht."
+        }
+      ]
+    }
+  }
+}
