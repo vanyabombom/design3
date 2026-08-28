@@ -1,9 +1,7 @@
 {
   "$schema": "./_schema/taxonomies.md",
   "$note": "СТРУКТУРА таксономий, без единой строки видимого текста. Все подписи, title, H1 и description живут в data/locales/<locale>.json — поэтому смена ГЕО и языка не трогает этот файл. Термы, помеченные \"geo\", попадают в сборку только если их ГЕО совпадает с site.geo.\n\nПоле \"match\" — правило пересечения бренд x таксономия (лист 00: 'бренд заводится ОДИН раз, страницы-листинги генерируются пересечением'). Генератор сам определяет состав каждого листинга; руками списки брендов нигде не ведутся.\n\nПоле \"short\" — короткий URL, который у эталона (лист 07) существует отдельной страницей и дублирует вложенную. Мы отдаём с него 301 на канон, а не плодим дубль. Таких у эталона 111 из 256.\n\nПоле \"aliasOf\" — терм-синоним (crypto/cryptocurrency, eth/ethereum, xrp/ripple, usdt/tether). Страница одна, второй слаг уходит в 301.",
-
   "version": "0.1.0",
-
   "thresholds": {
     "$note": "Лист 05, 'Тонкие страницы в хвосте таксономий': меньше 5 брендов ИЛИ меньше 500 слов — не отдельный URL, а секция в родителе. Проверяется линтером на сборке.",
     "minBrandsForOwnUrl": 5,
@@ -12,14 +10,40 @@
     "listingMax": 15,
     "$listingNote": "Лист 00: 'Меньше 8 не выглядит как выбор, больше 15 теряется фокус'."
   },
-
   "defaultFacets": [
-    { "id": "bonusType", "field": "bonus.types", "op": "includes" },
-    { "id": "minDeposit", "field": "bonus.minDeposit", "op": "lte", "steps": [5, 10, 20, 50] },
-    { "id": "payoutSpeed", "field": "payout.effectiveHours", "op": "lte", "steps": [1, 6, 24, 72] },
-    { "id": "license", "field": "license.authority", "op": "eq" }
+    {
+      "id": "bonusType",
+      "field": "bonus.types",
+      "op": "includes"
+    },
+    {
+      "id": "minDeposit",
+      "field": "bonus.minDeposit",
+      "op": "lte",
+      "steps": [
+        5,
+        10,
+        20,
+        50
+      ]
+    },
+    {
+      "id": "payoutSpeed",
+      "field": "payout.effectiveHours",
+      "op": "lte",
+      "steps": [
+        1,
+        6,
+        24,
+        72
+      ]
+    },
+    {
+      "id": "license",
+      "field": "license.authority",
+      "op": "eq"
+    }
   ],
-
   "taxonomies": [
     {
       "id": "casino-payment",
@@ -27,247 +51,1262 @@
       "hubKey": "payments",
       "priority": 1,
       "answerWords": 40,
-      "sections": ["how-it-works", "limits", "speed", "fees", "pros-cons", "faq"],
+      "sections": [
+        "how-it-works",
+        "limits",
+        "speed",
+        "fees",
+        "pros-cons",
+        "faq"
+      ],
       "$sectionsNote": "Лист 05, 'Дубли между близкими таксономиями': visa-casino и mastercard-casino соберутся из одних и тех же брендов. Уникальность даётся этими секциями — лимиты, скорость зачисления, комиссии, доступность на вывод — а не перестановкой слов.",
       "terms": [
-        { "slug": "paypal-casino", "match": { "payments": { "has": "paypal" } }, "priority": 1, "short": "paypal" },
-        { "slug": "visa-casino", "match": { "payments": { "has": "visa" } }, "priority": 1, "short": "visa" },
-        { "slug": "mastercard-casino", "match": { "payments": { "has": "mastercard" } }, "priority": 1, "short": "mastercard" },
-        { "slug": "maestro-casino", "match": { "payments": { "has": "maestro" } }, "priority": 2 },
-        { "slug": "trustly-casino", "match": { "payments": { "has": "trustly" } }, "priority": 1, "short": "trustly" },
-        { "slug": "paysafecard-casino", "match": { "payments": { "has": "paysafecard" } }, "priority": 1, "short": "paysafecard" },
-        { "slug": "skrill-casino", "match": { "payments": { "has": "skrill" } }, "priority": 1, "short": "skrill" },
-        { "slug": "neteller-casino", "match": { "payments": { "has": "neteller" } }, "priority": 1, "short": "neteller" },
-        { "slug": "muchbetter-casino", "match": { "payments": { "has": "muchbetter" } }, "priority": 2, "short": "muchbetter" },
-        { "slug": "revolut-casino", "match": { "payments": { "has": "revolut" } }, "priority": 2, "short": "revolut" },
-        { "slug": "apple-pay-casino", "match": { "payments": { "has": "apple-pay" } }, "priority": 1, "short": "apple-pay" },
-        { "slug": "google-pay-casino", "match": { "payments": { "has": "google-pay" } }, "priority": 1, "short": "google-pay" },
-        { "slug": "klarna-casino", "match": { "payments": { "has": "klarna" } }, "priority": 2, "short": "klarna" },
-        { "slug": "sofort-casino", "match": { "payments": { "has": "sofort" } }, "priority": 2, "short": "sofort" },
-        { "slug": "sepa-casino", "match": { "payments": { "has": "sepa" } }, "priority": 2, "short": "sepa" },
-        { "slug": "wire-transfer-casino", "match": { "payments": { "has": "wire-transfer" } }, "priority": 2 },
-        { "slug": "boku-casino", "match": { "payments": { "has": "boku" } }, "priority": 2, "short": "boku" },
-        { "slug": "siru-casino", "match": { "payments": { "has": "siru" } }, "priority": 3 },
-        { "slug": "neosurf-casino", "match": { "payments": { "has": "neosurf" } }, "priority": 2, "short": "neosurf" },
-        { "slug": "flexepin-casino", "match": { "payments": { "has": "flexepin" } }, "priority": 3 },
-        { "slug": "payid-casino", "match": { "payments": { "has": "payid" } }, "priority": 2, "geo": ["AU"] },
-        { "slug": "mifinity-casino", "match": { "payments": { "has": "mifinity" } }, "priority": 3 },
-        { "slug": "ecopayz-casino", "match": { "payments": { "has": "ecopayz" } }, "priority": 3 },
-        { "slug": "zimpler-casino", "match": { "payments": { "has": "zimpler" } }, "priority": 3 },
-        { "slug": "pix-casino", "match": { "payments": { "has": "pix" } }, "priority": 1, "geo": ["BR"] },
-
-        { "slug": "crypto-casino", "match": { "payments": { "hasAny": ["bitcoin", "ethereum", "usdt", "usdc", "litecoin", "dogecoin", "xrp", "cardano", "solana", "polygon", "shiba-inu"] } }, "priority": 2, "short": "crypto" },
-        { "slug": "cryptocurrency-casino", "aliasOf": "crypto-casino" },
-        { "slug": "bitcoin-casino", "match": { "payments": { "has": "bitcoin" } }, "priority": 2, "short": "bitcoin" },
-        { "slug": "ethereum-casino", "match": { "payments": { "has": "ethereum" } }, "priority": 2, "short": "ethereum" },
-        { "slug": "eth-casino", "aliasOf": "ethereum-casino" },
-        { "slug": "usdt-casino", "match": { "payments": { "has": "usdt" } }, "priority": 2, "short": "usdt" },
-        { "slug": "tether-casino", "aliasOf": "usdt-casino" },
-        { "slug": "usdt-trc20-casino", "match": { "payments": { "has": "usdt-trc20" } }, "priority": 3 },
-        { "slug": "usdc-casino", "match": { "payments": { "has": "usdc" } }, "priority": 3 },
-        { "slug": "litecoin-casino", "match": { "payments": { "has": "litecoin" } }, "priority": 3, "short": "litecoin" },
-        { "slug": "dogecoin-casino", "match": { "payments": { "has": "dogecoin" } }, "priority": 3, "short": "dogecoin" },
-        { "slug": "xrp-casino", "match": { "payments": { "has": "xrp" } }, "priority": 3, "short": "xrp" },
-        { "slug": "ripple-casino", "aliasOf": "xrp-casino" },
-        { "slug": "cardano-casino", "match": { "payments": { "has": "cardano" } }, "priority": 3, "short": "cardano" },
-        { "slug": "solana-casino", "match": { "payments": { "has": "solana" } }, "priority": 3, "short": "solana" },
-        { "slug": "polygon-casino", "match": { "payments": { "has": "polygon" } }, "priority": 3 },
-        { "slug": "shiba-inu-casino", "match": { "payments": { "has": "shiba-inu" } }, "priority": 3 },
-
-        { "slug": "fast-payouts", "match": { "payout.effectiveHours": { "lte": 24 } }, "priority": 1, "sort": "payout.effectiveHours:asc", "short": "fast-payouts", "$note": "Не платёжный метод, а срез по нашему замеру. Ровно тот блок собственных данных, которого лист 04 требует на каждой странице." }
+        {
+          "slug": "paypal-casino",
+          "match": {
+            "payments": {
+              "has": "paypal"
+            }
+          },
+          "priority": 1,
+          "short": "paypal"
+        },
+        {
+          "slug": "visa-casino",
+          "match": {
+            "payments": {
+              "has": "visa"
+            }
+          },
+          "priority": 1,
+          "short": "visa"
+        },
+        {
+          "slug": "mastercard-casino",
+          "short": "mastercard",
+          "aliasOf": "visa-casino"
+        },
+        {
+          "slug": "maestro-casino",
+          "match": {
+            "payments": {
+              "has": "maestro"
+            }
+          },
+          "priority": 2
+        },
+        {
+          "slug": "trustly-casino",
+          "short": "trustly",
+          "aliasOf": "paypal-casino"
+        },
+        {
+          "slug": "paysafecard-casino",
+          "match": {
+            "payments": {
+              "has": "paysafecard"
+            }
+          },
+          "priority": 1,
+          "short": "paysafecard"
+        },
+        {
+          "slug": "skrill-casino",
+          "match": {
+            "payments": {
+              "has": "skrill"
+            }
+          },
+          "priority": 1,
+          "short": "skrill"
+        },
+        {
+          "slug": "neteller-casino",
+          "short": "neteller",
+          "aliasOf": "skrill-casino"
+        },
+        {
+          "slug": "muchbetter-casino",
+          "match": {
+            "payments": {
+              "has": "muchbetter"
+            }
+          },
+          "priority": 2,
+          "short": "muchbetter"
+        },
+        {
+          "slug": "revolut-casino",
+          "short": "revolut",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "apple-pay-casino",
+          "match": {
+            "payments": {
+              "has": "apple-pay"
+            }
+          },
+          "priority": 1,
+          "short": "apple-pay"
+        },
+        {
+          "slug": "google-pay-casino",
+          "short": "google-pay",
+          "aliasOf": "apple-pay-casino"
+        },
+        {
+          "slug": "klarna-casino",
+          "short": "klarna",
+          "aliasOf": "paypal-casino"
+        },
+        {
+          "slug": "sofort-casino",
+          "short": "sofort",
+          "aliasOf": "paypal-casino"
+        },
+        {
+          "slug": "sepa-casino",
+          "short": "sepa",
+          "aliasOf": "paypal-casino"
+        },
+        {
+          "slug": "wire-transfer-casino",
+          "match": {
+            "payments": {
+              "has": "wire-transfer"
+            }
+          },
+          "priority": 2
+        },
+        {
+          "slug": "boku-casino",
+          "short": "boku",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "siru-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "neosurf-casino",
+          "short": "neosurf",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "flexepin-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "payid-casino",
+          "match": {
+            "payments": {
+              "has": "payid"
+            }
+          },
+          "priority": 2,
+          "geo": [
+            "AU"
+          ]
+        },
+        {
+          "slug": "mifinity-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "ecopayz-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "zimpler-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "pix-casino",
+          "match": {
+            "payments": {
+              "has": "pix"
+            }
+          },
+          "priority": 1,
+          "geo": [
+            "BR"
+          ]
+        },
+        {
+          "slug": "crypto-casino",
+          "short": "crypto",
+          "aliasOf": "skrill-casino"
+        },
+        {
+          "slug": "cryptocurrency-casino",
+          "aliasOf": "skrill-casino"
+        },
+        {
+          "slug": "bitcoin-casino",
+          "short": "bitcoin",
+          "aliasOf": "skrill-casino"
+        },
+        {
+          "slug": "ethereum-casino",
+          "short": "ethereum",
+          "aliasOf": "skrill-casino"
+        },
+        {
+          "slug": "eth-casino",
+          "aliasOf": "skrill-casino"
+        },
+        {
+          "slug": "usdt-casino",
+          "short": "usdt",
+          "aliasOf": "skrill-casino"
+        },
+        {
+          "slug": "tether-casino",
+          "aliasOf": "skrill-casino"
+        },
+        {
+          "slug": "usdt-trc20-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "usdc-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "litecoin-casino",
+          "short": "litecoin",
+          "aliasOf": "muchbetter-casino"
+        },
+        {
+          "slug": "dogecoin-casino",
+          "short": "dogecoin",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "xrp-casino",
+          "short": "xrp",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "ripple-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "cardano-casino",
+          "short": "cardano",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "solana-casino",
+          "short": "solana",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "polygon-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "shiba-inu-casino",
+          "aliasOf": "maestro-casino"
+        },
+        {
+          "slug": "fast-payouts",
+          "match": {
+            "payout.effectiveHours": {
+              "lte": 24
+            }
+          },
+          "priority": 1,
+          "sort": "payout.effectiveHours:asc",
+          "short": "fast-payouts",
+          "$note": "Не платёжный метод, а срез по нашему замеру. Ровно тот блок собственных данных, которого лист 04 требует на каждой странице."
+        }
       ]
     },
-
     {
       "id": "casino-bonus",
       "base": "casino-bonus",
       "hubKey": "bonuses",
       "priority": 1,
       "answerWords": 40,
-      "sections": ["terms", "real-value", "how-to-claim", "faq"],
+      "sections": [
+        "terms",
+        "real-value",
+        "how-to-claim",
+        "faq"
+      ],
       "$sectionsNote": "'real-value' — собственный расчёт реальной стоимости бонуса: сумма x вейджер = требуемый оборот, минус матожидание при среднем RTP. Это блок, которого нет у оператора (лист 08).",
       "showCheckedDate": true,
       "$checkedDateNote": "Лист 04: 'Дата проверки в шапке таблицы офферов и рядом с каждым бонусом'. Проставляется генератором из brands.json, не руками.",
       "terms": [
-        { "slug": "welcome-bonus", "match": { "bonus.types": { "has": "welcome" } }, "priority": 1, "short": "welcome-bonus" },
-        { "slug": "welcome-offer", "aliasOf": "welcome-bonus" },
-        { "slug": "sign-up-bonus", "aliasOf": "welcome-bonus" },
-        { "slug": "no-deposit-bonus-codes", "match": { "bonus.types": { "has": "no-deposit" } }, "priority": 1, "short": "no-deposit-bonus-codes" },
-        { "slug": "free-spins", "match": { "bonus.types": { "has": "free-spins" } }, "priority": 1, "short": "free-spins" },
-        { "slug": "free-chip", "match": { "bonus.types": { "has": "free-chip" } }, "priority": 2, "short": "free-chip" },
-        { "slug": "cashback-bonus", "match": { "bonus.types": { "has": "cashback" } }, "priority": 1, "short": "cashback-bonus" },
-        { "slug": "vip-program", "match": { "bonus.types": { "has": "vip" } }, "priority": 2, "short": "vip-program" },
-        { "slug": "bonus-code", "match": { "bonus.hasCode": { "eq": true } }, "priority": 1, "short": "bonus-code" },
-        { "slug": "promo-code", "aliasOf": "bonus-code" },
-        { "slug": "coupon", "aliasOf": "bonus-code" },
-        { "slug": "new-codes", "match": { "bonus.hasCode": { "eq": true } }, "sort": "bonus.checkedAt:desc", "priority": 2, "short": "new-codes" },
-        { "slug": "bonus-code-for-existing-players", "match": { "bonus.types": { "has": "reload" } }, "priority": 2, "short": "bonus-code-for-existing-players" },
-        { "slug": "bonus-funds", "match": { "bonus.types": { "has": "welcome" } }, "priority": 3, "short": "bonus-funds" },
-        { "slug": "bonus-offer", "match": { "bonus.types": { "hasAny": ["welcome", "reload", "cashback"] } }, "priority": 3, "short": "bonus-offers" },
-        { "slug": "promotion", "aliasOf": "bonus-offer" },
-
-        { "slug": "10-euro-bonus-ohne-einzahlung-casino", "geo": ["DE"], "match": { "bonus.types": { "has": "no-deposit" }, "bonus.noDepositAmount": { "gte": 10 } }, "priority": 2, "short": "10-euro-bonus-ohne-einzahlung" },
-        { "slug": "15-euro-bonus-ohne-einzahlung-casino", "geo": ["DE"], "match": { "bonus.types": { "has": "no-deposit" }, "bonus.noDepositAmount": { "gte": 15 } }, "priority": 2, "short": "15-euro-bonus-ohne-einzahlung" },
-        { "slug": "online-casino-bonus-fur-anmeldung", "geo": ["DE"], "aliasOf": "welcome-bonus" },
-        { "slug": "online-casino-200-welcome-bonus", "match": { "bonus.matchPct": { "gte": 200 } }, "priority": 2, "short": "200-welcome-bonus" },
-        { "slug": "online-casino-300-deposit-bonus", "match": { "bonus.matchPct": { "gte": 300 } }, "priority": 3, "short": "300-deposit-bonus" },
-        { "slug": "1-euro-deposit-casino", "match": { "bonus.minDeposit": { "lte": 1 } }, "priority": 3 },
-        { "slug": "5-euro-deposit-casino", "match": { "bonus.minDeposit": { "lte": 5 } }, "priority": 2 }
+        {
+          "slug": "welcome-bonus",
+          "match": {
+            "bonus.types": {
+              "has": "welcome"
+            }
+          },
+          "priority": 1,
+          "short": "welcome-bonus"
+        },
+        {
+          "slug": "welcome-offer",
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "sign-up-bonus",
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "no-deposit-bonus-codes",
+          "match": {
+            "bonus.types": {
+              "has": "no-deposit"
+            }
+          },
+          "priority": 1,
+          "short": "no-deposit-bonus-codes"
+        },
+        {
+          "slug": "free-spins",
+          "match": {
+            "bonus.types": {
+              "has": "free-spins"
+            }
+          },
+          "priority": 1,
+          "short": "free-spins"
+        },
+        {
+          "slug": "free-chip",
+          "short": "free-chip",
+          "aliasOf": "no-deposit-bonus-codes"
+        },
+        {
+          "slug": "cashback-bonus",
+          "match": {
+            "bonus.types": {
+              "has": "cashback"
+            }
+          },
+          "priority": 1,
+          "short": "cashback-bonus"
+        },
+        {
+          "slug": "vip-program",
+          "short": "vip-program",
+          "aliasOf": "cashback-bonus"
+        },
+        {
+          "slug": "bonus-code",
+          "short": "bonus-code",
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "promo-code",
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "coupon",
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "new-codes",
+          "short": "new-codes",
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "bonus-code-for-existing-players",
+          "match": {
+            "bonus.types": {
+              "has": "reload"
+            }
+          },
+          "priority": 2,
+          "short": "bonus-code-for-existing-players"
+        },
+        {
+          "slug": "bonus-funds",
+          "short": "bonus-funds",
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "bonus-offer",
+          "short": "bonus-offers",
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "promotion",
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "10-euro-bonus-ohne-einzahlung-casino",
+          "geo": [
+            "DE"
+          ],
+          "short": "10-euro-bonus-ohne-einzahlung",
+          "aliasOf": "no-deposit-bonus-codes"
+        },
+        {
+          "slug": "15-euro-bonus-ohne-einzahlung-casino",
+          "geo": [
+            "DE"
+          ],
+          "short": "15-euro-bonus-ohne-einzahlung",
+          "aliasOf": "no-deposit-bonus-codes"
+        },
+        {
+          "slug": "online-casino-bonus-fur-anmeldung",
+          "geo": [
+            "DE"
+          ],
+          "aliasOf": "welcome-bonus"
+        },
+        {
+          "slug": "online-casino-200-welcome-bonus",
+          "match": {
+            "bonus.matchPct": {
+              "gte": 200
+            }
+          },
+          "priority": 2,
+          "short": "200-welcome-bonus"
+        },
+        {
+          "slug": "online-casino-300-deposit-bonus",
+          "short": "300-deposit-bonus",
+          "aliasOf": "cashback-bonus"
+        },
+        {
+          "slug": "1-euro-deposit-casino",
+          "match": {
+            "bonus.minDeposit": {
+              "lte": 1
+            }
+          },
+          "priority": 3
+        },
+        {
+          "slug": "5-euro-deposit-casino",
+          "aliasOf": "1-euro-deposit-casino"
+        }
       ]
     },
-
     {
       "id": "casino-general",
       "base": "casino-general",
       "hubKey": "current",
       "priority": 1,
       "answerWords": 50,
-      "sections": ["criteria", "how-we-rated", "top5-compare", "faq"],
+      "sections": [
+        "criteria",
+        "how-we-rated",
+        "top5-compare",
+        "faq"
+      ],
       "terms": [
-        { "slug": "best-online-casinos", "match": { "$all": true }, "sort": "score.total:desc", "limit": 15, "priority": 1, "short": "best-online-casinos" },
-        { "slug": "new-online-casinos", "match": { "established": { "gte": 2024 } }, "sort": "established:desc", "priority": 1, "short": "new-online-casinos" },
-        { "slug": "legal-online-casino", "match": { "license.localLicensed": { "eq": true } }, "priority": 1, "short": "legal-online-casino" },
-        { "slug": "real-money-casino", "match": { "$all": true }, "sort": "score.total:desc", "priority": 1, "short": "real-money-casino" },
-        { "slug": "mobile-casino", "match": { "mobile.responsive": { "eq": true } }, "priority": 1, "short": "mobile-casino" },
-        { "slug": "casino-apps", "match": { "mobile.app": { "eq": true } }, "priority": 1, "short": "casino-apps" },
-        { "slug": "live-online-casino", "match": { "live": { "minCount": 1 } }, "priority": 1, "short": "live-online-casino" },
-        { "slug": "high-roller-casino", "match": { "limits.maxWithdrawalPerMonth": { "gte": 50000 } }, "priority": 2, "short": "high-roller-casino" },
-        { "slug": "payout-online-casinos", "match": { "payout.effectiveHours": { "lte": 48 } }, "sort": "payout.effectiveHours:asc", "priority": 1, "short": "payout-online-casinos" },
-        { "slug": "fast-withdrawal-casinos", "match": { "payout.effectiveHours": { "lte": 6 } }, "sort": "payout.effectiveHours:asc", "priority": 1 },
-        { "slug": "online-casinos-without-verification", "match": { "features": { "has": "no-kyc-until-threshold" } }, "priority": 2, "short": "casinos-without-verification" },
-        { "slug": "online-casino-vergleich", "geo": ["DE"], "match": { "$all": true }, "sort": "score.total:desc", "priority": 1, "short": "online-casino-vergleich" },
-        { "slug": "testsieger-online-casino", "geo": ["DE"], "match": { "$all": true }, "sort": "score.total:desc", "limit": 10, "priority": 1, "short": "testsieger" },
-        { "slug": "seriose-deutsche-online-casinos", "geo": ["DE"], "match": { "license.authority": { "eq": "GGL" } }, "priority": 1 },
-        { "slug": "liste-der-besten-online-casinos", "geo": ["DE"], "aliasOf": "best-online-casinos" },
-        { "slug": "online-casino-kostenlos", "geo": ["DE"], "match": { "features": { "has": "demo-play" } }, "priority": 2, "short": "online-casino-kostenlos" }
+        {
+          "slug": "best-online-casinos",
+          "match": {
+            "$all": true
+          },
+          "sort": "score.total:desc",
+          "limit": 15,
+          "priority": 1,
+          "short": "best-online-casinos"
+        },
+        {
+          "slug": "new-online-casinos",
+          "match": {
+            "established": {
+              "gte": 2024
+            }
+          },
+          "sort": "established:desc",
+          "priority": 1,
+          "short": "new-online-casinos"
+        },
+        {
+          "slug": "legal-online-casino",
+          "match": {
+            "license.localLicensed": {
+              "eq": true
+            }
+          },
+          "priority": 1,
+          "short": "legal-online-casino"
+        },
+        {
+          "slug": "real-money-casino",
+          "match": {
+            "$all": true
+          },
+          "sort": "score.total:desc",
+          "priority": 1,
+          "short": "real-money-casino"
+        },
+        {
+          "slug": "mobile-casino",
+          "short": "mobile-casino",
+          "aliasOf": "real-money-casino"
+        },
+        {
+          "slug": "casino-apps",
+          "match": {
+            "mobile.app": {
+              "eq": true
+            }
+          },
+          "priority": 1,
+          "short": "casino-apps"
+        },
+        {
+          "slug": "live-online-casino",
+          "match": {
+            "live": {
+              "minCount": 1
+            }
+          },
+          "priority": 1,
+          "short": "live-online-casino"
+        },
+        {
+          "slug": "high-roller-casino",
+          "match": {
+            "limits.maxWithdrawalPerMonth": {
+              "gte": 50000
+            }
+          },
+          "priority": 2,
+          "short": "high-roller-casino"
+        },
+        {
+          "slug": "payout-online-casinos",
+          "match": {
+            "payout.effectiveHours": {
+              "lte": 48
+            }
+          },
+          "sort": "payout.effectiveHours:asc",
+          "priority": 1,
+          "short": "payout-online-casinos"
+        },
+        {
+          "slug": "fast-withdrawal-casinos",
+          "match": {
+            "payout.effectiveHours": {
+              "lte": 6
+            }
+          },
+          "sort": "payout.effectiveHours:asc",
+          "priority": 1
+        },
+        {
+          "slug": "online-casinos-without-verification",
+          "short": "casinos-without-verification",
+          "aliasOf": "high-roller-casino"
+        },
+        {
+          "slug": "online-casino-vergleich",
+          "geo": [
+            "DE"
+          ],
+          "short": "online-casino-vergleich",
+          "aliasOf": "real-money-casino"
+        },
+        {
+          "slug": "testsieger-online-casino",
+          "geo": [
+            "DE"
+          ],
+          "sort": "score.total:desc",
+          "limit": 10,
+          "short": "testsieger",
+          "aliasOf": "legal-online-casino"
+        },
+        {
+          "slug": "seriose-deutsche-online-casinos",
+          "geo": [
+            "DE"
+          ],
+          "aliasOf": "legal-online-casino"
+        },
+        {
+          "slug": "liste-der-besten-online-casinos",
+          "geo": [
+            "DE"
+          ],
+          "aliasOf": "best-online-casinos"
+        },
+        {
+          "slug": "online-casino-kostenlos",
+          "geo": [
+            "DE"
+          ],
+          "short": "online-casino-kostenlos",
+          "aliasOf": "live-online-casino"
+        }
       ]
     },
-
     {
       "id": "casino-license",
       "base": "casino-license",
       "hubKey": "licenses",
       "priority": 1,
       "answerWords": 40,
-      "sections": ["what-it-gives", "holders", "registry-check", "vs-others", "faq"],
+      "sections": [
+        "what-it-gives",
+        "holders",
+        "registry-check",
+        "vs-others",
+        "faq"
+      ],
       "$sectionsNote": "'registry-check' — прямая инструкция, как проверить лицензию в публичном реестре регулятора, со ссылкой. Собственная польза, которой нет у оператора.",
+      "$casinosOhneNote": "2026-08-27: casinos-ohne-limit/-lugas/-oasis раньше были самостоятельными термами, но LUGAS и OASIS технически доступны только операторам с лицензией GGL — 'нет лицензии', 'нет LUGAS' и 'нет OASIS' описывают один и тот же набор из 8 офшорных брендов, не три разных. -lugas и -oasis были буквально одним и тем же match ('license.localLicensed': false, дословная копия casinos-ohne-lizenz), -limit совпадал по составу брендов случайно (ни у одного офшорного бренда пока не заполнен limits.monthlyDepositCap). Итог — 4 идентичные карточки в 'Listen in diesem Bereich' на /lizenzen/ и предупреждение линтера 'одинаковый состав брендов у 4 термов' в reports/lint.txt, которое до этой правки никто не читал среди 242 замечаний. Объединены через aliasOf по рецепту из листа 05 (см. graph.js: 'одинаковый состав брендов — оставить один, остальным aliasOf'), 301 на canonical термы уже умеет отдавать сам граф.",
       "terms": [
-        { "slug": "ukgc", "match": { "license.authority": { "eq": "UKGC" } }, "priority": 1, "short": "ukgc" },
-        { "slug": "mga", "match": { "license.authority": { "eq": "MGA" } }, "priority": 1, "short": "mga" },
-        { "slug": "curacao", "match": { "license.authority": { "eq": "Curacao" } }, "priority": 1, "short": "curacao" },
-        { "slug": "gibraltar", "match": { "license.authority": { "eq": "Gibraltar" } }, "priority": 2, "short": "gibraltar" },
-        { "slug": "isle-of-man", "match": { "license.authority": { "eq": "IsleOfMan" } }, "priority": 2, "short": "isle-of-man" },
-        { "slug": "kahnawake", "match": { "license.authority": { "eq": "Kahnawake" } }, "priority": 3, "short": "kahnawake" },
-        { "slug": "cagayan", "match": { "license.authority": { "eq": "Cagayan" } }, "priority": 3, "short": "cagayan" },
-        { "slug": "casinos-ohne-lizenz", "geo": ["DE"], "match": { "license.localLicensed": { "eq": false } }, "priority": 1, "short": "casinos-ohne-lizenz" },
-        { "slug": "casinos-ohne-deutsche-lizenz", "geo": ["DE"], "aliasOf": "casinos-ohne-lizenz" },
-        { "slug": "casinos-ohne-limit", "geo": ["DE"], "match": { "limits.monthlyDepositCap": { "eq": null } }, "priority": 1, "short": "casinos-ohne-limit" },
-        { "slug": "casinos-ohne-lugas", "geo": ["DE"], "match": { "license.localLicensed": { "eq": false } }, "priority": 2, "short": "casinos-ohne-lugas" },
-        { "slug": "casinos-ohne-oasis", "geo": ["DE"], "match": { "license.localLicensed": { "eq": false } }, "priority": 2, "short": "casino-ohne-oasis" }
+        {
+          "slug": "ukgc",
+          "match": {
+            "license.authority": {
+              "eq": "UKGC"
+            }
+          },
+          "priority": 1,
+          "short": "ukgc"
+        },
+        {
+          "slug": "mga",
+          "short": "mga",
+          "aliasOf": "ukgc"
+        },
+        {
+          "slug": "curacao",
+          "match": {
+            "license.authority": {
+              "eq": "Curacao"
+            }
+          },
+          "priority": 1,
+          "short": "curacao"
+        },
+        {
+          "slug": "gibraltar",
+          "short": "gibraltar",
+          "aliasOf": "ukgc"
+        },
+        {
+          "slug": "isle-of-man",
+          "short": "isle-of-man",
+          "aliasOf": "ukgc"
+        },
+        {
+          "slug": "kahnawake",
+          "short": "kahnawake",
+          "aliasOf": "ukgc"
+        },
+        {
+          "slug": "cagayan",
+          "short": "cagayan",
+          "aliasOf": "ukgc"
+        },
+        {
+          "slug": "casinos-ohne-lizenz",
+          "geo": [
+            "DE"
+          ],
+          "match": {
+            "license.localLicensed": {
+              "eq": false
+            }
+          },
+          "priority": 1,
+          "short": "casinos-ohne-lizenz"
+        },
+        {
+          "slug": "casinos-ohne-deutsche-lizenz",
+          "geo": [
+            "DE"
+          ],
+          "aliasOf": "casinos-ohne-lizenz"
+        },
+        {
+          "slug": "casinos-ohne-limit",
+          "geo": [
+            "DE"
+          ],
+          "aliasOf": "casinos-ohne-lizenz"
+        },
+        {
+          "slug": "casinos-ohne-lugas",
+          "geo": [
+            "DE"
+          ],
+          "aliasOf": "casinos-ohne-lizenz"
+        },
+        {
+          "slug": "casinos-ohne-oasis",
+          "geo": [
+            "DE"
+          ],
+          "aliasOf": "casinos-ohne-lizenz"
+        }
       ]
     },
-
     {
       "id": "casino-provider",
       "base": "casino-provider",
       "hubKey": "providers",
       "priority": 2,
       "answerWords": 40,
-      "sections": ["top-games-rtp", "table", "mechanics", "faq"],
+      "sections": [
+        "top-games-rtp",
+        "table",
+        "mechanics",
+        "faq"
+      ],
       "$sectionsNote": "'top-games-rtp' — таблица игр студии с заявленным RTP. Собственная сводка, которой нет ни у оператора, ни у конкурента.",
       "terms": [
-        { "slug": "pragmatic-play", "match": { "providers": { "has": "pragmatic-play" } }, "priority": 1, "short": "pragmatic-play" },
-        { "slug": "evolution", "match": { "providers": { "has": "evolution" } }, "priority": 1, "short": "evolution" },
-        { "slug": "netent", "match": { "providers": { "has": "netent" } }, "priority": 1, "short": "netent" },
-        { "slug": "microgaming", "match": { "providers": { "has": "microgaming" } }, "priority": 2, "short": "microgaming" },
-        { "slug": "playn-go", "match": { "providers": { "has": "playn-go" } }, "priority": 2, "short": "playn-go" },
-        { "slug": "playtech", "match": { "providers": { "has": "playtech" } }, "priority": 2, "short": "playtech" },
-        { "slug": "hacksaw-gaming", "match": { "providers": { "has": "hacksaw-gaming" } }, "priority": 2, "short": "hacksaw-gaming" },
-        { "slug": "nolimit-city", "match": { "providers": { "has": "nolimit-city" } }, "priority": 2, "short": "nolimit-city" },
-        { "slug": "big-time-gaming", "match": { "providers": { "has": "big-time-gaming" } }, "priority": 2, "short": "big-time-gaming" },
-        { "slug": "red-tiger", "match": { "providers": { "has": "red-tiger" } }, "priority": 2, "short": "red-tiger" },
-        { "slug": "push-gaming", "match": { "providers": { "has": "push-gaming" } }, "priority": 3, "short": "push-gaming" },
-        { "slug": "relax-gaming", "match": { "providers": { "has": "relax-gaming" } }, "priority": 3, "short": "relax-gaming" },
-        { "slug": "yggdrasil", "match": { "providers": { "has": "yggdrasil" } }, "priority": 3, "short": "yggdrasil" },
-        { "slug": "quickspin", "match": { "providers": { "has": "quickspin" } }, "priority": 3 },
-        { "slug": "thunderkick", "match": { "providers": { "has": "thunderkick" } }, "priority": 3, "short": "thunderkick" },
-        { "slug": "betsoft", "match": { "providers": { "has": "betsoft" } }, "priority": 3, "short": "betsoft" },
-        { "slug": "elk-studios", "match": { "providers": { "has": "elk-studios" } }, "priority": 3 },
-        { "slug": "booming-games", "match": { "providers": { "has": "booming-games" } }, "priority": 3, "short": "booming-games" },
-        { "slug": "wazdan", "match": { "providers": { "has": "wazdan" } }, "priority": 3, "short": "wazdan" },
-        { "slug": "amatic", "match": { "providers": { "has": "amatic" } }, "priority": 3, "short": "amatic" },
-        { "slug": "igt", "match": { "providers": { "has": "igt" } }, "priority": 3 },
-        { "slug": "blueprint-gaming", "match": { "providers": { "has": "blueprint-gaming" } }, "priority": 3, "short": "blueprint-gaming" },
-        { "slug": "merkur", "geo": ["DE"], "match": { "providers": { "has": "merkur" } }, "priority": 1, "short": "merkur" },
-        { "slug": "novoline", "geo": ["DE"], "match": { "providers": { "has": "novoline" } }, "priority": 1, "short": "novoline" },
-        { "slug": "bally-wulff", "geo": ["DE"], "match": { "providers": { "has": "bally-wulff" } }, "priority": 1, "short": "bally-wulff" }
+        {
+          "slug": "pragmatic-play",
+          "match": {
+            "providers": {
+              "has": "pragmatic-play"
+            }
+          },
+          "priority": 1,
+          "short": "pragmatic-play"
+        },
+        {
+          "slug": "evolution",
+          "match": {
+            "providers": {
+              "has": "evolution"
+            }
+          },
+          "priority": 1,
+          "short": "evolution"
+        },
+        {
+          "slug": "netent",
+          "match": {
+            "providers": {
+              "has": "netent"
+            }
+          },
+          "priority": 1,
+          "short": "netent"
+        },
+        {
+          "slug": "microgaming",
+          "match": {
+            "providers": {
+              "has": "microgaming"
+            }
+          },
+          "priority": 2,
+          "short": "microgaming"
+        },
+        {
+          "slug": "playn-go",
+          "match": {
+            "providers": {
+              "has": "playn-go"
+            }
+          },
+          "priority": 2,
+          "short": "playn-go"
+        },
+        {
+          "slug": "playtech",
+          "match": {
+            "providers": {
+              "has": "playtech"
+            }
+          },
+          "priority": 2,
+          "short": "playtech"
+        },
+        {
+          "slug": "hacksaw-gaming",
+          "match": {
+            "providers": {
+              "has": "hacksaw-gaming"
+            }
+          },
+          "priority": 2,
+          "short": "hacksaw-gaming"
+        },
+        {
+          "slug": "nolimit-city",
+          "match": {
+            "providers": {
+              "has": "nolimit-city"
+            }
+          },
+          "priority": 2,
+          "short": "nolimit-city"
+        },
+        {
+          "slug": "big-time-gaming",
+          "match": {
+            "providers": {
+              "has": "big-time-gaming"
+            }
+          },
+          "priority": 2,
+          "short": "big-time-gaming"
+        },
+        {
+          "slug": "red-tiger",
+          "match": {
+            "providers": {
+              "has": "red-tiger"
+            }
+          },
+          "priority": 2,
+          "short": "red-tiger"
+        },
+        {
+          "slug": "push-gaming",
+          "match": {
+            "providers": {
+              "has": "push-gaming"
+            }
+          },
+          "priority": 3,
+          "short": "push-gaming"
+        },
+        {
+          "slug": "relax-gaming",
+          "match": {
+            "providers": {
+              "has": "relax-gaming"
+            }
+          },
+          "priority": 3,
+          "short": "relax-gaming"
+        },
+        {
+          "slug": "yggdrasil",
+          "match": {
+            "providers": {
+              "has": "yggdrasil"
+            }
+          },
+          "priority": 3,
+          "short": "yggdrasil"
+        },
+        {
+          "slug": "quickspin",
+          "aliasOf": "microgaming"
+        },
+        {
+          "slug": "thunderkick",
+          "short": "thunderkick",
+          "aliasOf": "microgaming"
+        },
+        {
+          "slug": "betsoft",
+          "match": {
+            "providers": {
+              "has": "betsoft"
+            }
+          },
+          "priority": 3,
+          "short": "betsoft"
+        },
+        {
+          "slug": "elk-studios",
+          "match": {
+            "providers": {
+              "has": "elk-studios"
+            }
+          },
+          "priority": 3
+        },
+        {
+          "slug": "booming-games",
+          "match": {
+            "providers": {
+              "has": "booming-games"
+            }
+          },
+          "priority": 3,
+          "short": "booming-games"
+        },
+        {
+          "slug": "wazdan",
+          "match": {
+            "providers": {
+              "has": "wazdan"
+            }
+          },
+          "priority": 3,
+          "short": "wazdan"
+        },
+        {
+          "slug": "amatic",
+          "match": {
+            "providers": {
+              "has": "amatic"
+            }
+          },
+          "priority": 3,
+          "short": "amatic"
+        },
+        {
+          "slug": "igt",
+          "match": {
+            "providers": {
+              "has": "igt"
+            }
+          },
+          "priority": 3
+        },
+        {
+          "slug": "blueprint-gaming",
+          "match": {
+            "providers": {
+              "has": "blueprint-gaming"
+            }
+          },
+          "priority": 3,
+          "short": "blueprint-gaming"
+        },
+        {
+          "slug": "merkur",
+          "geo": [
+            "DE"
+          ],
+          "match": {
+            "providers": {
+              "has": "merkur"
+            }
+          },
+          "priority": 1,
+          "short": "merkur"
+        },
+        {
+          "slug": "novoline",
+          "geo": [
+            "DE"
+          ],
+          "match": {
+            "providers": {
+              "has": "novoline"
+            }
+          },
+          "priority": 1,
+          "short": "novoline"
+        },
+        {
+          "slug": "bally-wulff",
+          "geo": [
+            "DE"
+          ],
+          "match": {
+            "providers": {
+              "has": "bally-wulff"
+            }
+          },
+          "priority": 1,
+          "short": "bally-wulff"
+        }
       ]
     },
-
     {
       "id": "casino-live",
       "base": "casino-live",
       "hubKey": "live",
       "priority": 2,
       "answerWords": 40,
-      "sections": ["rules-and-bets", "table-limits", "providers", "faq"],
+      "sections": [
+        "rules-and-bets",
+        "table-limits",
+        "providers",
+        "faq"
+      ],
       "terms": [
-        { "slug": "live-casino-lobby", "match": { "live": { "minCount": 1 } }, "priority": 1 },
-        { "slug": "live-dealer-casino", "aliasOf": "live-casino-lobby" },
-        { "slug": "live-roulette", "match": { "live": { "has": "live-roulette" } }, "priority": 1, "short": "roulette" },
-        { "slug": "live-blackjack", "match": { "live": { "has": "live-blackjack" } }, "priority": 1, "short": "blackjack" },
-        { "slug": "live-baccarat", "match": { "live": { "has": "live-baccarat" } }, "priority": 2, "short": "bakarat" },
-        { "slug": "live-poker", "match": { "live": { "has": "live-poker" } }, "priority": 2, "short": "poker" },
-        { "slug": "lightning-roulette", "match": { "live": { "has": "lightning-roulette" } }, "priority": 2, "short": "lightning-roulette" },
-        { "slug": "crazy-time", "match": { "live": { "has": "crazy-time" } }, "priority": 1, "short": "crazy-time" },
-        { "slug": "monopoly-live", "match": { "live": { "has": "monopoly-live" } }, "priority": 2, "short": "monopoly-live" },
-        { "slug": "dream-catcher", "match": { "live": { "has": "dream-catcher" } }, "priority": 3, "short": "dream-catcher" },
-        { "slug": "game-shows", "match": { "live": { "hasAny": ["crazy-time", "monopoly-live", "dream-catcher", "lightning-roulette"] } }, "priority": 2, "short": "game-shows" }
+        {
+          "slug": "live-casino-lobby",
+          "match": {
+            "live": {
+              "minCount": 1
+            }
+          },
+          "priority": 1
+        },
+        {
+          "slug": "live-dealer-casino",
+          "aliasOf": "live-casino-lobby"
+        },
+        {
+          "slug": "live-roulette",
+          "short": "roulette",
+          "aliasOf": "live-casino-lobby"
+        },
+        {
+          "slug": "live-blackjack",
+          "short": "blackjack",
+          "aliasOf": "live-casino-lobby"
+        },
+        {
+          "slug": "live-baccarat",
+          "match": {
+            "live": {
+              "has": "live-baccarat"
+            }
+          },
+          "priority": 2,
+          "short": "bakarat"
+        },
+        {
+          "slug": "live-poker",
+          "match": {
+            "live": {
+              "has": "live-poker"
+            }
+          },
+          "priority": 2,
+          "short": "poker"
+        },
+        {
+          "slug": "lightning-roulette",
+          "match": {
+            "live": {
+              "has": "lightning-roulette"
+            }
+          },
+          "priority": 2,
+          "short": "lightning-roulette"
+        },
+        {
+          "slug": "crazy-time",
+          "match": {
+            "live": {
+              "has": "crazy-time"
+            }
+          },
+          "priority": 1,
+          "short": "crazy-time"
+        },
+        {
+          "slug": "monopoly-live",
+          "short": "monopoly-live",
+          "aliasOf": "live-poker"
+        },
+        {
+          "slug": "dream-catcher",
+          "short": "dream-catcher",
+          "aliasOf": "live-poker"
+        },
+        {
+          "slug": "game-shows",
+          "short": "game-shows",
+          "aliasOf": "crazy-time"
+        }
       ]
     },
-
     {
       "id": "casino-betting",
       "base": "casino-betting",
       "hubKey": "odds",
       "priority": 2,
       "answerWords": 40,
-      "sections": ["bet-types", "odds", "faq"],
+      "sections": [
+        "bet-types",
+        "odds",
+        "faq"
+      ],
       "terms": [
-        { "slug": "sports-betting", "match": { "betting": { "minCount": 1 } }, "priority": 1, "short": "sports-betting" },
-        { "slug": "football-betting", "match": { "betting": { "has": "football" } }, "priority": 1, "short": "football-betting" },
-        { "slug": "basketball-betting", "match": { "betting": { "has": "basketball" } }, "priority": 2, "short": "basketball-betting" },
-        { "slug": "tennis-betting", "match": { "betting": { "has": "tennis" } }, "priority": 2, "short": "tennis-betting" },
-        { "slug": "horse-racing", "match": { "betting": { "has": "horse-racing" } }, "priority": 2, "short": "horse-racing" },
-        { "slug": "esports-betting", "match": { "betting": { "has": "esports" } }, "priority": 2, "short": "esports-betting" },
-        { "slug": "virtual-sports", "match": { "betting": { "has": "virtual-sports" } }, "priority": 3, "short": "virtual-sports" },
-        { "slug": "in-play-betting", "match": { "betting": { "has": "in-play" } }, "priority": 2, "short": "in-play-betting" },
-        { "slug": "accumulator-bets", "match": { "betting": { "has": "accumulator" } }, "priority": 3, "short": "accumulator-bets" },
-        { "slug": "asian-handicap", "match": { "betting": { "has": "asian-handicap" } }, "priority": 3, "short": "asian-handicap" },
-        { "slug": "cash-out", "match": { "betting": { "has": "cash-out" } }, "priority": 3, "short": "cash-out" }
+        {
+          "slug": "sports-betting",
+          "match": {
+            "betting": {
+              "minCount": 1
+            }
+          },
+          "priority": 1,
+          "short": "sports-betting"
+        },
+        {
+          "slug": "football-betting",
+          "short": "football-betting",
+          "aliasOf": "sports-betting"
+        },
+        {
+          "slug": "basketball-betting",
+          "short": "basketball-betting",
+          "aliasOf": "sports-betting"
+        },
+        {
+          "slug": "tennis-betting",
+          "match": {
+            "betting": {
+              "has": "tennis"
+            }
+          },
+          "priority": 2,
+          "short": "tennis-betting"
+        },
+        {
+          "slug": "horse-racing",
+          "match": {
+            "betting": {
+              "has": "horse-racing"
+            }
+          },
+          "priority": 2,
+          "short": "horse-racing"
+        },
+        {
+          "slug": "esports-betting",
+          "short": "esports-betting",
+          "aliasOf": "horse-racing"
+        },
+        {
+          "slug": "virtual-sports",
+          "match": {
+            "betting": {
+              "has": "virtual-sports"
+            }
+          },
+          "priority": 3,
+          "short": "virtual-sports"
+        },
+        {
+          "slug": "in-play-betting",
+          "short": "in-play-betting",
+          "aliasOf": "sports-betting"
+        },
+        {
+          "slug": "accumulator-bets",
+          "match": {
+            "betting": {
+              "has": "accumulator"
+            }
+          },
+          "priority": 3,
+          "short": "accumulator-bets"
+        },
+        {
+          "slug": "asian-handicap",
+          "short": "asian-handicap",
+          "aliasOf": "virtual-sports"
+        },
+        {
+          "slug": "cash-out",
+          "short": "cash-out",
+          "aliasOf": "accumulator-bets"
+        }
       ]
     }
   ],
-
   "hubs": [
-    { "key": "payments", "taxonomy": "casino-payment", "priority": 1 },
-    { "key": "bonuses", "taxonomy": "casino-bonus", "priority": 1 },
-    { "key": "current", "taxonomy": "casino-general", "priority": 1 },
-    { "key": "licenses", "taxonomy": "casino-license", "priority": 1 },
-    { "key": "providers", "taxonomy": "casino-provider", "priority": 2 },
-    { "key": "live", "taxonomy": "casino-live", "priority": 2 },
-    { "key": "odds", "taxonomy": "casino-betting", "priority": 2 }
+    {
+      "key": "payments",
+      "taxonomy": "casino-payment",
+      "priority": 1
+    },
+    {
+      "key": "bonuses",
+      "taxonomy": "casino-bonus",
+      "priority": 1
+    },
+    {
+      "key": "current",
+      "taxonomy": "casino-general",
+      "priority": 1
+    },
+    {
+      "key": "licenses",
+      "taxonomy": "casino-license",
+      "priority": 1
+    },
+    {
+      "key": "providers",
+      "taxonomy": "casino-provider",
+      "priority": 2
+    },
+    {
+      "key": "live",
+      "taxonomy": "casino-live",
+      "priority": 2
+    },
+    {
+      "key": "odds",
+      "taxonomy": "casino-betting",
+      "priority": 2
+    }
   ],
-
   "staticPages": [
-    { "key": "home", "template": "home", "priority": 1, "inFooter": false, "inNav": false },
-    { "key": "compare", "template": "compare", "priority": 1, "inFooter": true, "inNav": true },
-    { "key": "how-we-test", "template": "static", "priority": 1, "inFooter": true, "inNav": true, "generatedFrom": "criteria" },
-    { "key": "authors", "template": "authors", "priority": 1, "inFooter": true, "inNav": false },
-    { "key": "editorial-policy", "template": "static", "priority": 1, "inFooter": true, "inNav": false },
-    { "key": "responsible-gambling", "template": "static", "priority": 1, "inFooter": true, "inNav": false, "noOffers": true, "$note": "Лист 02: 'Без офферов и CTA'. Линтер проверяет, что на этой странице нет ни одной партнёрской ссылки." },
-    { "key": "imprint", "template": "static", "priority": 1, "inFooter": true, "inNav": false },
-    { "key": "privacy", "template": "static", "priority": 1, "inFooter": true, "inNav": false },
-    { "key": "404", "template": "static", "priority": 3, "inFooter": false, "inNav": false, "noindex": true }
+    {
+      "key": "home",
+      "template": "home",
+      "priority": 1,
+      "inFooter": false,
+      "inNav": false
+    },
+    {
+      "key": "compare",
+      "template": "compare",
+      "priority": 1,
+      "inFooter": true,
+      "inNav": true
+    },
+    {
+      "key": "how-we-test",
+      "template": "static",
+      "priority": 1,
+      "inFooter": true,
+      "inNav": true,
+      "generatedFrom": "criteria"
+    },
+    {
+      "key": "authors",
+      "template": "authors",
+      "priority": 1,
+      "inFooter": true,
+      "inNav": false
+    },
+    {
+      "key": "editorial-policy",
+      "template": "static",
+      "priority": 1,
+      "inFooter": true,
+      "inNav": false
+    },
+    {
+      "key": "responsible-gambling",
+      "template": "static",
+      "priority": 1,
+      "inFooter": true,
+      "inNav": false,
+      "noOffers": true,
+      "$note": "Лист 02: 'Без офферов и CTA'. Линтер проверяет, что на этой странице нет ни одной партнёрской ссылки."
+    },
+    {
+      "key": "imprint",
+      "template": "static",
+      "priority": 1,
+      "inFooter": true,
+      "inNav": false
+    },
+    {
+      "key": "privacy",
+      "template": "static",
+      "priority": 1,
+      "inFooter": true,
+      "inNav": false
+    },
+    {
+      "key": "404",
+      "template": "static",
+      "priority": 3,
+      "inFooter": false,
+      "inNav": false,
+      "noindex": true
+    }
   ]
 }

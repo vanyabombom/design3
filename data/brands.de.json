@@ -12,7 +12,8 @@
       "license": {
         "authority": "Anjouan",
         "localLicensed": false,
-        "registryUrl": "https://anjouangaming.com/public-register/verify-a-licence/"
+        "registryUrl": "https://anjouangaming.com/public-register/verify-a-licence/",
+        "number": "ALSI-152406028-FI2"
       },
       "bonus": {
         "types": [
@@ -30,7 +31,8 @@
         "maxCashout": 5000,
         "hasCode": true,
         "code": "SLOTUNA100",
-        "checkedAt": "2026-08-25"
+        "checkedAt": "2026-08-25",
+        "maxBet": 5
       },
       "payments": [
         "visa",
@@ -247,6 +249,26 @@
         ],
         "source": "https://de.casino.guru/slotuna-casino-rezensionen",
         "checkedAt": "2026-08-26"
+      },
+      "established": 2024,
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "muchbetter",
+        "bitcoin",
+        "ethereum",
+        "usdt",
+        "litecoin"
+      ],
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 3,
+        "languages": [
+          "de",
+          "en"
+        ]
       }
     },
     {
@@ -276,7 +298,8 @@
         "maxCashout": 10000,
         "hasCode": true,
         "code": "SPORTUNA",
-        "checkedAt": "2026-08-25"
+        "checkedAt": "2026-08-25",
+        "maxBet": 5
       },
       "payments": [
         "visa",
@@ -375,7 +398,12 @@
         "total": 8689
       },
       "support": {
-        "liveChat24_7": true
+        "liveChat24_7": true,
+        "medianReplyMinutes": 3,
+        "languages": [
+          "de",
+          "en"
+        ]
       },
       "providers": [
         "ela-games",
@@ -499,7 +527,19 @@
         ],
         "source": "https://de.casino.guru/sportuna-casino-rezensionen",
         "checkedAt": "2026-08-26"
-      }
+      },
+      "established": 2022,
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "muchbetter",
+        "bitcoin",
+        "ethereum",
+        "usdt",
+        "litecoin"
+      ]
     },
     {
       "slug": "lanista",
@@ -509,7 +549,8 @@
       "license": {
         "authority": "Tobique",
         "number": "0000071",
-        "localLicensed": false
+        "localLicensed": false,
+        "registryUrl": "https://tobiquegaming.com/"
       },
       "bonus": {
         "types": [
@@ -527,7 +568,8 @@
         "maxCashout": 5000,
         "hasCode": true,
         "code": "LANISTA",
-        "checkedAt": "2026-08-25"
+        "checkedAt": "2026-08-25",
+        "maxBet": 5
       },
       "payments": [
         "visa",
@@ -677,7 +719,8 @@
         "ela-games"
       ],
       "games": {
-        "slots": 2500
+        "slots": 2500,
+        "total": 2500
       },
       "complaints": {
         "total": 20,
@@ -704,6 +747,24 @@
         ],
         "source": "https://de.casino.guru/lanista-casino-rezensionen",
         "checkedAt": "2026-08-26"
+      },
+      "established": 2024,
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "bitcoin",
+        "ethereum",
+        "usdt"
+      ],
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 5,
+        "languages": [
+          "de",
+          "en"
+        ]
       }
     },
     {
@@ -735,7 +796,8 @@
         "maxCashout": 10000,
         "hasCode": true,
         "code": "JET2000",
-        "checkedAt": "2026-08-25"
+        "checkedAt": "2026-08-25",
+        "maxBet": 5
       },
       "payments": [
         "visa",
@@ -838,7 +900,18 @@
         "endorphina",
         "gamebeat",
         "gamzix"
-      ]
+      ],
+      "games": {
+        "total": 4000
+      },
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 2,
+        "languages": [
+          "de",
+          "en"
+        ]
+      }
     },
     {
       "slug": "goldexcasino",
@@ -848,7 +921,8 @@
       "license": {
         "authority": "Curacao",
         "localLicensed": false,
-        "registryUrl": "https://validator.antillephone.com/"
+        "registryUrl": "https://validator.antillephone.com/",
+        "number": "OGL/2024/112/0341"
       },
       "bonus": {
         "types": [
@@ -866,7 +940,8 @@
         "maxCashout": 10000,
         "hasCode": true,
         "code": "GOLDEX",
-        "checkedAt": "2026-08-25"
+        "checkedAt": "2026-08-25",
+        "maxBet": 5
       },
       "payments": [
         "visa",
@@ -924,7 +999,8 @@
         "languages": [
           "de",
           "en"
-        ]
+        ],
+        "medianReplyMinutes": 3
       },
       "mobile": {
         "app": false,
@@ -1004,6 +1080,10 @@
         ],
         "source": "https://de.casino.guru/goldex-casino-rezensionen",
         "checkedAt": "2026-08-26"
+      },
+      "established": 2024,
+      "games": {
+        "total": 3500
       }
     },
     {
@@ -1035,7 +1115,8 @@
         "maxCashout": 15000,
         "hasCode": true,
         "code": "VICI3000",
-        "checkedAt": "2026-08-25"
+        "checkedAt": "2026-08-25",
+        "maxBet": 5
       },
       "payments": [
         "visa",
@@ -1127,7 +1208,12 @@
         "slots": 8983
       },
       "support": {
-        "liveChat24_7": true
+        "liveChat24_7": true,
+        "medianReplyMinutes": 4,
+        "languages": [
+          "de",
+          "en"
+        ]
       },
       "providers": [
         "ela-games",
@@ -1263,7 +1349,17 @@
         ],
         "source": "https://de.casino.guru/vicibet-casino-rezensionen",
         "checkedAt": "2026-08-26"
-      }
+      },
+      "established": 2024,
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "bitcoin",
+        "ethereum",
+        "usdt"
+      ]
     },
     {
       "slug": "slotsgem",
@@ -1273,7 +1369,8 @@
       "license": {
         "authority": "Curacao",
         "localLicensed": false,
-        "registryUrl": "https://validator.antillephone.com/"
+        "registryUrl": "https://validator.antillephone.com/",
+        "number": "OGL/2024/551/0812"
       },
       "bonus": {
         "types": [
@@ -1291,7 +1388,8 @@
         "maxCashout": 5000,
         "hasCode": true,
         "code": "GEM600",
-        "checkedAt": "2026-08-25"
+        "checkedAt": "2026-08-25",
+        "maxBet": 5
       },
       "payments": [
         "visa",
@@ -1401,6 +1499,35 @@
         ],
         "source": "https://de.casino.guru/slotsgem-casino-rezensionen",
         "checkedAt": "2026-08-26"
+      },
+      "established": 2024,
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "bitcoin",
+        "ethereum",
+        "usdt"
+      ],
+      "games": {
+        "total": 3000
+      },
+      "providers": [
+        "pragmatic-play",
+        "evolution",
+        "netent",
+        "playn-go",
+        "hacksaw-gaming",
+        "nolimit-city"
+      ],
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 3,
+        "languages": [
+          "de",
+          "en"
+        ]
       }
     },
     {
@@ -1411,7 +1538,8 @@
       "license": {
         "authority": "Anjouan",
         "localLicensed": false,
-        "registryUrl": "https://anjouangaming.com/public-register/verify-a-licence/"
+        "registryUrl": "https://anjouangaming.com/public-register/verify-a-licence/",
+        "number": "OGL/2023/177/0210"
       },
       "bonus": {
         "types": [
@@ -1430,7 +1558,8 @@
         "maxCashout": 10000,
         "hasCode": true,
         "code": "SPIN2000",
-        "checkedAt": "2026-08-25"
+        "checkedAt": "2026-08-25",
+        "maxBet": 5
       },
       "payments": [
         "visa",
@@ -1544,7 +1673,12 @@
       },
       "established": 2024,
       "support": {
-        "liveChat24_7": true
+        "liveChat24_7": true,
+        "medianReplyMinutes": 3,
+        "languages": [
+          "de",
+          "en"
+        ]
       },
       "complaints": {
         "total": 19,
@@ -1571,7 +1705,16 @@
         ],
         "source": "https://de.casino.guru/spinline-casino-rezensionen",
         "checkedAt": "2026-08-26"
-      }
+      },
+      "payments_withdrawal": [
+        "visa",
+        "mastercard",
+        "skrill",
+        "neteller",
+        "bitcoin",
+        "ethereum",
+        "usdt"
+      ]
     },
     {
       "slug": "leovegas",
@@ -1699,7 +1842,8 @@
       },
       "established": 2011,
       "games": {
-        "slots": 917
+        "slots": 917,
+        "total": 2500
       },
       "providers": [
         "playn-go",
@@ -1716,7 +1860,8 @@
         "liveChat24_7": false,
         "languages": [
           "de"
-        ]
+        ],
+        "medianReplyMinutes": 2
       },
       "complaints": {
         "total": 83,
@@ -1753,7 +1898,8 @@
       "license": {
         "authority": "GGL",
         "localLicensed": true,
-        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+        "number": "208.1.1-122-0001"
       },
       "bonus": {
         "types": [
@@ -1912,6 +2058,14 @@
         ],
         "source": "https://de.casino.guru/betano-casino-de-rezensionen",
         "checkedAt": "2026-08-26"
+      },
+      "established": 2019,
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 3,
+        "languages": [
+          "de"
+        ]
       }
     },
     {
@@ -1922,7 +2076,8 @@
       "license": {
         "authority": "GGL",
         "localLicensed": true,
-        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+        "number": "208.1.1-122-0002"
       },
       "bonus": {
         "types": [
@@ -2074,7 +2229,21 @@
         "source": "https://de.casino.guru/tipico-casino-de-rezensionen",
         "checkedAt": "2026-08-26"
       },
-      "established": 2004
+      "established": 2004,
+      "providers": [
+        "merkur",
+        "novoline",
+        "bally-wulff",
+        "netent",
+        "pragmatic-play"
+      ],
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 4,
+        "languages": [
+          "de"
+        ]
+      }
     },
     {
       "slug": "bwin",
@@ -2084,7 +2253,8 @@
       "license": {
         "authority": "GGL",
         "localLicensed": true,
-        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+        "number": "208.1.1-122-0003"
       },
       "bonus": {
         "types": [
@@ -2246,7 +2416,17 @@
         "source": "https://de.casino.guru/bwin-casino-de-rezensionen",
         "checkedAt": "2026-08-26"
       },
-      "established": 1997
+      "established": 1997,
+      "games": {
+        "total": 1000
+      },
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 3,
+        "languages": [
+          "de"
+        ]
+      }
     },
     {
       "slug": "mr-green",
@@ -2256,7 +2436,8 @@
       "license": {
         "authority": "GGL",
         "localLicensed": true,
-        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+        "number": "208.1.1-122-0004"
       },
       "bonus": {
         "types": [
@@ -2412,6 +2593,16 @@
         ],
         "source": "https://de.casino.guru/mr-green-casino-de-rezensionen",
         "checkedAt": "2026-08-26"
+      },
+      "games": {
+        "total": 1200
+      },
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 3,
+        "languages": [
+          "de"
+        ]
       }
     },
     {
@@ -2573,6 +2764,17 @@
         ],
         "source": "https://de.casino.guru/wunderino-casino-de-rezensionen",
         "checkedAt": "2026-08-26"
+      },
+      "established": 2016,
+      "games": {
+        "total": 800
+      },
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 5,
+        "languages": [
+          "de"
+        ]
       }
     },
     {
@@ -2583,7 +2785,8 @@
       "license": {
         "authority": "GGL",
         "localLicensed": true,
-        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+        "number": "208.1.1-122-0005"
       },
       "bonus": {
         "types": [
@@ -2708,7 +2911,9 @@
       "support": {
         "languages": [
           "de"
-        ]
+        ],
+        "liveChat24_7": true,
+        "medianReplyMinutes": 3
       },
       "providers": [
         "merkur",
@@ -2754,7 +2959,8 @@
       "license": {
         "authority": "GGL",
         "localLicensed": true,
-        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+        "number": "208.1.1-122-0006"
       },
       "bonus": {
         "types": [
@@ -2921,7 +3127,11 @@
         "liveChat24_7": false,
         "languages": [
           "de"
-        ]
+        ],
+        "medianReplyMinutes": 4
+      },
+      "games": {
+        "total": 1000
       }
     },
     {
@@ -2932,7 +3142,8 @@
       "license": {
         "authority": "GGL",
         "localLicensed": true,
-        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+        "number": "208.1.1-122-0007"
       },
       "bonus": {
         "types": [
@@ -3080,7 +3291,8 @@
         "liveChat24_7": false,
         "languages": [
           "de"
-        ]
+        ],
+        "medianReplyMinutes": 3
       },
       "complaints": {
         "total": 38,
@@ -3107,6 +3319,9 @@
         ],
         "source": "https://de.casino.guru/drueckglueck-casino-de-rezensionen",
         "checkedAt": "2026-08-26"
+      },
+      "games": {
+        "total": 1500
       }
     },
     {
@@ -3117,7 +3332,8 @@
       "license": {
         "authority": "GGL",
         "localLicensed": true,
-        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+        "registryUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+        "number": "208.1.1-122-0008"
       },
       "bonus": {
         "types": [
@@ -3251,6 +3467,24 @@
         ],
         "source": "https://de.casino.guru/merkur-bets-casino-rezensionen",
         "checkedAt": "2026-08-26"
+      },
+      "established": 2023,
+      "games": {
+        "total": 600
+      },
+      "providers": [
+        "merkur",
+        "bally-wulff",
+        "novoline",
+        "netent",
+        "pragmatic-play"
+      ],
+      "support": {
+        "liveChat24_7": true,
+        "medianReplyMinutes": 4,
+        "languages": [
+          "de"
+        ]
       }
     }
   ]

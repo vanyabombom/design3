@@ -8,10 +8,10 @@
  */
 
 import {
-  document_, pageHead, offersTable, filterForm, faqBlock, brandLogoLink, esc, get, icon,
+  document_, pageHead, offersTable, filterForm, faqBlock, brandCard, esc, get, icon,
 } from './_lib/layout.js';
-import { paymentIcon, SECTION_ICONS } from '../lib/icons.js';
-import { pageH1, properLabel, resolveAuthor, formatScore } from '../lib/labels.js';
+import { SECTION_ICONS } from '../lib/icons.js';
+import { pageH1, resolveAuthor, formatScore } from '../lib/labels.js';
 import { itemList } from '../lib/render.js';
 
 export function render(ctx, page) {
@@ -85,22 +85,18 @@ ${licensed.length} lizenzierten Anbieter nehmen, auch wenn deren Bonus bei 100 b
 
 <section class="section">
 <h2>${icon('star', { size: 18 })}Die drei bestbewerteten Anbieter</h2>
-<ul class="grid">
-${ranked.slice(0, 3).map((brand, i) => `<li class="card card--top">
-<div class="card__badge">
-<span class="card__rank">${i + 1}</span>
-${brandLogoLink(brand, ctx, { size: 40 })}
-</div>
-<div>
-<h3>${esc(brand.name)}</h3>
-<p class="card__score"><b>${esc(formatScore(brand.score.total, ctx))}</b> ${esc(locale.ui.outOf)} ${esc(brand.score.scale)}</p>
-<p class="card__meta"><span class="pill">${icon('shield', { size: 11 })}${esc(get(brand, 'license.authority'))}</span>${get(brand, 'license.localLicensed') ? '<span class="pill pill--ok">GGL-Lizenz</span>' : '<span class="pill pill--no">ohne deutsche Lizenz</span>'}</p>
-<p>${esc(shortReason(brand, locale))}</p>
-<ul class="chips">
-${(get(brand, 'payments') ?? []).slice(0, 5).map((m) => `<li><a href="${esc(paymentUrl(m, ctx))}">${paymentIcon(m, { size: 13 })}${esc(properLabel(m, locale))}</a></li>`).join('')}
-</ul>
-</div>
-</li>`).join('\n')}
+<ul class="grid grid--carousel">
+${ranked.slice(0, 3).map((brand, i) => brandCard(brand, ctx, {
+    rank: i + 1,
+    variant: 'featured',
+    note: shortReason(brand, locale),
+    payments: (get(brand, 'payments') ?? []).slice(0, 5).map((m) => ({ method: m, url: paymentUrl(m, ctx) })),
+    // Nur Platz 1 bekommt Ribbon und pulsierenden CTA (siehe brandCard()):
+    // drei gleichzeitig blinkende Buttons wären wieder der schreiende
+    // Gambling-Stil, den der Relaunch loswerden sollte.
+    spotlight: i === 0,
+    ribbon: i === 0 ? `Empfehlung ${monthLabel(ctx)}` : null,
+  })).join('\n')}
 </ul>
 </section>
 
@@ -222,4 +218,14 @@ function buildFaq({ active, licensed, offshore, ranked, ctx }) {
         + `Das ist die einzige Version dieses Versprechens, die sich überprüfen lässt.`,
     },
   ];
+}
+
+/**
+ * «Monat Jahr» für das Spotlight-Ribbon des Platz-1-Anbieters. Aus
+ * ctx.buildDate berechnet, nicht von Hand eingetragen: ein fest im Text
+ * stehender Monat wäre ab dem ersten Tag des Folgemonats falsch, und
+ * niemand merkt das beim nächsten Build.
+ */
+function monthLabel(ctx) {
+  return new Intl.DateTimeFormat(ctx.site.lang ?? 'de-DE', { month: 'long', year: 'numeric' }).format(new Date(ctx.buildDate));
 }

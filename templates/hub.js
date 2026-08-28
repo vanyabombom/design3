@@ -17,7 +17,7 @@
  * здесь про лайв и кэшаут. Наборы описаны в specFor().
  */
 
-import { document_, pageHead, faqBlock, factsTable, brandLogoLink, esc, get } from './_lib/layout.js';
+import { document_, pageHead, faqBlock, factsTable, esc, get } from './_lib/layout.js';
 import { pageH1, properLabel, resolveAuthor, formatScore, scoreBand } from '../lib/labels.js';
 
 export function render(ctx, page) {
@@ -59,31 +59,6 @@ ${table ? `<section class="section">
 <p>${esc(ht.intro[page.key] ?? '')}</p>
 ${table.html}
 ${table.thin ? `<p class="facts-foot">${esc(fillMin(ht.thinNote, ctx))}</p>` : ''}
-</section>` : ''}
-
-${page.key === 'licenses' && terms.length ? `<section class="section">
-<h2>${esc(locale.ui.moreLists ?? 'Listen in diesem Bereich')}</h2>
-<ul class="grid">
-${terms.map((term) => {
-    const lic = term.brands.filter(isLicensed).length;
-    // Состав списка прямо в карточке. Четыре карточки, отличавшиеся только
-    // заголовком и повторявшие «8 Anbieter · keiner mit deutscher Lizenz»,
-    // не отвечали на вопрос «а какие именно» — за ним нужно было открыть
-    // каждую из четырёх и сравнить в голове.
-    //
-    // Имя строки — логотип, не текст (с приёмки). aria-label остаётся на
-    // самой ссылке через brandLogoLink, поэтому у строки без картинки файла
-    // не пропадает доступное имя: заменяет его монограмма с тем же атрибутом.
-    const ranked = [...term.brands].sort((a, b) => (b.score?.total ?? 0) - (a.score?.total ?? 0));
-    return `<li class="card">
-<h3><a href="${esc(term.url)}">${esc(properLabel(term.slug, locale))}</a></h3>
-<p><small>${term.brands.length} Anbieter${lic ? ` · ${lic} mit GGL-Lizenz` : ' · keiner mit deutscher Lizenz'}</small></p>
-${ranked.length ? `<ol class="card__list">
-${ranked.map((b) => `<li>${brandLogoLink(b, ctx, { size: 24 })}<small>${esc(formatScore(b.score?.total, ctx))}</small></li>`).join('\n')}
-</ol>` : ''}
-</li>`;
-  }).join('\n')}
-</ul>
 </section>` : ''}
 
 ${hubSections(ctx, page.key)}

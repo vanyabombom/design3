@@ -18,7 +18,7 @@
         "bonus terms"
       ],
       "bio": "",
-      "photo": null,
+      "photo": "/assets/img/authors/editor-in-chief.webp",
       "links": {}
     },
     {
@@ -34,7 +34,7 @@
         "KYC"
       ],
       "bio": "",
-      "photo": null,
+      "photo": "/assets/img/authors/payments-editor.webp",
       "links": {}
     },
     {
@@ -50,7 +50,7 @@
         "terms and conditions"
       ],
       "bio": "",
-      "photo": null,
+      "photo": "/assets/img/authors/bonus-analyst.webp",
       "links": {}
     }
   ]

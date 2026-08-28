@@ -6,6 +6,7 @@
 
 import { document_, pageHead, factsTable, proseSections, faqBlock, esc, standNote } from './_lib/layout.js';
 import { pageH1, resolveAuthor } from '../lib/labels.js';
+import { withBase } from '../lib/util.js';
 
 export function render(ctx, page) {
   const { authors, locale, criteria } = ctx;
@@ -28,7 +29,7 @@ ${pending.length ? standNote(`${pending.length} von ${authors.authors.length} Pr
 <section class="section">
 <ul class="grid">
 ${authors.authors.map((a, index) => `<li class="card card--person" id="${esc(a.slug)}">
-<h2><span class="avatar" data-tone="${index % 3}" aria-hidden="true">${esc(monogram(a.name))}</span>${esc(a.name)}</h2>
+<h2>${avatar(a, index)}${esc(a.name)}</h2>
 <p><strong>${esc(de(a.role))}</strong>${a.since ? ` · seit ${esc(a.since)}` : ''}</p>
 ${a.expertise?.length ? `<ul class="chips">${a.expertise.map((e) => `<li><span>${esc(de(e))}</span></li>`).join('')}</ul>` : ''}
 ${a.bio ? `<p>${esc(a.bio)}</p>` : ''}
@@ -66,13 +67,28 @@ ${faq.html}
 }
 
 /**
+ * Аватар в шапке карточки: фото, если оно есть в authors.json (a.photo),
+ * иначе монограмма — тот же приём, что у брендов (logoOrMark() в
+ * lib/icons.js) и у платёжных методов (paymentIcon()): настоящий файл,
+ * если он есть, иначе честная заглушка вместо чужой картинки «похоже».
+ *
+ * Три профиля сейчас placeholder: true (см. authors.json), и фото у них —
+ * тоже подстава, не фото настоящего человека. Как только появятся реальные
+ * авторы, путь в photo меняется на их снимок, а разметка — нет.
+ */
+function avatar(a, index) {
+  if (a.photo) {
+    return `<img class="avatar" src="${esc(withBase(a.photo))}" alt="" width="38" height="38" loading="lazy" decoding="async">`;
+  }
+  return `<span class="avatar" data-tone="${index % 3}" aria-hidden="true">${esc(monogram(a.name))}</span>`;
+}
+
+/**
  * Инициалы для монограммы.
  *
- * Фотографий у нас пока нет и до замены профилей не будет. Три одинаково
- * серые карточки подряд при этом читались как заглушка, хотя люди за ними
- * разные. Монограмма своим тоном на каждую карточку — это не украшение:
- * она даёт карточке лицо и держит связь с подписью «Autor: ...» на других
- * страницах, где стоит то же имя.
+ * Запасной вариант там, где фото ещё нет. Монограмма своим тоном на каждую
+ * карточку — это не украшение: она даёт карточке лицо и держит связь с
+ * подписью «Autor: ...» на других страницах, где стоит то же имя.
  */
 function monogram(name) {
   return String(name ?? '')

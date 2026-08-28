@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://31.76.241.72/casino/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -19,16 +19,6 @@
     <loc>http://31.76.241.72/casino/casino-payment/paysafecard-casino/</loc>
     <lastmod>2026-08-25</lastmod>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>http://31.76.241.72/casino/casino-payment/sepa-casino/</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://31.76.241.72/casino/casino-payment/crypto-casino/</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/casino-bonus/welcome-bonus/</loc>
@@ -61,21 +51,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>http://31.76.241.72/casino/casino-license/casinos-ohne-limit/</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>http://31.76.241.72/casino/casino-license/casinos-ohne-lugas/</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://31.76.241.72/casino/casino-license/casinos-ohne-oasis/</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>http://31.76.241.72/casino/casino-provider/pragmatic-play/</loc>
     <lastmod>2026-08-25</lastmod>
     <priority>0.9</priority>
@@ -96,16 +71,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>http://31.76.241.72/casino/casino-live/live-roulette/</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>http://31.76.241.72/casino/casino-live/live-blackjack/</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>http://31.76.241.72/casino/casino-live/live-baccarat/</loc>
     <lastmod>2026-08-25</lastmod>
     <priority>0.7</priority>
@@ -121,58 +86,48 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>http://31.76.241.72/casino/casino-betting/football-betting/</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>http://31.76.241.72/casino/casino-betting/tennis-betting/</loc>
     <lastmod>2026-08-25</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://31.76.241.72/casino/casino-betting/in-play-betting/</loc>
-    <lastmod>2026-08-25</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>http://31.76.241.72/casino/zahlungen/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/bonusse/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/aktuell/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/lizenzen/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/anbieter/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/live-spiele/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/quoten/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/casino/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -267,37 +222,37 @@
   </url>
   <url>
     <loc>http://31.76.241.72/casino/vergleich/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/so-testen-wir/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/redaktion/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/redaktionelle-richtlinien/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/verantwortungsvolles-spielen/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/impressum/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>http://31.76.241.72/casino/datenschutz/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <priority>0.9</priority>
   </url>
 </urlset>

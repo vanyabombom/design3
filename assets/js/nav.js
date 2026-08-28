@@ -1,7 +1,8 @@
 /**
- * Меню в шапке. Ванильный JS, без библиотек (лист 08).
+ * Меню в шапке и bottom-sheet фильтров на мобильном. Ванильный JS, без
+ * библиотек (лист 08).
  *
- * КОНТРАКТ — только data-атрибуты, ни одного имени класса:
+ * КОНТРАКТ меню — только data-атрибуты, ни одного имени класса:
  *
  *   <details data-menu>
  *     <summary>…кнопка…</summary>
@@ -19,6 +20,13 @@
  *     панель остаётся раскрытой поверх новой страницы при возврате назад);
  *   — подложка, чтобы клик мимо ловился и на тач-устройствах, где click
  *     по <body> приходит не всегда.
+ *
+ * Ровно то же самое для .filters-wrap (единственное место в файле, где
+ * контракт — класс, а не data-атрибут: имя уже занято в main.css и в
+ * collapseFilters() ниже, заводить второй параллельный крючок ради одного
+ * файла незачем). На узком экране это bottom-sheet (см. main.css,
+ * @media max-width: 640px): скрипт добавляет подложку и Esc так же, как
+ * у меню, — раскрытие/схлопывание по-прежнему на <details>.
  */
 
 (function () {
@@ -71,6 +79,55 @@
   }
 
   /**
+   * Bottom-sheet фильтров на узком экране: подложка гасит страницу за
+   * панелью и закрывает её по клику мимо — тот же приём, что уже стоит на
+   * меню (см. setup() выше), просто на второй `<details>` сайта. Раскрытие
+   * по-прежнему делает нативный <details>: без JS панель всё равно
+   * открывается и закрывается, просто без подложки и закрытия по клику
+   * мимо. addScrim() ничего не создаёт на широком экране, где .filters-wrap
+   * не превращается в лист снизу (см. main.css, display: contents).
+   */
+  function setupSheet(wrap) {
+    var scrim = null;
+    var mq = window.matchMedia ? window.matchMedia('(max-width: 640px)') : null;
+
+    function isSheet() {
+      return !mq || mq.matches;
+    }
+
+    function addScrim() {
+      if (scrim || !isSheet()) return;
+      scrim = document.createElement('button');
+      scrim.type = 'button';
+      scrim.className = 'filters-wrap__scrim';
+      scrim.tabIndex = -1;
+      scrim.setAttribute('aria-hidden', 'true');
+      scrim.addEventListener('click', close);
+      document.body.appendChild(scrim);
+    }
+
+    function removeScrim() {
+      if (!scrim) return;
+      scrim.remove();
+      scrim = null;
+    }
+
+    function close() {
+      wrap.open = false;
+    }
+
+    wrap.addEventListener('toggle', function () {
+      if (wrap.open) addScrim();
+      else removeScrim();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Escape' || !wrap.open || !isSheet()) return;
+      close();
+    });
+  }
+
+  /**
    * Фильтры на узком экране свёрнуты по умолчанию.
    *
    * Разметка приходит раскрытой, потому что на широком экране фильтры должны
@@ -92,6 +149,8 @@
     collapseFilters(root);
     var menus = (root || document).querySelectorAll('[data-menu]');
     Array.prototype.forEach.call(menus, setup);
+    var sheets = (root || document).querySelectorAll('.filters-wrap');
+    Array.prototype.forEach.call(sheets, setupSheet);
   }
 
   if (document.readyState === 'loading') {

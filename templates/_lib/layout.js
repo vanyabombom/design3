@@ -6,9 +6,10 @@
  * рисовался без блокирующих запросов. Схему сняли, потому что она держала
  * вёрстку в двух копиях, а копии разошлись. В инлайновой не было мобильных
  * правил таблицы — и телефон на LTE успевал секундами показывать широкую
- * сломанную таблицу, прежде чем доезжал main.css. Один файл на 25 КБ (6 КБ
- * в gzip) с immutable-кэшем этого не стоит: со второй страницы он уже в кэше,
- * а расходиться теперь нечему.
+ * сломанную таблицу, прежде чем доезжал main.css. Один файл (после редизайна
+ * 2026.1 — около 57 КБ минифицированного, 11 КБ в gzip) с immutable-кэшем
+ * этого не стоит: со второй страницы он уже в кэше, а расходиться теперь
+ * нечему.
  *
  * Ни одной видимой строки текста здесь не задаётся: всё берётся из локали,
  * поэтому смена ГЕО не требует правок в шаблонах.
@@ -78,6 +79,7 @@ ${footer(ctx)}
 <script src="${ctx.asset('/assets/js/nav.js')}" defer></script>
 <script src="${ctx.asset('/assets/js/table-sort.js')}" defer></script>
 <script src="${ctx.asset('/assets/js/filters.js')}" defer></script>
+${page.type === 'brand' ? `<script src="${ctx.asset('/assets/js/sticky-cta.js')}" defer></script>` : ''}
 </body>
 </html>
 `;
@@ -346,7 +348,7 @@ ${termsOf ? ` data-f-term="${esc((termsOf.get(brand.slug) ?? []).join(','))}"\n`
  data-f-bonus-type="${esc((get(brand, 'bonus.types') ?? []).join(','))}"
  data-f-payment="${esc(payments.join(','))}">
 <th scope="row" role="rowheader" data-value="${esc(brand.name)}"><div class="cell-brand">
-${showRank ? `<span class="cell-brand__rank" data-rank>${index + 1}</span>` : ''}
+${showRank ? `<span class="cell-brand__rank"${index < 3 ? ` data-tier="${index + 1}"` : ''} data-rank>${index + 1}</span>` : ''}
 ${brandLogoLink(brand, ctx, { size: 24 })}
 <span class="cell-brand__body">${affiliateLink({ brand, site, label: brand.name, className: 'cell-brand__name' })}</span>
 </div></th>
@@ -735,4 +737,240 @@ export function standNote(text) {
   return `<p class="stand-note">${icon('alert', { size: 15 })}<span>${esc(text)}</span></p>`;
 }
 
-export { esc, logo, affiliateLink, get, icon, paymentIcon, logoOrMark };
+// ---------------------------------------------------------------------------
+// Атомарные компоненты редизайна 2026.1 (bento/glass, светлая тема)
+// ---------------------------------------------------------------------------
+
+/**
+ * Кольцевой бейдж оценки (RatingBadge). Тот же --pct-приём, что у табличного
+ * .score i (см. main.css), но для мест, где оценка — не строка данных, а
+ * самостоятельный акцент: бенто-карточка, шапка обзора казино. Пороги и
+ * цвет — те же scoreBand()/formatScore(), что уже красят .score в таблице:
+ * разойтись с ней бейдж не может, оба берут число из одного места.
+ */
+export function ratingBadge(value, ctx, { size = 'md' } = {}) {
+  const scale = ctx.criteria?.scale ?? 10;
+  const pct = value == null ? 0 : Math.max(0, Math.min(100, Math.round((value / scale) * 100)));
+  const band = scoreBand(value);
+  const cls = ['rating-badge', band, size === 'lg' ? 'rating-badge--lg' : ''].filter(Boolean).join(' ');
+  return `<span class="${cls}" style="--pct:${pct}%"><span class="rating-badge__value">${esc(formatScore(value, ctx))}</span></span>`;
+}
+
+/**
+ * Пилюля суммы бонуса (BonusPill). Те же поля, что offersTable() уже
+ * показывает в своей колонке — здесь просто вынесены в переиспользуемый
+ * блок для бенто-карточек и шапки обзора, без второго источника данных.
+ */
+export function bonusPill(brand, ctx) {
+  const { locale } = ctx;
+  const amount = get(brand, 'bonus.amount');
+  if (amount == null) return `<span class="bonus-pill"><b>${esc(locale.table.notChecked)}</b></span>`;
+  const spins = get(brand, 'bonus.freeSpins');
+  return `<span class="bonus-pill"><b>${esc(amount)} ${esc(locale.units.currency)}</b>`
+    + `${spins ? `<small>+ ${esc(spins)} ${esc(locale.table.freeSpins)}</small>` : ''}</span>`;
+}
+
+/**
+ * Строка Quick Metrics: скорость выплат, вейджер и минимальный депозит
+ * одним взглядом — те же поля brand.payout и brand.bonus, что уже читает
+ * offersTable(), просто без остальных семи колонок вокруг. «Хорошее»
+ * значение (выплата в течение суток) подсвечивается тем же зелёным, что и
+ * .score.is-high — второго языка цвета для «это хорошо» на сайте нет.
+ */
+export function quickMetrics(brand, ctx) {
+  const { locale } = ctx;
+  const u = locale.units;
+  const t = locale.table;
+  const payout = get(brand, 'payout.effectiveHours');
+  const wagering = get(brand, 'bonus.wagering');
+  const minDep = get(brand, 'bonus.minDeposit');
+  const na = `<span class="score--na">${esc(t.notChecked)}</span>`;
+
+  const items = [
+    {
+      icon: 'clock', label: t.payoutSpeed,
+      value: payout == null ? na : `${esc(payout)} ${esc(u.hours)}`,
+      good: payout != null && payout <= 24,
+    },
+    {
+      icon: 'repeat', label: t.wagering,
+      value: wagering == null ? na : `${esc(wagering)}${esc(u.times)}`,
+    },
+    {
+      icon: 'coins', label: t.minDeposit,
+      value: minDep == null ? na : `${esc(minDep)} ${esc(u.currency)}`,
+    },
+  ];
+
+  return `<div class="badge-metrics">${items.map((item) => `<span class="badge-metric${item.good ? ' badge-metric--good' : ''}">
+<span class="badge-metric__label">${icon(item.icon, { size: 12 })}${esc(item.label)}</span>
+<span class="badge-metric__value">${item.value}</span>
+</span>`).join('')}</div>`;
+}
+
+/**
+ * Карточка казино (Casino Card) — единый bento-компонент вместо трёх
+ * разрозненных вручную свёрстанных .card--top/.card, что раньше писал
+ * каждый шаблон отдельно (home.js топ-3, brand.js «похожие казино»). Один
+ * источник разметки: правка карточки — теперь одна правка, а не три.
+ *
+ * variant: 'featured' — полная карточка топ-листа (медаль, бонус, Quick
+ * Metrics, pros/cons, двойной CTA «Zum Casino» / «Zum Testbericht»);
+ * 'compact' — лёгкая карточка для «похожие казино»: рейтинг, лицензия,
+ * ссылка на обзор, без повторного CTA — предложение уже сделано на текущей
+ * странице бренда.
+ *
+ * note/payments — необязательные: собственный редакционный текст про
+ * конкретную карточку и список платёжных методов со ссылками. Их считает
+ * вызывающий шаблон (там же, где раньше считал paymentUrl()) — компонент
+ * сам по графу страниц не ходит.
+ *
+ * spotlight/ribbon — ровно одна карточка на странице (обычно первая в
+ * топ-листе) может получить пульсирующий CTA и ленточку сверху («Top Pick»
+ * из брифа). Остальные карточки того же грида — с обычным CTA: три
+ * одновременно пульсирующие кнопки на одном экране — это и есть тот самый
+ * «кричащий гемблинг-стиль 2010-х», от которого просили уйти, а не премиум.
+ */
+export function brandCard(brand, ctx, {
+  rank = null, variant = 'featured', note = null, payments = null, spotlight = false, ribbon = null,
+} = {}) {
+  const { site, locale } = ctx;
+  const licensed = get(brand, 'license.localLicensed');
+  const reviewUrl = urlJoin(locale.brandBase ?? 'casino', brand.slug);
+
+  const pros = (brand.pros ?? []).slice(0, 2);
+  const cons = (brand.cons ?? []).slice(0, 1);
+  const tags = pros.length || cons.length
+    ? `<ul class="pro-cons-tags">
+${pros.map((p) => `<li class="is-pro">${icon('check', { size: 11 })}${esc(p)}</li>`).join('')}
+${cons.map((c) => `<li class="is-con">${icon('minus', { size: 11 })}${esc(c)}</li>`).join('')}
+</ul>`
+    : '';
+
+  const paymentChips = payments?.length
+    ? `<ul class="chips">${payments.map((p) => `<li><a href="${esc(p.url)}">${paymentIcon(p.method, { size: 13 })}${esc(properLabel(p.method, locale))}</a></li>`).join('')}</ul>`
+    : '';
+
+  const ctaClass = spotlight ? 'cta cta--glow' : 'cta';
+  const cta = variant === 'featured' && brand.affiliate?.active
+    ? `<div class="bento-card__actions">
+${affiliateLink({ brand, site, label: locale.ui.visitCasino, className: ctaClass, iconHtml: icon('external', { size: 13 }) })}
+<a class="btn" href="${esc(reviewUrl)}">${icon('book', { size: 13 })} ${esc(locale.ui.readReview)}</a>
+</div>`
+    : `<a class="btn" href="${esc(reviewUrl)}">${icon('book', { size: 13 })} ${esc(locale.ui.readReview)}</a>`;
+
+  const classes = ['card', 'bento', 'bento-card'];
+  if (variant === 'featured') classes.push('bento--featured');
+  if (spotlight) classes.push('bento-card--spotlight');
+
+  return `<li class="${classes.join(' ')}">
+${ribbon ? `<span class="bento-card__ribbon">${icon('star', { size: 11 })}${esc(ribbon)}</span>` : ''}
+<div class="bento-card__head">
+${rank ? `<span class="cell-brand__rank" data-tier="${rank}">${rank}</span>` : ''}
+${brandLogoLink(brand, ctx, { size: 40 })}
+${ratingBadge(brand.score?.total, ctx, { size: 'lg' })}
+</div>
+<h3><a href="${esc(reviewUrl)}">${esc(brand.name)}</a></h3>
+<p class="card__meta">
+<span class="pill">${icon('shield', { size: 11 })}${esc(get(brand, 'license.authority'))}</span>
+${licensed ? `<span class="pill pill--ok">${esc(locale.table.germanLicence)}</span>` : '<span class="pill pill--no">ohne deutsche Lizenz</span>'}
+</p>
+${variant === 'featured' ? bonusPill(brand, ctx) : ''}
+${variant === 'featured' ? quickMetrics(brand, ctx) : ''}
+${tags}
+${note ? `<p>${esc(note)}</p>` : ''}
+${paymentChips}
+${cta}
+</li>`;
+}
+
+/**
+ * Плавающая плашка с бонусом при скролле (Sticky/Floating Bar из брифа).
+ * Появляется, только когда основной CTA над сгибом уходит из вьюпорта —
+ * следит assets/js/sticky-cta.js через IntersectionObserver на элементе
+ * с data-sticky-watch. hidden по умолчанию: без JS основной CTA и так
+ * виден на первом экране (см. вызов в brand.js), дублировать его в
+ * разметке без скрипта, решающего когда его показать, было бы лишним
+ * элементом страницы, который никогда не появляется.
+ */
+export function stickyBonusBar(brand, ctx) {
+  if (!brand.affiliate?.active) return '';
+  const { site, locale } = ctx;
+  return `<div class="sticky-bonus" data-sticky-bonus hidden>
+<div class="sticky-bonus__brand">${logoOrMark(brand, site, { size: 28 })}<strong>${esc(brand.name)}</strong></div>
+${bonusPill(brand, ctx)}
+${affiliateLink({ brand, site, label: locale.ui.visitCasino, className: 'cta', iconHtml: icon('external', { size: 13 }) })}
+</div>`;
+}
+
+/**
+ * Радар критериев оценки — инлайновый SVG, без единой зависимости (лист
+ * package.json: «Zero dependencies by design»). Строится по тому же
+ * brand.score.breakdown, что и factsTable() в scoreBreakdown() (brand.js):
+ * таблицу не заменяет — сортировка, печать и скринридер остаются на ней,
+ * диаграмма её визуальный компаньон. Меньше трёх осей рисовать нечего —
+ * многоугольник из двух точек не читается, возвращаем пусто.
+ */
+export function radarChart(breakdown, ctx) {
+  const list = (breakdown ?? []).filter((c) => !c.skipped && c.score != null);
+  if (list.length < 3) return '';
+
+  const { locale } = ctx;
+  const scale = ctx.criteria?.scale ?? 10;
+  const n = list.length;
+  const size = 260;
+  const cx = size / 2;
+  const cy = size / 2;
+  const R = 76;
+
+  const point = (i, r) => {
+    const angle = -Math.PI / 2 + (i * 2 * Math.PI) / n;
+    return [cx + r * Math.cos(angle), cy + r * Math.sin(angle)];
+  };
+  const fmt = (n2) => n2.toFixed(1);
+
+  const rings = [0.25, 0.5, 0.75, 1].map((f) => {
+    const pts = list.map((_, i) => point(i, R * f).map(fmt).join(',')).join(' ');
+    return `<polygon class="radar-grid" points="${pts}"/>`;
+  }).join('');
+
+  const axes = list.map((_, i) => {
+    const [x, y] = point(i, R);
+    return `<line class="radar-axis" x1="${cx}" y1="${cy}" x2="${fmt(x)}" y2="${fmt(y)}"/>`;
+  }).join('');
+
+  const ratioOf = (c) => Math.max(0, Math.min(1, c.score / scale));
+  const shapePts = list.map((c, i) => point(i, R * ratioOf(c)).map(fmt).join(',')).join(' ');
+  const dots = list.map((c, i) => {
+    const [x, y] = point(i, R * ratioOf(c));
+    return `<circle class="radar-dot" cx="${fmt(x)}" cy="${fmt(y)}" r="3"/>`;
+  }).join('');
+
+  // Номер вместо полного названия критерия: «Zahlungsmethoden» и «Support
+  // und Mobil» в подписи прямо на диаграмме обрезались о край SVG — немецкие
+  // названия критериев для этого попросту длинные, и укоротить их нельзя
+  // (это не наш текст, а locale.criteria). Цифра у вершины плюс та же
+  // цифра в легенде справа — расшифровка не теряется, просто не пытается
+  // уместиться в стеснённом углу диаграммы.
+  const labels = list.map((c, i) => {
+    const [x, y] = point(i, R + 16);
+    return `<circle class="radar-label-bg" cx="${fmt(x)}" cy="${fmt(y)}" r="8"/>`
+      + `<text class="radar-label" x="${fmt(x)}" y="${fmt(y)}" text-anchor="middle" dominant-baseline="central">${i + 1}</text>`;
+  }).join('');
+
+  const key = list.map((c, i) => `<li><span><b class="radar__key-num">${i + 1}</b>${esc(locale.criteria[c.id] ?? c.id)}</span><b>${esc(formatScore(c.score, ctx))}</b></li>`).join('');
+
+  return `<div class="radar">
+<svg class="radar__chart" viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" role="img" aria-label="${esc(locale.ui.methodology ?? 'Kriterien')}">
+${rings}${axes}
+<polygon class="radar-shape" points="${shapePts}"/>
+${dots}
+${labels}
+</svg>
+<ul class="radar__key">${key}</ul>
+</div>`;
+}
+
+export {
+  esc, logo, affiliateLink, get, icon, paymentIcon, logoOrMark,
+};

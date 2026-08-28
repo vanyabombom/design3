@@ -15,12 +15,11 @@
  */
 
 import {
-  document_, pageHead, faqBlock, factsTable, esc, get, icon,
+  document_, pageHead, faqBlock, factsTable, radarChart, brandCard, stickyBonusBar, esc, get, icon,
   affiliateLink, logoOrMark, paymentIcon,
 } from './_lib/layout.js';
 import { pageH1, properLabel, resolveAuthor, formatScore, scoreBand } from '../lib/labels.js';
 import { review } from '../lib/render.js';
-import { urlJoin } from '../lib/util.js';
 
 export function render(ctx, page) {
   const { locale, site, criteria } = ctx;
@@ -62,10 +61,12 @@ ${brand.status !== 'active' ? `<div class="callout">
 Diese Bewertung bleibt online, weil die Frage „Was ist mit diesem Anbieter passiert?“ eine Antwort verdient.</p>
 </div>` : ''}
 
-${brand.affiliate?.active ? `<p>${affiliateLink({ brand, site, label: locale.ui.visitCasino, className: 'cta cta--lg', iconHtml: ' →' })}</p>` : ''}
+${brand.affiliate?.active ? `<p data-sticky-watch>${affiliateLink({ brand, site, label: locale.ui.visitCasino, className: 'cta cta--lg', iconHtml: ' →' })}</p>` : ''}
+${stickyBonusBar(brand, ctx)}
 
 <section class="section">
 <h2>Wie die Note ${esc(formatScore(brand.score?.total, ctx))} zustande kommt</h2>
+${radarChart(brand.score?.breakdown, ctx)}
 ${scoreBreakdown(brand, ctx)}
 <p><small>Gewichte und Punkteregeln stehen offen auf <a href="${esc(ctx.staticUrls['how-we-test'])}">${esc(locale.ui.methodology)}</a>.
 Die Note wird bei jedem Neuaufbau der Seite neu berechnet und nirgends gespeichert.</small></p>
@@ -74,14 +75,14 @@ Die Note wird bei jedem Neuaufbau der Seite neu berechnet und nirgends gespeiche
 <section class="section">
 <h2>Bonus und Bedingungen</h2>
 <dl class="kv">
-<dt>Angebot</dt><dd>${get(brand, 'bonus.matchPct') ? `${esc(get(brand, 'bonus.matchPct'))} % bis ${fmt(get(brand, 'bonus.amount'))} ${esc(u.currency)}` : esc(locale.table.notChecked)}${get(brand, 'bonus.freeSpins') ? ` + ${esc(get(brand, 'bonus.freeSpins'))} ${esc(locale.table.freeSpins)}` : ''}</dd>
-<dt>Umsatz</dt><dd>${get(brand, 'bonus.wagering') == null ? esc(locale.table.notChecked) : `${esc(get(brand, 'bonus.wagering'))}${esc(u.times)} ${esc(locale.table.appliesTo[get(brand, 'bonus.wageringApplies')] ?? '')}`}</dd>
-<dt>Mindesteinzahlung</dt><dd>${get(brand, 'bonus.minDeposit') == null ? esc(locale.table.notChecked) : `${esc(get(brand, 'bonus.minDeposit'))} ${esc(u.currency)}`}</dd>
-<dt>Höchsteinsatz</dt><dd>${get(brand, 'bonus.maxBet') == null ? esc(locale.table.notChecked) : `${esc(get(brand, 'bonus.maxBet'))} ${esc(u.currency)} pro Drehung${ggl ? ' (gesetzlich vorgeschrieben)' : ''}`}</dd>
-<dt>Frist</dt><dd>${get(brand, 'bonus.expiryDays') == null ? esc(locale.table.notChecked) : `${esc(get(brand, 'bonus.expiryDays'))} ${esc(u.days)}`}</dd>
-${get(brand, 'bonus.maxCashout') ? `<dt>Gewinndeckel</dt><dd>${fmt(get(brand, 'bonus.maxCashout'))} ${esc(u.currency)}</dd>` : ''}
-${get(brand, 'bonus.hasCode') && get(brand, 'bonus.code') ? `<dt>Code</dt><dd><code>${esc(get(brand, 'bonus.code'))}</code></dd>` : ''}
-<dt>${esc(locale.ui.checkedOn)}</dt><dd><time datetime="${esc(get(brand, 'bonus.checkedAt'))}" data-checked>${esc(get(brand, 'bonus.checkedAt'))}</time></dd>
+<dt>${icon('star', { size: 14 })}Angebot</dt><dd>${get(brand, 'bonus.matchPct') ? `${esc(get(brand, 'bonus.matchPct'))} % bis ${fmt(get(brand, 'bonus.amount'))} ${esc(u.currency)}` : esc(locale.table.notChecked)}${get(brand, 'bonus.freeSpins') ? ` + ${esc(get(brand, 'bonus.freeSpins'))} ${esc(locale.table.freeSpins)}` : ''}</dd>
+<dt>${icon('repeat', { size: 14 })}Umsatz</dt><dd>${get(brand, 'bonus.wagering') == null ? esc(locale.table.notChecked) : `${esc(get(brand, 'bonus.wagering'))}${esc(u.times)} ${esc(locale.table.appliesTo[get(brand, 'bonus.wageringApplies')] ?? '')}`}</dd>
+<dt>${icon('coins', { size: 14 })}Mindesteinzahlung</dt><dd>${get(brand, 'bonus.minDeposit') == null ? esc(locale.table.notChecked) : `${esc(get(brand, 'bonus.minDeposit'))} ${esc(u.currency)}`}</dd>
+<dt>${icon('alert', { size: 14 })}Höchsteinsatz</dt><dd>${get(brand, 'bonus.maxBet') == null ? esc(locale.table.notChecked) : `${esc(get(brand, 'bonus.maxBet'))} ${esc(u.currency)} pro Drehung${ggl ? ' (gesetzlich vorgeschrieben)' : ''}`}</dd>
+<dt>${icon('calendar', { size: 14 })}Frist</dt><dd>${get(brand, 'bonus.expiryDays') == null ? esc(locale.table.notChecked) : `${esc(get(brand, 'bonus.expiryDays'))} ${esc(u.days)}`}</dd>
+${get(brand, 'bonus.maxCashout') ? `<dt>${icon('trophy', { size: 14 })}Gewinndeckel</dt><dd>${fmt(get(brand, 'bonus.maxCashout'))} ${esc(u.currency)}</dd>` : ''}
+${get(brand, 'bonus.hasCode') && get(brand, 'bonus.code') ? `<dt>${icon('voucher', { size: 14 })}Code</dt><dd><code>${esc(get(brand, 'bonus.code'))}</code></dd>` : ''}
+<dt>${icon('clock', { size: 14 })}${esc(locale.ui.checkedOn)}</dt><dd><time datetime="${esc(get(brand, 'bonus.checkedAt'))}" data-checked>${esc(get(brand, 'bonus.checkedAt'))}</time></dd>
 </dl>
 ${t ? `<div class="callout">
 <p><strong>Was das rechnerisch bedeutet:</strong> Um den vollen Bonus freizuspielen, sind
@@ -99,13 +100,13 @@ ${Array.isArray(get(brand, 'payments_withdrawal'))
 ${only.length ? `<div class="callout"><p><strong>Nur zum Einzahlen:</strong> ${only.map((m) => esc(properLabel(m, locale))).join(', ')}.
 Über diese Wege kommt kein Geld zurück, das erfährt man sonst erst an der Kasse.</p></div>` : ''}
 <dl class="kv">
-<dt>Auszahlungsdauer</dt><dd>${get(brand, 'payout.effectiveHours') == null
+<dt>${icon('clock', { size: 14 })}Auszahlungsdauer</dt><dd>${get(brand, 'payout.effectiveHours') == null
     ? esc(locale.table.notChecked)
     : `${esc(get(brand, 'payout.effectiveHours'))} ${esc(u.hours)} <small>${get(brand, 'payout.isMeasured') ? esc(locale.table.measured) : esc(locale.table.perOperator)}</small>`}</dd>
-${get(brand, 'fees.withdrawalPct') ? `<dt>Auszahlungsgebühr</dt><dd>${esc(get(brand, 'fees.withdrawalPct'))} ${esc(u.percent)}</dd>` : ''}
-${get(brand, 'limits.minWithdrawal') ? `<dt>Mindestauszahlung</dt><dd>${esc(get(brand, 'limits.minWithdrawal'))} ${esc(u.currency)}</dd>` : ''}
-${get(brand, 'limits.maxWithdrawalPerMonth') ? `<dt>Auszahlungslimit</dt><dd>${fmt(get(brand, 'limits.maxWithdrawalPerMonth'))} ${esc(u.currency)} pro Monat</dd>` : ''}
-<dt>Einzahlungslimit</dt><dd>${get(brand, 'limits.monthlyDepositCap') ? `${fmt(get(brand, 'limits.monthlyDepositCap'))} ${esc(u.currency)} pro Monat, anbieterübergreifend über LUGAS` : 'kein Limit, der Anbieter ist nicht an LUGAS angeschlossen'}</dd>
+${get(brand, 'fees.withdrawalPct') ? `<dt>${icon('wallet', { size: 14 })}Auszahlungsgebühr</dt><dd>${esc(get(brand, 'fees.withdrawalPct'))} ${esc(u.percent)}</dd>` : ''}
+${get(brand, 'limits.minWithdrawal') ? `<dt>${icon('coins', { size: 14 })}Mindestauszahlung</dt><dd>${esc(get(brand, 'limits.minWithdrawal'))} ${esc(u.currency)}</dd>` : ''}
+${get(brand, 'limits.maxWithdrawalPerMonth') ? `<dt>${icon('bank', { size: 14 })}Auszahlungslimit</dt><dd>${fmt(get(brand, 'limits.maxWithdrawalPerMonth'))} ${esc(u.currency)} pro Monat</dd>` : ''}
+<dt>${icon('bank', { size: 14 })}Einzahlungslimit</dt><dd>${get(brand, 'limits.monthlyDepositCap') ? `${fmt(get(brand, 'limits.monthlyDepositCap'))} ${esc(u.currency)} pro Monat, anbieterübergreifend über LUGAS` : 'kein Limit, der Anbieter ist nicht an LUGAS angeschlossen'}</dd>
 </dl>
 ${get(brand, 'payout.note') ? `<p>${esc(get(brand, 'payout.note'))}</p>` : ''}
 </section>
@@ -126,12 +127,12 @@ ${(get(brand, 'betting') ?? []).length ? `<p><strong>Sportwetten:</strong> ${(ge
 <section class="section">
 <h2>Lizenz und Spielerschutz</h2>
 <dl class="kv">
-<dt>Lizenz</dt><dd>${esc(get(brand, 'license.authority'))}${get(brand, 'license.number') ? `, Nummer ${esc(get(brand, 'license.number'))}` : ''}</dd>
-<dt>Deutsche Erlaubnis</dt><dd>${ggl ? 'ja, auf der GGL-Whitelist geführt' : 'nein'}</dd>
-<dt>Schutzfunktionen</dt><dd>${(get(brand, 'security.responsibleTools') ?? []).length
+<dt>${icon('shield', { size: 14 })}Lizenz</dt><dd>${esc(get(brand, 'license.authority'))}${get(brand, 'license.number') ? `, Nummer ${esc(get(brand, 'license.number'))}` : ''}</dd>
+<dt>${icon('check', { size: 14 })}Deutsche Erlaubnis</dt><dd>${ggl ? 'ja, auf der GGL-Whitelist geführt' : 'nein'}</dd>
+<dt>${icon('alert', { size: 14 })}Schutzfunktionen</dt><dd>${(get(brand, 'security.responsibleTools') ?? []).length
     ? (get(brand, 'security.responsibleTools') ?? []).map((tool) => esc(properLabel(tool, locale))).join(', ')
     : esc(locale.table.notChecked)}</dd>
-<dt>Zwei-Faktor-Anmeldung</dt><dd>${get(brand, 'security.twoFactor') ? 'ja' : 'nein'}</dd>
+<dt>${icon('phone', { size: 14 })}Zwei-Faktor-Anmeldung</dt><dd>${get(brand, 'security.twoFactor') ? 'ja' : 'nein'}</dd>
 </dl>
 ${get(brand, 'license.registryUrl') ? `<p><a class="tap-link" href="${esc(get(brand, 'license.registryUrl'))}" rel="nofollow noopener" target="_blank">Lizenz im öffentlichen Register prüfen</a></p>` : ''}
 ${!ggl ? `<div class="callout"><p><strong>Ohne deutsche Erlaubnis heißt konkret:</strong> keine OASIS-Anbindung, eine bestehende
@@ -167,15 +168,11 @@ ${terms.map((entry) => `<li><a href="${esc(entry.url)}">${esc(properLabel(entry.
 
 ${similar.length ? `<section class="section">
 <h2>${esc(locale.ui.similar)}</h2>
-<ul class="grid">
+<ul class="grid grid--carousel">
 ${similar.map((s) => {
     const other = ctx.brands.find((b) => b.slug === s.slug);
     if (!other) return '';
-    return `<li class="card">
-<h3><a href="${esc(brandUrl(other, locale))}">${esc(other.name)}</a></h3>
-<p><strong>${esc(formatScore(other.score?.total, ctx))}</strong> ${esc(locale.ui.outOf)} ${esc(other.score?.scale ?? scale)} · ${esc(get(other, 'license.authority'))}</p>
-<p><small>Steht in ${s.sharedTerms} derselben Listen</small></p>
-</li>`;
+    return brandCard(other, ctx, { variant: 'compact', note: `Steht in ${s.sharedTerms} derselben Listen` });
   }).join('\n')}
 </ul>
 </section>` : ''}
@@ -202,11 +199,6 @@ ${faq.html}
   ];
 
   return document_(ctx, page, { main, jsonLd, h1 });
-}
-
-/** Адрес карточки другого бренда — тем же способом, каким его строит граф. */
-function brandUrl(brand, locale) {
-  return urlJoin(locale.brandBase ?? 'casino', brand.slug);
 }
 
 /**

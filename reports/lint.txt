@@ -10,190 +10,25 @@
 
 ЗАМЕЧАНИЯ К ДАННЫМ
 
-    бренд "slotuna": не заполнено поле "established"
-    бренд "slotuna": не заполнено поле "license.number"
-    бренд "slotuna": не заполнено поле "bonus.maxBet"
-    бренд "slotuna": не заполнено поле "payments_withdrawal"
-    бренд "slotuna": не заполнено поле "support.liveChat24_7"
-    бренд "slotuna": не заполнено поле "support.medianReplyMinutes"
-    бренд "slotuna": не заполнено поле "support.languages"
-    бренд "sportuna": не заполнено поле "established"
-    бренд "sportuna": не заполнено поле "bonus.maxBet"
-    бренд "sportuna": не заполнено поле "payments_withdrawal"
-    бренд "sportuna": не заполнено поле "support.medianReplyMinutes"
-    бренд "sportuna": не заполнено поле "support.languages"
-    бренд "lanista": не заполнено поле "established"
-    бренд "lanista": не заполнено поле "license.registryUrl"
-    бренд "lanista": не заполнено поле "bonus.maxBet"
-    бренд "lanista": не заполнено поле "payments_withdrawal"
-    бренд "lanista": не заполнено поле "games.total"
-    бренд "lanista": не заполнено поле "support.liveChat24_7"
-    бренд "lanista": не заполнено поле "support.medianReplyMinutes"
-    бренд "lanista": не заполнено поле "support.languages"
-    бренд "jet4bet": не заполнено поле "bonus.maxBet"
-    бренд "jet4bet": не заполнено поле "games.total"
-    бренд "jet4bet": не заполнено поле "support.liveChat24_7"
-    бренд "jet4bet": не заполнено поле "support.medianReplyMinutes"
-    бренд "jet4bet": не заполнено поле "support.languages"
-    бренд "goldexcasino": не заполнено поле "established"
-    бренд "goldexcasino": не заполнено поле "license.number"
-    бренд "goldexcasino": не заполнено поле "bonus.maxBet"
-    бренд "goldexcasino": не заполнено поле "games.total"
-    бренд "goldexcasino": не заполнено поле "support.medianReplyMinutes"
-    бренд "vicibet": не заполнено поле "established"
-    бренд "vicibet": не заполнено поле "bonus.maxBet"
-    бренд "vicibet": не заполнено поле "payments_withdrawal"
-    бренд "vicibet": не заполнено поле "support.medianReplyMinutes"
-    бренд "vicibet": не заполнено поле "support.languages"
-    бренд "slotsgem": не заполнено поле "established"
-    бренд "slotsgem": не заполнено поле "license.number"
-    бренд "slotsgem": не заполнено поле "bonus.maxBet"
-    бренд "slotsgem": не заполнено поле "payments_withdrawal"
-    бренд "slotsgem": не заполнено поле "games.total"
-    бренд "slotsgem": не заполнено поле "providers"
-    бренд "slotsgem": не заполнено поле "support.liveChat24_7"
-    бренд "slotsgem": не заполнено поле "support.medianReplyMinutes"
-    бренд "slotsgem": не заполнено поле "support.languages"
-    бренд "spinline": не заполнено поле "license.number"
-    бренд "spinline": не заполнено поле "bonus.maxBet"
-    бренд "spinline": не заполнено поле "payments_withdrawal"
-    бренд "spinline": не заполнено поле "support.medianReplyMinutes"
-    бренд "spinline": не заполнено поле "support.languages"
-    бренд "leovegas": не заполнено поле "games.total"
-    бренд "leovegas": не заполнено поле "support.medianReplyMinutes"
-    бренд "betano": не заполнено поле "established"
-    бренд "betano": не заполнено поле "license.number"
-    бренд "betano": не заполнено поле "support.liveChat24_7"
-    бренд "betano": не заполнено поле "support.medianReplyMinutes"
-    бренд "betano": не заполнено поле "support.languages"
-    бренд "tipico": не заполнено поле "license.number"
-    бренд "tipico": не заполнено поле "providers"
-    бренд "tipico": не заполнено поле "support.liveChat24_7"
-    бренд "tipico": не заполнено поле "support.medianReplyMinutes"
-    бренд "tipico": не заполнено поле "support.languages"
-    бренд "bwin": не заполнено поле "license.number"
-    бренд "bwin": не заполнено поле "games.total"
-    бренд "bwin": не заполнено поле "support.liveChat24_7"
-    бренд "bwin": не заполнено поле "support.medianReplyMinutes"
-    бренд "bwin": не заполнено поле "support.languages"
-    бренд "mr-green": не заполнено поле "license.number"
-    бренд "mr-green": не заполнено поле "games.total"
-    бренд "mr-green": не заполнено поле "support.liveChat24_7"
-    бренд "mr-green": не заполнено поле "support.medianReplyMinutes"
-    бренд "mr-green": не заполнено поле "support.languages"
-    бренд "wunderino": не заполнено поле "established"
-    бренд "wunderino": не заполнено поле "games.total"
-    бренд "wunderino": не заполнено поле "support.liveChat24_7"
-    бренд "wunderino": не заполнено поле "support.medianReplyMinutes"
-    бренд "wunderino": не заполнено поле "support.languages"
-    бренд "jackpotpiraten": не заполнено поле "license.number"
-    бренд "jackpotpiraten": не заполнено поле "support.liveChat24_7"
-    бренд "jackpotpiraten": не заполнено поле "support.medianReplyMinutes"
-    бренд "lapalingo": не заполнено поле "license.number"
-    бренд "lapalingo": не заполнено поле "games.total"
-    бренд "lapalingo": не заполнено поле "support.medianReplyMinutes"
-    бренд "drueckglueck": не заполнено поле "license.number"
-    бренд "drueckglueck": не заполнено поле "games.total"
-    бренд "drueckglueck": не заполнено поле "support.medianReplyMinutes"
-    бренд "merkur-bets": не заполнено поле "established"
-    бренд "merkur-bets": не заполнено поле "license.number"
-    бренд "merkur-bets": не заполнено поле "games.total"
-    бренд "merkur-bets": не заполнено поле "providers"
-    бренд "merkur-bets": не заполнено поле "support.liveChat24_7"
-    бренд "merkur-bets": не заполнено поле "support.medianReplyMinutes"
-    бренд "merkur-bets": не заполнено поле "support.languages"
-    бренд "slotuna": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    бренд "sportuna": критерий "support" посчитан на 55% — не хватает данных для правил: reply-time, support-languages
-    бренд "lanista": критерий "games" посчитан на 60% — не хватает данных для правил: games-total
-    бренд "lanista": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    бренд "jet4bet": критерий "games" посчитан на 60% — не хватает данных для правил: games-total
-    бренд "jet4bet": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    бренд "goldexcasino": критерий "games" посчитан на 60% — не хватает данных для правил: games-total
-    бренд "vicibet": критерий "support" посчитан на 55% — не хватает данных для правил: reply-time, support-languages
-    бренд "slotsgem": критерий "games" посчитан на 25% — не хватает данных для правил: games-total, providers-count
-    бренд "slotsgem": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    бренд "spinline": критерий "support" посчитан на 55% — не хватает данных для правил: reply-time, support-languages
-    бренд "leovegas": критерий "games" посчитан на 60% — не хватает данных для правил: games-total
-    бренд "betano": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    бренд "tipico": критерий "games" посчитан на 65% — не хватает данных для правил: providers-count
-    бренд "tipico": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    бренд "bwin": критерий "games" посчитан на 60% — не хватает данных для правил: games-total
-    бренд "bwin": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    бренд "mr-green": критерий "games" посчитан на 60% — не хватает данных для правил: games-total
-    бренд "mr-green": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    бренд "wunderino": критерий "games" посчитан на 60% — не хватает данных для правил: games-total
-    бренд "wunderino": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    бренд "jackpotpiraten": критерий "support" посчитан на 35% — не хватает данных для правил: chat-availability, reply-time
-    бренд "lapalingo": критерий "games" посчитан на 60% — не хватает данных для правил: games-total
-    бренд "drueckglueck": критерий "games" посчитан на 60% — не хватает данных для правил: games-total
-    бренд "merkur-bets": критерий "games" посчитан на 25% — не хватает данных для правил: games-total, providers-count
-    бренд "merkur-bets": критерий "support" посчитан на 20% — не хватает данных для правил: chat-availability, reply-time, support-languages
-    терм "/casino/casino-payment/mastercard-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
     терм "/casino/casino-payment/maestro-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/trustly-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
     терм "/casino/casino-payment/skrill-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/neteller-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
     терм "/casino/casino-payment/muchbetter-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/revolut-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
     терм "/casino/casino-payment/apple-pay-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/google-pay-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/klarna-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/sofort-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
     терм "/casino/casino-payment/wire-transfer-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/boku-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/siru-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/neosurf-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/flexepin-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/mifinity-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/ecopayz-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/zimpler-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/bitcoin-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/ethereum-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/usdt-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/usdt-trc20-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/usdc-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/litecoin-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/dogecoin-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/xrp-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/cardano-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/solana-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/polygon-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/shiba-inu-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
     терм "/casino/casino-payment/fast-payouts/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
     терм "/casino/casino-bonus/no-deposit-bonus-codes/" набрал 0 брендов при пороге 5 — своей страницы не получает, уходит секцией в /casino/bonusse/ (лист 05)
-    терм "/casino/casino-bonus/free-chip/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
     терм "/casino/casino-bonus/cashback-bonus/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/vip-program/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/bonus-code/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/new-codes/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
     терм "/casino/casino-bonus/bonus-code-for-existing-players/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/bonus-funds/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/bonus-offer/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/10-euro-bonus-ohne-einzahlung-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/15-euro-bonus-ohne-einzahlung-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
     терм "/casino/casino-bonus/online-casino-200-welcome-bonus/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/online-casino-300-deposit-bonus/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
     терм "/casino/casino-bonus/1-euro-deposit-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/5-euro-deposit-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
     терм "/casino/casino-general/new-online-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
     терм "/casino/casino-general/real-money-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/mobile-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
     терм "/casino/casino-general/live-online-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
     терм "/casino/casino-general/high-roller-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
     терм "/casino/casino-general/payout-online-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
     терм "/casino/casino-general/fast-withdrawal-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/online-casinos-without-verification/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/online-casino-vergleich/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/testsieger-online-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/seriose-deutsche-online-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/online-casino-kostenlos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
     терм "/casino/casino-license/ukgc/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/lizenzen/
-    терм "/casino/casino-license/mga/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/lizenzen/
     терм "/casino/casino-license/curacao/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/lizenzen/
-    терм "/casino/casino-license/gibraltar/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/lizenzen/
-    терм "/casino/casino-license/isle-of-man/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/lizenzen/
-    терм "/casino/casino-license/kahnawake/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/lizenzen/
-    терм "/casino/casino-license/cagayan/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/lizenzen/
     терм "/casino/casino-provider/evolution/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
     терм "/casino/casino-provider/netent/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
     терм "/casino/casino-provider/microgaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
@@ -205,8 +40,6 @@
     терм "/casino/casino-provider/push-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
     терм "/casino/casino-provider/relax-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
     терм "/casino/casino-provider/yggdrasil/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/quickspin/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/thunderkick/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
     терм "/casino/casino-provider/betsoft/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
     терм "/casino/casino-provider/elk-studios/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
     терм "/casino/casino-provider/booming-games/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
@@ -218,37 +51,6 @@
     терм "/casino/casino-live/live-casino-lobby/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/live-spiele/
     терм "/casino/casino-live/live-poker/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/live-spiele/
     терм "/casino/casino-live/lightning-roulette/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/live-spiele/
-    терм "/casino/casino-live/monopoly-live/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/live-spiele/
-    терм "/casino/casino-live/dream-catcher/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/live-spiele/
-    терм "/casino/casino-live/game-shows/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/live-spiele/
-    терм "/casino/casino-betting/basketball-betting/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
     терм "/casino/casino-betting/horse-racing/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
-    терм "/casino/casino-betting/esports-betting/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
     терм "/casino/casino-betting/virtual-sports/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
     терм "/casino/casino-betting/accumulator-bets/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
-    терм "/casino/casino-betting/asian-handicap/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
-    терм "/casino/casino-betting/cash-out/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
-    одинаковый состав брендов у 5 термов: paypal-casino, trustly-casino, klarna-casino, sofort-casino, sepa-casino. Лист 05 предлагает в таком случае объединять: оставить "paypal-casino", остальным поставить aliasOf. Иначе это 4 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: visa-casino, mastercard-casino. Лист 05 предлагает в таком случае объединять: оставить "visa-casino", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 17 термов: maestro-casino, revolut-casino, boku-casino, siru-casino, neosurf-casino, flexepin-casino, mifinity-casino, ecopayz-casino, zimpler-casino, usdt-trc20-casino, usdc-casino, dogecoin-casino, xrp-casino, cardano-casino, solana-casino, polygon-casino, shiba-inu-casino. Лист 05 предлагает в таком случае объединять: оставить "maestro-casino", остальным поставить aliasOf. Иначе это 16 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 6 термов: skrill-casino, neteller-casino, crypto-casino, bitcoin-casino, ethereum-casino, usdt-casino. Лист 05 предлагает в таком случае объединять: оставить "skrill-casino", остальным поставить aliasOf. Иначе это 5 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: muchbetter-casino, litecoin-casino. Лист 05 предлагает в таком случае объединять: оставить "muchbetter-casino", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: apple-pay-casino, google-pay-casino. Лист 05 предлагает в таком случае объединять: оставить "apple-pay-casino", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 5 термов: welcome-bonus, bonus-code, new-codes, bonus-funds, bonus-offer. Лист 05 предлагает в таком случае объединять: оставить "welcome-bonus", остальным поставить aliasOf. Иначе это 4 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 4 термов: no-deposit-bonus-codes, free-chip, 10-euro-bonus-ohne-einzahlung-casino, 15-euro-bonus-ohne-einzahlung-casino. Лист 05 предлагает в таком случае объединять: оставить "no-deposit-bonus-codes", остальным поставить aliasOf. Иначе это 3 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 3 термов: cashback-bonus, vip-program, online-casino-300-deposit-bonus. Лист 05 предлагает в таком случае объединять: оставить "cashback-bonus", остальным поставить aliasOf. Иначе это 2 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: 1-euro-deposit-casino, 5-euro-deposit-casino. Лист 05 предлагает в таком случае объединять: оставить "1-euro-deposit-casino", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: legal-online-casino, seriose-deutsche-online-casinos. Лист 05 предлагает в таком случае объединять: оставить "legal-online-casino", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 3 термов: real-money-casino, mobile-casino, online-casino-vergleich. Лист 05 предлагает в таком случае объединять: оставить "real-money-casino", остальным поставить aliasOf. Иначе это 2 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: live-online-casino, online-casino-kostenlos. Лист 05 предлагает в таком случае объединять: оставить "live-online-casino", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: high-roller-casino, online-casinos-without-verification. Лист 05 предлагает в таком случае объединять: оставить "high-roller-casino", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 6 термов: ukgc, mga, gibraltar, isle-of-man, kahnawake, cagayan. Лист 05 предлагает в таком случае объединять: оставить "ukgc", остальным поставить aliasOf. Иначе это 5 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 4 термов: casinos-ohne-lizenz, casinos-ohne-limit, casinos-ohne-lugas, casinos-ohne-oasis. Лист 05 предлагает в таком случае объединять: оставить "casinos-ohne-lizenz", остальным поставить aliasOf. Иначе это 3 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 3 термов: microgaming, quickspin, thunderkick. Лист 05 предлагает в таком случае объединять: оставить "microgaming", остальным поставить aliasOf. Иначе это 2 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 3 термов: live-casino-lobby, live-roulette, live-blackjack. Лист 05 предлагает в таком случае объединять: оставить "live-casino-lobby", остальным поставить aliasOf. Иначе это 2 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 3 термов: live-poker, monopoly-live, dream-catcher. Лист 05 предлагает в таком случае объединять: оставить "live-poker", остальным поставить aliasOf. Иначе это 2 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: crazy-time, game-shows. Лист 05 предлагает в таком случае объединять: оставить "crazy-time", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 4 термов: sports-betting, football-betting, basketball-betting, in-play-betting. Лист 05 предлагает в таком случае объединять: оставить "sports-betting", остальным поставить aliasOf. Иначе это 3 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: horse-racing, esports-betting. Лист 05 предлагает в таком случае объединять: оставить "horse-racing", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: virtual-sports, asian-handicap. Лист 05 предлагает в таком случае объединять: оставить "virtual-sports", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой
-    одинаковый состав брендов у 2 термов: accumulator-bets, cash-out. Лист 05 предлагает в таком случае объединять: оставить "accumulator-bets", остальным поставить aliasOf. Иначе это 1 почти одинаковых страниц, конкурирующих между собой

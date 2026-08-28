@@ -1,5 +1,5 @@
 /**
- * Дизайн-система обзорника. Светлая тема.
+ * Дизайн-система обзорника. Светлая тема. Редакция 2026 (light fintech).
  *
  * Принципы, от которых здесь всё пляшет:
  *
@@ -7,18 +7,61 @@
  *    цифры важнее картинок, таблица — главный элемент страницы.
  * 2. Первый экран отдан делу. Заголовок, ответ и таблица должны попадать
  *    во вьюпорт вместе: человек пришёл выбирать, а не читать вступление.
- * 3. Один акцентный цвет и очень скупо. Никаких градиентов и свечений:
- *    сетка из мягких карточек с подсветкой читается как шаблон, а лист 05
- *    прямо предупреждает, что шаблон палится.
- * 4. Иерархия строится размером, весом и цветом текста, а не рамками.
+ * 3. Один акцентный цвет, но не один приём. Полосы, заливки и подложки —
+ *    да; собственно градиентов и свечений на тексте и границах по-прежнему
+ *    нет, а фон несёт не узор, а еле заметную объёмность (см. body ниже) —
+ *    настолько тихую, что на скриншоте её легко не заметить, а живьём
+ *    страница перестаёт быть плоским листом.
+ * 4. Иерархия строится размером, весом и цветом текста, а не рамками —
+ *    но там, где число само по себе главное (оценка, ранг, код бонуса),
+ *    оно получает бейдж: подложку и моноширинный кегль, чтобы взгляд
+ *    останавливался на цифре раньше, чем на подписи рядом.
  * 5. Цифры в таблицах — моноширинные по ширине (tabular-nums), иначе
  *    колонка со сроками вывода прыгает и её невозможно сканировать глазом.
+ *    Ключевые цифры (оценка, вес критерия) стоят на отдельном шрифте —
+ *    JetBrains Mono, начертание для чисел, а не для прозы.
  * 6. Ни одного текстового символа вместо иконки. Стрелки сортировки и
  *    плюс-минус аккордеона — маски из SVG, всё остальное — спрайт <use>.
+ * 7. Первые три места в любом ранжированном списке подписаны цветом
+ *    (золото / серебро / бронза) через :nth-child, а не классом из
+ *    шаблона — движок ничего не знает про подиум, это чистая CSS-надстройка
+ *    над тем же счётчиком rank, что был и раньше.
  *
  * Все значения — переменные. Второй сайт сети меняет тему в site.json,
  * а не эти правила.
  */
+
+/* ------------------------------------------------------------- типографика */
+
+/* Шрифты лежат в /assets/fonts и грузятся с собственного домена — ни одного
+   запроса на fonts.googleapis.com. Для немецкого сайта это не эстетика,
+   а комплаенс: суд в Мюнхене в 2022 присудил компенсацию посетителю именно
+   за то, что при заходе на страницу его IP ушёл на серверы Google без
+   согласия — ровно то, что делает стандартный google Fonts <link>. Файлы
+   те же (Inter, вариативный по начертанию, и JetBrains Mono), просто
+   отданы с /casino/assets/, как и всё остальное на сайте. */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-latin-ext-wght-normal.woff2') format('woff2-variations'),
+       url('../fonts/inter-latin-ext-wght-normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/jetbrains-mono-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/jetbrains-mono-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ---------------------------------------------------------------- токены */
 
@@ -45,14 +88,16 @@
   --text-dim: #4d5865;
   --text-faint: #63707f;
 
-  /* Акцент разведён на два: тёмная янтарь для текста и линий, светлая —
+  /* Акцент разведён на два: тёмный синий для текста и линий, светлый —
      для заливки кнопки. Одним цветом на светлом фоне не обойтись: то, что
-     читаемо в тексте, выглядит грязным в заливке, и наоборот. */
-  --accent: #a75a10;
-  --accent-soft: #f4a72a;
-  --accent-ink: #35240a;
-  --accent-wash: #fdf6ea;
-  --accent-line: #e6c894;
+     читаемо в тексте, выглядит грязным в заливке, и наоборот. Тот же приём,
+     что был у янтаря, — только новая марка (2026): холодный синий вместо
+     тёплого янтаря, ближе к минималистичной light-fintech палитре. */
+  --accent: #1d4ed8;
+  --accent-soft: #7ca6ff;
+  --accent-ink: #0b2a6b;
+  --accent-wash: #eef3ff;
+  --accent-line: #c3d6ff;
 
   /* Зелёный и красный разведены на три ступени: линия и значок (--good),
      подложка (--good-wash) и текст заголовка на этой подложке (--good-ink).
@@ -70,11 +115,38 @@
   --bad-wash: #fdf0ee;
   --bad-ink: #8c2c20;
 
-  --radius: 8px;
-  --radius-lg: 12px;
+  /* Подиум. Приглушённые, а не открыточные золото/серебро/бронза: цель —
+     чтобы кружок читался медалью и на белом тексте держал 4.5:1, а не
+     копировал цвет настоящей монеты. Значение не зависит от --accent:
+     это единственный акцент в системе, который остаётся тем же цветом,
+     даже если сменить основную марку — подиум узнаётся глазом раньше,
+     чем бренд. */
+  --medal-gold: #9c6b0a;
+  --medal-silver: #5b6472;
+  --medal-bronze: #8a4a1f;
+
+  /* Полная шкала скруглений, а не два значения. Чипу нужно 8px, карточке —
+     12, крупному блоку (таблица, панель фильтров) — 20: одно и то же 12px
+     на них всех читалось либо угловато на панели, либо чрезмерно на чипе.
+     --radius-pill — не то же самое, что border-radius: 999px в разметке
+     ниже: там, где радиус зависит от высоты строки, число нужно каждый раз
+     своё, а константа осталась для настоящих пилюль постоянной высоты. */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
   --line: 1px solid var(--border);
   --shadow-sm: 0 1px 2px rgba(31, 39, 51, 0.05);
   --shadow-md: 0 6px 24px -8px rgba(31, 39, 51, 0.18);
+  /* Крупная тень — только под тем, что и так плавает поверх страницы
+     (открытая панель меню, поповер). На карточке она читалась бы как
+     дефект рендера, а не как «этот элемент выше». */
+  --shadow-lg: 0 24px 48px -16px rgba(31, 39, 51, 0.24);
+  /* Цветная тень — исключительно под главной кнопкой строки, и только
+     она. Отдать этот приём чему-то ещё — значит обесценить кнопку: тень
+     должна безошибочно указывать на «то самое» действие на строке из
+     десяти одинаковых карточек. */
+  --shadow-accent: 0 10px 20px -8px rgba(29, 78, 216, 0.38);
 
   /* Шкала начинается с 16px, а не с 15px. Пятнадцать читались нормально на
      мониторе редактора и плохо — на телефоне под настольной лампой, а
@@ -109,7 +181,37 @@
      значение переопределяется в мобильном блоке одной строкой. */
   --tap: 40px;
 
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Inter первым, системный стек — запасной на случай, если шрифт ещё не
+     догрузился или запрос к /assets/fonts/ по какой-то причине не прошёл:
+     страница остаётся читаемой, просто на системной гарнитуре. */
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Только для чисел, которые сами по себе ответ: оценка, вес критерия,
+     промокод. Не для таблицы целиком — moderate.css уже держит её на
+     tabular-nums основным шрифтом, и полосу из полутора десятков строк
+     моноширинным начертанием читать тяжелее, не легче. */
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ---------------------------------------- премиальный bento/glass (2026.1)
+     Эволюция той же светлой темы, не отказ от неё: заказчик на приёмке
+     отклонил чёрный фон, а не объёмную вёрстку (см. $modeNote в
+     data/site.json). Матовое стекло и «неоновый» акцент для активных
+     состояний — те же светлые поверхности, ни одного нового тёмного или
+     чёрного значения. --shadow-md/--shadow-lg были объявлены выше и до сих
+     пор нигде не использовались в файле — здесь они наконец в деле. */
+  --glass-bg: rgba(255, 255, 255, 0.66);
+  --glass-bg-strong: rgba(255, 255, 255, 0.86);
+  --glass-border: rgba(255, 255, 255, 0.7);
+  --glass-blur: 18px;
+
+  /* Двухслойный glow: тонкий цветной контур плюс мягкое рассеивание под
+     ним — тот же приём, что уже стоит на .cta через --shadow-accent, здесь
+     оформленный переиспользуемым токеном для карточек и активных фильтров,
+     а не только для одной кнопки. */
+  --glow-accent: 0 0 0 1px var(--accent-line), 0 10px 30px -8px rgba(29, 78, 216, 0.32);
+  --glow-accent-lg: 0 0 0 1px var(--accent-line), 0 22px 48px -12px rgba(29, 78, 216, 0.4);
+  --glow-good: 0 0 0 1px color-mix(in srgb, var(--good) 30%, transparent), 0 10px 26px -8px rgba(28, 122, 76, 0.3);
+
+  --bento-radius: 20px;
 }
 
 /* ------------------------------------------------------------------ база */
@@ -118,9 +220,20 @@
 
 html { -webkit-text-size-adjust: 100%; }
 
+/* Фон — не заливка, а два очень тихих радиальных пятна: синее у левого
+   верхнего угла, зелёное у правого, оба на пределе видимости (4% альфы).
+   Задача — снять ощущение «одного плоского листа бумаги» на длинных
+   страницах, не отвлекая ни на пиксель от таблицы. fixed, а не scroll: на
+   странице в три экрана прокручивающийся градиент начинает повторяться и
+   становится узором — тем самым, от которого лист 05 предостерегает. */
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(560px circle at 8% 0%, rgba(29, 78, 216, 0.05), transparent 60%),
+    radial-gradient(560px circle at 96% 8%, rgba(28, 122, 76, 0.04), transparent 60%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--text);
   font: var(--step-0)/1.65 var(--font);
   font-variant-numeric: tabular-nums;
@@ -142,7 +255,7 @@ li { margin-bottom: 0.4rem; }
 li::marker { color: var(--text-faint); }
 small { font-size: var(--step-micro); color: var(--text-dim); }
 strong { font-weight: 650; }
-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: var(--surface-2); padding: 0.1em 0.35em; border-radius: 3px; }
+code { font-family: var(--mono); font-size: 0.9em; background: var(--surface-2); border: var(--line); padding: 0.1em 0.45em; border-radius: var(--radius-sm); }
 
 a {
   color: var(--text); text-decoration: underline;
@@ -399,30 +512,56 @@ main { padding-bottom: 3rem; }
 .hero__title h1 { margin-bottom: 0; }
 .hero__title .mark, .hero__title .logo { border-radius: 10px; }
 
+/* Ответ первого экрана — не абзац, а карточка-цитата: акцентная полоса
+   слева и лёгкая подложка выделяют его на странице, которую иначе открывает
+   один только заголовок. Тот же класс стоит и на вводном абзаце страницы
+   бренда — там он выполняет ту же работу: это первое предложение, которое
+   стоит прочитать целиком, и оно должно быть заметно раньше остального
+   текста, а не сливаться с ним отступом в 1em. */
 .lede {
   font-size: var(--step-1);
   line-height: 1.55;
   color: var(--text);
   max-width: 62ch;
   margin-bottom: 0.9rem;
+  padding: 1rem 1.25rem;
+  /* Стекло 2026.1: тот же приём, что и у .bento-card, но мягче — это первая
+     строчка страницы, а не карточка в сетке, глушить фон под ней сильнее
+     не нужно. */
+  background: linear-gradient(135deg, var(--accent-wash), var(--glass-bg-strong));
+  backdrop-filter: blur(calc(var(--glass-blur) / 2));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) / 2));
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  box-shadow: var(--shadow-sm);
   text-wrap: pretty;
 }
 
 /* Дата сверки и автор — это то, чем страница отвечает на «откуда вы знаете».
-   Раньше строка стояла тем же цветом, что и подписи в таблице, и терялась.
-   Тонкая линия сверху отделяет её от ответа и делает подписью к нему. */
+   Раньше строка стояла тем же цветом, что и подписи в таблице, и терялась
+   на нём. Теперь у неё нет ни линии, ни подложки: карточка-цитата над ней
+   уже отделяет блок от заголовка, вторая линия под ней была бы лишней.
+   Каждая часть — своя пилюля: так «дата» и «автор» читаются как два разных
+   факта, а не одна строка, которую приходится разбирать по запятым. */
 .meta-row {
-  display: flex; flex-wrap: wrap; gap: 0.35rem 1.15rem;
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
   align-items: center;
   font-size: var(--step-micro); color: var(--text-dim);
   margin: 0 0 0.8rem;
-  padding-top: 0.7rem;
-  border-top: var(--line);
   max-width: 62ch;
 }
-.meta-row > span { display: inline-flex; align-items: center; gap: 0.35rem; }
+.meta-row > span {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  background: var(--surface); border: var(--line); border-radius: var(--radius-pill);
+  transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+}
+@media (hover: hover) {
+  .meta-row > span:hover { border-color: var(--accent-line); box-shadow: var(--shadow-sm); transform: translateY(-1px); }
+}
 .meta-row .ic { color: var(--text-faint); }
 .meta-row a { color: var(--text-dim); }
+.meta-row strong { color: var(--text); }
 
 /* Раскрытие партнёрского статуса. Лист 04 требует его над сгибом, но не
    требует отдавать под него блок в четверть экрана: одна строка со знаком,
@@ -625,6 +764,21 @@ table:has(td.cell-actions) thead th:last-child {
   text-align: right; font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+/* Подиум в таблице. data-tier проставляет table-sort.js на живую позицию
+   после сортировки и фильтра (см. renumber() в assets/js/table-sort.js) —
+   :nth-child здесь не годится, он считает узлы DOM, а не видимые строки,
+   и после фильтра «первые три ребёнка» и «первые три видимые» — разные
+   строки. Дальше тройки кружок не идёт: см. токены --medal-* в шапке файла. */
+.cell-brand__rank[data-tier] {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 1.6rem; height: 1.6rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--step-micro); font-weight: 700;
+  color: #fff; text-align: center;
+}
+.cell-brand__rank[data-tier="1"] { background: var(--medal-gold); }
+.cell-brand__rank[data-tier="2"] { background: var(--medal-silver); }
+.cell-brand__rank[data-tier="3"] { background: var(--medal-bronze); }
 /* В ячейке осталось одно имя: плашку «GGL-Lizenz» сняли, лицензия и так
    стоит отдельной колонкой, а на смешанных списках строку помечает
    зелёная кромка слева.
@@ -779,9 +933,20 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
 }
 .card__list > li::before {
   content: counter(rank); flex: none;
-  min-width: 1.15rem;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 1.15rem; height: 1.15rem;
   color: var(--text-faint); font-size: var(--step-micro); font-variant-numeric: tabular-nums;
 }
+/* Тот же подиум, что и в таблице (см. .cell-brand__rank[data-tier]). Этот
+   список не пересортировывается на клиенте, поэтому :nth-child здесь
+   безопасен — «третий ребёнок» и «третья видимая строка» тут одно и то же. */
+.card__list > li:nth-child(-n+3)::before {
+  border-radius: var(--radius-pill);
+  font-weight: 700; color: #fff;
+}
+.card__list > li:nth-child(1)::before { background: var(--medal-gold); }
+.card__list > li:nth-child(2)::before { background: var(--medal-silver); }
+.card__list > li:nth-child(3)::before { background: var(--medal-bronze); }
 .card__list > li > small { margin-left: auto; color: var(--text-dim); font-weight: 600; }
 /* Имя строки — теперь логотип, не текст. 72 px даёт ровно 24 px высоты при
    родных 120×40 у файла: та же высота, что и WCAG 2.2 требует от цели,
@@ -803,7 +968,20 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
    тем же кеглем, что и минимальный депозит, и в ряду из восьми чисел
    ничем среди них не выделялась. */
 .score { white-space: nowrap; font-weight: 650; min-width: 2.8rem; }
-.score b { font-size: var(--step-1); font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+/* Пилюля вместо голого числа: моноширинный JetBrains Mono держит цифры на
+   одной ширине лучше, чем tabular-nums основного шрифта (у Inter «1» и «8»
+   в цифровом начертании визуально чуть разной толщины пера — на отдельно
+   стоящей оценке, набранной крупно, это заметно, в таблице на 14px — нет,
+   поэтому шкала строк по-прежнему на обычном шрифте). Подложка красится
+   по тому же порогу, что и полоска под ней (см. .score.is-* ниже) —
+   у пилюли и у шкалы должен быть один ответ на вопрос «это хорошо?». */
+.score b {
+  display: inline-block;
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+  font-size: var(--step-0); font-weight: 600; letter-spacing: -0.01em;
+  padding: 0.1em 0.5em; border-radius: var(--radius-sm);
+  color: var(--text); background: var(--surface-2);
+}
 .score i {
   display: block; height: 4px; margin-top: 0.35rem; width: 2.75rem;
   background: var(--surface-3); border-radius: 999px; overflow: hidden;
@@ -820,7 +998,9 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
 .score.is-high i::after { background: var(--good); }
 .score.is-mid i::after  { background: var(--accent-soft); }
 .score.is-low i::after  { background: var(--border-strong); }
-.score.is-high b { color: var(--good-ink); }
+.score.is-high b { color: var(--good-ink); background: var(--good-wash); }
+.score.is-mid b  { color: var(--accent-ink); background: var(--accent-wash); }
+.score.is-low b  { color: var(--text-dim); background: var(--surface-2); }
 /* Заглушка «не проверено» не должна задавать ширину колонки: она длиннее
    любого настоящего значения, а строкой в одну линию растягивала четыре
    числовые колонки так, что таблица переставала помещаться. */
@@ -829,12 +1009,25 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
   color: var(--text-faint); font-weight: 400;
   font-size: 0.75rem; line-height: 1.3;
   white-space: normal; max-width: 6rem;
+  /* Прозаическая заглушка «noch nicht geprüft», а не число — моно ей не
+     полагается, даже если она сидит внутри моноширинной ячейки-бейджа. */
+  font-family: var(--font);
 }
 
 /* Вес критерия той же шкалой, что и оценка: 25 % против 10 % видно
    глазом, а не вычитанием. */
 .weight { white-space: nowrap; }
-.weight b { font-weight: 700; }
+/* Та же пилюля, что у оценки, но без оценочного цвета: вес критерия не
+   бывает «хорошим» или «плохим», это фиксированная методика, а не
+   результат. Нейтральная подложка вместо тона по порогу — единственное
+   отличие от .score b. */
+.weight b {
+  display: inline-block;
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+  font-weight: 600; letter-spacing: -0.01em;
+  padding: 0.1em 0.5em; border-radius: var(--radius-sm);
+  color: var(--text-dim); background: var(--surface-2);
+}
 .weight i {
   display: block; height: 4px; margin-top: 0.35rem; width: 3.5rem;
   background: var(--surface-3); border-radius: 999px; overflow: hidden;
@@ -860,6 +1053,13 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
   border: var(--line); border-radius: 999px;
   background: var(--surface-2);
   color: var(--text-dim); white-space: nowrap;
+  transition: transform var(--ease), box-shadow var(--ease);
+}
+/* Интерактивный бейдж лицензии/выплаты из брифа: лёгкий подъём по
+   наведению, тот же язык, что и у .bento/.meta-row — бейдж не кликабелен
+   сам по себе, но реагирует на курсор, а не сидит мёртвым фактом. */
+@media (hover: hover) {
+  .pill:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
 }
 .pill .ic { width: 11px; height: 11px; }
 .pill--ok { color: var(--good); background: var(--good-wash); border-color: color-mix(in srgb, var(--good) 22%, transparent); }
@@ -870,21 +1070,25 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
 
 .cta, .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
-  min-height: var(--tap); padding: 0.4rem 0.85rem;
-  border-radius: var(--radius);
+  min-height: var(--tap); padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-pill);
   font-weight: 650; font-size: var(--step--1);
   text-decoration: none; white-space: nowrap;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: background var(--ease), border-color var(--ease), color var(--ease);
+  transition: background var(--ease), border-color var(--ease), color var(--ease), box-shadow var(--ease);
 }
+/* Заливка сплошным акцентом и белым текстом, а не светлой заливкой с
+   тёмным текстом, как раньше: это единственная кнопка на строке из
+   десяти одинаковых карточек, к которой нужно вести взгляд в первую
+   очередь, и ей нужен вес, а не деликатность. Цветная тень — тот же
+   приём, что метит главное действие визуально, без слов «главное». */
 .cta {
-  background: var(--accent-soft); color: var(--accent-ink);
-  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
-  box-shadow: var(--shadow-sm);
+  background: var(--accent); color: #fff;
+  box-shadow: var(--shadow-accent);
 }
-.cta:hover { background: color-mix(in srgb, var(--accent-soft) 82%, var(--accent)); color: var(--accent-ink); }
-.cta--lg { min-height: 48px; padding: 0.6rem 1.25rem; font-size: var(--step-0); }
+.cta:hover { background: var(--accent-ink); box-shadow: 0 12px 24px -8px rgba(29, 78, 216, 0.46); }
+.cta--lg { min-height: 48px; padding: 0.7rem 1.5rem; font-size: var(--step-0); }
 
 .btn { background: var(--surface); color: var(--text-dim); border-color: var(--border-strong); }
 .btn:hover { color: var(--accent); border-color: var(--accent-line); background: var(--accent-wash); }
@@ -892,9 +1096,16 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
 
 /* ------------------------------------------------------------------ фильтры */
 
-/* Обёртка фильтров. На широком экране прозрачна: <details open> без
-   собственного вида, кнопка-раскрывашка спрятана. Вся работа — на узком. */
-.filters-wrap { display: contents; }
+/* Обёртка фильтров. На широком экране без собственного вида — рамки,
+   фона и отступов у неё нет, кнопка-раскрывашка спрятана, — но именно
+   `display: block` (родной для <details>), а не `display: contents`.
+   display: contents в Chromium и Firefox ломает `position: sticky` у
+   ребёнка: контейнер перестаёт участвовать в раскладке, и sticky-контекст
+   для .filters разрешается уже не туда — command-bar 2026.1 просто едет
+   вместе со страницей вместо того, чтобы прилипать под шапкой. Без
+   собственных визуальных стилей на .filters-wrap разницы в виде это не
+   даёт, поэтому правки в разметке не нужны. */
+.filters-wrap { display: block; }
 .filters__toggle { display: none; }
 
 .filters {
@@ -906,6 +1117,29 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   margin-bottom: 0.7rem;
+}
+/* Command-bar: панель фильтров липнет под шапкой на широком экране — тот
+   самый «floating control» из брифа, без нового компонента и без правки
+   filters.js: data-filter-* контракт тот же, меняется только position.
+   На мобильном не трогаем — там своя раскладка (bottom-sheet, см. ниже),
+   и второй sticky-слой поверх схлопывающегося <details> только мешал бы.
+   sticky стоит на .filters-wrap, а не на .filters: содержащий блок для
+   sticky-позиционирования — это ближайший родитель, а у .filters им был
+   бы .filters-wrap, который по высоте ровно равен самому .filters (кроме
+   него внутри ничего нет). У sticky-элемента без запаса высоты в
+   содержащем блоке буквально нет пространства, чтобы прилипнуть, — по
+   факту это неотличимо от обычного потока, ровно то, что показал первый
+   заход. У .filters-wrap родитель — <main>, растянутый на всю страницу,
+   и там есть, в границах чего прилипать при прокрутке таблицы под ним. */
+@media (min-width: 901px) {
+  .filters-wrap {
+    position: sticky; top: calc(var(--head-h) + 0.6rem); z-index: 10;
+  }
+  .filters {
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+  }
 }
 .filters__legend {
   display: flex; align-items: center; gap: 0.45rem;
@@ -950,8 +1184,21 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
   border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent-line);
   font-weight: 650; background-color: var(--accent-wash);
 }
-.filters__status { margin-left: auto; font-size: var(--step--1); color: var(--text-dim); white-space: nowrap; padding-bottom: 0.4rem; }
-.filters__status output { color: var(--text); font-weight: 700; }
+.filters__status {
+  display: flex; align-items: center; gap: 0.45rem;
+  margin-left: auto; font-size: var(--step--1); color: var(--text-dim);
+  white-space: nowrap; padding-bottom: 0.4rem;
+}
+/* Счётчик — не число в строке, а бейдж: результат фильтра это первое,
+   что нужно увидеть, применив его, а не подпись, которую приходится
+   выцеплять из предложения глазами. */
+.filters__status output {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 1.6rem; height: 1.6rem; padding: 0 0.4rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent); color: #fff;
+  font-family: var(--mono); font-weight: 700; font-size: var(--step-micro);
+}
 [data-filter-reset] {
   font: inherit; font-size: var(--step--1);
   background: var(--surface); color: var(--text-dim);
@@ -1070,13 +1317,18 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
    бейдже картинка 64×21 — на 3 px ниже минимума WCAG 2.2. Паддинг на самой
    ссылке добирает высоту цели до 24, не трогая видимый размер знака. */
 .card__badge .logo-link { padding: 1.5px 0; }
+/* Тот же подиум, что в таблице и в .card__list (см. --medal-* в шапке
+   файла). Список всегда ровно из трёх карточек — ranked.slice(0, 3) в
+   home.js — поэтому :nth-child здесь безопасен без единой оговорки. */
 .card__rank {
   display: grid; place-items: center;
   width: 1.6rem; height: 1.6rem; border-radius: 50%;
-  background: var(--accent-wash); border: 1px solid var(--accent-line);
-  font-size: 0.8125rem; font-weight: 700; color: var(--accent);
+  background: var(--medal-silver);
+  font-size: 0.8125rem; font-weight: 700; color: #fff;
   line-height: 1;
 }
+.card--top:nth-child(1) .card__rank { background: var(--medal-gold); }
+.card--top:nth-child(3) .card__rank { background: var(--medal-bronze); }
 .card__score { display: flex; align-items: baseline; gap: 0.3rem; font-size: var(--step--1); color: var(--text-dim); }
 .card__score b { font-size: var(--step-2); font-weight: 700; color: var(--text); }
 .card__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-bottom: 0.5rem; }
@@ -1094,12 +1346,229 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
 .chips .ic { color: var(--text-faint); }
 .chips a:hover .ic { color: var(--accent); }
 
+/* ------------------------------------------------------- бенто-компоненты
+
+   Атомарные блоки редизайна 2026.1: RatingBadge, BonusPill, ScoreBar (уже
+   была — .score выше) и строка Quick Metrics. .bento ставится вторым
+   классом рядом с .card, а не вместо него — рамка/радиус/тень базовой
+   карточки остаются, здесь только матовое стекло и подъём по наведению.
+   Там, где backdrop-filter не поддерживается (Firefox до 103, старые
+   WebView), --glass-bg и так достаточно непрозрачен для читаемого текста
+   поверх и без размытия — деградация тихая, без @supports. */
+.bento {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-color: var(--glass-border);
+  border-radius: var(--bento-radius);
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+@media (hover: hover) {
+  .bento:hover, .bento:focus-within {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-line);
+  }
+}
+/* Выделенная плитка — «Top Pick», плавающий бонус-бар: непрозрачнее
+   обычного стекла и сразу со свечением, а не только по наведению. */
+.bento--featured {
+  background: var(--glass-bg-strong);
+  box-shadow: var(--glow-accent);
+  border-color: var(--accent-line);
+}
+@media (hover: hover) {
+  .bento--featured:hover { box-shadow: var(--glow-accent-lg); }
+}
+
+/* Акцентная подсветка для CTA, который стоит один на весь блок (не в
+   строке таблицы — там его уже выделяет --shadow-accent на .cta). Пульс
+   мягкий и виден на паузе между наведениями, а не как замена hover;
+   отключается вместе со всеми transition/animation под reduced-motion. */
+.cta--glow { box-shadow: var(--glow-accent-lg); animation: cta-pulse 2.6s ease-in-out infinite; }
+@media (hover: hover) {
+  .cta--glow:hover { animation-play-state: paused; box-shadow: 0 0 0 1px var(--accent-line), 0 26px 54px -10px rgba(29, 78, 216, 0.5); }
+}
+@keyframes cta-pulse {
+  0%, 100% { box-shadow: var(--glow-accent-lg); }
+  50% { box-shadow: 0 0 0 1px var(--accent-line), 0 14px 34px -8px rgba(29, 78, 216, 0.5); }
+}
+@media (prefers-reduced-motion: reduce) { .cta--glow { animation: none; } }
+
+/* Кольцевой бейдж оценки (RatingBadge) — самостоятельный компонент вне
+   ячейки таблицы: там числа держит .score, здесь оценка — визуальный
+   акцент бенто-карточки или шапки обзора. Кольцо — conic-gradient по
+   --pct, тот же параметр, что уже заполняет .score i, без единой строки
+   JS на клиенте: значение приходит инлайновым style="--pct:NN%" с сервера. */
+.rating-badge {
+  --pct: 0%;
+  display: inline-grid; place-items: center;
+  width: 3.4rem; height: 3.4rem; border-radius: 50%; flex: none;
+  background:
+    radial-gradient(closest-side, var(--surface) 72%, transparent 73%),
+    conic-gradient(var(--accent-soft) var(--pct), var(--surface-3) 0);
+}
+.rating-badge__value {
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+  font-size: var(--step-0); font-weight: 700; color: var(--text);
+}
+.rating-badge--lg { width: 4.4rem; height: 4.4rem; }
+.rating-badge--lg .rating-badge__value { font-size: var(--step-1); }
+/* Те же пороги и тот же язык цвета, что у .score.is-*. */
+.rating-badge.is-high { background: radial-gradient(closest-side, var(--surface) 72%, transparent 73%), conic-gradient(var(--good) var(--pct), var(--surface-3) 0); }
+.rating-badge.is-high .rating-badge__value { color: var(--good-ink); }
+.rating-badge.is-mid { background: radial-gradient(closest-side, var(--surface) 72%, transparent 73%), conic-gradient(var(--accent) var(--pct), var(--surface-3) 0); }
+.rating-badge.is-low { background: radial-gradient(closest-side, var(--surface) 72%, transparent 73%), conic-gradient(var(--border-strong) var(--pct), var(--surface-3) 0); }
+
+/* Пилюля суммы бонуса (BonusPill) — крупнее и заметнее обычной .pill: это
+   число, ради которого открывают карточку, а не факт вроде лицензии. */
+.bonus-pill {
+  display: inline-flex; align-items: baseline; gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--accent-wash); border: 1px solid var(--accent-line);
+  border-radius: var(--radius-pill);
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+  color: var(--accent-ink);
+}
+.bonus-pill b { font-size: var(--step-1); font-weight: 700; }
+.bonus-pill small { color: var(--accent-ink); opacity: 0.75; font-family: var(--font); }
+
+/* Строка Quick Metrics: скорость выплат, вейджер, минимальный депозит
+   одним взглядом, тем же языком чисел, что и остальной сайт — моно-кегль,
+   подпись мельче и бледнее сверху. --good подсвечивает то значение,
+   которое лучше медианы (сейчас — только быстрая выплата). */
+.badge-metrics { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.7rem 0; }
+.badge-metric {
+  display: flex; flex-direction: column; gap: 0.2rem;
+  min-width: 4.75rem; padding: 0.45rem 0.65rem;
+  background: var(--surface-alt); border: var(--line); border-radius: var(--radius);
+}
+.badge-metric__label {
+  display: flex; align-items: center; gap: 0.3rem;
+  font-size: 0.6875rem; color: var(--text-faint);
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.badge-metric__label .ic { color: var(--text-faint); }
+.badge-metric__value {
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+  font-size: var(--step-0); font-weight: 650; color: var(--text);
+}
+.badge-metric--good { background: var(--good-wash); border-color: color-mix(in srgb, var(--good) 22%, transparent); }
+.badge-metric--good .badge-metric__label { color: var(--good-ink); }
+.badge-metric--good .badge-metric__label .ic { color: var(--good); }
+.badge-metric--good .badge-metric__value { color: var(--good-ink); }
+
+/* Радар критериев оценки — инлайновый SVG без единой зависимости, второй
+   взгляд на те же шесть чисел, что уже есть в таблице разбора (см.
+   scoreBreakdown() в brand.js). Таблицу не заменяет — сортировка, печать
+   и скринридер остаются на ней, диаграмма её визуальный компаньон. */
+.radar { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin: 0.9rem 0 1.2rem; }
+/* max-width/height:auto поверх атрибутов width/height SVG: на узком
+   экране блок сжимается вместе с колонкой, а не толкает её в прокрутку —
+   разметка серверная, брейкпоинт для фиксированного размера заводить
+   незачем. */
+.radar__chart { flex: none; overflow: visible; max-width: 100%; height: auto; }
+.radar__chart .radar-grid { fill: none; stroke: var(--border); stroke-width: 1; }
+.radar__chart .radar-axis { stroke: var(--border); stroke-width: 1; }
+.radar__chart .radar-shape { fill: color-mix(in srgb, var(--accent) 16%, transparent); stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; }
+.radar__chart .radar-dot { fill: var(--accent); }
+/* Цифра у вершины вместо полного названия критерия — немецкие названия
+   («Zahlungsmethoden», «Support und Mobil») не помещаются подписью прямо
+   на диаграмме без обрезки о край SVG. Расшифровка — в .radar__key рядом,
+   та же цифра там первым знаком строки. */
+.radar__chart .radar-label-bg { fill: var(--surface); stroke: var(--accent-line); stroke-width: 1; }
+.radar__chart .radar-label { font: 700 10px var(--mono); fill: var(--accent-ink); }
+.radar__key { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; font-size: var(--step-micro); color: var(--text-dim); min-width: 13rem; }
+.radar__key li { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; }
+.radar__key li > span { display: flex; align-items: center; gap: 0.5rem; }
+.radar__key-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.15rem; height: 1.15rem; border-radius: 50%; flex: none;
+  background: var(--accent-wash); border: 1px solid var(--accent-line);
+  font-family: var(--mono); font-size: 0.6875rem; font-weight: 700; color: var(--accent-ink);
+}
+.radar__key b:not(.radar__key-num) { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--text); }
+
+/* Единая карточка казино (Casino Card / brandCard()) — сборка уже готовых
+   кусков (.bento, .rating-badge, .bonus-pill, .badge-metrics,
+   .pro-cons-tags) в одну карточку вместо трёх вручную свёрстанных
+   .card--top/.card, что раньше писал каждый шаблон отдельно. */
+.bento-card { display: flex; flex-direction: column; }
+.bento-card__head { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+.bento-card__head .rating-badge { margin-left: auto; }
+.bento-card h3 { margin: 0 0 0.35rem; font-size: var(--step-1); }
+.bento-card h3 a { text-decoration: none; }
+.bento-card h3 a:hover { text-decoration: underline; }
+.bento-card__actions { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.5rem; }
+.bento-card__actions .cta, .bento-card__actions .btn { width: 100%; }
+
+/* Ровно одна карточка на грид может быть spotlight («Top Pick» из брифа):
+   лента сверху и рамка чуть плотнее остальных .bento--featured. Свечение
+   и пульс живут на самой кнопке через .cta--glow (см. выше), не здесь —
+   если вынести их на всю карточку, соседние карточки в том же :hover
+   ряду начинают казаться потухшими, а не спокойными. */
+.bento-card--spotlight { position: relative; border-color: var(--accent-line); }
+.bento-card__ribbon {
+  position: absolute; top: -0.6rem; left: 1rem; z-index: 1;
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  background: var(--accent); color: #fff;
+  border-radius: var(--radius-pill);
+  font-size: var(--step-micro); font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+.bento-card__ribbon .ic { color: #fff; }
+
+/* Плавающая плашка с бонусом (Sticky/Floating Bar) — только на странице
+   казино, появляется скриптом (см. assets/js/sticky-cta.js), когда
+   основной CTA над сгибом уходит из вьюпорта. hidden по умолчанию: без JS
+   элемент не показывается вовсе, атрибут снимает только сам наблюдатель. */
+.sticky-bonus {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  padding-bottom: calc(0.6rem + env(safe-area-inset-bottom, 0px));
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-lg);
+  animation: sticky-bonus-in 0.2s ease;
+}
+.sticky-bonus[hidden] { display: none; }
+.sticky-bonus__brand { display: flex; align-items: center; gap: 0.5rem; min-width: 0; flex: 1 1 auto; }
+.sticky-bonus__brand strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sticky-bonus .bonus-pill, .sticky-bonus .cta { flex: none; }
+@keyframes sticky-bonus-in { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .sticky-bonus { animation: none; } }
+@media (max-width: 640px) {
+  .sticky-bonus .bonus-pill small { display: none; }
+}
+
+/* Компактные pros/cons-теги карточки — не полноразмерный .plus-minus (тот
+   для развёрнутого списка на странице обзора), а плотная строка из двух-
+   трёх пунктов, чтобы сравнить казино с одного взгляда по сетке карточек. */
+.pro-cons-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 0.6rem; padding: 0; list-style: none; }
+.pro-cons-tags li {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.2rem 0.55rem; border-radius: 999px;
+  font-size: var(--step-micro); line-height: 1.3;
+}
+.pro-cons-tags li.is-pro { background: var(--good-wash); color: var(--good-ink); }
+.pro-cons-tags li.is-con { background: var(--bad-wash); color: var(--bad-ink); }
+
 /* Пары «свойство — значение» с линией на каждую строку. Без линий шесть
    пар подряд, где значение занимает две-три строки текста, склеиваются в
    сплошной блок, и глазом уже не поймать, к какой подписи относится
    абзац напротив. */
+/* Spec-блок вместо голой линии: пара dt/dd — один плотный ряд с иконкой
+   слева от подписи (иконка необязательна — dt без .ic выглядит как раньше,
+   просто без засечки слева). Зебра — по номеру ряда через nth-of-type: dt и
+   dd считаются каждый в своём типе, поэтому «второй dt» и «второй dd» — это
+   один и тот же смысловой ряд, без разъезда чётности между колонками. */
 .kv {
-  display: grid; grid-template-columns: minmax(8rem, max-content) 1fr;
+  display: grid; grid-template-columns: minmax(9rem, max-content) 1fr;
+  gap: 0.2rem 0;
   margin: 0 0 1.25rem; font-size: var(--step-0);
 }
 
@@ -1117,9 +1586,21 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
   display: inline-block;
   padding: 0.3rem 0; margin: -0.3rem 0;
 }
-.kv dt { color: var(--text-dim); padding: 0.6rem 1.5rem 0.6rem 0; border-top: var(--line); }
-.kv dd { margin: 0; padding: 0.6rem 0; border-top: var(--line); }
-.kv > dt:first-of-type, .kv > dt:first-of-type + dd { border-top: 0; padding-top: 0; }
+.kv dt {
+  display: flex; align-items: center; gap: 0.5rem;
+  color: var(--text-dim);
+  padding: 0.6rem 1rem 0.6rem 0.85rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+.kv dd {
+  margin: 0;
+  padding: 0.6rem 0.85rem 0.6rem 0;
+  background: var(--surface-alt);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.kv dt:nth-of-type(even), .kv dd:nth-of-type(even) { background: var(--surface); }
+.kv dt .ic { color: var(--accent); flex: none; }
 
 .callout {
   background: var(--surface);
@@ -1132,10 +1613,10 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
 .callout p:last-child { margin-bottom: 0; }
 .callout strong { color: var(--text); }
 
-/* Карточка человека. Фотографий нет и до замены профилей не будет, а три
-   одинаково серые карточки подряд читались как незаполненная форма.
-   Монограмма своим тоном даёт карточке лицо и стоит ровно столько же
-   байт, сколько инициалы. */
+/* Карточка человека. .avatar — либо фото (<img>, если в authors.json есть
+   a.photo), либо монограмма (<span> с инициалами) там, где фото ещё нет —
+   тот же класс, оба варианта одного размера и радиуса, чтобы карточки в
+   гриде не скакали высотой в зависимости от того, у кого уже есть снимок. */
 .card--person > h2 { display: flex; align-items: center; gap: 0.65rem; border-left: 0; padding-left: 0; }
 .avatar {
   flex: none;
@@ -1143,6 +1624,11 @@ tbody tr:has(details[open]) th, tbody tr:has(details[open]) td { vertical-align:
   width: 2.4rem; height: 2.4rem; border-radius: 50%;
   font-size: var(--step--1); font-weight: 700; letter-spacing: 0.02em;
   background: var(--accent-wash); color: var(--accent);
+}
+img.avatar {
+  object-fit: cover;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
 }
 .avatar[data-tone="1"] { background: var(--info-wash); color: var(--info-ink); }
 .avatar[data-tone="2"] { background: var(--good-wash); color: var(--good-ink); }
@@ -1396,17 +1882,38 @@ details.faq-item, .section > details {
   thead { display: none; }
   tbody { display: grid; gap: 0.7rem; }
 
+  /* Бенто/стекло 2026.1: та же карточка, что и .bento (см. выше), но без
+     самого класса — строку рисует table-sort.js из голой <tr>, заводить
+     туда ещё один атрибут ради имени класса не нужно, свойства можно
+     продублировать напрямую. Подъём и свечение по наведению/фокусу — тот
+     же токен --shadow-md, что стоял объявленным, но неиспользуемым. */
   tbody tr {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 0 0.85rem;
     padding: 0.9rem 0.95rem;
-    background: var(--surface);
-    border: var(--line);
-    border-radius: var(--radius-lg);
+    background: var(--glass-bg-strong);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--bento-radius);
     box-shadow: var(--shadow-sm);
+    transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
   }
+  @media (hover: hover) {
+    tbody tr:hover, tbody tr:focus-within {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-line);
+    }
+  }
+  /* Первые три строки карточной раскладки — те же подиумные позиции, что и
+     в таблице (см. .cell-brand__rank[data-tier]): тонкая цветная кромка
+     сверху карточки повторяет медаль, не дожидаясь взгляда на номер. */
+  tbody tr:has(.cell-brand__rank[data-tier="1"]) { box-shadow: var(--shadow-sm), inset 0 2px 0 var(--medal-gold); }
+  tbody tr:has(.cell-brand__rank[data-tier="2"]) { box-shadow: var(--shadow-sm), inset 0 2px 0 var(--medal-silver); }
+  tbody tr:has(.cell-brand__rank[data-tier="3"]) { box-shadow: var(--shadow-sm), inset 0 2px 0 var(--medal-bronze); }
   /* Зебра и подсветка по наведению — механизмы, помогающие не потерять
      строку в широкой таблице. У отдельно стоящей карточки терять нечего,
      а чередование фона делает список пёстрым. */
@@ -1451,6 +1958,37 @@ details.faq-item, .section > details {
     content: attr(data-label);
     flex: none; margin-right: auto; text-align: left;
     color: var(--text-dim); font-weight: 500;
+  }
+
+  /* Quick-metrics бейджи прямо в карточке-строке: бонус, вейджер, минимальный
+     депозит и скорость выплат читаются одним взглядом, тем же языком, что
+     .badge-metric в brandCard() — плитка вместо голой пары «подпись — число».
+     Разметка та же самая (data-col уже стоит на каждой ячейке td() в
+     offersTable() — см. _lib/layout.js), меняются только стили. */
+  tbody td[data-col="bonus"], tbody td[data-col="wagering"],
+  tbody td[data-col="min-deposit"], tbody td[data-col="payout"] {
+    background: var(--surface-alt); border: var(--line); border-radius: var(--radius);
+    padding: 0.45rem 0.6rem; margin: 0.3rem 0 0;
+  }
+  tbody td[data-col="bonus"]::before, tbody td[data-col="wagering"]::before,
+  tbody td[data-col="min-deposit"]::before, tbody td[data-col="payout"]::before {
+    font-size: var(--step-micro);
+  }
+  /* Моно — только для голого числа. У ячейки нет отдельного узла под
+     значение (число — прямой текст td, см. td() в _lib/layout.js), поэтому
+     моноширинный шрифт ставится на саму ячейку, а подпись (::before) и
+     уточнение (<small>, обычно немецкая фраза вроде «nur auf den Bonus»)
+     явно возвращаются на текстовый — принцип 5 дизайн-системы: моно для
+     цифр, не для прозы. */
+  tbody td[data-col="bonus"], tbody td[data-col="wagering"],
+  tbody td[data-col="min-deposit"], tbody td[data-col="payout"] {
+    font-family: var(--mono); font-variant-numeric: tabular-nums;
+  }
+  tbody td[data-col="bonus"]::before, tbody td[data-col="wagering"]::before,
+  tbody td[data-col="min-deposit"]::before, tbody td[data-col="payout"]::before,
+  tbody td[data-col="bonus"] small, tbody td[data-col="wagering"] small,
+  tbody td[data-col="min-deposit"] small, tbody td[data-col="payout"] small {
+    font-family: var(--font);
   }
 
   /* Оценка из таблицы предложений поднимается в шапку карточки, к названию
@@ -1559,7 +2097,14 @@ details.faq-item, .section > details {
   :root { --step-4: 1.75rem; --step-3: 1.4375rem; --step-2: 1.25rem; --gap-lg: 1.25rem; --head-h: 54px; }
 
   .wrap { padding: 0 0.6rem; }
-  .lede { font-size: var(--step-0); }
+  .lede { font-size: var(--step-0); padding: 0.85rem 1rem; }
+
+  /* fixed на длинной странице — это перерисовка фона на каждый кадр
+     прокрутки на телефонах, которые с ней не справляются (в первую
+     очередь iOS Safari): скролл начинает подёргиваться там, где на
+     десктопе тот же градиент не стоил ничего. Пятна настолько бледные,
+     что их отсутствие при прокрутке всё равно не заметно. */
+  body { background-attachment: scroll; }
 
   /* Логотип рядом с H1 приходит в родные 120 px и на 390-пиксельном экране
      оставляет заголовку половину ширины: «Betano Erfahrungen 2026» вставало
@@ -1600,10 +2145,42 @@ details.faq-item, .section > details {
     mask: var(--ic-chevron) center / contain no-repeat;
     transition: transform 0.15s;
   }
-  .filters-wrap[open] .filters__toggle { border-radius: var(--radius-lg) var(--radius-lg) 0 0; border-bottom: 0; }
-  .filters-wrap[open] .filters__toggle::after { transform: rotate(180deg); }
-  .filters-wrap[open] .filters { border-radius: 0 0 var(--radius-lg) var(--radius-lg); margin-bottom: 0; }
+  /* Кнопка больше не «сливается» с панелью снизу — панель теперь
+     самостоятельный лист внизу экрана (см. ниже), а не разворот прямо под
+     кнопкой, поэтому квадратные нижние углы ей не нужны. Активное
+     состояние вместо этого читается акцентной подсветкой самой кнопки. */
+  .filters-wrap[open] .filters__toggle { border-color: var(--accent-line); background: var(--accent-wash); color: var(--accent-ink); }
+  .filters-wrap[open] .filters__toggle::after { transform: rotate(180deg); color: var(--accent); }
   .filters-wrap[open] .filters__legend { display: none; }
+
+  /* Bottom-sheet: раскрытая панель фильтров больше не разворачивается в
+     потоке страницы под кнопкой, а поднимается листом снизу — тот же
+     мобильный паттерн, что и у нативных пикеров. Подложку добавляет
+     nav.js (setupSheet()), закрытие по-прежнему на самом <details>. */
+  .filters-wrap[open] .filters {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    max-height: 80vh; overflow-y: auto;
+    margin-bottom: 0;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    box-shadow: var(--shadow-lg);
+    padding-top: 1.15rem;
+    padding-bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px));
+  }
+  /* Ручка шторки — визуальная подсказка «это лист, а не панель», не жест:
+     свайп для закрытия здесь не ловится, для этого нужен отдельный
+     touch-обработчик, а закрыть можно и так — кнопкой, Esc или клику по
+     подложке. */
+  .filters-wrap[open] .filters::before {
+    content: "";
+    position: absolute; top: 0.55rem; left: 50%; transform: translateX(-50%);
+    width: 2.25rem; height: 4px; border-radius: 999px;
+    background: var(--border-strong);
+  }
+  .filters-wrap__scrim {
+    position: fixed; inset: 0; z-index: 49;
+    background: rgba(31, 39, 51, 0.32);
+    border: 0; padding: 0; cursor: default;
+  }
 
   .filters { padding: 0.65rem; }
   .filters__legend { flex-basis: 100%; padding-bottom: 0; }
@@ -1611,9 +2188,34 @@ details.faq-item, .section > details {
   .filters__status { margin-left: 0; width: 100%; padding-bottom: 0; }
 
   .site-foot__grid { grid-template-columns: 1fr; gap: var(--gap); }
-  .kv { grid-template-columns: 1fr; gap: 0.1rem 0; }
-  .kv dt { margin-top: 0.5rem; }
+  /* Стек: dt и dd — уже не половины одного ряда, а верх и низ одной плитки.
+     Grid-gap здесь не подходит: он развёл бы одинаковым зазором и dt со
+     своим dd, и dd со следующим dt, а плитка должна остаться целой —
+     поэтому зазор между парами снова на margin-top у dt, как и было. */
+  .kv { grid-template-columns: 1fr; gap: 0; }
+  .kv dt {
+    margin-top: 0.5rem; padding: 0.5rem 0.85rem 0.3rem;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  }
+  .kv dd { padding: 0.3rem 0.85rem 0.6rem; border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
   .grid { grid-template-columns: 1fr; }
+
+  /* Карусель топ-листа/похожих казино на телефоне — свайп вместо
+     вертикального стека (модификатор .grid--carousel из home.js/brand.js).
+     Остальные .grid-списки (депортированные бренды, грид лицензий,
+     карточки авторов) карусели не получают: там карточки читают одну за
+     другой, а не сравнивают пролистыванием, — вертикальный стек им ближе. */
+  .grid--carousel {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    margin: 0 -0.6rem; padding: 0.2rem 0.6rem 0.9rem;
+  }
+  .grid--carousel > li {
+    flex: 0 0 86%;
+    scroll-snap-align: start; scroll-snap-stop: always;
+  }
 }
 
 @media (max-width: 430px) {
@@ -1631,7 +2233,7 @@ details.faq-item, .section > details {
    по которым нельзя нажать. */
 @media print {
   .site-head, .site-foot, .filters-wrap, .filters, .menu,
-  .cta, .btn, .disclosure, .empty-note { display: none; }
+  .cta, .btn, .disclosure, .empty-note, .sticky-bonus { display: none; }
 
   /* Три колонки на бумагу не едут, и каждая по своей причине:
 

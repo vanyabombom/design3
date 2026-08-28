@@ -107,10 +107,17 @@
       if (!cell) return;
       if (row.hidden) {
         cell.textContent = '';
+        cell.removeAttribute('data-tier');
         return;
       }
       n += 1;
       cell.textContent = String(n);
+      // Золото/серебро/бронза в CSS читают этот атрибут, а не :nth-child:
+      // после сортировки или фильтра первые три строки в DOM — не то же
+      // самое, что первые три видимые, а медаль обязана сидеть на видимой
+      // позиции, не на разметке.
+      if (n <= 3) cell.setAttribute('data-tier', String(n));
+      else cell.removeAttribute('data-tier');
     });
   }
 

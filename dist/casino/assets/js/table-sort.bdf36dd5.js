@@ -52,10 +52,13 @@ var cell = row.querySelector('[data-rank]');
 if (!cell) return;
 if (row.hidden) {
 cell.textContent = '';
+cell.removeAttribute('data-tier');
 return;
 }
 n += 1;
 cell.textContent = String(n);
+if (n <= 3) cell.setAttribute('data-tier', String(n));
+else cell.removeAttribute('data-tier');
 });
 }
 function applySort(table, headers, column, direction) {
