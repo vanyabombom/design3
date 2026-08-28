@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Static site generator for casino review sites. Zero dependencies by design.",
   "engines": {
-    "node": ">=20"
+    "node": "24.x"
   },
   "scripts": {
     "build": "node build.js",
