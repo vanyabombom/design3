@@ -2,55 +2,103 @@
 «ЧЕГО НЕ ДЕЛАТЬ» листа 08 из ТЗ обзорников.
 
 Ошибок: 0
-Предупреждений: 0
+Предупреждений: 22
 
 ==============================================================================
+
+[WARN] title-length — 14
+    /casino-payment/paypal-casino/
+        title 57 знаков, норма 60–65: «PayPal Casino Deutschland 2026 – 10 Anbieter im Vergleich»
+    /bonusse/
+        title 55 знаков, норма 60–65: «Casinos nach Bonus 2026 – 2 Listen für deutsche Spieler»
+    /aktuell/
+        title 44 знаков, норма 60–65: «Aktuell 2026 – 3 Listen für deutsche Spieler»
+    /lizenzen/
+        title 56 знаков, норма 60–65: «Casinos nach Lizenz 2026 – 1 Listen für deutsche Spieler»
+    /live-spiele/
+        title 48 знаков, норма 60–65: «Live-Casino 2026 – 2 Listen für deutsche Spieler»
+    /quoten/
+        title 48 знаков, норма 60–65: «Sportwetten 2026 – 2 Listen für deutsche Spieler»
+    /casino/merkur-bets/
+        title 59 знаков, норма 60–65: «Merkur Bets Erfahrungen 2026 – Auszahlung und Bonus im Test»
+    /so-testen-wir/
+        title 44 знаков, норма 60–65: «So testen wir – Beste Online Casinos DE 2026»
+    /redaktion/
+        title 40 знаков, норма 60–65: «Redaktion – Beste Online Casinos DE 2026»
+    /redaktionelle-richtlinien/
+        title 56 знаков, норма 60–65: «Redaktionelle Richtlinien – Beste Online Casinos DE 2026»
+    /verantwortungsvolles-spielen/
+        title 59 знаков, норма 60–65: «Verantwortungsvolles Spielen – Beste Online Casinos DE 2026»
+    /impressum/
+        title 40 знаков, норма 60–65: «Impressum – Beste Online Casinos DE 2026»
+    /datenschutz/
+        title 42 знаков, норма 60–65: «Datenschutz – Beste Online Casinos DE 2026»
+    /404.html
+        title 51 знаков, норма 60–65: «Seite nicht gefunden – Beste Online Casinos DE 2026»
+
+[WARN] description-length — 8
+    /casino-provider/playn-go/
+        meta description 161 знаков, норма 140–158
+    /so-testen-wir/
+        meta description 74 знаков, норма 140–158
+    /redaktion/
+        meta description 70 знаков, норма 140–158
+    /redaktionelle-richtlinien/
+        meta description 86 знаков, норма 140–158
+    /verantwortungsvolles-spielen/
+        meta description 89 знаков, норма 140–158
+    /impressum/
+        meta description 70 знаков, норма 140–158
+    /datenschutz/
+        meta description 72 знаков, норма 140–158
+    /404.html
+        meta description 81 знаков, норма 140–158
 
 ==============================================================================
 
 ЗАМЕЧАНИЯ К ДАННЫМ
 
-    терм "/casino/casino-payment/maestro-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/skrill-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/muchbetter-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/apple-pay-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/wire-transfer-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-payment/fast-payouts/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/zahlungen/
-    терм "/casino/casino-bonus/no-deposit-bonus-codes/" набрал 0 брендов при пороге 5 — своей страницы не получает, уходит секцией в /casino/bonusse/ (лист 05)
-    терм "/casino/casino-bonus/cashback-bonus/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/bonus-code-for-existing-players/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/online-casino-200-welcome-bonus/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-bonus/1-euro-deposit-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/bonusse/
-    терм "/casino/casino-general/new-online-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/real-money-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/live-online-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/high-roller-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/payout-online-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-general/fast-withdrawal-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/aktuell/
-    терм "/casino/casino-license/ukgc/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/lizenzen/
-    терм "/casino/casino-license/curacao/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/lizenzen/
-    терм "/casino/casino-provider/evolution/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/netent/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/microgaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/playtech/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/hacksaw-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/nolimit-city/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/big-time-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/red-tiger/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/push-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/relax-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/yggdrasil/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/betsoft/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/elk-studios/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/booming-games/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/wazdan/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/amatic/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/igt/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/blueprint-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-provider/bally-wulff/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/anbieter/
-    терм "/casino/casino-live/live-casino-lobby/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/live-spiele/
-    терм "/casino/casino-live/live-poker/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/live-spiele/
-    терм "/casino/casino-live/lightning-roulette/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/live-spiele/
-    терм "/casino/casino-betting/horse-racing/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
-    терм "/casino/casino-betting/virtual-sports/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
-    терм "/casino/casino-betting/accumulator-bets/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /casino/quoten/
+    терм "/casino-payment/maestro-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /zahlungen/
+    терм "/casino-payment/skrill-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /zahlungen/
+    терм "/casino-payment/muchbetter-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /zahlungen/
+    терм "/casino-payment/apple-pay-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /zahlungen/
+    терм "/casino-payment/wire-transfer-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /zahlungen/
+    терм "/casino-payment/fast-payouts/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /zahlungen/
+    терм "/casino-bonus/no-deposit-bonus-codes/" набрал 0 брендов при пороге 5 — своей страницы не получает, уходит секцией в /bonusse/ (лист 05)
+    терм "/casino-bonus/cashback-bonus/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /bonusse/
+    терм "/casino-bonus/bonus-code-for-existing-players/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /bonusse/
+    терм "/casino-bonus/online-casino-200-welcome-bonus/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /bonusse/
+    терм "/casino-bonus/1-euro-deposit-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /bonusse/
+    терм "/casino-general/new-online-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /aktuell/
+    терм "/casino-general/real-money-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /aktuell/
+    терм "/casino-general/live-online-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /aktuell/
+    терм "/casino-general/high-roller-casino/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /aktuell/
+    терм "/casino-general/payout-online-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /aktuell/
+    терм "/casino-general/fast-withdrawal-casinos/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /aktuell/
+    терм "/casino-license/ukgc/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /lizenzen/
+    терм "/casino-license/curacao/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /lizenzen/
+    терм "/casino-provider/evolution/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/netent/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/microgaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/playtech/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/hacksaw-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/nolimit-city/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/big-time-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/red-tiger/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/push-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/relax-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/yggdrasil/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/betsoft/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/elk-studios/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/booming-games/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/wazdan/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/amatic/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/igt/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/blueprint-gaming/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-provider/bally-wulff/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /anbieter/
+    терм "/casino-live/live-casino-lobby/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /live-spiele/
+    терм "/casino-live/live-poker/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /live-spiele/
+    терм "/casino-live/lightning-roulette/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /live-spiele/
+    терм "/casino-betting/horse-racing/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /quoten/
+    терм "/casino-betting/virtual-sports/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /quoten/
+    терм "/casino-betting/accumulator-bets/" не входит в текущую волну публикации (site.build.includeTerms) — отдаёт 301 на /quoten/
